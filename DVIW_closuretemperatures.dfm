@@ -1,0 +1,434 @@
+object ISFClosureTemperatures: TISFClosureTemperatures
+  Left = 0
+  Top = 0
+  Width = 787
+  Height = 595
+  RenderInvisibleControls = False
+  OnRender = IWAppFormRender
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  OnCreate = IWAppFormCreate
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = False
+  LockOnSubmit = True
+  ShowHint = True
+  DesignLeft = 2
+  DesignTop = 2
+  object iwDBg: TIWDBGrid
+    Left = 98
+    Top = 122
+    Width = 661
+    Height = 474
+    BorderColors.Color = clNone
+    BorderColors.Light = clNone
+    BorderColors.Dark = clNone
+    BGColor = clNone
+    BorderSize = 1
+    BorderStyle = tfDefault
+    CellPadding = 2
+    CellSpacing = 0
+    Font.Color = clNone
+    Font.FontName = 'Verdana'
+    Font.Size = 9
+    Font.Style = []
+    FrameBuffer = 40
+    Lines = tlAll
+    OnRenderCell = iwDBgRenderCell
+    UseFrame = False
+    UseSize = True
+    ScrollToCurrentRow = False
+    Columns = <
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'MATERIALDESCRIPTION'
+        OnTitleClick = iwDBgColumns0TitleClick
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Material'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'ISOSYSTEMNAME'
+        OnTitleClick = iwDBgColumns0TitleClick
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Isotope System'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'APPROACHDESCRIPTION'
+        OnClick = iwDBgColumns0Click
+        OnTitleClick = iwDBgColumns0TitleClick
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Approach'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taRightJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'BLOCKINGT'
+        OnTitleClick = iwDBgColumns0TitleClick
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Closure Temp. (C)'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taRightJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'BLOCKINGTUNCERTAINTY'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Uncertainty (C)'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end>
+    DataSource = dmDV.dsClosureTemperatures
+    FooterRowCount = 0
+    FriendlyName = 'iwDBg'
+    FromStart = False
+    HighlightColor = clNone
+    HighlightRows = False
+    Options = [dgIndicator, dgShowTitles]
+    RefreshMode = rmAutomatic
+    RowLimit = 20
+    RollOver = True
+    RowClick = False
+    RollOverColor = clWebPALEGOLDENROD
+    RowHeaderColor = clWebLIGHTSTEELBLUE
+    RowAlternateColor = clNone
+    RowCurrentColor = clWebYELLOW
+  end
+  object iwlPrevPage: TIWLink
+    Left = 112
+    Top = 101
+    Width = 97
+    Height = 17
+    RenderSize = False
+    StyleRenderOptions.RenderSize = False
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clWebBLUE
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'iwlPrevPage'
+    OnClick = iwlPrevPageClick
+    TabOrder = 1
+    RawText = False
+    Caption = 'Previous page'
+  end
+  object iwlNextPage: TIWLink
+    Left = 238
+    Top = 101
+    Width = 65
+    Height = 17
+    RenderSize = False
+    StyleRenderOptions.RenderSize = False
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clWebBLUE
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'iwlNextPage'
+    OnClick = iwlNextPageClick
+    TabOrder = 3
+    RawText = False
+    Caption = 'Next page'
+  end
+  object iwbClose: TIWButton
+    Left = 96
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    Color = clWebLIGHTGREEN
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'iwbClose'
+    OnClick = iwbCloseClick
+  end
+  object iwbAddNewRecord: TIWButton
+    Left = 624
+    Top = 72
+    Width = 129
+    Height = 25
+    Caption = 'Add new record'
+    Color = clWebLIGHTSKYBLUE
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'iwbAddNewRecord'
+    TabOrder = 4
+    OnClick = iwbAddNewRecordClick
+  end
+  object rectLeft: TIWRectangle
+    Left = 0
+    Top = 55
+    Width = 83
+    Height = 540
+    Align = alLeft
+    ZIndex = 1
+    Font.Color = clWebBLACK
+    Font.Size = 10
+    Font.Style = []
+    BorderOptions.Width = 0
+    FriendlyName = 'rectLeft'
+    Color = clWebLAVENDER
+    Alignment = taLeftJustify
+    VAlign = vaMiddle
+    ExplicitTop = 54
+    ExplicitHeight = 541
+  end
+  object iwlSortedBy: TIWLabel
+    Left = 620
+    Top = 105
+    Width = 137
+    Height = 14
+    Alignment = taRightJustify
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 8
+    Font.Style = [fsItalic]
+    HasTabOrder = False
+    FriendlyName = 'iwlSortedBy'
+    Caption = 'Sorted as specified in query'
+  end
+  object iwbEdit: TIWButton
+    Left = 328
+    Top = 72
+    Width = 129
+    Height = 25
+    Caption = 'Edit current record'
+    Color = clWebLEMONCHIFFON
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'iwbEdit'
+    TabOrder = 5
+    OnClick = iwbEditClick
+  end
+  object IWDBNavigator1: TIWDBNavigator
+    Left = 200
+    Top = 71
+    Width = 108
+    Height = 31
+    Confirmations.Delete = 'Are you sure you want to delete this record?'
+    Confirmations.Post = 'Are you sure you want to update this record?'
+    Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
+    DataSource = dmDV.dsClosureTemperatures
+    FriendlyName = 'IWDBNavigator1'
+    ImageHeight = 21
+    ImageWidth = 21
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    Orientation = orHorizontal
+  end
+  inline TopBar: TISFTopBar
+    Left = 0
+    Top = 0
+    Width = 787
+    Height = 55
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 55
+    Constraints.MinHeight = 55
+    Constraints.MinWidth = 600
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+    ExplicitWidth = 787
+    inherited IWFrameRegion: TIWRegion
+      Width = 787
+      TabOrder = 2
+      ExplicitWidth = 787
+      inherited iwrHeader: TIWRegion
+        Width = 787
+        ExplicitWidth = 787
+        inherited iwrWelcome: TIWRegion
+          Width = 787
+          ExplicitWidth = 787
+          inherited iwrDisplayUserName: TIWRegion
+            Width = 646
+            ExplicitWidth = 646
+            inherited lblWelcome: TIWLabel
+              Left = 325
+              ExplicitLeft = 325
+            end
+          end
+        end
+        inherited iwrSignInOut: TIWRegion
+          Width = 787
+          ExplicitWidth = 787
+          inherited iwlSignOut: TIWLink
+            TabOrder = -1
+          end
+          inherited lnkSignIn: TIWLink
+            Left = 562
+            ExplicitLeft = 562
+          end
+        end
+      end
+    end
+  end
+end
