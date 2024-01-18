@@ -1,0 +1,212 @@
+unit DVIW_units;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWCompEdit, IWDBStdCtrls, IWHTMLControls,
+  IWCompButton, IWCompListbox, IWVCLBaseControl, IWBaseHTMLControl,
+  IWCompLabel, UCustomFlexCelReport, UFlexCelReport, UExcelAdapter,
+  UFlxMemTable, XLSXAdapter;
+
+type
+  TISFUnits = class(TIWAppForm)
+    iwDBgUnits: TIWDBGrid;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    iwbApplyUpdates: TIWButton;
+    iwbCancelUpdates: TIWButton;
+    iwbAddNewUnit: TIWButton;
+    iwlSortedBy: TIWLabel;
+    rectLeft: TIWRectangle;
+    iwbDownload: TIWButton;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    TopBar: TISFTopBar;
+    XLSXAdapter1: TXLSXAdapter;
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbApplyUpdatesClick(Sender: TObject);
+    procedure iwbCancelUpdatesClick(Sender: TObject);
+    procedure iwbAddNewUnitClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwDBgUnitsColumns0TitleClick(Sender: TObject);
+    procedure iwDBgUnitsColumns0Click(ASender: TObject;
+      const AValue: String);
+    procedure iwbDownloadClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DB, DBClient, DVIW_dm, DVIW_uMain, DVIW_constants, DVIW_unitedit,
+  usrIW_dm;
+
+
+
+
+procedure TISFUnits.IWAppFormRender(Sender: TObject);
+begin
+  iwbApplyUpdates.Visible := UserSession.CanModify and (dmDV.cdsUnits.State in [dsEdit,dsInsert]);
+  iwbCancelUpdates.Visible := UserSession.CanModify and (dmDV.cdsUnits.State in [dsEdit,dsInsert]);
+  iwbAddNewUnit.Visible := UserSession.CanModify and (dmDV.cdsUnits.State in [dsBrowse]);
+end;
+
+procedure TISFUnits.IWAppFormCreate(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  {Units}
+  dmDV.qUnits.Close;
+  dmDV.qUnits.SQL.Clear;
+  dmDV.qUnits.SQL.Add('SELECT SUITE.UNITID, SUITE.UNITNAME, SUITE.UNITRANK, SUITE.GISID,');
+  dmDV.qUnits.SQL.Add('  SUITE.FORMATIONOFFSET, SUITE.FORMATIONOFFSET2, SUITE.FORMATIONOFFSET3');
+  dmDV.qUnits.SQL.Add('FROM SUITE');
+  dmDV.qUnits.SQL.Add('WHERE (SUITE.UNITNAME >= :FirstValue');
+  dmDV.qUnits.SQL.Add('AND SUITE.UNITNAME <= :LastValue'+')');
+  dmDV.qUnits.SQL.Add('OR SUITE.UNITNAME STARTING WITH '+quotedstr('NEW'+UserSession.UserID));
+  dmDV.qUnits.SQL.Add('ORDER BY SUITE.UNITNAME');
+  dmDV.qUnits.ParamByName('FIRSTVALUE').AsString := UserSession.UnitStartFrom;
+  dmDV.qUnits.ParamByName('LASTVALUE').AsString := UserSession.UnitEndWith;
+  dmDV.cdsUnits.Close;
+  dmDV.cdsUnits.Open;
+  iwlPrevPage.Visible := (dmDV.cdsUnits.RecordCount > iwDBgUnits.RowLimit);
+  iwlNextPage.Visible := (dmDV.cdsUnits.RecordCount > iwDBgUnits.RowLimit);
+end;
+
+procedure TISFUnits.iwbCloseClick(Sender: TObject);
+begin
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFUnits.iwbApplyUpdatesClick(Sender: TObject);
+begin
+  try
+    dmDV.cdsUnits.Post;
+  except
+  end;
+  try
+    dmDV.cdsUnits.ApplyUpdates(0);
+  except
+  end;
+end;
+
+procedure TISFUnits.iwbCancelUpdatesClick(Sender: TObject);
+begin
+  try
+    dmDV.cdsUnits.CancelUpdates;
+  except
+  end;
+end;
+
+procedure TISFUnits.iwbAddNewUnitClick(Sender: TObject);
+var
+  tUnitName : string;
+  WasSuccessful : boolean;
+begin
+  WasSuccessful := false;
+  tUnitName := 'NEW'+UserSession.UserID;
+  dmDV.AddUnit(tUnitName,WasSuccessful);
+  if WasSuccessful then
+  begin
+    UserSession.ParameterChosen := 'NEW'+UserSession.UserID;
+    dmDV.qUnits.Close;
+    //dmDV.qUnits.ParamByName('FIRSTVALUE').AsString := 'NEW';
+    //dmDV.qUnits.ParamByName('LASTVALUE').AsString := 'NEX';
+    dmDV.qUnits.ParamByName('FIRSTVALUE').AsString := UserSession.UnitStartFrom;
+    dmDV.qUnits.ParamByName('LASTVALUE').AsString := UserSession.UnitEndWith;
+    //dmUser.SetDeveloperData(dmDV.qUnits.SQL.Text);
+    dmDV.cdsUnits.Close;
+    dmDV.cdsUnits.Open;
+    dmDV.cdsUnits.Locate('UNITNAME',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
+    UserSession.Parameter2Chosen := dmDV.cdsUnitsUNITID.AsString;
+    dmDV.cdsUnits.Close;
+    UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+    TIWAppForm(WebApplication.ActiveForm).Release;
+    TISFUnitEdit.Create(WebApplication).Show;
+  end else
+  begin
+    WebApplication.ShowMessage('Not able to add new Stratigraphic Unit.',smAlert);
+  end;
+end;
+
+procedure TISFUnits.iwlPrevPageClick(Sender: TObject);
+begin
+  dmDV.cdsUnits.MoveBy(-1*iwDBgUnits.RowLimit);
+end;
+
+procedure TISFUnits.iwlNextPageClick(Sender: TObject);
+begin
+  dmDV.cdsUnits.MoveBy(iwDBgUnits.RowLimit);
+end;
+
+procedure TISFUnits.iwDBgUnitsColumns0TitleClick(Sender: TObject);
+begin
+  dmDV.cdsUnits.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFUnits.iwDBgUnitsColumns0Click(ASender: TObject;
+  const AValue: String);
+begin
+  UserSession.ParameterChosen := AValue;
+  dmDV.cdsUnits.Locate('UNITNAME',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
+  UserSession.Parameter2Chosen := dmDV.cdsUnitsUNITID.AsString;
+  dmDV.cdsUnits.Close;
+  UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFUnitEdit.Create(WebApplication).Show;
+end;
+
+procedure TISFUnits.iwbDownloadClick(Sender: TObject);
+var
+  {
+  tmpPath : string;
+  tmpFileName : string;
+  }
+  MemStream: TMemoryStream;
+begin
+  {
+  tmpPath := WebApplication.UserCacheDir; // by putting the file in the cache folder, it will
+                                         // automatically be deleted when the session terminates
+  tmpFileName := 'StratigraphicUnits.xml';
+  try
+    dmDV.cdsUnits.SaveToFile(tmpPath+tmpFileName,dfXML);
+    WebApplication.SendFile(tmpPath+tmpFileName,true, '', tmpFileName);
+  except
+  end;
+  }
+  dmDV.cdsUnits.First;
+  FlxMemTable1.Open;
+  FlxMemTable1.Clear;
+  repeat
+    FlxMemTable1.AddRecord([dmDV.cdsUnitsUNITNAME.AsVariant,dmDV.cdsUnitsUNITRANK.AsVariant,
+           dmDV.cdsUnitsGISID.AsVariant,dmDV.cdsUnitsFORMATIONOFFSET.AsVariant,
+           dmDV.cdsUnitsFORMATIONOFFSET2.AsVariant,dmDV.cdsUnitsFORMATIONOFFSET3.AsVariant,
+           dmDV.cdsUnitsUNITID.AsVariant]);
+    dmDV.cdsUnits.Next;
+  until dmDV.cdsUnits.Eof;
+  FlxMemTable1.First;
+  Report1.Template := DefaultFlexCellFolder+'FlxUnits.xls';
+  MemStream:=TMemoryStream.Create;
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','Units.xls'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+end.

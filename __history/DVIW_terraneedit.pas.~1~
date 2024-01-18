@@ -1,0 +1,108 @@
+unit DVIW_terraneedit;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompListbox, IWDBStdCtrls, IWCompEdit, IWCompButton, IWGrids, IWDBGrids,
+  IWVCLBaseControl, IWBaseHTMLControl, IWCompLabel;
+
+type
+  TISFTerraneEdit = class(TIWAppForm)
+    IWDBNavigator1: TIWDBNavigator;
+    IWDBEdit1: TIWDBEdit;
+    iwbReturn: TIWButton;
+    IWLabel1: TIWLabel;
+    iwbSaveChanges: TIWButton;
+    iwbCancelChanges: TIWButton;
+    iwbDelete: TIWButton;
+    IWLabel3: TIWLabel;
+    iwDBlcbContinent: TIWDBLookupComboBox;
+    iwbEdit: TIWButton;
+    TopBar: TISFTopBar;
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure iwbReturnClick(Sender: TObject);
+    procedure iwbSaveChangesClick(Sender: TObject);
+    procedure iwbCancelChangesClick(Sender: TObject);
+    procedure iwbDeleteClick(Sender: TObject);
+    procedure iwbEditClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DVIW_dmStrat, DB, DVIW_terranes;
+
+
+
+
+procedure TISFTerraneEdit.IWAppFormRender(Sender: TObject);
+begin
+  iwbSaveChanges.Visible := UserSession.CanModify and (dmStrat.cdsTerranes.State in [dsEdit,dsInsert]);
+  iwbCancelChanges.Visible := UserSession.CanModify and (dmStrat.cdsTerranes.State in [dsEdit,dsInsert]);
+  iwbDelete.Visible := UserSession.CanModify and (dmStrat.cdsTerranes.State in [dsBrowse]);
+end;
+
+procedure TISFTerraneEdit.IWAppFormCreate(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  iwbDelete.Visible := UserSession.CanDelete;
+  iwDBNavigator1.Visible := UserSession.CanModifyPlus;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  dmStrat.cdsTerranes.Locate('DOMAINID',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
+  dmStrat.cdsContinents.Open;
+end;
+
+procedure TISFTerraneEdit.iwbReturnClick(Sender: TObject);
+begin
+  dmStrat.cdsContinents.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFTerranes.Create(WebApplication).Show;
+end;
+
+procedure TISFTerraneEdit.iwbSaveChangesClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsTerranes.Post;
+  except
+  end;
+  try
+    dmStrat.cdsTerranes.ApplyUpdates(0);
+  except
+    WebApplication.ShowMessage('Not able to update changes to this record');
+  end;
+end;
+
+procedure TISFTerraneEdit.iwbCancelChangesClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsTerranes.CancelUpdates;
+  except
+    WebApplication.ShowMessage('Not able to cancel changes to this record');
+  end;
+end;
+
+procedure TISFTerraneEdit.iwbDeleteClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsTerranes.Delete;
+    dmStrat.cdsTerranes.ApplyUpdates(0);
+  except
+    WebApplication.ShowMessage('Not able to delete record',smAlert);
+  end;
+end;
+
+procedure TISFTerraneEdit.iwbEditClick(Sender: TObject);
+begin
+  dmStrat.cdsTerranes.Edit;
+end;
+
+end.

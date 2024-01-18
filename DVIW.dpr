@@ -115,7 +115,8 @@ uses
   DVIW_datalookups in 'DVIW_datalookups.pas' {ISFDataLookups: TIWAppForm},
   DVIW_modelquery in 'DVIW_modelquery.pas' {ISFModelQuery: TIWAppForm},
   usr_uForgotten in '..\WebUserIW\usr_uForgotten.pas' {ISFForgotten: TIWAppForm},
-  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm};
+  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm},
+  DVIW_calcGDUpdfs in 'DVIW_calcGDUpdfs.pas' {ISFCalculateGDUPDFS: TIWAppForm};
 
 {$R *.res}
 

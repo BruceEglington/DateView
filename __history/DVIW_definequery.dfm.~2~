@@ -1,0 +1,308 @@
+object ISFDefineQuery: TISFDefineQuery
+  Left = 0
+  Top = 0
+  Width = 713
+  Height = 478
+  RenderInvisibleControls = False
+  OnRender = IWAppFormRender
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  Title = 'Define query'
+  SupportedBrowsers = [brNetscape7, brIE, brOpera, brSafari, brNetscape6]
+  OnCreate = IWAppFormCreate
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = False
+  LockOnSubmit = True
+  ShowHint = True
+  XPTheme = True
+  DesignLeft = 8
+  DesignTop = 8
+  object iwcbContinents: TIWCheckBox
+    Left = 89
+    Top = 128
+    Width = 231
+    Height = 21
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    Caption = 'Include selection from Continents'
+    Editable = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    SubmitOnAsyncEvent = True
+    ScriptEvents = <>
+    DoSubmitValidation = True
+    Style = stNormal
+    TabOrder = 0
+    Checked = True
+    FriendlyName = 'iwcbContinents'
+  end
+  object iwbNextStageOfQuery: TIWButton
+    Left = 94
+    Top = 74
+    Width = 293
+    Height = 25
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    Caption = 'Proceed to next stage of query definition'
+    DoSubmitValidation = True
+    Color = clWebLIGHTGREEN
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'iwbNextStageOfQuery'
+    ScriptEvents = <>
+    TabOrder = 1
+    OnClick = iwbNextStageOfQueryClick
+  end
+  object iwlContinents: TIWListbox
+    Left = 98
+    Top = 155
+    Width = 313
+    Height = 192
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    BGColor = clNone
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    FocusColor = clNone
+    AutoHideOnMenuActivation = False
+    ItemsHaveValues = False
+    NoSelectionText = '-- No Selection --'
+    Required = False
+    RequireSelection = False
+    ScriptEvents = <>
+    UseSize = True
+    DoSubmitValidation = True
+    Editable = True
+    TabOrder = 2
+    SubmitOnAsyncEvent = True
+    MaxItems = 0
+    FriendlyName = 'iwlContinents'
+    ItemIndex = -1
+    Items.Strings = (
+      'four=4'
+      'one=1'
+      'three=3'
+      'two=2')
+    MultiSelect = True
+    Sorted = True
+  end
+  object IWText1: TIWText
+    Left = 424
+    Top = 131
+    Width = 275
+    Height = 175
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    BGColor = clNone
+    ConvertSpaces = True
+    Font.Color = clWebDARKSLATEGRAY
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'IWText1'
+    Lines.Strings = (
+      'Select the Continents from which you wish '
+      'to obtain data. Note that the values '
+      'selected here will influence subsequent lists '
+      'used to further refine search conditions and '
+      'will also influence the final query.'
+      ''
+      'Multiple Continents may be selected. '
+      ''
+      'A more restricted range in data will improve '
+      'performance and provide faster response times '
+      'to your queries.')
+    RawText = False
+    UseFrame = False
+    WantReturns = True
+  end
+  object rectLeft: TIWRectangle
+    Left = 0
+    Top = 55
+    Width = 83
+    Height = 423
+    Cursor = crAuto
+    Align = alLeft
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 1
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    Font.Color = clWebBLACK
+    Font.Size = 10
+    Font.Style = []
+    BorderOptions.Color = clNone
+    BorderOptions.Width = 0
+    FriendlyName = 'rectLeft'
+    Color = clWebLAVENDER
+    Alignment = taLeftJustify
+    VAlign = vaMiddle
+    ExplicitHeight = 294
+  end
+  object iwlblError: TIWLabel
+    Left = 126
+    Top = 353
+    Width = 235
+    Height = 15
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    Alignment = taLeftJustify
+    BGColor = clNone
+    Font.Color = clWebRED
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    NoWrap = False
+    ConvertSpaces = False
+    HasTabOrder = False
+    FriendlyName = 'iwlblError'
+    Caption = 'No items selected or box not checked'
+    RawText = False
+  end
+  object iwbCancel: TIWButton
+    Left = 424
+    Top = 74
+    Width = 105
+    Height = 25
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    Caption = 'Cancel'
+    DoSubmitValidation = True
+    Color = clWebLIGHTSALMON
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    FriendlyName = 'iwbCancel'
+    ScriptEvents = <>
+    TabOrder = 3
+    OnClick = iwbCancelClick
+  end
+  inline TopBar: TISFTopBar
+    Left = 0
+    Top = 0
+    Width = 713
+    Height = 55
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 55
+    Constraints.MinHeight = 55
+    Constraints.MinWidth = 600
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+    ExplicitWidth = 713
+    inherited IWFrameRegion: TIWRegion
+      Width = 713
+      TabOrder = 4
+      ExplicitWidth = 713
+      inherited iwrHeader: TIWRegion
+        Width = 713
+        ExplicitWidth = 713
+        inherited iwrWelcome: TIWRegion
+          Width = 713
+          ExplicitWidth = 713
+          inherited iwrDisplayUserName: TIWRegion
+            Width = 572
+            ExplicitWidth = 572
+            inherited lblWelcome: TIWLabel
+              Left = 251
+              ExplicitLeft = 510
+            end
+          end
+        end
+        inherited iwrSignInOut: TIWRegion
+          Width = 713
+          ExplicitWidth = 713
+        end
+      end
+    end
+  end
+end

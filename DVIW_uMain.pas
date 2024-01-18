@@ -59,6 +59,7 @@ type
     procedure FrameMenuRawDataIndivAgeHfClick(Sender: TObject);
     procedure FrameMenuRawDataMultiAgeChemClick(Sender: TObject);
     procedure iwb_TestDestroyClick(Sender: TObject);
+    procedure FrameMenuDefineGDUCurve1Click(Sender: TObject);
   public
   protected
     procedure LoadWelcomeMessage;
@@ -79,6 +80,11 @@ uses
 procedure TISFMain.FrameMenuDefine1Click(Sender: TObject);
 begin
   FrameMenu.SelectInterpretedRecords1Click(Sender);
+end;
+
+procedure TISFMain.FrameMenuDefineGDUCurve1Click(Sender: TObject);
+begin
+  FrameMenu.DefineGDUCurve1Click(Sender);
 end;
 
 procedure TISFMain.FrameMenuRawDataIdentifyAgePeaks1Click(Sender: TObject);

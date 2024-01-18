@@ -1,0 +1,189 @@
+unit DVIW_unitareas;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWCompEdit, IWDBStdCtrls, IWHTMLControls,
+  IWCompButton, IWCompListbox, IWVCLBaseControl, IWBaseHTMLControl,
+  IWCompLabel, UFlxMemTable, UCustomFlexCelReport, UFlexCelReport,
+  UExcelAdapter, XLSAdapter;
+
+type
+  TISFUnitAreas = class(TIWAppForm)
+    iwDBgUnitAreas: TIWDBGrid;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    iwbApplyUpdates: TIWButton;
+    iwbCancelUpdates: TIWButton;
+    iwbAddNewUnit: TIWButton;
+    iwlSortedBy: TIWLabel;
+    rectLeft: TIWRectangle;
+    TopBar: TISFTopBar;
+    iwbDownload: TIWButton;
+    XLSAdapter1: TXLSAdapter;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbApplyUpdatesClick(Sender: TObject);
+    procedure iwbCancelUpdatesClick(Sender: TObject);
+    procedure iwbAddNewUnitClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwDBgUnitsColumns0TitleClick(Sender: TObject);
+    procedure iwDBgUnitsColumns0Click(ASender: TObject;
+      const AValue: String);
+    procedure iwbDownloadClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DB, DVIW_dm, DVIW_uMain, DVIW_constants, DVIW_unitlinkquery;
+
+
+
+
+procedure TISFUnitAreas.IWAppFormRender(Sender: TObject);
+begin
+  iwbApplyUpdates.Visible := UserSession.CanModify and (dmDV.cdsUnitCountry.State in [dsEdit,dsInsert]);
+  iwbCancelUpdates.Visible := UserSession.CanModify and (dmDV.cdsUnitCountry.State in [dsEdit,dsInsert]);
+  iwbAddNewUnit.Visible := UserSession.CanModify and (dmDV.cdsUnitCountry.State in [dsBrowse]);
+end;
+
+procedure TISFUnitAreas.IWAppFormCreate(Sender: TObject);
+var
+  i : integer;
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  {References}
+  dmDV.qUnitCountry.Close;
+  dmDV.qUnitCountry.SQL.Clear;
+  dmDV.qUnitCountry.SQL.Add('SELECT SUITECOUNTRY.CountryAbr, SUITECOUNTRY.UnitName');
+  dmDV.qUnitCountry.SQL.Add('FROM SUITECOUNTRY, COUNTRY');
+  dmDV.qUnitCountry.SQL.Add('WHERE SUITECOUNTRY.CountryAbr = Country.CountryAbr');
+  dmDV.qUnitCountry.SQL.Add('AND SUITECOUNTRY.UnitName >= :FirstReference');
+  dmDV.qUnitCountry.SQL.Add('AND SUITECOUNTRY.UnitName <= :LastReference');
+  dmDV.qUnitCountry.SQL.Add('AND ( SUITECOUNTRY.CountryAbr = '+''''+UserSession.AreaValues.Strings[0]+'''');
+  if (UserSession.AreaValues.Count > 1) then
+  begin
+    for i := 2 to UserSession.AreaValues.Count do
+    begin
+      dmDV.qUnitCountry.SQL.Add('OR SUITECOUNTRY.CountryAbr = '+''''+UserSession.AreaValues.Strings[i-1]+'''');
+    end;
+  end;
+  dmDV.qUnitCountry.SQL.Add(' )');
+  dmDV.qUnitCountry.SQL.Add('ORDER BY SUITECOUNTRY.UNITNAME, SUITECOUNTRY.COUNTRYABR');
+  dmDV.qUnitCountry.ParamByName('FIRSTREFERENCE').AsString := UserSession.UnitStartFrom;
+  dmDV.qUnitCountry.ParamByName('LASTREFERENCE').AsString := UserSession.UnitEndWith;
+  dmDV.cdsUnitCountry.Close;
+  dmDV.cdsUnitCountry.Open;
+  iwlPrevPage.Visible := (dmDV.cdsUnitCountry.RecordCount > iwDBgUnitAreas.RowLimit);
+  iwlNextPage.Visible := (dmDV.cdsUnitCountry.RecordCount > iwDBgUnitAreas.RowLimit);
+end;
+
+procedure TISFUnitAreas.iwbCloseClick(Sender: TObject);
+begin
+  dmDV.qCountries.Close;
+  dmDV.qCountries.SQL.Clear;
+  dmDV.qCountries.SQL.Add('SELECT COUNTRY.COUNTRYABR, COUNTRY.COUNTRY, COUNTRY.COUNTRYOFFSET,');
+  dmDV.qCountries.SQL.Add('  COUNTRY.COUNTRYOFFSET2, COUNTRY.COUNTRYOFFSET3, COUNTRY.CONTINENTID,');
+  dmDV.qCountries.SQL.Add('  CONTINENT.CONTINENT, COUNTRY.COUNTRYHASRECORDS');
+  dmDV.qCountries.SQL.Add('from COUNTRY, CONTINENT');
+  dmDV.qCountries.SQL.Add('where COUNTRY.CONTINENTID=CONTINENT.CONTINENTID');
+  dmDV.qCountries.SQL.Add('and COUNTRY.COUNTRYHASRECORDS = '+''''+'Y'+'''');
+  dmDV.qCountries.SQL.Add('order by COUNTRY.COUNTRY');
+  dmDV.cdsCountries.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFUnitAreas.iwbDownloadClick(Sender: TObject);
+var
+  MemStream: TMemoryStream;
+begin
+  FlxMemTable1.Open;
+  FlxMemTable1.Clear;
+  Report1.Template := DefaultFlexCellFolder+'FlxUnitAreas.xls';
+  dmDV.cdsUnitCountry.First;
+  repeat
+    FlxMemTable1.AddRecord([dmDV.cdsUnitCountryCOUNTRYABR.AsVariant,dmDV.cdsUnitCountryUNITNAME.AsVariant]);
+    dmDV.cdsUnitCountry.Next;
+  until dmDV.cdsUnitCountry.Eof;
+  FlxMemTable1.First;
+  MemStream:=TMemoryStream.Create;
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','UnitAreas.xls'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+procedure TISFUnitAreas.iwbApplyUpdatesClick(Sender: TObject);
+begin
+  try
+    dmDV.cdsUnitCountry.Post;
+  except
+  end;
+  try
+    dmDV.cdsUnitCountry.ApplyUpdates(0);
+  except
+  end;
+end;
+
+procedure TISFUnitAreas.iwbCancelUpdatesClick(Sender: TObject);
+begin
+  try
+    dmDV.cdsUnitCountry.CancelUpdates;
+  except
+  end;
+end;
+
+procedure TISFUnitAreas.iwbAddNewUnitClick(Sender: TObject);
+begin
+  UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFUnitAreaLinkQuery.Create(WebApplication).Show;
+end;
+
+procedure TISFUnitAreas.iwlPrevPageClick(Sender: TObject);
+begin
+  dmDV.cdsUnitCountry.MoveBy(-1*iwDBgUnitAreas.RowLimit);
+end;
+
+procedure TISFUnitAreas.iwlNextPageClick(Sender: TObject);
+begin
+  dmDV.cdsUnitCountry.MoveBy(iwDBgUnitAreas.RowLimit);
+end;
+
+procedure TISFUnitAreas.iwDBgUnitsColumns0TitleClick(Sender: TObject);
+begin
+  dmDV.cdsUnitCountry.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFUnitAreas.iwDBgUnitsColumns0Click(ASender: TObject;
+  const AValue: String);
+begin
+  UserSession.ParameterChosen := AValue;
+  UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  {
+  TISFUnitAreaDetails.Create(WebApplication).Show;
+  }
+end;
+
+end.

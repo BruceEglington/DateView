@@ -543,6 +543,11 @@
             <Form>ISFLogin</Form>
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
+        <DCCReference Include="DVIW_calcGDUpdfs.pas">
+            <Form>ISFCalculateGDUPDFS</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TIWAppForm</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

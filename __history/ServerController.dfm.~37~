@@ -1,0 +1,18 @@
+object IWServerController: TIWServerController
+  AppName = 'DateView'
+  Compression.Enabled = False
+  Compression.Level = 6
+  Description = 'DateView'
+  DisplayName = 'DateView'
+  Log = loFile
+  Port = 8085
+  SSLOptions.SSLVersion = SSLv3
+  Version = '15.2.53'
+  ExceptionLogger.Enabled = True
+  SessionOptions.SessionTimeout = 20
+  SessionOptions.LogSessionEvents = [etCreate, etDestroy, etRequest]
+  OnNewSession = IWServerControllerBaseNewSession
+  OnGetMainForm = IWServerControllerBaseGetMainForm
+  Height = 310
+  Width = 342
+end

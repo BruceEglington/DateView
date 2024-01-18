@@ -1,0 +1,18 @@
+unit DVIW_calcGDUpdfs;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWColor, IWTypes;
+
+type
+  TISFCalculateGDUPDFS = class(TIWAppForm)
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+
+end.

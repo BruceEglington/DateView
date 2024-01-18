@@ -27,7 +27,6 @@ object dmDV: TdmDV
       'DriverUnit=DbxDevartInterBase'
       'OptimizedNumerics=false'
       'CharLength=1')
-    Connected = True
     Left = 36
     Top = 14
   end
@@ -1852,7 +1851,6 @@ object dmDV: TdmDV
     Top = 112
   end
   object cdsRecordIDs: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspRecordIDs'
@@ -2055,7 +2053,6 @@ object dmDV: TdmDV
     end
   end
   object cdsResults: TClientDataSet
-    Active = True
     Aggregates = <>
     AggregatesActive = True
     DataSetField = cdsRecordIDsqResults
@@ -2187,7 +2184,6 @@ object dmDV: TdmDV
     Top = 246
   end
   object cdsResultsExtra: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqResultsExtra
     Params = <>
@@ -2241,7 +2237,6 @@ object dmDV: TdmDV
     Top = 284
   end
   object cdsIsoInit: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoInit
     Params = <>
@@ -2311,7 +2306,6 @@ object dmDV: TdmDV
     Top = 332
   end
   object cdsIsoOther: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoOther
     Params = <>
@@ -2405,7 +2399,6 @@ object dmDV: TdmDV
     end
   end
   object cdsProvince: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqProvince
     Params = <>
@@ -2521,7 +2514,6 @@ object dmDV: TdmDV
     end
   end
   object cdsTerrane: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqTerrane
     Params = <>
@@ -2633,7 +2625,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoRef: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoRef
     Params = <>
@@ -2804,7 +2795,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoLab: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoLab
     Params = <>
@@ -3064,7 +3054,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoFor: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoFor
     Params = <>
@@ -3174,7 +3163,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoImages: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoImages
     Params = <>
@@ -3303,7 +3291,6 @@ object dmDV: TdmDV
     end
   end
   object cdsSmpReg: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsResults2qSmpReg
     Params = <>
@@ -3440,7 +3427,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoBoundary: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoBoundary
     Params = <>
@@ -3494,7 +3480,6 @@ object dmDV: TdmDV
     Top = 260
   end
   object cdsIsoStatistics: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoStatistics
     Params = <>
@@ -3634,7 +3619,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoChemType: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoChemType
     Params = <>
@@ -3696,7 +3680,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoOrogenic: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoOrogenic
     Params = <>
@@ -3748,7 +3731,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoGrouping: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoGrouping
     Params = <>
@@ -4571,7 +4553,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoValid2: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoValid2
     Filter = 'ValidStatusID='#39'Check'#39
@@ -4896,7 +4877,6 @@ object dmDV: TdmDV
     Top = 204
   end
   object cdsResults2: TClientDataSet
-    Active = True
     Aggregates = <>
     AggregatesActive = True
     DataSetField = cdsRecordIDsqResults2
@@ -5542,7 +5522,6 @@ object dmDV: TdmDV
     end
   end
   object cdsStratDBLink: TClientDataSet
-    Active = True
     Aggregates = <>
     AggregatesActive = True
     DataSetField = cdsResults2qStratDBLink
@@ -5676,7 +5655,6 @@ object dmDV: TdmDV
     end
   end
   object cdsIsoLIP: TClientDataSet
-    Active = True
     Aggregates = <>
     DataSetField = cdsRecordIDsqIsoLIP
     Params = <>
@@ -5730,7 +5708,6 @@ object dmDV: TdmDV
     end
   end
   object cdsComment: TClientDataSet
-    Active = True
     Aggregates = <>
     AggregatesActive = True
     DataSetField = cdsRecordIDsqComment

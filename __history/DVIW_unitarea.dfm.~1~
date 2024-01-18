@@ -1,0 +1,215 @@
+object ISFUnitArea: TISFUnitArea
+  Left = 0
+  Top = 0
+  Width = 742
+  Height = 400
+  ConnectionMode = cmAny
+  SupportedBrowsers = [brIE, brOpera, brNetscape6]
+  OnCreate = IWAppFormCreate
+  OnRender = IWAppFormRender
+  BrowserSecurityCheck = True
+  Background.Fixed = False
+  HandleTabs = False
+  LockUntilLoaded = True
+  LockOnSubmit = True
+  ShowHint = True
+  UpdateMode = umAll
+  DesignLeft = 5
+  DesignTop = 177
+  object IWLabel1: TIWLabel
+    Left = 442
+    Top = 84
+    Width = 243
+    Height = 16
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = False
+    Alignment = taLeftJustify
+    BGColor = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    NoWrap = False
+    FriendlyName = 'IWLabel1'
+    Caption = 'UnitArea grid should be visible below'
+    RawText = False
+  end
+  object IWDBGrid1: TIWDBGrid
+    Left = 156
+    Top = 104
+    Width = 543
+    Height = 291
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = False
+    BorderColors.Color = clNone
+    BorderColors.Light = clNone
+    BorderColors.Dark = clNone
+    BGColor = clNone
+    BorderSize = 1
+    BorderStyle = tfDefault
+    CellPadding = 0
+    CellSpacing = 0
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FrameBuffer = 40
+    Lines = tlAll
+    UseFrame = True
+    UseSize = True
+    Columns = <
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.Size = 10
+        Font.Style = []
+        Header = False
+        Height = '0'
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'UNITNAME'
+        RawText = False
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.Size = 10
+        Title.Font.Style = []
+        Title.Header = False
+        Title.Height = '0'
+        Title.Text = 'UNITNAME'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.Size = 10
+        Font.Style = []
+        Header = False
+        Height = '0'
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'COUNTRYABR'
+        RawText = False
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.Size = 10
+        Title.Font.Style = []
+        Title.Header = False
+        Title.Height = '0'
+        Title.Text = 'COUNTRYABR'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+      end>
+    DataSource = dmDV.dsUnitArea
+    FooterRowCount = 0
+    FriendlyName = 'IWDBGrid1'
+    FromStart = True
+    HighlightColor = clNone
+    HighlightRows = False
+    Options = [dgShowTitles]
+    RefreshMode = rmAutomatic
+    RowLimit = 0
+    RollOver = False
+    RowClick = False
+    RollOverColor = clNone
+    RowHeaderColor = clNone
+    RowAlternateColor = clNone
+    RowCurrentColor = clNone
+    TabOrder = 1
+  end
+  inline TopBar: TISFTopBar
+    Left = 0
+    Top = 0
+    Width = 742
+    Height = 69
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 69
+    Constraints.MinHeight = 69
+    Constraints.MinWidth = 600
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    inherited IWFrameRegion: TIWRegion
+      Width = 742
+      DesignSize = (
+        742
+        69)
+      inherited rectRedTop: TIWRectangle
+        Width = 467
+      end
+      inherited lnkSignIn: TIWLink
+        Left = 341
+      end
+      inherited IWRectangleTitle: TIWRectangle
+        Width = 513
+        Text = '    DateView International Geochronology Database'
+      end
+    end
+  end
+  inline LeftTree: TISFProductTree
+    Left = 0
+    Top = 69
+    Width = 142
+    Height = 331
+    Align = alLeft
+    Constraints.MaxWidth = 142
+    Constraints.MinWidth = 142
+    Color = clNone
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 1
+    inherited IWFrameRegion: TIWRegion
+      Height = 331
+      inherited imgLogo: TIWImageFile
+        Left = 2
+        Top = 4
+        Width = 123
+        Height = 117
+      end
+      inherited rectRight: TIWRectangle
+        Height = 329
+      end
+      inherited iwregPageLinks: TIWRegion
+        Height = 197
+        inherited iwlAreas: TIWLink
+          OnClick = LeftTreeiwlAreasClick
+        end
+      end
+    end
+  end
+end

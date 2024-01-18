@@ -1,0 +1,216 @@
+unit DVIW_terranes;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes, DVIW_frProductTree,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWVCLBaseControl, IWBaseHTMLControl, IWHTMLControls,
+  IWCompLabel, IWCompButton, UCustomFlexCelReport, UFlexCelReport,
+  UExcelAdapter, XLSAdapter, UFlxMemTable, XLSXAdapter;
+
+type
+  TISFTerranes = class(TIWAppForm)
+    iwDBg: TIWDBGrid;
+    iwlSortedBy: TIWLabel;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    rectLeft: TIWRectangle;
+    iwbDownload: TIWButton;
+    iwbApplyUpdates: TIWButton;
+    iwbCancelUpdates: TIWButton;
+    iwbAddNew: TIWButton;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    TopBar: TISFTopBar;
+    XLSXAdapter1: TXLSXAdapter;
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWDBGrid1Columns0TitleClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbDownloadClick(Sender: TObject);
+    procedure iwbApplyUpdatesClick(Sender: TObject);
+    procedure iwbCancelUpdatesClick(Sender: TObject);
+    procedure iwbAddNewClick(Sender: TObject);
+    procedure iwDBgColumns0Click(ASender: TObject; const AValue: String);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DB, DBClient, DVIW_dmStrat, DVIW_uMain, DVIW_terraneedit,
+  DVIW_constants;
+
+
+
+
+procedure TISFTerranes.IWAppFormCreate(Sender: TObject);
+var
+  i : integer;
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  iwbApplyUpdates.Visible := UserSession.CanModify;
+  iwbCancelupdates.Visible := UserSession.CanModify;
+  iwbAddNew.Visible := UserSession.CanModify;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  dmStrat.qDomains.Close;
+  dmStrat.qDomains.SQL.Clear;
+  dmStrat.qDomains.SQL.Add('SELECT DOMAINS.DOMAINNAME,DOMAINS.CONTINENTID,');
+  dmStrat.qDomains.SQL.Add('  DOMAINS.DOMAINID,DOMAINS.DOMAINTYPEID,');
+  dmStrat.qDomains.SQL.Add('  DOMAINS.SPOTLATITUDE,DOMAINS.SPOTLONGITUDE,');
+  dmStrat.qDomains.SQL.Add('  DOMAINS.DOMAINPARENTID,DOMAINS.MAXAGE,');
+  dmStrat.qDomains.SQL.Add('  DOMAINS.MINPLOTAGE,DOMAINS.MAXPLOTAGE');
+  dmStrat.qDomains.SQL.Add('FROM DOMAINS,CONTINENTS,DOMAINTYPES');
+  dmStrat.qDomains.SQL.Add('WHERE CONTINENTS.CONTINENTID = DOMAINS.CONTINENTID');
+  dmStrat.qDomains.SQL.Add('AND DOMAINS.DOMAINTYPEID=DOMAINTYPES.DOMAINTYPEID');
+  dmStrat.qDomains.SQL.Add('AND DOMAINTYPES.DVLEVEL > 2');
+  if (UserSession.IncludeContinentValues) then
+  begin
+    dmStrat.qDomains.SQL.Add('AND ( DOMAINS.CONTINENTID = '+''''+UserSession.ContinentValues.Strings[0]+'''');
+    if (UserSession.ContinentValues.Count >1) then
+    begin
+      for i := 2 to UserSession.ContinentValues.Count do
+      begin
+        dmStrat.qDomains.SQL.Add('OR DOMAINS.ContinentID = '+''''+UserSession.ContinentValues.Strings[i-1]+'''');
+      end;
+    end;
+    dmStrat.qDomains.SQL.Add(' ) ');
+  end;
+  dmStrat.qDomains.SQL.Add('ORDER BY DOMAINS.DOMAINNAME, DOMAINS.CONTINENTID');
+  dmStrat.cdsDomains.Open;
+end;
+
+procedure TISFTerranes.IWAppFormRender(Sender: TObject);
+begin
+  iwlPrevPage.Visible := (dmStrat.cdsDomains.RecordCount > iwDBg.RowLimit);
+  iwlNextPage.Visible := (dmStrat.cdsDomains.RecordCount > iwDBg.RowLimit);
+  iwbApplyUpdates.Visible := UserSession.CanModify and (dmStrat.cdsDomains.State in [dsEdit,dsInsert]);
+  iwbCancelUpdates.Visible := UserSession.CanModify and (dmStrat.cdsDomains.State in [dsEdit,dsInsert]);
+  iwbAddNew.Visible := UserSession.CanModify and (dmStrat.cdsDomains.State in [dsBrowse]);
+end;
+
+procedure TISFTerranes.IWDBGrid1Columns0TitleClick(Sender: TObject);
+begin
+  dmStrat.cdsDomains.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFTerranes.iwlPrevPageClick(Sender: TObject);
+begin
+  dmStrat.cdsDomains.MoveBy(-1*iwDBg.RowLimit);
+end;
+
+procedure TISFTerranes.iwlNextPageClick(Sender: TObject);
+begin
+  dmStrat.cdsDomains.MoveBy(iwDBg.RowLimit);
+end;
+
+procedure TISFTerranes.iwbCloseClick(Sender: TObject);
+begin
+  dmStrat.cdsDomains.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFTerranes.iwbDownloadClick(Sender: TObject);
+var
+  {
+  tmpPath : string;
+  tmpFileName : string;
+  }
+  MemStream: TMemoryStream;
+begin
+  {
+  tmpPath := WebApplication.UserCacheDir; // by putting the file in the cache folder, it will
+                                         // automatically be deleted when the session terminates
+  tmpFileName := 'TectonicDomains.xml';
+  try
+    dmStrat.cdsDomains.SaveToFile(tmpPath+tmpFileName,dfXML);
+    WebApplication.SendFile(tmpPath+tmpFileName,true, '', tmpFileName);
+  except
+  end;
+  }
+  dmStrat.cdsDomains.First;
+  FlxMemTable1.Open;
+  FlxMemTable1.Clear;
+  repeat
+    FlxMemTable1.AddRecord([dmStrat.cdsDomainsDOMAINNAME.AsVariant,dmStrat.cdsDomainsCONTINENTID.AsVariant,dmStrat.cdsDomainsDOMAINID.AsVariant,dmStrat.cdsDomainsDOMAINTYPEID.AsVariant]);
+    dmStrat.cdsDomains.Next;
+  until dmStrat.cdsDomains.Eof;
+  FlxMemTable1.First;
+  Report1.Template := DefaultFlexCellFolder+'FlxTerranes.xls';
+  MemStream:=TMemoryStream.Create;
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','Terranes.xls'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+procedure TISFTerranes.iwbApplyUpdatesClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsDomains.Post;
+  except
+  end;
+  try
+    dmStrat.cdsDomains.ApplyUpdates(0);
+  except
+  end;
+end;
+
+procedure TISFTerranes.iwbCancelUpdatesClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsDomains.CancelUpdates;
+  except
+  end;
+end;
+
+procedure TISFTerranes.iwbAddNewClick(Sender: TObject);
+begin
+  try
+    dmStrat.cdsDomains.Append;
+    dmStrat.cdsDomainsDOMAINNAME.AsString := 'NEW'+UserSession.UserID;
+    dmStrat.cdsDomainsCONTINENTID.AsString := 'UND';
+    dmStrat.cdsDomains.Post;
+  except
+    WebApplication.ShowMessage('Not able to add new record',smAlert);
+  end;
+  try
+    UserSession.ParameterChosen := 'NEW'+UserSession.UserID;
+    UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+    TIWAppForm(WebApplication.ActiveForm).Release;
+    TISFTerraneEdit.Create(WebApplication).Show;
+  except
+    WebApplication.ShowMessage('Not able to edit new terrane',smAlert);
+  end;
+end;
+
+procedure TISFTerranes.iwDBgColumns0Click(ASender: TObject;
+  const AValue: String);
+begin
+  if UserSession.CanModify then
+  begin
+    UserSession.ParameterChosen := AValue;
+    UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
+    TIWAppForm(WebApplication.ActiveForm).Release;
+    TISFTerraneEdit.Create(WebApplication).Show;
+  end else
+  begin
+    WebApplication.ShowMessage('Edit rights are required to change these values');
+  end;
+end;
+
+end.

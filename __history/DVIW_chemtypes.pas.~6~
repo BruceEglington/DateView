@@ -1,0 +1,122 @@
+unit DVIW_chemtypes;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes, DVIW_frProductTree,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWVCLBaseControl, IWBaseHTMLControl, IWHTMLControls,
+  IWCompLabel, IWCompButton, UCustomFlexCelReport, UFlexCelReport,
+  UExcelAdapter, UFlxMemTable, XLSXAdapter;
+
+type
+  TISFChemTypes = class(TIWAppForm)
+    iwDBg: TIWDBGrid;
+    iwlSortedBy: TIWLabel;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    rectLeft: TIWRectangle;
+    iwbDownload: TIWButton;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    TopBar: TISFTopBar;
+    XLSXAdapter1: TXLSXAdapter;
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWDBGrid1Columns0TitleClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbDownloadClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DBClient, DVIW_dm, DVIW_uMain, DVIW_constants;
+
+
+
+
+procedure TISFChemTypes.IWAppFormCreate(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  dmDV.cdsChemTypes.Open;
+end;
+
+procedure TISFChemTypes.IWAppFormRender(Sender: TObject);
+begin
+  iwlPrevPage.Visible := (dmDV.cdsChemTypes.RecordCount > iwDBg.RowLimit);
+  iwlNextPage.Visible := (dmDV.cdsChemTypes.RecordCount > iwDBg.RowLimit);
+end;
+
+procedure TISFChemTypes.IWDBGrid1Columns0TitleClick(Sender: TObject);
+begin
+  dmDV.cdsChemTypes.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFChemTypes.iwlPrevPageClick(Sender: TObject);
+begin
+  dmDV.cdsChemTypes.MoveBy(-1*iwDBg.RowLimit);
+end;
+
+procedure TISFChemTypes.iwlNextPageClick(Sender: TObject);
+begin
+  dmDV.cdsChemTypes.MoveBy(iwDBg.RowLimit);
+end;
+
+procedure TISFChemTypes.iwbCloseClick(Sender: TObject);
+begin
+  dmDV.cdsChemTypes.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFChemTypes.iwbDownloadClick(Sender: TObject);
+var
+  {
+  tmpPath : string;
+  tmpFileName : string;
+  }
+  MemStream: TMemoryStream;
+begin
+  {
+  tmpPath := WebApplication.UserCacheDir; // by putting the file in the cache folder, it will
+                                         // automatically be deleted when the session terminates
+  tmpFileName := 'ChemTypes.xml';
+  try
+    dmDV.cdsChemTypes.SaveToFile(tmpPath+tmpFileName,dfXML);
+    WebApplication.SendFile(tmpPath+tmpFileName,true, '', tmpFileName);
+  except
+  end;
+  }
+  FlxMemTable1.Open;
+  FlxMemTable1.Clear;
+  dmDV.cdsChemTypes.First;
+  dmDV.cdsChemTypes.First;
+  repeat
+    FlxMemTable1.AddRecord([dmDV.cdsChemTypesCHEMTYPEABR.AsVariant,dmDV.cdsChemTypesCHEMICALTYPE.AsVariant]);
+    dmDV.cdsChemTypes.Next;
+  until dmDV.cdsChemTypes.Eof;
+  FlxMemTable1.First;
+  Report1.Template := DefaultFlexCellFolder+'FlxChemTypes.xlsx';
+  MemStream:=TMemoryStream.Create;
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','Chemical Types.xlsx'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+end.

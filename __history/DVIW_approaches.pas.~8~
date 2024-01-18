@@ -1,0 +1,108 @@
+unit DVIW_approaches;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes, DVIW_frProductTree,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWVCLBaseControl, IWBaseHTMLControl, IWHTMLControls,
+  IWCompLabel, IWCompButton, UCustomFlexCelReport, UFlexCelReport,
+  UExcelAdapter, UFlxMemTable, XLSXAdapter;
+
+type
+  TISFApproaches = class(TIWAppForm)
+    iwDBg: TIWDBGrid;
+    iwlSortedBy: TIWLabel;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    rectLeft: TIWRectangle;
+    iwbDownload: TIWButton;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    TopBar: TISFTopBar;
+    XLSXAdapter1: TXLSXAdapter;
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWDBGrid1Columns0TitleClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbDownloadClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DBClient, DVIW_dm, DVIW_uMain, DVIW_constants;
+
+
+
+
+procedure TISFApproaches.IWAppFormCreate(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  dmDV.cdsApproach.Open;
+end;
+
+procedure TISFApproaches.IWAppFormRender(Sender: TObject);
+begin
+  iwlPrevPage.Visible := (dmDV.cdsApproach.RecordCount > iwDBg.RowLimit);
+  iwlNextPage.Visible := (dmDV.cdsApproach.RecordCount > iwDBg.RowLimit);
+end;
+
+procedure TISFApproaches.IWDBGrid1Columns0TitleClick(Sender: TObject);
+begin
+  dmDV.cdsApproach.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFApproaches.iwlPrevPageClick(Sender: TObject);
+begin
+  dmDV.cdsApproach.MoveBy(-1*iwDBg.RowLimit);
+end;
+
+procedure TISFApproaches.iwlNextPageClick(Sender: TObject);
+begin
+  dmDV.cdsApproach.MoveBy(iwDBg.RowLimit);
+end;
+
+procedure TISFApproaches.iwbCloseClick(Sender: TObject);
+begin
+  dmDV.cdsApproach.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFApproaches.iwbDownloadClick(Sender: TObject);
+var
+  MemStream: TMemoryStream;
+begin
+  FlxMemTable1.Open;
+  FlxMemTable1.Clear;
+  Report1.Template := DefaultFlexCellFolder+'FlxApproach.xlsx';
+  dmDV.cdsApproach.First;
+  repeat
+    FlxMemTable1.AddRecord([dmDV.cdsApproachAPPROACHABR.AsVariant,dmDV.cdsApproachAPPROACHDESCRIPTION.AsVariant]);
+    dmDV.cdsApproach.Next;
+  until dmDV.cdsApproach.Eof;
+  FlxMemTable1.First;
+  MemStream:=TMemoryStream.Create;
+  //new way based on example posted by Adrian Gallero of TMS Software
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','Approach.xlsx'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+end.

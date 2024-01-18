@@ -17,12 +17,9 @@ object ISFFrameMenu: TISFFrameMenu
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     RenderInvisibleControls = False
-    TabOrder = 0
     Align = alClient
     BorderOptions.NumericWidth = 0
-    BorderOptions.BorderWidth = cbwNumeric
     BorderOptions.Style = cbsNone
-    BorderOptions.Color = clNone
     object iwrAll: TIWRegion
       Left = 0
       Top = 0
@@ -33,9 +30,7 @@ object ISFFrameMenu: TISFFrameMenu
       RenderInvisibleControls = False
       Align = alClient
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
       BorderOptions.Style = cbsNone
-      BorderOptions.Color = clNone
       Color = clWebLIGHTSTEELBLUE
       ClipRegion = False
       object iwrEggTimer: TIWRegion
@@ -46,12 +41,10 @@ object ISFFrameMenu: TISFFrameMenu
         HorzScrollBar.Visible = False
         VertScrollBar.Visible = False
         RenderInvisibleControls = False
-        TabOrder = 2
+        TabOrder = 1
         Align = alTop
         BorderOptions.NumericWidth = 0
-        BorderOptions.BorderWidth = cbwNumeric
         BorderOptions.Style = cbsNone
-        BorderOptions.Color = clNone
         object iwrImageTop: TIWRegion
           Left = 0
           Top = 0
@@ -62,18 +55,17 @@ object ISFFrameMenu: TISFFrameMenu
           RenderInvisibleControls = False
           Align = alTop
           BorderOptions.NumericWidth = 0
-          BorderOptions.BorderWidth = cbwNumeric
           BorderOptions.Style = cbsNone
-          BorderOptions.Color = clNone
           Color = clWebLIGHTSTEELBLUE
           object IWImageDVIW: TIWImage
+            AlignWithMargins = False
             Left = 0
             Top = 0
             Width = 100
             Height = 150
+            Hint = ''
             Align = alLeft
             BorderOptions.Width = 0
-            TabOrder = -1
             UseSize = True
             Picture.Data = {
               0A544A504547496D6167650F750000FFD8FFE000104A46494600010201004800
@@ -1031,15 +1023,15 @@ object ISFFrameMenu: TISFFrameMenu
         RenderInvisibleControls = False
         Align = alClient
         BorderOptions.NumericWidth = 0
-        BorderOptions.BorderWidth = cbwNumeric
         BorderOptions.Style = cbsNone
-        BorderOptions.Color = clNone
         Color = clWebLIGHTSTEELBLUE
         object IWMenu1: TIWMenu
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 80
           Height = 174
+          Hint = ''
           Align = alLeft
           FriendlyName = 'IWMenu1'
           AttachedMenu = MainMenu1
@@ -1049,14 +1041,17 @@ object ISFFrameMenu: TISFFrameMenu
           MainMenuStyle.MenuItemFont.FontName = 'Verdana'
           MainMenuStyle.MenuItemFont.Size = 8
           MainMenuStyle.MenuItemFont.Style = []
+          MainMenuStyle.MenuItemFont.PxSize = 10
           MainMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
           MainMenuStyle.SelectedMenuItemFont.FontName = 'Verdana'
           MainMenuStyle.SelectedMenuItemFont.Size = 8
           MainMenuStyle.SelectedMenuItemFont.Style = [fsBold]
+          MainMenuStyle.SelectedMenuItemFont.PxSize = 10
           MainMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
           MainMenuStyle.DisabledMenuItemFont.FontName = 'Verdana'
           MainMenuStyle.DisabledMenuItemFont.Size = 8
           MainMenuStyle.DisabledMenuItemFont.Style = []
+          MainMenuStyle.DisabledMenuItemFont.PxSize = 10
           MainMenuStyle.BGColor = clWebLIGHTSTEELBLUE
           MainMenuStyle.ItemBGColor = clNone
           MainMenuStyle.SelectedItemBGColor = clWebLIGHTSLATEBLUE
@@ -1067,14 +1062,17 @@ object ISFFrameMenu: TISFFrameMenu
           SubMenuStyle.MenuItemFont.FontName = 'Verdana'
           SubMenuStyle.MenuItemFont.Size = 8
           SubMenuStyle.MenuItemFont.Style = []
+          SubMenuStyle.MenuItemFont.PxSize = 10
           SubMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
           SubMenuStyle.SelectedMenuItemFont.FontName = 'Verdana'
           SubMenuStyle.SelectedMenuItemFont.Size = 8
           SubMenuStyle.SelectedMenuItemFont.Style = []
+          SubMenuStyle.SelectedMenuItemFont.PxSize = 10
           SubMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
           SubMenuStyle.DisabledMenuItemFont.FontName = 'Verdana'
           SubMenuStyle.DisabledMenuItemFont.Size = 8
           SubMenuStyle.DisabledMenuItemFont.Style = []
+          SubMenuStyle.DisabledMenuItemFont.PxSize = 10
           SubMenuStyle.BGColor = clWebLIGHTSTEELBLUE
           SubMenuStyle.ItemBGColor = clWebWHITE
           SubMenuStyle.SelectedItemBGColor = clWebLIGHTSKYBLUE
@@ -1104,6 +1102,10 @@ object ISFFrameMenu: TISFFrameMenu
       object DefineSQL1: TMenuItem
         Caption = 'Define SQL'
         OnClick = SelectSQL1Click
+      end
+      object DefineGDUCurve1: TMenuItem
+        Caption = 'CalculateGDUCurve'
+        OnClick = DefineGDUCurve1Click
       end
     end
     object Graph1: TMenuItem
@@ -1278,7 +1280,7 @@ object ISFFrameMenu: TISFFrameMenu
     Left = 132
     Top = 340
     Bitmap = {
-      494C010104000900140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

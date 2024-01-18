@@ -1,0 +1,125 @@
+unit DVIW_lithologies;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWTypes, DVIW_frProductTree,
+  Controls, Forms, DVIW_frTopBar, IWBaseControl, IWControl, IWCompRectangle,
+  IWCompGrids, IWDBGrids, IWVCLBaseControl, IWBaseHTMLControl, IWHTMLControls,
+  IWCompLabel, IWCompButton, UCustomFlexCelReport, UFlexCelReport,
+  UExcelAdapter, XLSAdapter, UFlxMemTable;
+
+type
+  TISFLithologies = class(TIWAppForm)
+    iwDBg: TIWDBGrid;
+    iwlSortedBy: TIWLabel;
+    iwlPrevPage: TIWLink;
+    iwlNextPage: TIWLink;
+    iwbClose: TIWButton;
+    rectLeft: TIWRectangle;
+    iwbDownload: TIWButton;
+    XLSAdapter1: TXLSAdapter;
+    Report1: TFlexCelReport;
+    FlxMemTable1: TFlxMemTable;
+    TopBar: TISFTopBar;
+    procedure IWAppFormCreate(Sender: TObject);
+    procedure IWAppFormRender(Sender: TObject);
+    procedure IWDBGrid1Columns0TitleClick(Sender: TObject);
+    procedure iwlPrevPageClick(Sender: TObject);
+    procedure iwlNextPageClick(Sender: TObject);
+    procedure iwbCloseClick(Sender: TObject);
+    procedure iwbDownloadClick(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController, DBClient, DVIW_dm, DVIW_uMain, DVIW_constants;
+
+
+
+
+procedure TISFLithologies.IWAppFormCreate(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  dmDV.cdsLithol.Open;
+end;
+
+procedure TISFLithologies.IWAppFormRender(Sender: TObject);
+begin
+  TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  if UserSession.LoggedIn then
+  begin
+    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+  end;
+  iwlPrevPage.Visible := (dmDV.cdsLithol.RecordCount > iwDBg.RowLimit);
+  iwlNextPage.Visible := (dmDV.cdsLithol.RecordCount > iwDBg.RowLimit);
+end;
+
+procedure TISFLithologies.IWDBGrid1Columns0TitleClick(Sender: TObject);
+begin
+  dmDV.cdsLithol.IndexFieldNames := TIWDBGridColumn(Sender).DataField;
+  iwlSortedBy.Caption := 'Sorted by ' + TIWDBGridColumn(Sender).Title.Text;
+end;
+
+procedure TISFLithologies.iwlPrevPageClick(Sender: TObject);
+begin
+  dmDV.cdsLithol.MoveBy(-1*iwDBg.RowLimit);
+end;
+
+procedure TISFLithologies.iwlNextPageClick(Sender: TObject);
+begin
+  dmDV.cdsLithol.MoveBy(iwDBg.RowLimit);
+end;
+
+procedure TISFLithologies.iwbCloseClick(Sender: TObject);
+begin
+  dmDV.cdsLithol.Close;
+  TIWAppForm(WebApplication.ActiveForm).Release;
+  TISFMain.Create(WebApplication).Show
+end;
+
+procedure TISFLithologies.iwbDownloadClick(Sender: TObject);
+var
+  {
+  tmpPath : string;
+  tmpFileName : string;
+  }
+  MemStream: TMemoryStream;
+begin
+  {
+  tmpPath := WebApplication.UserCacheDir; // by putting the file in the cache folder, it will
+                                         // automatically be deleted when the session terminates
+  tmpFileName := 'Lithologies.xml';
+  try
+    dmDV.cdsLithol.SaveToFile(tmpPath+tmpFileName,dfXML);
+    WebApplication.SendFile(tmpPath+tmpFileName,true, '', tmpFileName);
+  except
+  end;
+  }
+  FlxMemTable1.Open;
+  dmDV.cdsLithol.First;
+  repeat
+    FlxMemTable1.AddRecord([dmDV.cdsLitholLITHOLOGY.AsVariant]);
+    dmDV.cdsLithol.Next;
+  until dmDV.cdsLithol.Eof;
+  FlxMemTable1.First;
+  Report1.Template := DefaultFlexCellFolder+'FlxLithol.xls';
+  MemStream:=TMemoryStream.Create;
+  try
+    Report1.SavetoStream(MemStream);
+    WebApplication.SendStream(MemStream,true,'','Lithologies.xls'); //save as an attachment
+    MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.
+  finally
+    FreeAndNil(MemStream);
+  end; //finally
+end;
+
+end.
