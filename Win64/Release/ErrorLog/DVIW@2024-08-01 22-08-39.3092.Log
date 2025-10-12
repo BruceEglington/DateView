@@ -1,0 +1,39 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Access violation at address 00000000020AC5F5 in module 'DVIW.exe'. Read of address 00000000000000B0
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EAccessViolation
+Exception address  : 00000000020AC5F5
+Exception Time     : 2024-08-01 22:08:39.309
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 
+Started at         : 2024-08-01 22:07:36.226
+Running for        :  1 minute 3 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\Win64\Release\wwwroot\
+Session count      : 2
+Current Thread ID  : 6760
+Application Path   : C:\DevD12\DateViewIW2\Win64\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+Session ID         : I2NywK-zZDmHfUfcN5Q4sj3AJ38
+Last Access        : 2024-08-01 22:08:39.250
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+Cookies Count      : 1
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

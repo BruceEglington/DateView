@@ -16,7 +16,7 @@ object ISFOptions: TISFOptions
   LockOnSubmit = True
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -1542
+  DesignTop = 2
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
@@ -83,6 +83,7 @@ object ISFOptions: TISFOptions
       RenderInvisibleControls = False
       Align = alLeft
       object rectLeft: TIWRectangle
+        AlignWithMargins = False
         Left = 1
         Top = 1
         Width = 86
@@ -92,6 +93,7 @@ object ISFOptions: TISFOptions
         Font.Color = clWebBLACK
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         BorderOptions.Width = 0
         FriendlyName = 'rectLeft'
         Color = clWebLAVENDER
@@ -118,6 +120,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object iwbSavePreferences: TIWButton
+          AlignWithMargins = False
           Left = 93
           Top = 30
           Width = 125
@@ -128,10 +131,12 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'iwbSavePreferences'
           OnClick = iwbSavePreferencesClick
         end
         object iwbCancel: TIWButton
+          AlignWithMargins = False
           Left = 320
           Top = 30
           Width = 125
@@ -142,11 +147,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'iwbCancel'
           TabOrder = 1
           OnClick = iwbCancelClick
         end
         object IWText1: TIWText
+          AlignWithMargins = False
           Left = 565
           Top = 12
           Width = 294
@@ -157,6 +164,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWText1'
           Lines.Strings = (
             'Define the parameters which will be used to'
@@ -178,6 +186,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object IWLabel30: TIWLabel
+          AlignWithMargins = False
           Left = 112
           Top = 44
           Width = 161
@@ -186,12 +195,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Interpretations'
         end
         object IWLabel2: TIWLabel
+          AlignWithMargins = False
           Left = 163
           Top = 98
           Width = 172
@@ -200,12 +211,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel2'
           Caption = 'Interpretation 1 caption'
         end
         object iweInterpretation1: TIWEdit
+          AlignWithMargins = False
           Left = 321
           Top = 94
           Width = 189
@@ -216,11 +229,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 2
         end
         object IWLabel5: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 126
           Width = 77
@@ -229,12 +244,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = 'Categories'
         end
         object iwlInterpretation1: TIWListbox
+          AlignWithMargins = False
           Left = 239
           Top = 122
           Width = 271
@@ -245,6 +262,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           RequireSelection = False
           UseSize = False
           TabOrder = 3
@@ -260,6 +278,7 @@ object ISFOptions: TISFOptions
           NoSelectionText = '-- No Selection --'
         end
         object IWLabel6: TIWLabel
+          AlignWithMargins = False
           Left = 163
           Top = 264
           Width = 172
@@ -268,12 +287,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel6'
           Caption = 'Interpretation 2 caption'
         end
         object iweInterpretation2: TIWEdit
+          AlignWithMargins = False
           Left = 321
           Top = 260
           Width = 189
@@ -284,11 +305,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 4
         end
         object IWLabel7: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 292
           Width = 77
@@ -297,12 +320,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel7'
           Caption = 'Categories'
         end
         object iwlInterpretation2: TIWListbox
+          AlignWithMargins = False
           Left = 239
           Top = 288
           Width = 271
@@ -313,6 +338,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           RequireSelection = False
           UseSize = False
           TabOrder = 5
@@ -328,6 +354,7 @@ object ISFOptions: TISFOptions
           NoSelectionText = '-- No Selection --'
         end
         object IWLabel8: TIWLabel
+          AlignWithMargins = False
           Left = 163
           Top = 430
           Width = 172
@@ -336,12 +363,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
           Caption = 'Interpretation 3 caption'
         end
         object iweInterpretation3: TIWEdit
+          AlignWithMargins = False
           Left = 321
           Top = 426
           Width = 189
@@ -352,11 +381,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 6
         end
         object IWLabel9: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 458
           Width = 77
@@ -365,12 +396,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel9'
           Caption = 'Categories'
         end
         object iwlInterpretation3: TIWListbox
+          AlignWithMargins = False
           Left = 239
           Top = 454
           Width = 271
@@ -381,6 +414,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           RequireSelection = False
           UseSize = False
           TabOrder = 7
@@ -396,6 +430,7 @@ object ISFOptions: TISFOptions
           NoSelectionText = '-- No Selection --'
         end
         object IWLabel10: TIWLabel
+          AlignWithMargins = False
           Left = 163
           Top = 598
           Width = 172
@@ -404,12 +439,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel10'
           Caption = 'Interpretation 4 caption'
         end
         object iweInterpretation4: TIWEdit
+          AlignWithMargins = False
           Left = 321
           Top = 594
           Width = 189
@@ -420,11 +457,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 8
         end
         object IWLabel11: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 626
           Width = 77
@@ -433,12 +472,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel11'
           Caption = 'Categories'
         end
         object iwlInterpretation4: TIWListbox
+          AlignWithMargins = False
           Left = 239
           Top = 622
           Width = 271
@@ -449,6 +490,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           RequireSelection = False
           UseSize = False
           TabOrder = 9
@@ -464,6 +506,7 @@ object ISFOptions: TISFOptions
           NoSelectionText = '-- No Selection --'
         end
         object IWLabel12: TIWLabel
+          AlignWithMargins = False
           Left = 163
           Top = 768
           Width = 172
@@ -472,12 +515,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel12'
           Caption = 'Interpretation 5 caption'
         end
         object IWLabel13: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 796
           Width = 77
@@ -486,12 +531,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel13'
           Caption = 'Categories'
         end
         object iweInterpretation5: TIWEdit
+          AlignWithMargins = False
           Left = 321
           Top = 764
           Width = 189
@@ -502,11 +549,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 10
         end
         object iwlInterpretation5: TIWListbox
+          AlignWithMargins = False
           Left = 239
           Top = 792
           Width = 271
@@ -517,6 +566,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           RequireSelection = False
           UseSize = False
           TabOrder = 11
@@ -532,6 +582,7 @@ object ISFOptions: TISFOptions
           NoSelectionText = '-- No Selection --'
         end
         object lblInterpretation5Values: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 814
           Width = 217
@@ -540,12 +591,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'At least one item must be selected'
         end
         object lblInterpretation5Caption: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 766
           Width = 240
@@ -554,12 +607,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Interpretation 5 caption needs a value'
         end
         object lblInterpretation4Values: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 638
           Width = 217
@@ -568,12 +623,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'At least one item must be selected'
         end
         object lblInterpretation4Caption: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 596
           Width = 240
@@ -582,12 +639,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Interpretation 4 caption needs a value'
         end
         object lblInterpretation3Values: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 468
           Width = 217
@@ -596,12 +655,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'At least one item must be selected'
         end
         object lblInterpretation3Caption: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 428
           Width = 240
@@ -610,12 +671,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Interpretation 3 caption needs a value'
         end
         object lblInterpretation2Values: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 302
           Width = 217
@@ -624,12 +687,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'At least one item must be selected'
         end
         object lblInterpretation2Caption: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 264
           Width = 240
@@ -638,12 +703,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Interpretation 2 caption needs a value'
         end
         object lblInterpretation1Values: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 148
           Width = 217
@@ -652,12 +719,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'At least one item must be selected'
         end
         object lblInterpretation1Caption: TIWLabel
+          AlignWithMargins = False
           Left = 563
           Top = 108
           Width = 240
@@ -666,6 +735,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
@@ -680,6 +750,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object IWLabel15: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 114
           Width = 114
@@ -688,12 +759,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel15'
           Caption = 'Minimum date ='
         end
         object lblDateBand1Caption: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 80
           Width = 220
@@ -702,12 +775,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Date Band 1 caption needs a value'
         end
         object lblDate1Values: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 114
           Width = 196
@@ -716,12 +791,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify numeric values'
         end
         object lblDateBand2Caption: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 172
           Width = 220
@@ -730,12 +807,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Date Band 2 caption needs a value'
         end
         object lblDate2Values: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 202
           Width = 196
@@ -744,12 +823,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify numeric values'
         end
         object lblDateBand3Caption: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 260
           Width = 220
@@ -758,12 +839,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Date Band 3 caption needs a value'
         end
         object lblDate3Values: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 290
           Width = 196
@@ -772,12 +855,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify numeric values'
         end
         object lblDateBand4Caption: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 348
           Width = 220
@@ -786,12 +871,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Date Band 4 caption needs a value'
         end
         object lblDate4Values: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 380
           Width = 196
@@ -800,12 +887,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify numeric values'
         end
         object lblDateBand5Caption: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 442
           Width = 220
@@ -814,12 +903,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Date Band 5 caption needs a value'
         end
         object lblDate5Values: TIWLabel
+          AlignWithMargins = False
           Left = 561
           Top = 476
           Width = 196
@@ -828,12 +919,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify numeric values'
         end
         object iweDateBand5Maximum: TIWEdit
+          AlignWithMargins = False
           Left = 475
           Top = 468
           Width = 61
@@ -845,11 +938,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 26
         end
         object IWLabel27: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 476
           Width = 118
@@ -858,12 +953,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel27'
           Caption = 'Maximum date ='
         end
         object iweDateBand5Minimum: TIWEdit
+          AlignWithMargins = False
           Left = 271
           Top = 468
           Width = 61
@@ -875,11 +972,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 25
         end
         object IWLabel26: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 476
           Width = 114
@@ -888,12 +987,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel26'
           Caption = 'Minimum date ='
         end
         object iweDateBand5: TIWEdit
+          AlignWithMargins = False
           Left = 319
           Top = 438
           Width = 189
@@ -904,11 +1005,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 24
         end
         object IWLabel25: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 442
           Width = 143
@@ -917,12 +1020,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel25'
           Caption = 'Date Band 5 caption'
         end
         object iweDateBand4Maximum: TIWEdit
+          AlignWithMargins = False
           Left = 475
           Top = 376
           Width = 61
@@ -934,11 +1039,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 23
         end
         object IWLabel24: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 380
           Width = 118
@@ -947,12 +1054,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel24'
           Caption = 'Maximum date ='
         end
         object iweDateBand4Minimum: TIWEdit
+          AlignWithMargins = False
           Left = 268
           Top = 376
           Width = 61
@@ -964,11 +1073,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 22
         end
         object IWLabel23: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 380
           Width = 114
@@ -977,12 +1088,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel23'
           Caption = 'Minimum date ='
         end
         object iweDateBand4: TIWEdit
+          AlignWithMargins = False
           Left = 319
           Top = 346
           Width = 189
@@ -993,11 +1106,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 21
         end
         object IWLabel4: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 350
           Width = 143
@@ -1006,12 +1121,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel4'
           Caption = 'Date Band 4 caption'
         end
         object iweDateBand3Maximum: TIWEdit
+          AlignWithMargins = False
           Left = 481
           Top = 283
           Width = 61
@@ -1023,11 +1140,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 20
         end
         object IWLabel22: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 290
           Width = 118
@@ -1036,12 +1155,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel22'
           Caption = 'Maximum date ='
         end
         object iweDateBand3Minimum: TIWEdit
+          AlignWithMargins = False
           Left = 268
           Top = 286
           Width = 61
@@ -1053,11 +1174,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 19
         end
         object IWLabel21: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 290
           Width = 114
@@ -1066,12 +1189,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel21'
           Caption = 'Minimum date ='
         end
         object iweDateBand3: TIWEdit
+          AlignWithMargins = False
           Left = 319
           Top = 256
           Width = 189
@@ -1082,11 +1207,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 18
         end
         object IWLabel20: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 260
           Width = 143
@@ -1095,12 +1222,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel20'
           Caption = 'Date Band 3 caption'
         end
         object iweDateBand2Maximum: TIWEdit
+          AlignWithMargins = False
           Left = 475
           Top = 198
           Width = 61
@@ -1112,11 +1241,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 17
         end
         object IWLabel19: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 202
           Width = 118
@@ -1125,12 +1256,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel19'
           Caption = 'Maximum date ='
         end
         object iweDateBand2Minimum: TIWEdit
+          AlignWithMargins = False
           Left = 271
           Top = 198
           Width = 61
@@ -1142,11 +1275,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 16
         end
         object IWLabel18: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 202
           Width = 114
@@ -1155,12 +1290,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel18'
           Caption = 'Minimum date ='
         end
         object iweDateBand2: TIWEdit
+          AlignWithMargins = False
           Left = 319
           Top = 168
           Width = 189
@@ -1171,11 +1308,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 15
         end
         object IWLabel17: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 172
           Width = 143
@@ -1184,12 +1323,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel17'
           Caption = 'Date Band 2 caption'
         end
         object iweDateBand1Maximum: TIWEdit
+          AlignWithMargins = False
           Left = 475
           Top = 110
           Width = 61
@@ -1201,11 +1342,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 14
         end
         object IWLabel16: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 114
           Width = 118
@@ -1214,12 +1357,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel16'
           Caption = 'Maximum date ='
         end
         object iweDateBand1Minimum: TIWEdit
+          AlignWithMargins = False
           Left = 271
           Top = 110
           Width = 61
@@ -1231,11 +1376,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 13
         end
         object iweDateBand1: TIWEdit
+          AlignWithMargins = False
           Left = 319
           Top = 80
           Width = 189
@@ -1246,11 +1393,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 12
         end
         object IWLabel14: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 84
           Width = 143
@@ -1259,12 +1408,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel14'
           Caption = 'Date Band 1 caption'
         end
         object IWLabel29: TIWLabel
+          AlignWithMargins = False
           Left = 112
           Top = 32
           Width = 122
@@ -1273,21 +1424,20 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Age Bands'
         end
         object iwbSaveAgeBands: TIWButton
+          AlignWithMargins = False
           Left = 517
           Top = 24
           Width = 156
           Height = 25
           Caption = 'SaveAgeBands'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbSaveAgeBands'
           TabOrder = 50
           OnClick = iwbSaveAgeBandsClick
@@ -1301,6 +1451,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object IWLabel31: TIWLabel
+          AlignWithMargins = False
           Left = 110
           Top = 24
           Width = 161
@@ -1309,12 +1460,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Graph Options'
         end
         object IWLabel1: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 115
           Width = 64
@@ -1323,12 +1476,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel1'
           Caption = 'Group by'
         end
         object IWLabel28: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 163
           Width = 234
@@ -1337,12 +1492,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel28'
           Caption = 'Minimum uncertainty for dates ='
         end
         object iwrgShowAllSampleLocalities: TIWRadioGroup
+          AlignWithMargins = False
           Left = 161
           Top = 213
           Width = 293
@@ -1354,6 +1511,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           FriendlyName = 'iwrgShowAllSampleLocalities'
           ItemIndex = 1
           Items.Strings = (
@@ -1363,6 +1521,7 @@ object ISFOptions: TISFOptions
           TabOrder = -1
         end
         object iwrgPDFType: TIWRadioGroup
+          AlignWithMargins = False
           Left = 159
           Top = 277
           Width = 151
@@ -1374,6 +1533,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           FriendlyName = 'iwrgShowAllSampleLocalities'
           ItemIndex = 1
           Items.Strings = (
@@ -1383,6 +1543,7 @@ object ISFOptions: TISFOptions
           TabOrder = -1
         end
         object iweMinimumUncertaintyForDates: TIWEdit
+          AlignWithMargins = False
           Left = 377
           Top = 155
           Width = 49
@@ -1394,11 +1555,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 28
         end
         object IWLabel3: TIWLabel
+          AlignWithMargins = False
           Left = 432
           Top = 163
           Width = 81
@@ -1407,12 +1570,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel28'
           Caption = '(95% conf)'
         end
         object lblGroupBy: TIWLabel
+          AlignWithMargins = False
           Left = 553
           Top = 115
           Width = 172
@@ -1421,12 +1586,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Group by must be specified'
         end
         object lblMinimumUncertainty: TIWLabel
+          AlignWithMargins = False
           Left = 553
           Top = 163
           Width = 202
@@ -1435,12 +1602,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'Need to specify a numeric value'
         end
         object lblShowAll: TIWLabel
+          AlignWithMargins = False
           Left = 553
           Top = 219
           Width = 191
@@ -1449,12 +1618,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'One of these must be selected'
         end
         object lblPDFType: TIWLabel
+          AlignWithMargins = False
           Left = 553
           Top = 275
           Width = 191
@@ -1463,12 +1634,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblInterpretation1Caption'
           Caption = 'One of these must be selected'
         end
         object iwcbGroupBy: TIWComboBox
+          AlignWithMargins = False
           Left = 237
           Top = 115
           Width = 223
@@ -1480,6 +1653,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           UseSize = False
           NonEditableAsLabel = True
           TabOrder = 27
@@ -1505,6 +1679,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object iwbSubmitQuery2: TIWButton
+          AlignWithMargins = False
           Left = 199
           Top = 23
           Width = 125
@@ -1515,11 +1690,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'iwbSubmitQuery2'
           TabOrder = 47
           OnClick = iwbSavePreferencesClick
         end
         object IWButton1: TIWButton
+          AlignWithMargins = False
           Left = 449
           Top = 23
           Width = 125
@@ -1530,6 +1707,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'iwbCancel'
           TabOrder = 48
           OnClick = iwbCancelClick
@@ -1543,6 +1721,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object IWLabel32: TIWLabel
+          AlignWithMargins = False
           Left = 110
           Top = 24
           Width = 70
@@ -1551,12 +1730,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Ratios'
         end
         object iwDBgRatioOptionTypes: TIWDBGrid
+          AlignWithMargins = False
           Left = 163
           Top = 96
           Width = 470
@@ -1573,10 +1754,13 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = False
           Columns = <
             item
@@ -1587,6 +1771,7 @@ object ISFOptions: TISFOptions
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1609,6 +1794,7 @@ object ISFOptions: TISFOptions
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1627,6 +1813,7 @@ object ISFOptions: TISFOptions
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1649,6 +1836,7 @@ object ISFOptions: TISFOptions
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1676,6 +1864,7 @@ object ISFOptions: TISFOptions
           RowCurrentColor = clWebYELLOW
         end
         object iwdbnOptionTypes: TIWDBNavigator
+          AlignWithMargins = False
           Left = 163
           Top = 62
           Width = 120
@@ -1692,6 +1881,7 @@ object ISFOptions: TISFOptions
           OnNext = iwdbnOptionTypesNext
         end
         object IWLabel33: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 356
           Width = 146
@@ -1700,12 +1890,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel14'
           Caption = 'Ratio Band 1 caption'
         end
         object IWLabel34: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 386
           Width = 78
@@ -1714,12 +1906,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel15'
           Caption = 'Minimum ='
         end
         object IWLabel35: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 444
           Width = 146
@@ -1728,12 +1922,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel17'
           Caption = 'Ratio Band 2 caption'
         end
         object IWLabel36: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 474
           Width = 78
@@ -1742,12 +1938,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel18'
           Caption = 'Minimum ='
         end
         object IWLabel37: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 532
           Width = 146
@@ -1756,12 +1954,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel20'
           Caption = 'Ratio Band 3 caption'
         end
         object IWLabel38: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 562
           Width = 78
@@ -1770,12 +1970,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel21'
           Caption = 'Minimum ='
         end
         object IWLabel39: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 622
           Width = 146
@@ -1784,12 +1986,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel4'
           Caption = 'Ratio Band 4 caption'
         end
         object IWLabel40: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 652
           Width = 78
@@ -1798,12 +2002,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel23'
           Caption = 'Minimum ='
         end
         object IWLabel41: TIWLabel
+          AlignWithMargins = False
           Left = 161
           Top = 714
           Width = 146
@@ -1812,12 +2018,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel25'
           Caption = 'Ratio Band 5 caption'
         end
         object IWLabel42: TIWLabel
+          AlignWithMargins = False
           Left = 159
           Top = 748
           Width = 78
@@ -1826,12 +2034,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel26'
           Caption = 'Minimum ='
         end
         object IWLabel43: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 748
           Width = 82
@@ -1840,12 +2050,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel27'
           Caption = 'Maximum ='
         end
         object IWLabel44: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 652
           Width = 82
@@ -1854,12 +2066,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel24'
           Caption = 'Maximum ='
         end
         object IWLabel45: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 562
           Width = 82
@@ -1868,12 +2082,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel22'
           Caption = 'Maximum ='
         end
         object IWLabel46: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 474
           Width = 82
@@ -1882,12 +2098,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel19'
           Caption = 'Maximum ='
         end
         object IWLabel47: TIWLabel
+          AlignWithMargins = False
           Left = 357
           Top = 386
           Width = 86
@@ -1896,12 +2114,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = [fsBold]
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel16'
           Caption = 'Maximum  ='
         end
         object IWDBEdit1: TIWDBEdit
+          AlignWithMargins = False
           Left = 313
           Top = 352
           Width = 248
@@ -1913,6 +2133,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 30
@@ -1922,6 +2143,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit2: TIWDBEdit
+          AlignWithMargins = False
           Left = 313
           Top = 440
           Width = 248
@@ -1933,6 +2155,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 33
@@ -1942,6 +2165,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit3: TIWDBEdit
+          AlignWithMargins = False
           Left = 313
           Top = 528
           Width = 248
@@ -1953,6 +2177,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 36
@@ -1962,6 +2187,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit4: TIWDBEdit
+          AlignWithMargins = False
           Left = 313
           Top = 620
           Width = 248
@@ -1973,6 +2199,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 39
@@ -1982,6 +2209,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit5: TIWDBEdit
+          AlignWithMargins = False
           Left = 313
           Top = 712
           Width = 248
@@ -1993,6 +2221,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 42
@@ -2002,6 +2231,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit6: TIWDBEdit
+          AlignWithMargins = False
           Left = 243
           Top = 382
           Width = 89
@@ -2013,6 +2243,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 31
@@ -2022,6 +2253,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit7: TIWDBEdit
+          AlignWithMargins = False
           Left = 449
           Top = 382
           Width = 89
@@ -2033,6 +2265,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 32
@@ -2042,6 +2275,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit8: TIWDBEdit
+          AlignWithMargins = False
           Left = 243
           Top = 470
           Width = 89
@@ -2053,6 +2287,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 34
@@ -2062,6 +2297,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit9: TIWDBEdit
+          AlignWithMargins = False
           Left = 449
           Top = 470
           Width = 89
@@ -2073,6 +2309,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 35
@@ -2082,6 +2319,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit10: TIWDBEdit
+          AlignWithMargins = False
           Left = 243
           Top = 555
           Width = 89
@@ -2093,6 +2331,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 37
@@ -2102,6 +2341,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit11: TIWDBEdit
+          AlignWithMargins = False
           Left = 449
           Top = 558
           Width = 89
@@ -2113,6 +2353,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 38
@@ -2122,6 +2363,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit12: TIWDBEdit
+          AlignWithMargins = False
           Left = 243
           Top = 647
           Width = 89
@@ -2133,6 +2375,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 40
@@ -2142,6 +2385,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit13: TIWDBEdit
+          AlignWithMargins = False
           Left = 449
           Top = 647
           Width = 89
@@ -2153,6 +2397,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 41
@@ -2162,6 +2407,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit14: TIWDBEdit
+          AlignWithMargins = False
           Left = 243
           Top = 739
           Width = 89
@@ -2173,6 +2419,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 43
@@ -2182,6 +2429,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object IWDBEdit15: TIWDBEdit
+          AlignWithMargins = False
           Left = 449
           Top = 739
           Width = 89
@@ -2193,6 +2441,7 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
           TabOrder = 44
@@ -2202,6 +2451,7 @@ object ISFOptions: TISFOptions
           PasswordPrompt = False
         end
         object iwbRatiosEdit: TIWButton
+          AlignWithMargins = False
           Left = 182
           Top = 296
           Width = 101
@@ -2211,11 +2461,13 @@ object ISFOptions: TISFOptions
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbRatiosEdit'
           TabOrder = 29
           OnClick = iwbRatiosEditClick
         end
         object iwbRatiosApplyUpdates: TIWButton
+          AlignWithMargins = False
           Left = 313
           Top = 296
           Width = 101
@@ -2225,11 +2477,13 @@ object ISFOptions: TISFOptions
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbRatiosApplyUpdates'
           TabOrder = 45
           OnClick = iwbRatiosApplyUpdatesClick
         end
         object iwbRatiosCancelChanges: TIWButton
+          AlignWithMargins = False
           Left = 443
           Top = 296
           Width = 101
@@ -2239,6 +2493,7 @@ object ISFOptions: TISFOptions
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbRatiosCancelChanges'
           TabOrder = 46
           OnClick = iwbRatiosCancelChangesClick
@@ -2252,6 +2507,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = False
         Align = alTop
         object IWLabel48: TIWLabel
+          AlignWithMargins = False
           Left = 110
           Top = 24
           Width = 322
@@ -2260,12 +2516,14 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Maximum Download Records'
         end
         object iwdbgMaxOutputLimits: TIWDBGrid
+          AlignWithMargins = False
           Left = 51
           Top = 64
           Width = 808
@@ -2278,13 +2536,12 @@ object ISFOptions: TISFOptions
           BorderStyle = tfDefault
           CellPadding = 0
           CellSpacing = 0
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = False
           Columns = <
             item
@@ -2295,6 +2552,7 @@ object ISFOptions: TISFOptions
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2314,6 +2572,7 @@ object ISFOptions: TISFOptions
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2332,6 +2591,7 @@ object ISFOptions: TISFOptions
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2351,6 +2611,7 @@ object ISFOptions: TISFOptions
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2369,6 +2630,7 @@ object ISFOptions: TISFOptions
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2388,6 +2650,7 @@ object ISFOptions: TISFOptions
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2423,6 +2686,7 @@ object ISFOptions: TISFOptions
         RenderInvisibleControls = True
         Align = alTop
         object iwrgDownloadFileFormat: TIWRadioGroup
+          AlignWithMargins = False
           Left = 57
           Top = 54
           Width = 161
@@ -2430,15 +2694,13 @@ object ISFOptions: TISFOptions
           SubmitOnAsyncEvent = True
           RawText = False
           Editable = True
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwrgDownloadFileFormat'
           ItemIndex = 0
           Layout = glVertical
           TabOrder = -1
         end
         object IWLabel49: TIWLabel
+          AlignWithMargins = False
           Left = 110
           Top = 24
           Width = 226
@@ -2447,21 +2709,20 @@ object ISFOptions: TISFOptions
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
           Caption = 'Download file format'
         end
         object cbPDF: TIWRadioButton
+          AlignWithMargins = False
           Left = 77
           Top = 179
           Width = 121
           Height = 21
           Cursor = crPointer
           Caption = 'PDF'
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           RawText = False
           Group = 'DownloadFormat'
           Value = 'IWRadioButton1'
@@ -2469,15 +2730,13 @@ object ISFOptions: TISFOptions
           SubmitOnAsyncEvent = True
         end
         object cbHTML: TIWRadioButton
+          AlignWithMargins = False
           Left = 77
           Top = 152
           Width = 121
           Height = 21
           Cursor = crPointer
           Caption = 'HTML'
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           RawText = False
           Group = 'DownloadFormat'
           Value = 'IWRadioButton1'
@@ -2485,15 +2744,13 @@ object ISFOptions: TISFOptions
           SubmitOnAsyncEvent = True
         end
         object cbXls: TIWRadioButton
+          AlignWithMargins = False
           Left = 77
           Top = 71
           Width = 121
           Height = 21
           Cursor = crPointer
           Caption = 'XLS'
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           RawText = False
           Checked = True
           Group = 'DownloadFormat'
@@ -2502,15 +2759,13 @@ object ISFOptions: TISFOptions
           SubmitOnAsyncEvent = True
         end
         object cbCSV: TIWRadioButton
+          AlignWithMargins = False
           Left = 77
           Top = 125
           Width = 121
           Height = 21
           Cursor = crPointer
           Caption = 'CSV'
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           RawText = False
           Group = 'DownloadFormat'
           Value = 'IWRadioButton1'
@@ -2518,15 +2773,13 @@ object ISFOptions: TISFOptions
           SubmitOnAsyncEvent = True
         end
         object cbXlsx: TIWRadioButton
+          AlignWithMargins = False
           Left = 77
           Top = 98
           Width = 121
           Height = 21
           Cursor = crPointer
           Caption = 'XLSX'
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           RawText = False
           Group = 'DownloadFormat'
           Value = 'IWRadioButton1'

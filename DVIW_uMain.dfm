@@ -40,7 +40,6 @@ object ISFMain: TISFMain
         Top = 18
         Width = 217
         Height = 22
-        Hint = ''
         ZIndex = 1
         Font.Color = clWebCORNFLOWERBLUE
         Font.FontName = 'Arial'
@@ -70,7 +69,6 @@ object ISFMain: TISFMain
         Top = 0
         Width = 113
         Height = 15
-        Hint = ''
         Anchors = [akLeft, akTop, akBottom]
         Font.Color = clNone
         Font.FontName = 'Arial'
@@ -88,7 +86,6 @@ object ISFMain: TISFMain
         Top = 38
         Width = 141
         Height = 14
-        Hint = ''
         Anchors = [akLeft, akTop, akBottom]
         Font.Color = clNone
         Font.FontName = 'Arial'
@@ -106,7 +103,6 @@ object ISFMain: TISFMain
         Top = 42
         Width = 155
         Height = 14
-        Hint = ''
         Anchors = [akLeft, akTop, akRight, akBottom]
         Font.Color = clNone
         Font.FontName = 'Arial'
@@ -124,7 +120,6 @@ object ISFMain: TISFMain
         Top = 1
         Width = 158
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -141,7 +136,6 @@ object ISFMain: TISFMain
         Top = 1
         Width = 115
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -159,7 +153,6 @@ object ISFMain: TISFMain
         Top = 12
         Width = 182
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -176,7 +169,6 @@ object ISFMain: TISFMain
         Top = 12
         Width = 106
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -194,7 +186,6 @@ object ISFMain: TISFMain
         Top = 24
         Width = 82
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -212,7 +203,6 @@ object ISFMain: TISFMain
         Top = 24
         Width = 85
         Height = 14
-        Hint = ''
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
@@ -229,7 +219,7 @@ object ISFMain: TISFMain
         Top = 6
         Width = 117
         Height = 25
-        Hint = ''
+        Visible = False
         Caption = 'Permissions'
         Color = clBtnFace
         FriendlyName = 'iwbPermissions'
@@ -242,7 +232,6 @@ object ISFMain: TISFMain
         Top = 32
         Width = 117
         Height = 25
-        Hint = ''
         Visible = False
         Caption = 'Check Ini File'
         Color = clBtnFace
@@ -256,7 +245,6 @@ object ISFMain: TISFMain
         Top = 21
         Width = 150
         Height = 14
-        Hint = ''
         Anchors = [akLeft, akTop, akBottom]
         Font.Color = clNone
         Font.FontName = 'Arial'
@@ -275,7 +263,7 @@ object ISFMain: TISFMain
         Top = 56
         Width = 117
         Height = 30
-        Hint = ''
+        Visible = False
         Caption = 'iwb_TestDestroy'
         Color = clBtnFace
         FriendlyName = 'iwb_TestDestroy'
@@ -299,7 +287,6 @@ object ISFMain: TISFMain
         Top = 6
         Width = 725
         Height = 381
-        Hint = ''
         ParentCustomHint = False
         Anchors = [akLeft, akTop, akRight, akBottom]
         ShowHint = False
@@ -356,9 +343,6 @@ object ISFMain: TISFMain
         inherited Query1: TMenuItem
           inherited Define1: TMenuItem
             OnClick = FrameMenuDefine1Click
-          end
-          inherited DefineGDUCurve1: TMenuItem
-            OnClick = FrameMenuDefineGDUCurve1Click
           end
         end
         inherited Select1: TMenuItem

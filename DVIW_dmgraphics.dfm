@@ -9,24 +9,17 @@ object dmgDV: TdmgDV
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
       'VendorLib=c:\exe32\fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\dateview2021v30.fdb'
+      'DataBase=c:\data\firebird\dateview2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
       'DriverUnit=DbxDevartInterBase'
-      'OptimizedNumerics=false'
-      'CharLength=1')
+      'UseUnicode=true'
+      'Charset=UTF8'
+      '')
     Left = 36
     Top = 10
   end
@@ -80,7 +73,7 @@ object dmgDV: TdmgDV
     SQLConnection = sqlcDateView
     Left = 144
     Top = 18
-    object QuerydmCOUNTRYABR: TStringField
+    object QuerydmCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
@@ -89,27 +82,27 @@ object dmgDV: TdmgDV
       FieldName = 'UNITID'
       Required = True
     end
-    object QuerydmMATERIALABR: TStringField
+    object QuerydmMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object QuerydmISOTOPESYSTEM: TStringField
+    object QuerydmISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object QuerydmAPPROACHABR: TStringField
+    object QuerydmAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
     end
-    object QuerydmTECHABR: TStringField
+    object QuerydmTECHABR: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object QuerydmINTERPABR: TStringField
+    object QuerydmINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -118,23 +111,23 @@ object dmgDV: TdmgDV
       FieldName = 'PREFLEVEL'
       Required = True
     end
-    object QuerydmAGEUNITS: TStringField
+    object QuerydmAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object QuerydmLITHOLOGY: TStringField
+    object QuerydmLITHOLOGY: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
     end
-    object QuerydmUNITNAME: TStringField
+    object QuerydmUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object QuerydmMETHODABR: TStringField
+    object QuerydmMETHODABR: TWideStringField
       FieldName = 'METHODABR'
       Required = True
       FixedChar = True
@@ -168,7 +161,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuery2'
     Left = 226
     Top = 18
-    object cdsQuerydmCOUNTRYABR: TStringField
+    object cdsQuerydmCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -179,31 +172,31 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQuerydmMATERIALABR: TStringField
+    object cdsQuerydmMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQuerydmISOTOPESYSTEM: TStringField
+    object cdsQuerydmISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQuerydmAPPROACHABR: TStringField
+    object cdsQuerydmAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQuerydmTECHABR: TStringField
+    object cdsQuerydmTECHABR: TWideStringField
       FieldName = 'TECHABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQuerydmINTERPABR: TStringField
+    object cdsQuerydmINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -214,23 +207,23 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQuerydmLITHOLOGY: TStringField
+    object cdsQuerydmLITHOLOGY: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
     end
-    object cdsQuerydmAGEUNITS: TStringField
+    object cdsQuerydmAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsQuerydmMETHODABR: TStringField
+    object cdsQuerydmMETHODABR: TWideStringField
       FieldName = 'METHODABR'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsQuerydmUNITNAME: TStringField
+    object cdsQuerydmUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -359,11 +352,11 @@ object dmgDV: TdmgDV
   object cdsTempDataMap: TClientDataSet
     PersistDataPacket.Data = {
       2D0100009619E0BD01000000180000000D0000000000030000002D010E496E74
-      6572707265746174696F6E010049000000010005574944544802000200140007
-      41676542616E64010049000000010005574944544802000200140009496E7465
-      7270416272010049000000010005574944544802000200140008436F6C756D6E
-      4E6F04000100000000000853616D706C654E6F01004900000001000557494454
-      4802000200140003416765080004000000000007416765506C75730800040000
+      6572707265746174696F6E01004A000000010005574944544802000200280007
+      41676542616E6401004A000000010005574944544802000200280009496E7465
+      727041627201004A000000010005574944544802000200280008436F6C756D6E
+      4E6F04000100000000000853616D706C654E6F01004A00000001000557494454
+      4802000200280003416765080004000000000007416765506C75730800040000
       000000084167654D696E75730800040000000000084C61746974756465080004
       0000000000094C6F6E676974756465080004000000000009456C65766174696F
       6E08000400000000000C436F6C756D6E4E6F4461746504000100000000000852
@@ -373,17 +366,17 @@ object dmgDV: TdmgDV
     FieldDefs = <
       item
         Name = 'Interpretation'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
         Name = 'AgeBand'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
         Name = 'InterpAbr'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
@@ -392,7 +385,7 @@ object dmgDV: TdmgDV
       end
       item
         Name = 'SampleNo'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
@@ -432,19 +425,19 @@ object dmgDV: TdmgDV
     StoreDefs = True
     Left = 38
     Top = 96
-    object cdsTempDataMapInterpretation: TStringField
+    object cdsTempDataMapInterpretation: TWideStringField
       FieldName = 'Interpretation'
     end
-    object cdsTempDataMapAgeBand: TStringField
+    object cdsTempDataMapAgeBand: TWideStringField
       FieldName = 'AgeBand'
     end
-    object cdsTempDataMapInterpAbr: TStringField
+    object cdsTempDataMapInterpAbr: TWideStringField
       FieldName = 'InterpAbr'
     end
     object cdsTempDataMapColumnNo: TIntegerField
       FieldName = 'ColumnNo'
     end
-    object cdsTempDataMapSampleNo: TStringField
+    object cdsTempDataMapSampleNo: TWideStringField
       FieldName = 'SampleNo'
     end
     object cdsTempDataMapAge: TFloatField
@@ -475,11 +468,11 @@ object dmgDV: TdmgDV
   object cdsTempDataDI: TClientDataSet
     PersistDataPacket.Data = {
       F00000009619E0BD010000001800000009000000000003000000F0000E496E74
-      6572707265746174696F6E010049000000010005574944544802000200140003
-      416765080004000000000008537569744E616D65010049000000010005574944
-      544802000200140009496E746572704162720100490000000100055749445448
-      0200020014000847726F7570696E670100490000000100055749445448020002
-      00140008436F6C756D6E4E6F02000100000000000A4167654572726F72417608
+      6572707265746174696F6E01004A000000010005574944544802000200280003
+      416765080004000000000008537569744E616D6501004A000000010005574944
+      544802000200280009496E7465727041627201004A0000000100055749445448
+      020002000A000847726F7570696E6701004A0000000100055749445448020002
+      00280008436F6C756D6E4E6F02000100000000000A4167654572726F72417608
       000400000000000C416765506C75734572726F7208000400000000000D416765
       4D696E75734572726F7208000400000000000000}
     Active = True
@@ -487,7 +480,7 @@ object dmgDV: TdmgDV
     FieldDefs = <
       item
         Name = 'Interpretation'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
@@ -496,17 +489,17 @@ object dmgDV: TdmgDV
       end
       item
         Name = 'SuitName'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
         Name = 'InterpAbr'
-        DataType = ftString
-        Size = 20
+        DataType = ftWideString
+        Size = 5
       end
       item
         Name = 'Grouping'
-        DataType = ftString
+        DataType = ftWideString
         Size = 20
       end
       item
@@ -530,20 +523,20 @@ object dmgDV: TdmgDV
     StoreDefs = True
     Left = 38
     Top = 140
-    object cdsTempDataDIInterpretation: TStringField
+    object cdsTempDataDIInterpretation: TWideStringField
       FieldName = 'Interpretation'
     end
     object cdsTempDataDIAge: TFloatField
       FieldName = 'Age'
     end
-    object cdsTempDataDISuitName: TStringField
+    object cdsTempDataDISuitName: TWideStringField
       FieldName = 'SuitName'
     end
-    object cdsTempDataDIInterpAbr: TStringField
+    object cdsTempDataDIInterpAbr: TWideStringField
       FieldName = 'InterpAbr'
       Size = 5
     end
-    object cdsTempDataDIGrouping: TStringField
+    object cdsTempDataDIGrouping: TWideStringField
       FieldName = 'Grouping'
     end
     object cdsTempDataDIColumnNo: TSmallintField
@@ -562,11 +555,11 @@ object dmgDV: TdmgDV
   object cdsTempDataDT: TClientDataSet
     PersistDataPacket.Data = {
       290100009619E0BD01000000180000000B00000000000300000029010847726F
-      7570696E6701004900000001000557494454480200020014000B4D6174657269
-      616C41627201004900000001000557494454480200020005000949736F537973
-      74656D0100490000000100055749445448020002000F000B417070726F616368
-      4162720100490000000100055749445448020002000500034167650800040000
-      00000008537569744E616D650100490000000100055749445448020002003200
+      7570696E6701004A00000001000557494454480200020028000B4D6174657269
+      616C41627201004A0000000100055749445448020002000A000949736F537973
+      74656D01004A0000000100055749445448020002001E000B417070726F616368
+      41627201004A0000000100055749445448020002000A00034167650800040000
+      00000008537569744E616D6501004A0000000100055749445448020002006400
       08436F6C756D6E4E6F02000100000000000C416765506C75734572726F720800
       0400000000000D4167654D696E75734572726F72080004000000000009426C6F
       636B696E6754080004000000000014426C6F636B696E6754556E636572746169
@@ -576,21 +569,21 @@ object dmgDV: TdmgDV
     Params = <>
     Left = 38
     Top = 238
-    object cdsTempDataDTGrouping: TStringField
+    object cdsTempDataDTGrouping: TWideStringField
       FieldName = 'Grouping'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsTempDataDTMaterialAbr: TStringField
+    object cdsTempDataDTMaterialAbr: TWideStringField
       FieldName = 'MaterialAbr'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Size = 5
     end
-    object cdsTempDataDTIsoSystem: TStringField
+    object cdsTempDataDTIsoSystem: TWideStringField
       FieldName = 'IsoSystem'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Size = 15
     end
-    object cdsTempDataDTApproachAbr: TStringField
+    object cdsTempDataDTApproachAbr: TWideStringField
       FieldName = 'ApproachAbr'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Size = 5
@@ -600,7 +593,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       DisplayFormat = '###0.00'
     end
-    object cdsTempDataDTSuitName: TStringField
+    object cdsTempDataDTSuitName: TWideStringField
       FieldName = 'SuitName'
       Size = 50
     end
@@ -627,11 +620,11 @@ object dmgDV: TdmgDV
   object cdsTempDataDG: TClientDataSet
     PersistDataPacket.Data = {
       F00000009619E0BD010000001800000009000000000003000000F0000847726F
-      7570696E67010049000000010005574944544802000200140003416765080004
-      000000000008537569744E616D65010049000000010005574944544802000200
-      320009496E746572704162720100490000000100055749445448020002000500
-      0E496E746572707265746174696F6E0100490000000100055749445448020002
-      00140008436F6C756D6E4E6F02000100000000000A4167654572726F72417608
+      7570696E6701004A000000010005574944544802000200280003416765080004
+      000000000008537569744E616D6501004A000000010005574944544802000200
+      640009496E7465727041627201004A0000000100055749445448020002000A00
+      0E496E746572707265746174696F6E01004A0000000100055749445448020002
+      00280008436F6C756D6E4E6F02000100000000000A4167654572726F72417608
       000400000000000C416765506C75734572726F7208000400000000000D416765
       4D696E75734572726F7208000400000000000000}
     Active = True
@@ -639,22 +632,22 @@ object dmgDV: TdmgDV
     Params = <>
     Left = 40
     Top = 282
-    object cdsTempDataDGGrouping: TStringField
+    object cdsTempDataDGGrouping: TWideStringField
       FieldName = 'Grouping'
     end
     object cdsTempDataDGAge: TFloatField
       FieldName = 'Age'
       DisplayFormat = '###0.00'
     end
-    object cdsTempDataDGSuitName: TStringField
+    object cdsTempDataDGSuitName: TWideStringField
       FieldName = 'SuitName'
       Size = 50
     end
-    object cdsTempDataDGInterpAbr: TStringField
+    object cdsTempDataDGInterpAbr: TWideStringField
       FieldName = 'InterpAbr'
       Size = 5
     end
-    object cdsTempDataDGInterpretation: TStringField
+    object cdsTempDataDGInterpretation: TWideStringField
       FieldName = 'Interpretation'
     end
     object cdsTempDataDGColumnNo: TSmallintField
@@ -693,7 +686,7 @@ object dmgDV: TdmgDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object QdmGroupingGROUPING: TStringField
+    object QdmGroupingGROUPING: TWideStringField
       FieldName = 'GROUPING'
       Required = True
     end
@@ -719,32 +712,32 @@ object dmgDV: TdmgDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object QdmSmpISOSYSTEM: TStringField
+    object QdmSmpISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object QdmSmpSAMPLENO: TStringField
+    object QdmSmpSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object QdmSmpFRAC: TStringField
+    object QdmSmpFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object QdmSmpINCLUDED: TStringField
+    object QdmSmpINCLUDED: TWideStringField
       FieldName = 'INCLUDED'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object QdmSmpCONTINENTID: TStringField
+    object QdmSmpCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object QdmSmpCOUNTRYABR: TStringField
+    object QdmSmpCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
@@ -790,7 +783,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object QdmProvinceDOMAINNAME: TStringField
+    object QdmProvinceDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ReadOnly = True
       Size = 65
@@ -823,7 +816,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object QdmTerraneDOMAINNAME: TStringField
+    object QdmTerraneDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ReadOnly = True
       Size = 65
@@ -849,7 +842,7 @@ object dmgDV: TdmgDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object QdmOrogenicPeriodOROGENICPERIODID: TStringField
+    object QdmOrogenicPeriodOROGENICPERIODID: TWideStringField
       FieldName = 'OROGENICPERIODID'
       Required = True
       Size = 4
@@ -875,7 +868,7 @@ object dmgDV: TdmgDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object QdmChemTypeCHEMTYPEABR: TStringField
+    object QdmChemTypeCHEMTYPEABR: TWideStringField
       FieldName = 'CHEMTYPEABR'
       Required = True
       Size = 5
@@ -959,17 +952,17 @@ object dmgDV: TdmgDV
     SQLConnection = sqlcDateView
     Left = 144
     Top = 446
-    object QdmBlockingTMATERIALABR: TStringField
+    object QdmBlockingTMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object QdmBlockingTISOSYSTEM: TStringField
+    object QdmBlockingTISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object QdmBlockingTAPPROACHABR: TStringField
+    object QdmBlockingTAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
@@ -1005,7 +998,7 @@ object dmgDV: TdmgDV
       FieldName = 'BOUNDARYID'
       Required = True
     end
-    object QdmBoundaryBOUNDPOSID: TStringField
+    object QdmBoundaryBOUNDPOSID: TWideStringField
       FieldName = 'BOUNDPOSID'
       Required = True
       Size = 2
@@ -1027,7 +1020,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmGroupingGROUPING: TStringField
+    object cdsQdmGroupingGROUPING: TWideStringField
       FieldName = 'GROUPING'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1044,35 +1037,35 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmSmpISOSYSTEM: TStringField
+    object cdsQdmSmpISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQdmSmpSAMPLENO: TStringField
+    object cdsQdmSmpSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmSmpFRAC: TStringField
+    object cdsQdmSmpFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQdmSmpINCLUDED: TStringField
+    object cdsQdmSmpINCLUDED: TWideStringField
       FieldName = 'INCLUDED'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsQdmSmpCONTINENTID: TStringField
+    object cdsQdmSmpCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsQdmSmpCOUNTRYABR: TStringField
+    object cdsQdmSmpCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
@@ -1106,7 +1099,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmProvinceDOMAINNAME: TStringField
+    object cdsQdmProvinceDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ReadOnly = True
       Size = 65
@@ -1127,7 +1120,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmTerraneDOMAINNAME: TStringField
+    object cdsQdmTerraneDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ReadOnly = True
       Size = 65
@@ -1144,7 +1137,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmOrogenicPeriodOROGENICPERIODID: TStringField
+    object cdsQdmOrogenicPeriodOROGENICPERIODID: TWideStringField
       FieldName = 'OROGENICPERIODID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1162,7 +1155,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmChemTypeCHEMTYPEABR: TStringField
+    object cdsQdmChemTypeCHEMTYPEABR: TWideStringField
       FieldName = 'CHEMTYPEABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1185,7 +1178,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmBoundaryBOUNDPOSID: TStringField
+    object cdsQdmBoundaryBOUNDPOSID: TWideStringField
       FieldName = 'BOUNDPOSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1237,19 +1230,19 @@ object dmgDV: TdmgDV
     Params = <>
     Left = 172
     Top = 446
-    object cdsQdmBlockingTMATERIALABR: TStringField
+    object cdsQdmBlockingTMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQdmBlockingTISOSYSTEM: TStringField
+    object cdsQdmBlockingTISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQdmBlockingTAPPROACHABR: TStringField
+    object cdsQdmBlockingTAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1410,17 +1403,17 @@ object dmgDV: TdmgDV
   object cdsTempDataI: TClientDataSet
     PersistDataPacket.Data = {
       9E0000009619E0BD0100000018000000060000000000030000009E000E496E74
-      6572707265746174696F6E010049000000010005574944544802000200140006
+      6572707265746174696F6E01004A000000010005574944544802000200280006
       506C6F744E6F020001000000000008436F6C756D6E4E6F020001000000000009
       5661726961626C65580800040000000000095661726961626C65590800040000
-      0000000847726F7570696E670100490000000100055749445448020002001400
+      0000000847726F7570696E6701004A0000000100055749445448020002002800
       0000}
     Active = True
     Aggregates = <>
     Params = <>
     Left = 38
     Top = 186
-    object cdsTempDataIInterpretation: TStringField
+    object cdsTempDataIInterpretation: TWideStringField
       FieldName = 'Interpretation'
     end
     object cdsTempDataIPlotNo: TSmallintField
@@ -1437,7 +1430,7 @@ object dmgDV: TdmgDV
       FieldName = 'VariableY'
       DisplayFormat = '###0.000000'
     end
-    object cdsTempDataIGrouping: TStringField
+    object cdsTempDataIGrouping: TWideStringField
       FieldName = 'Grouping'
     end
   end
@@ -1461,12 +1454,12 @@ object dmgDV: TdmgDV
     ProviderName = 'dspVariables'
     Left = 338
     Top = 86
-    object cdsVariablesVARIABLEABR: TStringField
+    object cdsVariablesVARIABLEABR: TWideStringField
       FieldName = 'VARIABLEABR'
       Required = True
       Size = 5
     end
-    object cdsVariablesVARIABLENAME: TStringField
+    object cdsVariablesVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Required = True
       Size = 60
@@ -1481,8 +1474,8 @@ object dmgDV: TdmgDV
     PersistDataPacket.Data = {
       6C0000009619E0BD0100000018000000040000000000030000006C000B437572
       76654E756D62657204000100000000000341676508000400000000000A437572
-      766556616C756508000400000000000A43757276655469746C65010049000000
-      01000557494454480200020014000000}
+      766556616C756508000400000000000A43757276655469746C6501004A000000
+      01000557494454480200020028000000}
     Active = True
     Aggregates = <>
     Params = <>
@@ -1501,7 +1494,7 @@ object dmgDV: TdmgDV
       FieldName = 'CurveValue'
       DisplayFormat = '##0.000'
     end
-    object cdsTempDataProbCurveTitle: TStringField
+    object cdsTempDataProbCurveTitle: TWideStringField
       FieldName = 'CurveTitle'
     end
   end
@@ -1569,7 +1562,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydm2'
     Left = 494
     Top = 22
-    object cdsQuerydm2OPTIONTITLE: TStringField
+    object cdsQuerydm2OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1585,7 +1578,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydm2INTERPABR: TStringField
+    object cdsQuerydm2INTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -1594,7 +1587,7 @@ object dmgDV: TdmgDV
       FieldName = 'OPTIONID'
       Required = True
     end
-    object cdsQuerydm2OPTIONTITLE_1: TStringField
+    object cdsQuerydm2OPTIONTITLE_1: TWideStringField
       FieldName = 'OPTIONTITLE_1'
       Required = True
       Size = 30
@@ -1607,7 +1600,7 @@ object dmgDV: TdmgDV
       FieldName = 'RAGEMERROR'
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydm2UNITNAME: TStringField
+    object cdsQuerydm2UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -1646,7 +1639,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspGroupingLink'
     Left = 340
     Top = 140
-    object cdsGroupingLinkUSERID: TStringField
+    object cdsGroupingLinkUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1656,7 +1649,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsGroupingLinkGROUPINGLINK: TStringField
+    object cdsGroupingLinkGROUPINGLINK: TWideStringField
       FieldName = 'GROUPINGLINK'
       Required = True
       Size = 30
@@ -1710,7 +1703,7 @@ object dmgDV: TdmgDV
     SQLConnection = sqlcDateView
     Left = 438
     Top = 74
-    object QuerydmDIOPTIONTITLE: TStringField
+    object QuerydmDIOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1722,17 +1715,17 @@ object dmgDV: TdmgDV
       FieldName = 'UNITID'
       Required = True
     end
-    object QuerydmDIUNITNAME: TStringField
+    object QuerydmDIUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object QuerydmDIINTERPABR: TStringField
+    object QuerydmDIINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
     end
-    object QuerydmDIOPTIONTITLE_1: TStringField
+    object QuerydmDIOPTIONTITLE_1: TWideStringField
       FieldName = 'OPTIONTITLE_1'
       Required = True
       Size = 30
@@ -1759,7 +1752,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydmDI'
     Left = 454
     Top = 122
-    object cdsQuerydmDIOPTIONTITLE: TStringField
+    object cdsQuerydmDIOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1772,13 +1765,13 @@ object dmgDV: TdmgDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsQuerydmDIUNITNAME: TStringField
+    object cdsQuerydmDIUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsQuerydmDIINTERPABR: TStringField
+    object cdsQuerydmDIINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -1845,7 +1838,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydmDG'
     Left = 494
     Top = 120
-    object cdsQuerydmDGGROUPINGLINK: TStringField
+    object cdsQuerydmDGGROUPINGLINK: TWideStringField
       FieldName = 'GROUPINGLINK'
       Required = True
       Size = 30
@@ -1858,13 +1851,13 @@ object dmgDV: TdmgDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsQuerydmDGUNITNAME: TStringField
+    object cdsQuerydmDGUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsQuerydmDGINTERPABR: TStringField
+    object cdsQuerydmDGINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -1947,7 +1940,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydmI'
     Left = 494
     Top = 166
-    object cdsQuerydmIOPTIONTITLE: TStringField
+    object cdsQuerydmIOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1956,12 +1949,12 @@ object dmgDV: TdmgDV
       FieldName = 'RAGE'
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydmIUNITNAME: TStringField
+    object cdsQuerydmIUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsQuerydmIINTERPABR: TStringField
+    object cdsQuerydmIINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -2060,25 +2053,25 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydmDT'
     Left = 496
     Top = 214
-    object cdsQuerydmDTGROUPINGLINK: TStringField
+    object cdsQuerydmDTGROUPINGLINK: TWideStringField
       FieldName = 'GROUPINGLINK'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 30
     end
-    object cdsQuerydmDTMATERIALABR: TStringField
+    object cdsQuerydmDTMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQuerydmDTISOTOPESYSTEM: TStringField
+    object cdsQuerydmDTISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQuerydmDTAPPROACHABR: TStringField
+    object cdsQuerydmDTAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2089,7 +2082,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydmDTUNITNAME: TStringField
+    object cdsQuerydmDTUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -2106,7 +2099,7 @@ object dmgDV: TdmgDV
       FieldName = 'RAGEMERROR'
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydmDTINTERPABR: TStringField
+    object cdsQuerydmDTINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -2190,12 +2183,12 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQuerydmMISAMPLENO: TStringField
+    object cdsQuerydmMISAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQuerydmMIOPTIONTITLE: TStringField
+    object cdsQuerydmMIOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -2210,7 +2203,7 @@ object dmgDV: TdmgDV
       Required = True
       DisplayFormat = '###0.00000'
     end
-    object cdsQuerydmMIINTERPABR: TStringField
+    object cdsQuerydmMIINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -2291,7 +2284,7 @@ object dmgDV: TdmgDV
     ProviderName = 'dspQuerydmIG'
     Left = 498
     Top = 306
-    object cdsQuerydmIGGROUPINGLINK: TStringField
+    object cdsQuerydmIGGROUPINGLINK: TWideStringField
       FieldName = 'GROUPINGLINK'
       Required = True
       Size = 30
@@ -2300,12 +2293,12 @@ object dmgDV: TdmgDV
       FieldName = 'RAGE'
       DisplayFormat = '###0.00'
     end
-    object cdsQuerydmIGUNITNAME: TStringField
+    object cdsQuerydmIGUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsQuerydmIGINTERPABR: TStringField
+    object cdsQuerydmIGINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -2408,7 +2401,7 @@ object dmgDV: TdmgDV
       FieldName = 'OPTIONID'
       Required = True
     end
-    object cdsQuerydmMIGSAMPLENO: TStringField
+    object cdsQuerydmMIGSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
@@ -2422,12 +2415,12 @@ object dmgDV: TdmgDV
       Required = True
       DisplayFormat = '###0.00000'
     end
-    object cdsQuerydmMIGINTERPABR: TStringField
+    object cdsQuerydmMIGINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
     end
-    object cdsQuerydmMIGGROUPINGLINK: TStringField
+    object cdsQuerydmMIGGROUPINGLINK: TWideStringField
       FieldName = 'GROUPINGLINK'
       Required = True
       Size = 30
@@ -2515,7 +2508,7 @@ object dmgDV: TdmgDV
       FieldName = 'OPTIONID'
       Required = True
     end
-    object cdsQuerydmMESAMPLENO: TStringField
+    object cdsQuerydmMESAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
@@ -2531,12 +2524,12 @@ object dmgDV: TdmgDV
       FieldName = 'ELEVATION'
       Required = True
     end
-    object cdsQuerydmMEINTERPABR: TStringField
+    object cdsQuerydmMEINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
     end
-    object cdsQuerydmMEOPTIONTITLE: TStringField
+    object cdsQuerydmMEOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -2618,7 +2611,7 @@ object dmgDV: TdmgDV
       FieldName = 'LIPID'
       Required = True
     end
-    object QdmLIPLIPNAME: TStringField
+    object QdmLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
@@ -2642,7 +2635,7 @@ object dmgDV: TdmgDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQdmLIPLIPNAME: TStringField
+    object cdsQdmLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50

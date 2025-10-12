@@ -17,6 +17,7 @@ object ISFSamples: TISFSamples
   DesignLeft = 2
   DesignTop = 2
   object iwDBgSmpLoc: TIWDBGrid
+    AlignWithMargins = False
     Left = 98
     Top = 122
     Width = 783
@@ -33,10 +34,13 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -47,6 +51,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -55,7 +60,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SAMPLENO'
@@ -68,6 +72,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -86,6 +91,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,7 +100,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'CONTINENTID'
@@ -105,6 +110,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -123,6 +129,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -131,7 +138,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'COUNTRYABR'
@@ -142,6 +148,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -160,6 +167,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -168,7 +176,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LATITUDE'
@@ -179,6 +186,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -197,6 +205,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -205,7 +214,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LATITUDEPRECISION'
@@ -216,6 +224,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -234,6 +243,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -242,7 +252,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LONGITUDE'
@@ -253,6 +262,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -271,6 +281,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -279,7 +290,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LONGITUDEPRECISION'
@@ -290,6 +300,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -308,6 +319,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -316,7 +328,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ELEVATION'
@@ -327,6 +338,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -345,6 +357,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -353,7 +366,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ELEVATIONPRECISION'
@@ -364,6 +376,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -382,6 +395,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -390,7 +404,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LITHOLOGY'
@@ -401,6 +414,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -419,6 +433,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -427,7 +442,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LITHCLASS'
@@ -438,6 +452,7 @@ object ISFSamples: TISFSamples
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -456,6 +471,7 @@ object ISFSamples: TISFSamples
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -464,7 +480,6 @@ object ISFSamples: TISFSamples
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IGSN'
@@ -474,6 +489,7 @@ object ISFSamples: TISFSamples
         Title.Font.Color = clNone
         Title.Font.Size = 10
         Title.Font.Style = []
+        Title.Font.PxSize = 13
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -501,6 +517,7 @@ object ISFSamples: TISFSamples
     RowCurrentColor = clNone
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 96
     Top = 70
     Width = 75
@@ -510,10 +527,12 @@ object ISFSamples: TISFSamples
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object iwbAddNewSample: TIWButton
+    AlignWithMargins = False
     Left = 196
     Top = 70
     Width = 129
@@ -523,11 +542,13 @@ object ISFSamples: TISFSamples
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewSample'
     TabOrder = 3
     OnClick = iwbAddNewSampleClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -537,6 +558,7 @@ object ISFSamples: TISFSamples
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -546,6 +568,7 @@ object ISFSamples: TISFSamples
     ExplicitHeight = 541
   end
   object iwlFirstPage: TIWLink
+    AlignWithMargins = False
     Left = 102
     Top = 101
     Width = 33
@@ -558,6 +581,7 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlFirstPage'
@@ -567,6 +591,7 @@ object ISFSamples: TISFSamples
     Caption = 'First'
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 142
     Top = 101
     Width = 53
@@ -579,15 +604,17 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
     OnClick = iwlPrevPageClick
-    TabOrder = 7
+    TabOrder = 6
     RawText = False
     Caption = 'Previous'
   end
   object iwlPageNum: TIWLabel
+    AlignWithMargins = False
     Left = 209
     Top = 101
     Width = 21
@@ -597,11 +624,13 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = '999'
   end
   object iwlOf: TIWLabel
+    AlignWithMargins = False
     Left = 236
     Top = 101
     Width = 11
@@ -610,11 +639,13 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlOf'
     Caption = 'of'
   end
   object iwlPageNumTotal: TIWLabel
+    AlignWithMargins = False
     Left = 265
     Top = 101
     Width = 23
@@ -623,11 +654,13 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlPageNumTotal'
     Caption = '999'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 294
     Top = 101
     Width = 35
@@ -640,6 +673,7 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -649,6 +683,7 @@ object ISFSamples: TISFSamples
     Caption = 'Next'
   end
   object iwlLastPage: TIWLink
+    AlignWithMargins = False
     Left = 335
     Top = 101
     Width = 35
@@ -661,6 +696,7 @@ object ISFSamples: TISFSamples
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlLastPage'

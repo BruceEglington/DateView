@@ -2,7 +2,7 @@ object ISFDetailsEdit: TISFDetailsEdit
   Left = 0
   Top = 0
   Width = 1023
-  Height = 3000
+  Height = 3300
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -18,6 +18,7 @@ object ISFDetailsEdit: TISFDetailsEdit
   DesignLeft = 2
   DesignTop = 2
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 96
     Top = 132
     Width = 60
@@ -26,12 +27,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Record ID'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 96
     Top = 88
     Width = 140
@@ -41,108 +44,124 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 158
+    Top = 155
     Width = 27
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Area'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 188
+    Top = 190
     Width = 101
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel3'
     Caption = 'Stratigraphic unit'
   end
   object IWLabel4: TIWLabel
-    Left = 618
-    Top = 188
+    AlignWithMargins = False
+    Left = 611
+    Top = 190
     Width = 53
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel4'
     Caption = 'Lithology'
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 232
+    Top = 228
     Width = 105
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel5'
     Caption = 'Material analysed'
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 260
+    Top = 262
     Width = 92
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel6'
     Caption = 'Isotope system'
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 286
+    Top = 289
     Width = 57
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel7'
     Caption = 'Approach'
   end
   object IWLabel8: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 312
+    Top = 316
     Width = 63
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel8'
     Caption = 'Technique'
   end
   object IWLabel9: TIWLabel
+    AlignWithMargins = False
     Left = 96
     Top = 342
     Width = 79
@@ -151,12 +170,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel9'
     Caption = 'Interpretation'
   end
   object IWLabel10: TIWLabel
+    AlignWithMargins = False
     Left = 490
     Top = 342
     Width = 39
@@ -165,28 +186,32 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel10'
     Caption = 'Rating'
   end
   object IWLabel11: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 366
+    Top = 390
     Width = 39
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel11'
     Caption = 'Date ='
   end
-  object IWDBEdit11: TIWDBEdit
+  object iwDBeRAGE: TIWDBEdit
+    AlignWithMargins = False
     Left = 208
-    Top = 365
+    Top = 389
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -197,31 +222,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FriendlyName = 'IWDBEdit1'
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGE'
     SubmitOnAsyncEvent = True
     TabOrder = 5
     AutoEditable = True
     DataField = 'RAGE'
-    DataSource = dmDV.dscdsResults
+    DataSource = dmDV.dscdsResults2
     PasswordPrompt = False
   end
   object IWLabel12: TIWLabel
-    Left = 268
-    Top = 366
+    AlignWithMargins = False
+    Left = 270
+    Top = 390
     Width = 7
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel12'
     Caption = '+'
   end
-  object IWDBEdit12: TIWDBEdit
-    Left = 278
-    Top = 365
+  object iwDBeRAGEPERRORALL: TIWDBEdit
+    AlignWithMargins = False
+    Left = 280
+    Top = 389
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -232,31 +261,36 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FriendlyName = 'IWDBEdit1'
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGEPERRORALL'
+    MaxLength = 5
     SubmitOnAsyncEvent = True
-    TabOrder = 6
+    TabOrder = 10
     AutoEditable = True
-    DataField = 'RAGEPERROR'
-    DataSource = dmDV.dscdsResults
+    DataField = 'RAGEPERRORALL'
+    DataSource = dmDV.dscdsResults2
     PasswordPrompt = False
   end
   object IWLabel13: TIWLabel
-    Left = 338
-    Top = 366
+    AlignWithMargins = False
+    Left = 340
+    Top = 390
     Width = 4
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel13'
     Caption = '-'
   end
-  object IWDBEdit13: TIWDBEdit
-    Left = 346
-    Top = 365
+  object iwDBeRAGEMERRORALL: TIWDBEdit
+    AlignWithMargins = False
+    Left = 348
+    Top = 389
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -267,31 +301,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FriendlyName = 'IWDBEdit1'
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGEMERRORALL'
     SubmitOnAsyncEvent = True
-    TabOrder = 7
+    TabOrder = 11
     AutoEditable = True
-    DataField = 'RAGEMERROR'
-    DataSource = dmDV.dscdsResults
+    DataField = 'RAGEMERRORALL'
+    DataSource = dmDV.dscdsResults2
     PasswordPrompt = False
   end
   object IWLabel15: TIWLabel
-    Left = 96
-    Top = 412
+    AlignWithMargins = False
+    Left = 94
+    Top = 564
     Width = 60
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel15'
     Caption = 'Weighting'
   end
   object iwDBeWeighting: TIWDBEdit
-    Left = 208
-    Top = 413
+    AlignWithMargins = False
+    Left = 206
+    Top = 565
     Width = 323
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -301,31 +339,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeWeighting'
     SubmitOnAsyncEvent = True
-    TabOrder = 12
+    TabOrder = 16
     AutoEditable = True
     DataField = 'WEIGHTING'
     DataSource = dmDV.dsIsoOther
     PasswordPrompt = False
   end
   object iwlDC1: TIWLabel
-    Left = 96
-    Top = 586
+    AlignWithMargins = False
+    Left = 94
+    Top = 738
     Width = 114
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlDC1'
     Caption = 'Decay constant 1 ='
   end
   object iwDBeDC1: TIWDBEdit
-    Left = 208
-    Top = 587
+    AlignWithMargins = False
+    Left = 206
+    Top = 739
     Width = 93
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -336,31 +378,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 24
+    TabOrder = 29
     AutoEditable = True
     DataField = 'DECAYCONST1'
     DataSource = dmDV.dsResultsExtra
     PasswordPrompt = False
   end
   object iwlDC1error: TIWLabel
-    Left = 308
-    Top = 586
+    AlignWithMargins = False
+    Left = 306
+    Top = 738
     Width = 83
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlDC1error'
     Caption = '+/- 1 sigma %'
   end
   object iwDBeDC1error: TIWDBEdit
-    Left = 394
-    Top = 587
+    AlignWithMargins = False
+    Left = 392
+    Top = 739
     Width = 46
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -370,59 +416,67 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 25
+    TabOrder = 30
     AutoEditable = True
     DataField = 'SIGMAPERCENTDC1'
     DataSource = dmDV.dsResultsExtra
     PasswordPrompt = False
   end
   object IWLabel18: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 718
+    Top = 1018
     Width = 70
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel18'
     Caption = 'References'
   end
   object IWLabel19: TIWLabel
-    Left = 524
-    Top = 366
-    Width = 105
+    AlignWithMargins = False
+    Left = 526
+    Top = 390
+    Width = 262
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel19'
-    Caption = '(95% confidence)'
+    Caption = '(95% confidence including all uncertainties)'
   end
   object iwlOtherIntercept: TIWLabel
-    Left = 96
-    Top = 388
+    AlignWithMargins = False
+    Left = 94
+    Top = 500
     Width = 99
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlOtherIntercept'
     Caption = 'Other intercept ='
   end
   object iwDBeOtherIntercept: TIWDBEdit
-    Left = 208
-    Top = 389
+    AlignWithMargins = False
+    Left = 206
+    Top = 500
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -433,31 +487,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeOtherIntercept'
     SubmitOnAsyncEvent = True
-    TabOrder = 9
+    TabOrder = 13
     AutoEditable = True
     DataField = 'LWRINTERCEPT'
     DataSource = dmDV.dsIsoOther
     PasswordPrompt = False
   end
   object iwlOtherInterceptPError: TIWLabel
-    Left = 268
-    Top = 388
+    AlignWithMargins = False
+    Left = 266
+    Top = 500
     Width = 7
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlOtherInterceptPError'
     Caption = '+'
   end
   object iwDBeOtherInterceptPError: TIWDBEdit
-    Left = 278
-    Top = 389
+    AlignWithMargins = False
+    Left = 276
+    Top = 500
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -468,31 +526,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeOtherInterceptPError'
     SubmitOnAsyncEvent = True
-    TabOrder = 10
+    TabOrder = 14
     AutoEditable = True
     DataField = 'LWRPERROR'
     DataSource = dmDV.dsIsoOther
     PasswordPrompt = False
   end
   object iwlOtherInterceptMError: TIWLabel
-    Left = 338
-    Top = 388
+    AlignWithMargins = False
+    Left = 336
+    Top = 500
     Width = 4
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlOtherInterceptMError'
     Caption = '-'
   end
   object iwDBeOtherInterceptMError: TIWDBEdit
-    Left = 346
-    Top = 389
+    AlignWithMargins = False
+    Left = 344
+    Top = 500
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -503,31 +565,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeOtherInterceptMError'
     SubmitOnAsyncEvent = True
-    TabOrder = 11
+    TabOrder = 15
     AutoEditable = True
     DataField = 'LWRMERROR'
     DataSource = dmDV.dsIsoOther
     PasswordPrompt = False
   end
   object iwlDC2: TIWLabel
-    Left = 488
-    Top = 586
+    AlignWithMargins = False
+    Left = 486
+    Top = 738
     Width = 114
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlDC2'
     Caption = 'Decay constant 2 ='
   end
   object iwDBeDC2: TIWDBEdit
-    Left = 596
-    Top = 587
+    AlignWithMargins = False
+    Left = 594
+    Top = 739
     Width = 93
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -538,31 +604,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 26
+    TabOrder = 31
     AutoEditable = True
     DataField = 'DECAYCONST2'
     DataSource = dmDV.dsResultsExtra
     PasswordPrompt = False
   end
   object iwlDC2error: TIWLabel
-    Left = 696
-    Top = 586
+    AlignWithMargins = False
+    Left = 694
+    Top = 738
     Width = 83
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlDC2error'
     Caption = '+/- 1 sigma %'
   end
   object iwDBeDC2error: TIWDBEdit
-    Left = 782
-    Top = 587
+    AlignWithMargins = False
+    Left = 780
+    Top = 739
     Width = 44
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -572,17 +642,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 27
+    TabOrder = 32
     AutoEditable = True
     DataField = 'SIGMAPERCENTDC2'
     DataSource = dmDV.dsResultsExtra
     PasswordPrompt = False
   end
   object iwDBgReference: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 717
+    Top = 1017
     Width = 679
     Height = 105
     BorderColors.Color = clNone
@@ -597,10 +669,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -611,6 +686,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -630,6 +706,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -648,6 +725,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -667,6 +745,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -685,6 +764,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -706,6 +786,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -733,8 +814,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwDBgValidation: TIWDBGrid
+    AlignWithMargins = False
     Left = 232
-    Top = 1097
+    Top = 1397
     Width = 541
     Height = 161
     BorderColors.Color = clNone
@@ -749,10 +831,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -763,6 +848,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -784,6 +870,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -802,6 +889,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -821,6 +909,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -839,6 +928,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -858,6 +948,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -885,22 +976,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel24: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1100
+    Top = 1400
     Width = 100
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel24'
     Caption = 'Validation status'
   end
   object iwDBgSample: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 2221
+    Top = 2521
     Width = 731
     Height = 150
     BorderColors.Color = clNone
@@ -915,10 +1009,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = []
+    Font.PxSize = 10
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -929,6 +1026,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -950,6 +1048,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -968,6 +1067,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -987,6 +1087,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1005,6 +1106,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1024,6 +1126,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1042,6 +1145,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1062,6 +1166,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1080,6 +1185,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1100,6 +1206,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1118,6 +1225,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1138,6 +1246,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1156,6 +1265,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1175,6 +1285,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1193,6 +1304,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1212,6 +1324,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1230,6 +1343,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1249,6 +1363,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1267,6 +1382,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1286,6 +1402,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1304,6 +1421,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1323,6 +1441,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1341,6 +1460,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -1360,6 +1480,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1387,36 +1508,41 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel25: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 2226
+    Top = 2526
     Width = 55
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel25'
     Caption = 'Samples'
   end
   object IWLabel26: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1454
+    Top = 1754
     Width = 51
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel26'
     Caption = 'Province'
   end
   object iwDBgProvince: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 1450
+    Top = 1750
     Width = 257
     Height = 139
     BorderColors.Color = clNone
@@ -1431,10 +1557,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -1445,6 +1574,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -1466,6 +1596,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1484,6 +1615,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -1503,6 +1635,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1530,8 +1663,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwDBgTerrane: TIWDBGrid
+    AlignWithMargins = False
     Left = 656
-    Top = 1449
+    Top = 1750
     Width = 257
     Height = 139
     BorderColors.Color = clNone
@@ -1546,10 +1680,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -1560,6 +1697,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -1581,6 +1719,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1599,6 +1738,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -1618,6 +1758,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1645,22 +1786,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel27: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1740
+    Top = 2040
     Width = 132
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel27'
     Caption = 'Chemical association'
   end
   object iwDBgChemicalType: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 1735
+    Top = 2035
     Width = 257
     Height = 109
     BorderColors.Color = clNone
@@ -1675,10 +1819,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -1688,6 +1835,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.Color = clNone
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         Header = False
         Height = '0'
         ShowHint = True
@@ -1708,6 +1856,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.Color = clNone
         Title.Font.Size = 10
         Title.Font.Style = []
+        Title.Font.PxSize = 13
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1735,8 +1884,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwDBgOrogenicPeriod: TIWDBGrid
+    AlignWithMargins = False
     Left = 656
-    Top = 1735
+    Top = 2035
     Width = 257
     Height = 109
     BorderColors.Color = clNone
@@ -1751,10 +1901,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -1765,6 +1918,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -1786,6 +1940,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -1813,22 +1968,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel28: TIWLabel
-    Left = 96
-    Top = 438
+    AlignWithMargins = False
+    Left = 94
+    Top = 590
     Width = 83
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel28'
     Caption = 'Augmentation'
   end
   object iwDBeAugmentation: TIWDBEdit
-    Left = 208
-    Top = 437
+    AlignWithMargins = False
+    Left = 206
+    Top = 589
     Width = 323
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -1838,31 +1996,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 13
+    TabOrder = 17
     AutoEditable = True
     DataField = 'AUGMENTATION'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel29: TIWLabel
-    Left = 96
-    Top = 462
+    AlignWithMargins = False
+    Left = 94
+    Top = 614
     Width = 66
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel29'
     Caption = 'Ludwig p ='
   end
   object iwDBeLudwig: TIWDBEdit
-    Left = 208
-    Top = 461
+    AlignWithMargins = False
+    Left = 206
+    Top = 613
     Width = 47
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -1872,31 +2034,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 14
+    TabOrder = 18
     AutoEditable = True
     DataField = 'LUDWIGP'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel30: TIWLabel
-    Left = 96
-    Top = 486
+    AlignWithMargins = False
+    Left = 94
+    Top = 638
     Width = 70
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel30'
     Caption = 'Constraints'
   end
   object iwDBeConstraints: TIWDBEdit
-    Left = 208
-    Top = 486
+    AlignWithMargins = False
+    Left = 206
+    Top = 638
     Width = 323
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -1906,31 +2072,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 15
+    TabOrder = 19
     AutoEditable = True
     DataField = 'CONSTRAINTS'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel31: TIWLabel
-    Left = 96
-    Top = 512
+    AlignWithMargins = False
+    Left = 94
+    Top = 664
     Width = 96
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel31'
     Caption = 'Age constraint ='
   end
   object iwDBeAgeConstrain: TIWDBEdit
-    Left = 208
-    Top = 511
+    AlignWithMargins = False
+    Left = 206
+    Top = 663
     Width = 57
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -1940,31 +2110,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 16
+    TabOrder = 20
     AutoEditable = True
     DataField = 'AGECONSTRAIN'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel32: TIWLabel
-    Left = 96
-    Top = 536
+    AlignWithMargins = False
+    Left = 94
+    Top = 688
     Width = 81
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel32'
     Caption = 'X constraint ='
   end
   object iwDBeXConstrain: TIWDBEdit
-    Left = 208
-    Top = 535
+    AlignWithMargins = False
+    Left = 206
+    Top = 687
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -1975,31 +2149,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 18
+    TabOrder = 22
     AutoEditable = True
     DataField = 'XCONSTRAIN'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel33: TIWLabel
-    Left = 346
-    Top = 536
+    AlignWithMargins = False
+    Left = 344
+    Top = 688
     Width = 70
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel33'
     Caption = 'Y constraint'
   end
   object iwDBeYConstrain: TIWDBEdit
-    Left = 416
-    Top = 535
+    AlignWithMargins = False
+    Left = 414
+    Top = 687
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2010,17 +2188,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 19
+    TabOrder = 23
     AutoEditable = True
     DataField = 'YCONSTRAIN'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object iwDBeZConstrain: TIWDBEdit
-    Left = 626
-    Top = 535
+    AlignWithMargins = False
+    Left = 624
+    Top = 687
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2031,45 +2211,51 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 20
+    TabOrder = 24
     AutoEditable = True
     DataField = 'ZCONSTRAIN'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel34: TIWLabel
-    Left = 556
-    Top = 536
+    AlignWithMargins = False
+    Left = 554
+    Top = 688
     Width = 70
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel34'
     Caption = 'Z constraint'
   end
   object IWLabel35: TIWLabel
-    Left = 96
-    Top = 560
+    AlignWithMargins = False
+    Left = 94
+    Top = 712
     Width = 59
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel35'
     Caption = 'X centroid'
   end
   object iwDBeXCentroid: TIWDBEdit
-    Left = 208
-    Top = 559
+    AlignWithMargins = False
+    Left = 206
+    Top = 711
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2080,31 +2266,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 21
+    TabOrder = 25
     AutoEditable = True
     DataField = 'XCENTROID'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel36: TIWLabel
-    Left = 346
-    Top = 560
+    AlignWithMargins = False
+    Left = 344
+    Top = 712
     Width = 59
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel36'
     Caption = 'Y centroid'
   end
   object iwDBeYCentroid: TIWDBEdit
-    Left = 416
-    Top = 559
+    AlignWithMargins = False
+    Left = 414
+    Top = 711
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2115,31 +2305,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 22
+    TabOrder = 26
     AutoEditable = True
     DataField = 'YCENTROID'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel37: TIWLabel
-    Left = 556
-    Top = 560
+    AlignWithMargins = False
+    Left = 554
+    Top = 712
     Width = 59
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel37'
     Caption = 'Z centroid'
   end
   object iwDBeZCentroid: TIWDBEdit
-    Left = 626
-    Top = 559
+    AlignWithMargins = False
+    Left = 624
+    Top = 711
     Width = 97
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2150,31 +2344,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 23
+    TabOrder = 27
     AutoEditable = True
     DataField = 'ZCENTROID'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel38: TIWLabel
-    Left = 346
-    Top = 512
+    AlignWithMargins = False
+    Left = 344
+    Top = 664
     Width = 174
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel38'
     Caption = 'Regression performed using'
   end
   object iwDBeProgName: TIWDBEdit
-    Left = 512
-    Top = 511
+    AlignWithMargins = False
+    Left = 510
+    Top = 663
     Width = 211
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2184,31 +2382,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 17
+    TabOrder = 21
     AutoEditable = True
     DataField = 'PROGNAME'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel39: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 612
+    Top = 844
     Width = 104
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel39'
     Caption = 'Probability of fit = '
   end
   object iwDBeProbOfFit: TIWDBEdit
+    AlignWithMargins = False
     Left = 208
-    Top = 611
+    Top = 843
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2219,31 +2421,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 28
+    TabOrder = 33
     AutoEditable = True
     DataField = 'PROBOFFIT'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel40: TIWLabel
+    AlignWithMargins = False
     Left = 270
-    Top = 610
+    Top = 842
     Width = 108
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel40'
     Caption = 'relative to Alpha = '
   end
   object iwDBeAlpha: TIWDBEdit
+    AlignWithMargins = False
     Left = 386
-    Top = 611
+    Top = 843
     Width = 45
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2254,31 +2460,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 29
+    TabOrder = 34
     AutoEditable = True
     DataField = 'ALPHA'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel41: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 638
+    Top = 870
     Width = 51
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel41'
     Caption = 'MSWD ='
   end
   object iwDBeMSWD: TIWDBEdit
+    AlignWithMargins = False
     Left = 208
-    Top = 637
+    Top = 869
     Width = 53
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2289,31 +2499,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 30
+    TabOrder = 35
     AutoEditable = True
     DataField = 'MSWD'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel42: TIWLabel
+    AlignWithMargins = False
     Left = 270
-    Top = 636
+    Top = 868
     Width = 118
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel42'
     Caption = 'relative to F cut-off ='
   end
   object iwDBeFcutoff: TIWDBEdit
+    AlignWithMargins = False
     Left = 386
-    Top = 637
+    Top = 869
     Width = 45
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2324,31 +2538,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 31
+    TabOrder = 36
     AutoEditable = True
     DataField = 'FCUTOFF'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel43: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 688
+    Top = 920
     Width = 169
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel43'
     Caption = 'Probability of concordance ='
   end
   object iwDBeProbConcord: TIWDBEdit
+    AlignWithMargins = False
     Left = 260
-    Top = 688
+    Top = 920
     Width = 41
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2358,17 +2576,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 36
+    TabOrder = 41
     AutoEditable = True
     DataField = 'PROBOFCONCORDANCE'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel44: TIWLabel
+    AlignWithMargins = False
     Left = 288
-    Top = 663
+    Top = 895
     Width = 10
     Height = 15
     Alignment = taCenter
@@ -2376,14 +2596,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel44'
     Caption = 'of'
   end
   object iwDBeNReg: TIWDBEdit
+    AlignWithMargins = False
     Left = 210
-    Top = 662
+    Top = 894
     Width = 51
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2394,31 +2616,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 33
+    TabOrder = 38
     AutoEditable = True
     DataField = 'NREG'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel45: TIWLabel
+    AlignWithMargins = False
     Left = 364
-    Top = 663
+    Top = 895
     Width = 119
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel45'
     Caption = 'samples regressed'
   end
   object iwDBeNSamp: TIWDBEdit
+    AlignWithMargins = False
     Left = 308
-    Top = 662
+    Top = 894
     Width = 51
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2429,17 +2655,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 34
+    TabOrder = 39
     AutoEditable = True
     DataField = 'NSAMPLES'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object iwDBeNRep: TIWDBEdit
+    AlignWithMargins = False
     Left = 712
-    Top = 662
+    Top = 894
     Width = 51
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2450,31 +2678,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 35
+    TabOrder = 40
     AutoEditable = True
     DataField = 'NREPLICATES'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel46: TIWLabel
+    AlignWithMargins = False
     Left = 582
-    Top = 663
+    Top = 895
     Width = 137
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel46'
     Caption = 'Number of replicates ='
   end
   object iwDBeDegFree: TIWDBEdit
+    AlignWithMargins = False
     Left = 712
-    Top = 637
+    Top = 869
     Width = 51
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2485,45 +2717,51 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 32
+    TabOrder = 37
     AutoEditable = True
     DataField = 'DEGFREEDOM'
     DataSource = dmDV.dsIsoStatistics
     PasswordPrompt = False
   end
   object IWLabel47: TIWLabel
+    AlignWithMargins = False
     Left = 580
-    Top = 638
+    Top = 870
     Width = 132
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel47'
     Caption = 'Degrees of freedom ='
   end
   object IWLabel48: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 980
+    Top = 1280
     Width = 63
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel48'
     Caption = 'Laboratory'
   end
   object iwDBgLaboratory: TIWDBGrid
+    AlignWithMargins = False
     Left = 232
-    Top = 979
+    Top = 1279
     Width = 541
     Height = 111
     BorderColors.Color = clNone
@@ -2538,10 +2776,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -2552,6 +2793,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -2573,6 +2815,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -2600,22 +2843,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel49: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 832
+    Top = 1132
     Width = 68
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel49'
     Caption = 'Comments'
   end
   object iwDBmComments: TIWDBMemo
+    AlignWithMargins = False
     Left = 230
-    Top = 828
+    Top = 1128
     Width = 541
     Height = 144
     StyleRenderOptions.RenderBorder = False
@@ -2625,11 +2871,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
     Required = False
-    TabOrder = 37
+    TabOrder = 42
     SubmitOnAsyncEvent = True
     AutoEditable = True
     DataField = 'COMMENT'
@@ -2637,22 +2884,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     FriendlyName = 'iwDBmComments'
   end
   object iwlConfidentiality: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1286
+    Top = 1586
     Width = 130
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlConfidentiality'
     Caption = 'Confidentiality index ='
   end
   object iwDBeConfidentiality: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1284
+    Top = 1586
     Width = 35
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2662,31 +2912,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 40
+    TabOrder = 45
     AutoEditable = True
     DataField = 'CONFIDENTIAL'
     DataSource = dmDV.dscdsResults
     PasswordPrompt = False
   end
   object IWLabel52: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1316
+    Top = 1616
     Width = 72
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel52'
     Caption = 'Initial ratio ='
   end
   object iwDBeInitialRatio: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1317
+    Top = 1616
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2697,31 +2951,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 41
+    TabOrder = 46
     AutoEditable = True
     DataField = 'INITRATIO'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel53: TIWLabel
+    AlignWithMargins = False
     Left = 320
-    Top = 1316
+    Top = 1616
     Width = 55
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel53'
     Caption = '+/- (95%)'
   end
   object iwDBeInitialRatioError: TIWDBEdit
+    AlignWithMargins = False
     Left = 376
-    Top = 1317
+    Top = 1616
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2732,31 +2990,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 42
+    TabOrder = 47
     AutoEditable = True
     DataField = 'INITRATIOERROR'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel51: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1340
+    Top = 1640
     Width = 116
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel51'
     Caption = 'Epsilon / Gamma ='
   end
   object iwDBeEpsilon: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1341
+    Top = 1640
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2767,31 +3029,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 43
+    TabOrder = 48
     AutoEditable = True
     DataField = 'EPSILON'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel54: TIWLabel
+    AlignWithMargins = False
     Left = 320
-    Top = 1340
+    Top = 1640
     Width = 55
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel54'
     Caption = '+/- (95%)'
   end
   object iwDBeEpsilonError: TIWDBEdit
+    AlignWithMargins = False
     Left = 376
-    Top = 1341
+    Top = 1640
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2802,31 +3068,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 44
+    TabOrder = 49
     AutoEditable = True
     DataField = 'EPSILONERROR'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel55: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1364
+    Top = 1664
     Width = 106
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel55'
     Caption = 'Initial ratio (3-D) ='
   end
   object iwDBeInitialRatio3D: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1365
+    Top = 1664
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2837,31 +3107,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 45
+    TabOrder = 50
     AutoEditable = True
     DataField = 'INITIALRATIO3D'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel56: TIWLabel
+    AlignWithMargins = False
     Left = 320
-    Top = 1364
+    Top = 1664
     Width = 55
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel56'
     Caption = '+/- (95%)'
   end
   object iwDBeInitialRatio3DError: TIWDBEdit
+    AlignWithMargins = False
     Left = 376
-    Top = 1365
+    Top = 1664
     Width = 79
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2872,31 +3146,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 46
+    TabOrder = 51
     AutoEditable = True
     DataField = 'INITIALRATIO3DERROR'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel57: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1388
+    Top = 1688
     Width = 36
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel57'
     Caption = 'Model'
   end
   object iwDBeModelUsed: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1389
+    Top = 1688
     Width = 399
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2906,45 +3184,51 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 47
+    TabOrder = 52
     AutoEditable = True
     DataField = 'MODEL'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel59: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1412
+    Top = 1712
     Width = 140
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel59'
     Caption = '238U/204Pb (source) ='
   end
   object IWLabel60: TIWLabel
+    AlignWithMargins = False
     Left = 320
-    Top = 1412
+    Top = 1712
     Width = 35
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel60'
     Caption = '+95%'
   end
   object iwDBeMuPError: TIWDBEdit
+    AlignWithMargins = False
     Left = 356
-    Top = 1413
+    Top = 1712
     Width = 61
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2955,17 +3239,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 49
+    TabOrder = 54
     AutoEditable = True
     DataField = 'MUPERROR'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object iwDBeMuMError: TIWDBEdit
+    AlignWithMargins = False
     Left = 472
-    Top = 1413
+    Top = 1712
     Width = 59
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -2976,31 +3262,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 50
+    TabOrder = 55
     AutoEditable = True
     DataField = 'MUMERROR'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel61: TIWLabel
+    AlignWithMargins = False
     Left = 434
-    Top = 1412
+    Top = 1712
     Width = 31
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel61'
     Caption = '-95%'
   end
   object iwDBeMu: TIWDBEdit
+    AlignWithMargins = False
     Left = 234
-    Top = 1413
+    Top = 1712
     Width = 73
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -3011,31 +3301,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 48
+    TabOrder = 53
     AutoEditable = True
     DataField = 'MU'
     DataSource = dmDV.dsIsoInit
     PasswordPrompt = False
   end
   object IWLabel58: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1598
+    Top = 1898
     Width = 56
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel58'
     Caption = 'Grouping'
   end
   object iwDBgGrouping: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 1595
+    Top = 1895
     Width = 257
     Height = 135
     BorderColors.Color = clNone
@@ -3050,10 +3344,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -3064,6 +3361,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3085,6 +3383,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3112,36 +3411,41 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel62: TIWLabel
+    AlignWithMargins = False
     Left = 520
-    Top = 1738
+    Top = 2040
     Width = 96
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel62'
     Caption = 'Orogenic period'
   end
   object IWLabel63: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1856
+    Top = 2156
     Width = 57
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel63'
     Caption = 'Boundary'
   end
   object iwDBgBoundary: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 1853
+    Top = 2153
     Width = 541
     Height = 113
     BorderColors.Color = clNone
@@ -3156,10 +3460,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -3170,6 +3477,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3189,6 +3497,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3207,6 +3516,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3228,6 +3538,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3255,22 +3566,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object IWLabel64: TIWLabel
+    AlignWithMargins = False
     Left = 96
-    Top = 1976
+    Top = 2276
     Width = 46
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel64'
     Caption = 'Images'
   end
   object iwDBgImage: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 1973
+    Top = 2273
     Width = 257
     Height = 119
     BorderColors.Color = clNone
@@ -3285,10 +3599,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -3299,6 +3616,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3318,6 +3636,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3336,6 +3655,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3357,6 +3677,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3384,8 +3705,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwDBgWhoFor: TIWDBGrid
+    AlignWithMargins = False
     Left = 230
-    Top = 2099
+    Top = 2399
     Width = 441
     Height = 115
     BorderColors.Color = clNone
@@ -3400,10 +3722,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -3414,6 +3739,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -3435,6 +3761,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -3462,6 +3789,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwDBlcbLithology: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 671
     Top = 188
     Width = 260
@@ -3473,6 +3801,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
@@ -3489,6 +3818,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwbPost: TIWButton
+    AlignWithMargins = False
     Left = 902
     Top = 88
     Width = 130
@@ -3498,11 +3828,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbPost'
-    TabOrder = 38
+    TabOrder = 43
     OnClick = iwbPostClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 414
     Top = 88
     Width = 130
@@ -3512,11 +3844,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
-    TabOrder = 39
+    TabOrder = 44
     OnClick = iwbApplyUpdatesClick
   end
   object iwDBlcbInterpretation: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 340
     Width = 243
@@ -3528,6 +3862,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
@@ -3544,8 +3879,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbPrefLevel: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 548
-    Top = 341
+    Top = 340
     Width = 455
     Height = 21
     RenderSize = False
@@ -3555,6 +3891,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
@@ -3571,8 +3908,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbMethod: TIWDBLookupComboBox
-    Left = 410
-    Top = 366
+    AlignWithMargins = False
+    Left = 412
+    Top = 390
     Width = 84
     Height = 21
     RenderSize = False
@@ -3582,14 +3920,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 8
+    TabOrder = 12
     AutoEditable = True
     DataField = 'AGEUNITS'
-    DataSource = dmDV.dscdsResults
+    DataSource = dmDV.dscdsResults2
     FriendlyName = 'iwDBlcbMethod'
     KeyField = 'AGEUNITS'
     ListField = 'AGEUNITS'
@@ -3598,8 +3937,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBnReferences: TIWDBNavigator
+    AlignWithMargins = False
     Left = 96
-    Top = 735
+    Top = 1035
     Width = 108
     Height = 28
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3613,8 +3953,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object iwDBnLaboratories: TIWDBNavigator
+    AlignWithMargins = False
     Left = 96
-    Top = 997
+    Top = 1297
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3628,8 +3969,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator3: TIWDBNavigator
+    AlignWithMargins = False
     Left = 526
-    Top = 1473
+    Top = 1771
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3643,22 +3985,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWLabel66: TIWLabel
+    AlignWithMargins = False
     Left = 522
-    Top = 1456
+    Top = 1754
     Width = 47
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel66'
     Caption = 'Terrane'
   end
   object IWDBNavigator4: TIWDBNavigator
+    AlignWithMargins = False
     Left = 94
-    Top = 1471
+    Top = 1771
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3672,8 +4017,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator5: TIWDBNavigator
+    AlignWithMargins = False
     Left = 94
-    Top = 1613
+    Top = 1913
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3687,8 +4033,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator6: TIWDBNavigator
+    AlignWithMargins = False
     Left = 92
-    Top = 1755
+    Top = 2055
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3702,8 +4049,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator7: TIWDBNavigator
+    AlignWithMargins = False
     Left = 522
-    Top = 1753
+    Top = 2055
     Width = 108
     Height = 27
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3717,8 +4065,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator8: TIWDBNavigator
+    AlignWithMargins = False
     Left = 94
-    Top = 1873
+    Top = 2173
     Width = 108
     Height = 27
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3732,8 +4081,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object IWDBNavigator9: TIWDBNavigator
+    AlignWithMargins = False
     Left = 96
-    Top = 1993
+    Top = 2293
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3747,8 +4097,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object iwdbnWhoFor: TIWDBNavigator
+    AlignWithMargins = False
     Left = 96
-    Top = 2121
+    Top = 2421
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3762,22 +4113,25 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object iwlWhoFor: TIWLabel
+    AlignWithMargins = False
     Left = 98
-    Top = 2104
+    Top = 2404
     Width = 46
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlWhoFor'
     Caption = 'Who for'
   end
   object IWDBNavigator10: TIWDBNavigator
+    AlignWithMargins = False
     Left = 96
-    Top = 2243
+    Top = 2543
     Width = 108
     Height = 29
     Confirmations.Delete = 'Are you sure you want to delete this record?'
@@ -3791,6 +4145,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 558
     Top = 88
     Width = 130
@@ -3800,13 +4155,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelChanges'
-    TabOrder = 51
+    TabOrder = 56
     OnClick = iwbCancelChangesClick
   end
   object iwbAddReference: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 764
+    Top = 1064
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3814,13 +4171,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddReference'
-    TabOrder = 53
+    TabOrder = 58
     OnClick = iwbAddReferenceClick
   end
   object iwbAddLaboratory: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 1028
+    Top = 1328
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3828,13 +4187,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddLaboratory'
-    TabOrder = 54
+    TabOrder = 59
     OnClick = iwbAddLaboratoryClick
   end
   object iwbAddProvince: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1502
+    Top = 1802
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3842,13 +4203,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddProvince'
-    TabOrder = 56
+    TabOrder = 61
     OnClick = iwbAddProvinceClick
   end
   object iwbAddTerrane: TIWButton
+    AlignWithMargins = False
     Left = 536
-    Top = 1504
+    Top = 1802
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3856,13 +4219,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddTerrane'
-    TabOrder = 57
+    TabOrder = 62
     OnClick = iwbAddTerraneClick
   end
   object iwbAddGroup: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1648
+    Top = 1948
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3870,13 +4235,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddGroup'
-    TabOrder = 58
+    TabOrder = 63
     OnClick = iwbAddGroupClick
   end
   object iwbAddChemType: TIWButton
+    AlignWithMargins = False
     Left = 102
-    Top = 1786
+    Top = 2086
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3884,13 +4251,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddChemType'
-    TabOrder = 59
+    TabOrder = 64
     OnClick = iwbAddChemTypeClick
   end
   object iwbAddOrogenic: TIWButton
+    AlignWithMargins = False
     Left = 532
-    Top = 1784
+    Top = 2086
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3898,13 +4267,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddOrogenic'
-    TabOrder = 60
+    TabOrder = 65
     OnClick = iwbAddOrogenicClick
   end
   object iwbAddBoundary: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1902
+    Top = 2202
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3912,13 +4283,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddBoundary'
-    TabOrder = 61
+    TabOrder = 66
     OnClick = iwbAddBoundaryClick
   end
   object iwbAddImage: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2024
+    Top = 2324
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3926,13 +4299,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddImage'
-    TabOrder = 62
+    TabOrder = 67
     OnClick = iwbAddImageClick
   end
   object iwbAddWhoFor: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2152
+    Top = 2452
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3940,13 +4315,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddWhoFor'
-    TabOrder = 63
+    TabOrder = 68
     OnClick = iwbAddWhoForClick
   end
   object iwbAddSample: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2278
+    Top = 2578
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -3954,13 +4331,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddSample'
-    TabOrder = 64
+    TabOrder = 69
     OnClick = iwbAddSampleClick
   end
   object iwbDeleteReference: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 792
+    Top = 1092
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -3969,13 +4348,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteReference'
-    TabOrder = 65
+    TabOrder = 70
     OnClick = iwbDeleteReferenceClick
   end
   object iwbDeleteLaboratory: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 1056
+    Top = 1356
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -3984,13 +4365,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLaboratory'
-    TabOrder = 66
+    TabOrder = 71
     OnClick = iwbDeleteLaboratoryClick
   end
   object iwbDeleteProvince: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1530
+    Top = 1830
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -3999,13 +4382,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteProvince'
-    TabOrder = 67
+    TabOrder = 72
     OnClick = iwbDeleteProvinceClick
   end
   object iwbDeleteTerrane: TIWButton
+    AlignWithMargins = False
     Left = 536
-    Top = 1532
+    Top = 1830
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4014,13 +4399,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteTerrane'
-    TabOrder = 68
+    TabOrder = 73
     OnClick = iwbDeleteTerraneClick
   end
   object iwbDeleteGroup: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1676
+    Top = 1976
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4029,13 +4416,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteGroup'
-    TabOrder = 69
+    TabOrder = 74
     OnClick = iwbDeleteGroupClick
   end
   object iwbDeleteChemType: TIWButton
+    AlignWithMargins = False
     Left = 102
-    Top = 1814
+    Top = 2114
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4044,13 +4433,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteChemType'
-    TabOrder = 70
+    TabOrder = 75
     OnClick = iwbDeleteChemTypeClick
   end
   object iwbDeleteOrogenic: TIWButton
+    AlignWithMargins = False
     Left = 532
-    Top = 1812
+    Top = 2114
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4059,13 +4450,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteOrogenic'
-    TabOrder = 71
+    TabOrder = 76
     OnClick = iwbDeleteOrogenicClick
   end
   object iwbDeleteBoundary: TIWButton
+    AlignWithMargins = False
     Left = 104
-    Top = 1930
+    Top = 2230
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4074,13 +4467,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteBoundary'
-    TabOrder = 72
+    TabOrder = 77
     OnClick = iwbDeleteBoundaryClick
   end
   object iwbDeleteImage: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2052
+    Top = 2352
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4089,13 +4484,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteImage'
-    TabOrder = 73
+    TabOrder = 78
     OnClick = iwbDeleteImageClick
   end
   object iwbDeleteWhoFor: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2180
+    Top = 2480
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4104,13 +4501,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteWhoFor'
-    TabOrder = 74
+    TabOrder = 79
     OnClick = iwbDeleteWhoForClick
   end
   object iwbDeleteSample: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 2306
+    Top = 2606
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4119,51 +4518,59 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
-    TabOrder = 75
+    TabOrder = 80
     OnClick = iwbDeleteSampleClick
   end
   object iwlFooterProgramName: TIWLabel
+    AlignWithMargins = False
     Left = 90
-    Top = 2954
+    Top = 3254
     Width = 214
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlFooterProgramName'
     Caption = 'DateView Geochronology Database'
   end
   object iwlFooterCopyright: TIWLabel
+    AlignWithMargins = False
     Left = 90
-    Top = 2972
+    Top = 3270
     Width = 159
     Height = 14
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     HasTabOrder = False
     FriendlyName = 'iwlFooterCopyright'
     Caption = '(c) Dr Bruce Eglington (2004)'
   end
   object IWLabel69: TIWLabel
-    Left = 627
-    Top = 314
+    AlignWithMargins = False
+    Left = 611
+    Top = 316
     Width = 44
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel65'
     Caption = 'Method'
   end
   object iwDBlcbMethod2: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 671
     Top = 314
     Width = 202
@@ -4175,6 +4582,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
@@ -4191,29 +4599,33 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwbValidate: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 1150
-    Width = 91
+    Top = 1450
+    Width = 111
     Height = 25
     Caption = 'Validate'
     Color = clBtnFace
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbValidate'
-    TabOrder = 55
+    TabOrder = 60
     OnClick = iwbValidateClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
-    Height = 2945
+    Height = 3245
     Align = alLeft
     ZIndex = 1
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -4223,62 +4635,55 @@ object ISFDetailsEdit: TISFDetailsEdit
     ExplicitHeight = 2423
   end
   object iwbAddInitialRatioData: TIWButton
+    AlignWithMargins = False
     Left = 654
-    Top = 1316
+    Top = 1616
     Width = 241
     Height = 25
     Caption = 'Add Initial ratio data'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbAddInitialRatioData'
-    TabOrder = 77
+    TabOrder = 82
     OnClick = iwbAddInitialRatioDataClick
   end
   object iwbAddStatisticsData: TIWButton
-    Left = 634
-    Top = 451
+    AlignWithMargins = False
+    Left = 632
+    Top = 603
     Width = 241
     Height = 25
     Caption = 'Add Statistics data'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbAddStatisticsData'
-    TabOrder = 78
+    TabOrder = 83
     OnClick = iwbAddStatisticsDataClick
   end
   object iwbAddOtherInterceptData: TIWButton
-    Left = 634
-    Top = 387
+    AlignWithMargins = False
+    Left = 632
+    Top = 500
     Width = 241
     Height = 25
     Caption = 'Add Other Intercept data'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbAddOtherInterceptData'
-    TabOrder = 76
+    TabOrder = 81
     OnClick = iwbAddOtherInterceptDataClick
   end
   object iwbRawData: TIWButton
+    AlignWithMargins = False
     Left = 764
-    Top = 2377
+    Top = 2677
     Width = 151
     Height = 25
     Caption = 'View raw data'
     Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = '111'
-    TabOrder = 92
+    TabOrder = 97
     OnClick = iwbRawDataClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 702
     Top = 88
     Width = 130
@@ -4289,11 +4694,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
-    TabOrder = 52
+    TabOrder = 57
     OnClick = iwbDeleteClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 270
     Top = 88
     Width = 130
@@ -4303,11 +4710,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
-    TabOrder = 79
+    TabOrder = 84
     OnClick = iwbEditClick
   end
   object IWDBLabel1: TIWDBLabel
+    AlignWithMargins = False
     Left = 208
     Top = 132
     Width = 59
@@ -4316,6 +4725,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     AutoSize = False
     DataField = 'RECORDID'
@@ -4323,8 +4733,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     FriendlyName = 'IWDBLabel1'
   end
   object iwbObjection: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 1120
+    Top = 1420
     Width = 111
     Height = 25
     Caption = 'Submit Objection'
@@ -4332,11 +4743,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbObjection'
-    TabOrder = 80
+    TabOrder = 85
     OnClick = iwbObjectionClick
   end
   object iwbNewErrorRec: TIWButton
+    AlignWithMargins = False
     Left = 892
     Top = 124
     Width = 130
@@ -4346,13 +4759,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbNewErrorRec'
-    TabOrder = 81
+    TabOrder = 86
     OnClick = iwbNewErrorRecClick
   end
   object iwbReturnBottom: TIWButton
+    AlignWithMargins = False
     Left = 100
-    Top = 2903
+    Top = 3203
     Width = 130
     Height = 25
     Caption = 'Return to results list'
@@ -4360,13 +4775,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturnBottom'
-    TabOrder = 82
+    TabOrder = 87
     OnClick = iwbReturnClick
   end
   object iwbEditBottom: TIWButton
+    AlignWithMargins = False
     Left = 290
-    Top = 2903
+    Top = 3203
     Width = 101
     Height = 25
     Caption = 'Edit'
@@ -4374,13 +4791,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEditBottom'
-    TabOrder = 83
+    TabOrder = 88
     OnClick = iwbEditClick
   end
   object iwbApplyUpdatesBottom: TIWButton
+    AlignWithMargins = False
     Left = 421
-    Top = 2903
+    Top = 3203
     Width = 101
     Height = 25
     Caption = 'Save changes'
@@ -4388,13 +4807,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdatesBottom'
-    TabOrder = 84
+    TabOrder = 89
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelChangesBottom: TIWButton
+    AlignWithMargins = False
     Left = 551
-    Top = 2903
+    Top = 3203
     Width = 101
     Height = 25
     Caption = 'Cancel changes'
@@ -4402,27 +4823,31 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelChangesBottom'
-    TabOrder = 85
+    TabOrder = 90
     OnClick = iwbCancelChangesClick
   end
   object IWLabel16: TIWLabel
+    AlignWithMargins = False
     Left = 611
-    Top = 235
+    Top = 230
     Width = 62
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel4'
     Caption = 'StratDB ID'
   end
   object iwDBeStratDBID: TIWDBEdit
+    AlignWithMargins = False
     Left = 671
-    Top = 232
+    Top = 226
     Width = 130
     Height = 21
     StyleRenderOptions.RenderBorder = False
@@ -4432,31 +4857,35 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeStratDBID'
     SubmitOnAsyncEvent = True
-    TabOrder = 86
+    TabOrder = 91
     AutoEditable = False
     DataField = 'GISID'
     DataSource = dmDV.dsStratDBLink
     PasswordPrompt = False
   end
   object IWLabel14: TIWLabel
+    AlignWithMargins = False
     Left = 522
-    Top = 1598
+    Top = 1898
     Width = 121
     Height = 15
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel58'
     Caption = 'Large Igneous Prov.'
   end
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 520
-    Top = 1613
+    Top = 1913
     Width = 108
     Height = 29
     Visible = False
@@ -4471,8 +4900,9 @@ object ISFDetailsEdit: TISFDetailsEdit
     Orientation = orHorizontal
   end
   object iwbAddLIP: TIWButton
+    AlignWithMargins = False
     Left = 530
-    Top = 1648
+    Top = 1948
     Width = 91
     Height = 25
     Caption = 'Add link'
@@ -4480,13 +4910,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddLIP'
-    TabOrder = 87
+    TabOrder = 92
     OnClick = iwbAddLIPClick
   end
   object iwbDeleteLIP: TIWButton
+    AlignWithMargins = False
     Left = 530
-    Top = 1676
+    Top = 1976
     Width = 91
     Height = 25
     Caption = 'Delete link'
@@ -4495,13 +4927,15 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLIP'
-    TabOrder = 88
+    TabOrder = 93
     OnClick = iwbDeleteLIPClick
   end
   object iwDBgLIP: TIWDBGrid
+    AlignWithMargins = False
     Left = 656
-    Top = 1595
+    Top = 1895
     Width = 257
     Height = 134
     BorderColors.Color = clNone
@@ -4516,10 +4950,13 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -4530,6 +4967,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -4551,6 +4989,7 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -4578,34 +5017,31 @@ object ISFDetailsEdit: TISFDetailsEdit
     RowCurrentColor = clNone
   end
   object iwbAddComment: TIWButton
+    AlignWithMargins = False
     Left = 106
-    Top = 847
+    Top = 1147
     Width = 111
     Height = 25
     Caption = 'New Comment'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbAddComment'
-    TabOrder = 89
+    TabOrder = 94
     OnClick = iwbAddCommentClick
   end
   object iwbLinkRawData: TIWButton
+    AlignWithMargins = False
     Left = 557
-    Top = 2377
+    Top = 2677
     Width = 151
     Height = 25
     Caption = 'Link raw data'
     Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbRawData'
-    TabOrder = 91
+    TabOrder = 96
     OnClick = iwbLinkRawDataClick
   end
   object iwDBlcbArea: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 153
     Width = 361
@@ -4617,11 +5053,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 93
+    TabOrder = 98
     AutoEditable = True
     DataField = 'COUNTRYABR'
     DataSource = dmDV.dscdsResults
@@ -4633,6 +5070,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbUnit: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 188
     Width = 361
@@ -4644,11 +5082,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 94
+    TabOrder = 99
     AutoEditable = True
     DataField = 'UNITID'
     DataSource = dmDV.dscdsResults
@@ -4660,6 +5099,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbMaterial: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 226
     Width = 361
@@ -4671,11 +5111,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 95
+    TabOrder = 100
     AutoEditable = True
     DataField = 'MATERIALABR'
     DataSource = dmDV.dscdsResults
@@ -4687,6 +5128,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbIsoSys: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 260
     Width = 361
@@ -4698,11 +5140,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 96
+    TabOrder = 101
     AutoEditable = True
     DataField = 'ISOTOPESYSTEM'
     DataSource = dmDV.dscdsResults
@@ -4714,6 +5157,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbApproach: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 287
     Width = 361
@@ -4725,11 +5169,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 97
+    TabOrder = 102
     AutoEditable = True
     DataField = 'APPROACHABR'
     DataSource = dmDV.dscdsResults
@@ -4741,6 +5186,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbTechnique: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 208
     Top = 313
     Width = 361
@@ -4752,11 +5198,12 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 98
+    TabOrder = 103
     AutoEditable = True
     DataField = 'TECHABR'
     DataSource = dmDV.dscdsResults
@@ -4768,18 +5215,245 @@ object ISFDetailsEdit: TISFDetailsEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwbMakePublic: TIWButton
+    AlignWithMargins = False
     Left = 731
-    Top = 2125
+    Top = 2425
     Width = 122
     Height = 25
     Caption = 'Make public'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbMakePublic'
-    TabOrder = 108
+    TabOrder = 113
     OnClick = iwbMakePublicClick
+  end
+  object IWLabel67: TIWLabel
+    AlignWithMargins = False
+    Left = 270
+    Top = 417
+    Width = 7
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel12'
+    Caption = '+'
+  end
+  object iwDBeRAGEPERRORTRACER: TIWDBEdit
+    AlignWithMargins = False
+    Left = 280
+    Top = 416
+    Width = 53
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Alignment = taRightJustify
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGEPERRORTRACER'
+    MaxLength = 2
+    SubmitOnAsyncEvent = True
+    TabOrder = 8
+    AutoEditable = True
+    DataField = 'RAGEPERRORTRACER'
+    DataSource = dmDV.dscdsResults2
+    PasswordPrompt = False
+  end
+  object IWLabel68: TIWLabel
+    AlignWithMargins = False
+    Left = 340
+    Top = 417
+    Width = 4
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel13'
+    Caption = '-'
+  end
+  object iwDBeRAGEMERRORTRACER: TIWDBEdit
+    AlignWithMargins = False
+    Left = 348
+    Top = 416
+    Width = 53
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Alignment = taRightJustify
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGEMERRORTRACER'
+    SubmitOnAsyncEvent = True
+    TabOrder = 9
+    AutoEditable = True
+    DataField = 'RAGEMERRORTRACER'
+    DataSource = dmDV.dscdsResults2
+    PasswordPrompt = False
+  end
+  object IWLabel73: TIWLabel
+    AlignWithMargins = False
+    Left = 526
+    Top = 417
+    Width = 282
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel19'
+    Caption = '(95% confidence including tracer uncertainties)'
+  end
+  object IWLabel74: TIWLabel
+    AlignWithMargins = False
+    Left = 270
+    Top = 444
+    Width = 7
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel12'
+    Caption = '+'
+  end
+  object iwDBeRAGEPERROR: TIWDBEdit
+    AlignWithMargins = False
+    Left = 280
+    Top = 443
+    Width = 53
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Alignment = taRightJustify
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRAGEPERROR'
+    MaxLength = 5
+    SubmitOnAsyncEvent = True
+    TabOrder = 6
+    AutoEditable = True
+    DataField = 'RAGEPERROR'
+    DataSource = dmDV.dscdsResults2
+    PasswordPrompt = False
+  end
+  object IWLabel75: TIWLabel
+    AlignWithMargins = False
+    Left = 340
+    Top = 444
+    Width = 4
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel13'
+    Caption = '-'
+  end
+  object iwDBeiwDBeRAGEMERROR: TIWDBEdit
+    AlignWithMargins = False
+    Left = 348
+    Top = 443
+    Width = 53
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Alignment = taRightJustify
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeiwDBeRAGEMERROR'
+    SubmitOnAsyncEvent = True
+    TabOrder = 7
+    AutoEditable = True
+    DataField = 'RAGEMERROR'
+    DataSource = dmDV.dscdsResults2
+    PasswordPrompt = False
+  end
+  object IWLabel76: TIWLabel
+    AlignWithMargins = False
+    Left = 526
+    Top = 444
+    Width = 349
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel19'
+    Caption = '(95% confidence excluding decay and tracer uncertainties)'
+  end
+  object iwDBeIsotopeConstant: TIWDBEdit
+    AlignWithMargins = False
+    Left = 206
+    Top = 767
+    Width = 59
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Alignment = taRightJustify
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeIsotopeConstant'
+    SubmitOnAsyncEvent = True
+    TabOrder = 28
+    AutoEditable = True
+    DataField = 'ISOTOPECONSTANT'
+    DataSource = dmDV.dsResultsExtra
+    PasswordPrompt = False
+  end
+  object iwlIsotopeConstant: TIWLabel
+    AlignWithMargins = False
+    Left = 94
+    Top = 766
+    Width = 111
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'iwlIsotopeConstant'
+    Caption = 'Isotope constant ='
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -4805,7 +5479,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     ExplicitWidth = 1023
     inherited IWFrameRegion: TIWRegion
       Width = 1023
-      TabOrder = 90
+      TabOrder = 95
       ExplicitWidth = 1023
       inherited iwrHeader: TIWRegion
         Width = 1023
@@ -4834,7 +5508,7 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwrSameSampleRecords: TIWRegion
     Left = 89
-    Top = 2408
+    Top = 2708
     Width = 872
     Height = 473
     RenderInvisibleControls = True
@@ -4842,6 +5516,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderOptions.Style = cbsNone
     Color = clMoneyGreen
     object IWLabel17: TIWLabel
+      AlignWithMargins = False
       Left = 11
       Top = 245
       Width = 367
@@ -4850,12 +5525,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 10
       Font.Style = [fsBold]
+      Font.PxSize = 13
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel17'
       Caption = 'Create Equivalent Records for Other Isotope Systems'
     end
     object IWLabel50: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 294
       Width = 105
@@ -4864,12 +5541,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel5'
       Caption = 'Material analysed'
     end
     object IWLabel65: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 320
       Width = 92
@@ -4878,12 +5557,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel6'
       Caption = 'Isotope system'
     end
     object IWLabel70: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 347
       Width = 57
@@ -4892,12 +5573,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel7'
       Caption = 'Approach'
     end
     object IWLabel71: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 374
       Width = 63
@@ -4906,12 +5589,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel8'
       Caption = 'Technique'
     end
     object IWLabel72: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 267
       Width = 79
@@ -4920,12 +5605,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel9'
       Caption = 'Interpretation'
     end
     object iwdbgSameSampleResults: TIWDBGrid
+      AlignWithMargins = False
       Left = 15
       Top = 35
       Width = 842
@@ -4942,10 +5629,13 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 8
       Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = True
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
@@ -4956,6 +5646,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -4977,6 +5668,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -4995,6 +5687,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5014,6 +5707,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5032,6 +5726,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5051,6 +5746,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5069,6 +5765,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5088,6 +5785,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5106,6 +5804,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5125,6 +5824,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5143,6 +5843,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5162,6 +5863,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5180,6 +5882,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5199,6 +5902,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5217,6 +5921,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5236,6 +5941,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5254,6 +5960,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5273,6 +5980,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5291,6 +5999,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -5310,6 +6019,7 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -5337,20 +6047,19 @@ object ISFDetailsEdit: TISFDetailsEdit
       RowCurrentColor = clNone
     end
     object iwbCreateEquivalentRecord: TIWButton
+      AlignWithMargins = False
       Left = 623
       Top = 445
       Width = 234
       Height = 25
       Caption = 'Create New Record'
       Color = clWebLIGHTSKYBLUE
-      Font.Color = clNone
-      Font.Size = 10
-      Font.Style = []
       FriendlyName = 'iwbCreateEquivalentRecord'
-      TabOrder = 99
+      TabOrder = 104
       OnClick = iwbCreateEquivalentRecordClick
     end
     object iwcbMaterial: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 294
       Width = 309
@@ -5360,14 +6069,16 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 100
+      TabOrder = 105
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbMaterial'
       NoSelectionText = '-- No Selection --'
     end
     object iwcbIsotopeSystem: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 321
       Width = 309
@@ -5377,14 +6088,16 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 101
+      TabOrder = 106
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbIsotopeSystem'
       NoSelectionText = '-- No Selection --'
     end
     object iwcbApproach: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 348
       Width = 309
@@ -5394,14 +6107,16 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 102
+      TabOrder = 107
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbApproach'
       NoSelectionText = '-- No Selection --'
     end
     object iwcbTechnique: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 375
       Width = 309
@@ -5411,14 +6126,16 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 103
+      TabOrder = 108
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbTechnique'
       NoSelectionText = '-- No Selection --'
     end
     object iwcbInterpretation: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 267
       Width = 309
@@ -5428,14 +6145,16 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 104
+      TabOrder = 109
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbInterpretation'
       NoSelectionText = '-- No Selection --'
     end
     object IWLabel20: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 443
       Width = 39
@@ -5444,12 +6163,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Date ='
     end
     object iweDate: TIWEdit
+      AlignWithMargins = False
       Left = 179
       Top = 440
       Width = 59
@@ -5461,11 +6182,13 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iweDate'
       SubmitOnAsyncEvent = True
-      TabOrder = 105
+      TabOrder = 110
     end
     object IWLabel21: TIWLabel
+      AlignWithMargins = False
       Left = 263
       Top = 441
       Width = 7
@@ -5474,12 +6197,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = '+'
     end
     object iweDatePError: TIWEdit
+      AlignWithMargins = False
       Left = 275
       Top = 440
       Width = 59
@@ -5491,11 +6216,13 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
-      TabOrder = 106
+      TabOrder = 111
     end
     object IWLabel22: TIWLabel
+      AlignWithMargins = False
       Left = 349
       Top = 441
       Width = 4
@@ -5504,12 +6231,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = '-'
     end
     object iweDateMError: TIWEdit
+      AlignWithMargins = False
       Left = 363
       Top = 440
       Width = 59
@@ -5521,11 +6250,13 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
-      TabOrder = 107
+      TabOrder = 112
     end
     object iwlAgeUnitsNew: TIWLabel
+      AlignWithMargins = False
       Left = 441
       Top = 443
       Width = 17
@@ -5534,12 +6265,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'iwlAgeUnitsNew'
       Caption = 'Ma'
     end
     object IWLabel23: TIWLabel
+      AlignWithMargins = False
       Left = 26
       Top = 401
       Width = 39
@@ -5548,12 +6281,14 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel8'
       Caption = 'Rating'
     end
     object iwcbRating: TIWComboBox
+      AlignWithMargins = False
       Left = 179
       Top = 402
       Width = 309
@@ -5563,8 +6298,9 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 109
+      TabOrder = 114
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbUnit'

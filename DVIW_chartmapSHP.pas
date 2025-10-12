@@ -62,8 +62,6 @@ type
     iwcbIsometric: TIWCheckBox;
     iwcbSeries6: TIWCheckBox;
     Series6: TWorldSeries;
-    Chart2: TChart;
-    Series7: TWorldSeries;
     FDMemTitles: TFDMemTable;
     FDMemTempDataMap: TFDMemTable;
     procedure IWAppFormCreate(Sender: TObject);

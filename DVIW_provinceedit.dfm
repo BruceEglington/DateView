@@ -16,22 +16,8 @@ object ISFProvinceEdit: TISFProvinceEdit
   ShowHint = True
   DesignLeft = 2
   DesignTop = 2
-  object IWDBNavigator1: TIWDBNavigator
-    Left = 168
-    Top = 72
-    Width = 108
-    Height = 27
-    Confirmations.Delete = 'Are you sure you want to delete this record?'
-    Confirmations.Post = 'Are you sure you want to update this record?'
-    Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
-    DataSource = dmDV.dsProvinces
-    FriendlyName = 'IWDBNavigator1'
-    ImageHeight = 21
-    ImageWidth = 21
-    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
-    Orientation = orHorizontal
-  end
-  object IWDBEdit1: TIWDBEdit
+  object iwDBeProvince: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 278
@@ -43,7 +29,8 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FriendlyName = 'IWDBEdit1'
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeProvince'
     SubmitOnAsyncEvent = True
     TabOrder = 1
     AutoEditable = False
@@ -52,6 +39,7 @@ object ISFProvinceEdit: TISFProvinceEdit
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 119
@@ -61,11 +49,13 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 3
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 51
@@ -74,12 +64,14 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Province'
   end
   object iwbSave: TIWButton
+    AlignWithMargins = False
     Left = 317
     Top = 74
     Width = 119
@@ -89,11 +81,13 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbSaveClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 447
     Top = 74
     Width = 119
@@ -103,11 +97,13 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 119
@@ -118,11 +114,13 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 30
     Top = 142
     Width = 58
@@ -131,12 +129,14 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Continent'
   end
   object iwDBlcbContinent: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 140
     Width = 279
@@ -146,6 +146,7 @@ object ISFProvinceEdit: TISFProvinceEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -159,6 +160,22 @@ object ISFProvinceEdit: TISFProvinceEdit
     ListSource = dmStrat.dsContinents
     DisableWhenEmpty = True
     NoSelectionText = '-- No Selection --'
+  end
+  object iwbEdit: TIWButton
+    AlignWithMargins = False
+    Left = 139
+    Top = 74
+    Width = 100
+    Height = 25
+    Caption = 'Edit'
+    Color = clWebLEMONCHIFFON
+    Font.Color = clNone
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    FriendlyName = 'iwbEdit'
+    TabOrder = 7
+    OnClick = iwbEditClick
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -184,7 +201,7 @@ object ISFProvinceEdit: TISFProvinceEdit
     ExplicitWidth = 716
     inherited IWFrameRegion: TIWRegion
       Width = 716
-      TabOrder = 7
+      TabOrder = 8
       ExplicitWidth = 716
       inherited iwrHeader: TIWRegion
         Width = 716

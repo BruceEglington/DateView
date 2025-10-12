@@ -17,7 +17,8 @@ uses
   VclTee.TeeGDIPlus, VCLTee.TeeData, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Forms,
-  IWVCLBaseContainer, IWContainer, IWHTMLContainer, IWHTML40Container, IWRegion;
+  IWVCLBaseContainer, IWContainer, IWHTMLContainer, IWHTML40Container, IWRegion,
+  VCLTee.TeeEdit;
 
 type
   TIWChartInterpretation = class(TIWAppForm)
@@ -104,6 +105,7 @@ type
     Series8: TErrorSeries;
     Series9: TErrorSeries;
     Series10: TErrorSeries;
+    ChartEditor1: TChartEditor;
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwcbShowLegendClick(Sender: TObject);
     procedure iwcbShowBackgroundClick(Sender: TObject);
@@ -142,8 +144,12 @@ uses IWForm, ServerController, DVIW_dmgraphics, DVIW_constants,
 
 procedure TIWChartInterpretation.IWAppFormCreate(Sender: TObject);
 begin
+  iweXMinimum.Text := FormatFloat('####0.00',UserSession.StartAtX);
+  iweXMaximum.Text := FormatFloat('####0.00',UserSession.EndAtX);
   //dmUser.SetDeveloperData('StartAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.StartAtX));
   //dmUser.SetDeveloperData('EndAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.EndAtX));
+  //dmUser.SetDeveloperData('iweXMinimum.Text ChartInterpretationFormCreate = '+iweXMinimum.Text);
+  //dmUser.SetDeveloperData('iweXMaximum.Text ChartInterpretationFormCreate = '+iweXMaximum.Text);
   MinimumCurveValue := 1.0e-8;
   Chart1.BufferedDisplay := false;
   Chart1.Foot.Clear;
@@ -348,6 +354,8 @@ var
   tempGauss : double;
   tNpts : double;
 begin
+    //dmUser.SetDeveloperData('iweXMinimum GraphDateByInterpretation = '+iweXMinimum.Text);
+    //dmUser.SetDeveloperData('iweXMaximum GraphDateByInterpretation = '+iweXMaximum.Text);
     MinimumUncertainty := 2.0;
     Val(UserSession.MinimumDateUncertainty,MinimumUncertainty,iCode);
     MinimumUncertainty := MinimumUncertainty/1.96;
@@ -356,6 +364,9 @@ begin
     if (UserSession.EndAtX <= UserSession.StartAtX) then UserSession.EndAtX := UserSession.StartAtX + 1.0;
     //UserSession.StartAtX := 100.0*(Trunc(UserSession.StartAtX) div 100);
     //UserSession.EndAtX := 100.0*(Trunc(UserSession.EndAtX) div 100 + 1);
+    //dmUser.SetDeveloperData('DateFromField GraphDateByInterpretation = '+UserSession.DateFromField);
+    //dmUser.SetDeveloperData('DateToField GraphDateByInterpretation = '+UserSession.DateToField);
+    {
     if UserSession.IncludeDateFromValue then
     begin
       Val(UserSession.DateFromField,FromDate,iCode);
@@ -372,6 +383,11 @@ begin
         UserSession.EndAtX := ToDate;
       end;
     end;
+    }
+    //dmUser.SetDeveloperData('FromDate GraphDateByInterpretation = '+FormatFloat('####0.00',FromDate));
+    //dmUser.SetDeveloperData('ToDate GraphDateByInterpretation = '+FormatFloat('####0.00',ToDate));
+    UserSession.FromAge := UserSession.StartAtX;
+    UserSession.ToAge := UserSession.EndAtX;
     Chart1.BottomAxis.Automatic := true;
     Chart1.LeftAxis.Automatic := true;
     Chart1.Title.Text.Text := UserSession.GraphType;
@@ -793,6 +809,7 @@ begin
     if (UserSession.EndAtX <= UserSession.StartAtX) then UserSession.EndAtX := UserSession.StartAtX + 1.0;
     //UserSession.StartAtX := 100.0*(Trunc(UserSession.StartAtX) div 100);
     //UserSession.EndAtX := 100.0*(Trunc(UserSession.EndAtX) div 100 + 1);
+    {
     if UserSession.IncludeDateFromValue then
     begin
       Val(UserSession.DateFromField,FromDate,iCode);
@@ -803,10 +820,13 @@ begin
       Val(UserSession.DateToField,ToDate,iCode);
       if (iCode = 0) then UserSession.EndAtX := ToDate;
     end;
+    }
     //dmUser.SetDeveloperData('StartAtX 1 GraphDataGrouped = '+FormatFloat('###0.00',UserSession.StartAtX));
     //dmUser.SetDeveloperData('EndAtX 1 GraphDataGrouped = '+FormatFloat('###0.00',UserSession.EndAtX));
     //dmUser.SetDeveloperData('FromAge 1 GraphDataGrouped = '+FormatFloat('###0.00',UserSession.FromAge));
     //dmUser.SetDeveloperData('ToAge 1 GraphDataGrouped = '+FormatFloat('###0.00',UserSession.ToAge));
+    UserSession.FromAge := UserSession.StartAtX;
+    UserSession.ToAge := UserSession.EndAtX;
     Chart1.BottomAxis.Automatic := true;
     Chart1.LeftAxis.Automatic := true;
     Chart1.Title.Text.Text := UserSession.GraphType;

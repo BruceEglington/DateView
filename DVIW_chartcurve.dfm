@@ -28,6 +28,7 @@ object IWChartInterpretation: TIWChartInterpretation
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwbClose: TIWButton
+      AlignWithMargins = False
       Left = 11
       Top = 14
       Width = 75
@@ -37,10 +38,12 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbClose'
       OnClick = iwbCloseClick
     end
     object iwbExportGraphValues: TIWButton
+      AlignWithMargins = False
       Left = 11
       Top = 36
       Width = 75
@@ -50,11 +53,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbExportGraphValues'
       TabOrder = 15
       OnClick = iwbExportGraphValuesClick
     end
     object IWLabel3: TIWLabel
+      AlignWithMargins = False
       Left = 107
       Top = 16
       Width = 64
@@ -63,12 +68,14 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel3'
       Caption = 'Y axis min.'
     end
     object IWLabel4: TIWLabel
+      AlignWithMargins = False
       Left = 107
       Top = 40
       Width = 64
@@ -77,12 +84,14 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel4'
       Caption = 'X axis min.'
     end
     object iweYMinimum: TIWEdit
+      AlignWithMargins = False
       Left = 194
       Top = 12
       Width = 69
@@ -92,11 +101,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iweYMinimum'
       SubmitOnAsyncEvent = True
       TabOrder = 1
     end
     object iweXMinimum: TIWEdit
+      AlignWithMargins = False
       Left = 194
       Top = 39
       Width = 69
@@ -106,11 +117,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iweXMinimum'
       SubmitOnAsyncEvent = True
       TabOrder = 3
     end
     object IWLabel6: TIWLabel
+      AlignWithMargins = False
       Left = 269
       Top = 40
       Width = 28
@@ -119,12 +132,14 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel4'
       Caption = 'max.'
     end
     object IWLabel5: TIWLabel
+      AlignWithMargins = False
       Left = 269
       Top = 16
       Width = 28
@@ -133,12 +148,14 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel3'
       Caption = 'max.'
     end
     object iweYMaximum: TIWEdit
+      AlignWithMargins = False
       Left = 303
       Top = 12
       Width = 69
@@ -148,11 +165,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
       TabOrder = 2
     end
     object iweXMaximum: TIWEdit
+      AlignWithMargins = False
       Left = 303
       Top = 36
       Width = 69
@@ -162,11 +181,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'IWEdit2'
       SubmitOnAsyncEvent = True
       TabOrder = 4
     end
     object iwcbAutomaticScaling: TIWCheckBox
+      AlignWithMargins = False
       Left = 389
       Top = 36
       Width = 197
@@ -178,6 +199,7 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
       TabOrder = 6
@@ -186,6 +208,7 @@ object IWChartInterpretation: TIWChartInterpretation
       FriendlyName = 'iwcbAutomaticScaling'
     end
     object iwbChangeAxisScales: TIWButton
+      AlignWithMargins = False
       Left = 389
       Top = 14
       Width = 75
@@ -195,11 +218,13 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbChangeAxisScales'
       TabOrder = 5
       OnClick = iwbChangeAxisScalesClick
     end
     object iwcbShowErrorBars: TIWCheckBox
+      AlignWithMargins = False
       Left = 509
       Top = 14
       Width = 116
@@ -211,6 +236,7 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
       TabOrder = 7
@@ -219,6 +245,7 @@ object IWChartInterpretation: TIWChartInterpretation
       FriendlyName = 'iwcbShowErrorBars'
     end
     object iwcbShowLegend: TIWCheckBox
+      AlignWithMargins = False
       Left = 617
       Top = 14
       Width = 176
@@ -230,6 +257,7 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
       TabOrder = 8
@@ -238,6 +266,7 @@ object IWChartInterpretation: TIWChartInterpretation
       FriendlyName = 'iwcbShowLegend'
     end
     object iwcbShowBackground: TIWCheckBox
+      AlignWithMargins = False
       Left = 617
       Top = 34
       Width = 176
@@ -249,6 +278,7 @@ object IWChartInterpretation: TIWChartInterpretation
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
       TabOrder = 9
@@ -276,6 +306,7 @@ object IWChartInterpretation: TIWChartInterpretation
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwcbSeries1: TIWCheckBox
+        AlignWithMargins = False
         Left = 18
         Top = 18
         Width = 250
@@ -287,6 +318,7 @@ object IWChartInterpretation: TIWChartInterpretation
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 10
@@ -295,6 +327,7 @@ object IWChartInterpretation: TIWChartInterpretation
         FriendlyName = 'iwcbSeries1'
       end
       object iwcbSeries2: TIWCheckBox
+        AlignWithMargins = False
         Left = 18
         Top = 37
         Width = 250
@@ -306,6 +339,7 @@ object IWChartInterpretation: TIWChartInterpretation
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 11
@@ -314,6 +348,7 @@ object IWChartInterpretation: TIWChartInterpretation
         FriendlyName = 'iwcbSeries2'
       end
       object iwcbSeries3: TIWCheckBox
+        AlignWithMargins = False
         Left = 18
         Top = 57
         Width = 250
@@ -325,6 +360,7 @@ object IWChartInterpretation: TIWChartInterpretation
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 12
@@ -333,6 +369,7 @@ object IWChartInterpretation: TIWChartInterpretation
         FriendlyName = 'iwcbSeries3'
       end
       object iwcbSeries4: TIWCheckBox
+        AlignWithMargins = False
         Left = 18
         Top = 76
         Width = 250
@@ -344,6 +381,7 @@ object IWChartInterpretation: TIWChartInterpretation
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 13
@@ -352,6 +390,7 @@ object IWChartInterpretation: TIWChartInterpretation
         FriendlyName = 'iwcbSeries4'
       end
       object iwcbSeries5: TIWCheckBox
+        AlignWithMargins = False
         Left = 18
         Top = 96
         Width = 250
@@ -363,6 +402,7 @@ object IWChartInterpretation: TIWChartInterpretation
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 14
@@ -381,6 +421,7 @@ object IWChartInterpretation: TIWChartInterpretation
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWChart1: TIWChart
+        AlignWithMargins = False
         Left = 0
         Top = 0
         Width = 700
@@ -404,6 +445,7 @@ object IWChartInterpretation: TIWChartInterpretation
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwlNormalisationType: TIWLabel
+          AlignWithMargins = False
           Left = 442
           Top = 44
           Width = 112
@@ -412,12 +454,14 @@ object IWChartInterpretation: TIWChartInterpretation
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlNormalisationType'
           Caption = 'iwlNormalisationType'
         end
         object iwlMinimumDateUncertainty: TIWLabel
+          AlignWithMargins = False
           Left = 442
           Top = 24
           Width = 144
@@ -426,12 +470,14 @@ object IWChartInterpretation: TIWChartInterpretation
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlMinimumDateUncertainty'
           Caption = 'iwlMinimumDateUncertainty'
         end
         object iwlPDFType: TIWLabel
+          AlignWithMargins = False
           Left = 442
           Top = 3
           Width = 62
@@ -440,6 +486,7 @@ object IWChartInterpretation: TIWChartInterpretation
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlPDFType'
@@ -461,14 +508,14 @@ object IWChartInterpretation: TIWChartInterpretation
         Foot.Font.Name = 'Verdana'
         Foot.Font.Style = []
         Foot.Text.Strings = (
-          '(c) Bruce Eglington (2004-2022)'
+          '(c) Bruce Eglington (2004-2025)'
           'DateView Geochronology Database')
         Gradient.Direction = gdBottomTop
         Gradient.EndColor = clSilver
         Gradient.MidColor = clWhite
         Gradient.StartColor = clSilver
         Gradient.Visible = True
-        LeftWall.Color = 14745599
+        LeftWall.Color = clLightyellow
         Legend.CheckBoxesStyle = cbsRadio
         Legend.Font.Name = 'Verdana'
         Legend.Font.Style = [fsBold]
@@ -478,7 +525,8 @@ object IWChartInterpretation: TIWChartInterpretation
         Legend.LegendStyle = lsSeries
         Legend.Shadow.Transparency = 0
         Legend.Symbol.Shadow.Visible = False
-        RightWall.Color = 14745599
+        Legend.TextFormat = ttfHtml
+        RightWall.Color = clLightyellow
         SubFoot.Font.Name = 'Verdana'
         SubTitle.Font.Name = 'Verdana'
         Title.Brush.Gradient.Direction = gdLeftRight
@@ -491,51 +539,56 @@ object IWChartInterpretation: TIWChartInterpretation
         Title.Text.Strings = (
           'TChart')
         BottomAxis.Axis.Color = 4210752
-        BottomAxis.Grid.Color = 11119017
+        BottomAxis.Grid.Color = clDarkgray
         BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-        BottomAxis.TicksInner.Color = 11119017
+        BottomAxis.TicksInner.Color = clDarkgray
         BottomAxis.Title.Caption = 'Date'
         BottomAxis.Title.Font.Name = 'Verdana'
         BottomAxis.Title.Font.Style = [fsBold]
+        Chart3DPercent = 1
         DepthAxis.Axis.Color = 4210752
-        DepthAxis.Grid.Color = 11119017
+        DepthAxis.Grid.Color = clDarkgray
         DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthAxis.TicksInner.Color = 11119017
+        DepthAxis.TicksInner.Color = clDarkgray
         DepthAxis.Title.Font.Name = 'Verdana'
         DepthTopAxis.Axis.Color = 4210752
-        DepthTopAxis.Grid.Color = 11119017
+        DepthTopAxis.Grid.Color = clDarkgray
         DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthTopAxis.TicksInner.Color = 11119017
+        DepthTopAxis.TicksInner.Color = clDarkgray
         DepthTopAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Axis.Color = 4210752
-        LeftAxis.Grid.Color = 11119017
+        LeftAxis.Grid.Color = clDarkgray
         LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-        LeftAxis.TicksInner.Color = 11119017
+        LeftAxis.TicksInner.Color = clDarkgray
         LeftAxis.Title.Caption = 'Date'
         LeftAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Title.Font.Style = [fsBold]
+        Pages.AutoScale = True
         RightAxis.Axis.Color = 4210752
-        RightAxis.Grid.Color = 11119017
+        RightAxis.Grid.Color = clDarkgray
         RightAxis.LabelsFormat.Font.Name = 'Verdana'
-        RightAxis.TicksInner.Color = 11119017
+        RightAxis.TicksInner.Color = clDarkgray
         RightAxis.Title.Font.Name = 'Verdana'
         TopAxis.Axis.Color = 4210752
-        TopAxis.Grid.Color = 11119017
+        TopAxis.Grid.Color = clDarkgray
         TopAxis.LabelsFormat.Font.Name = 'Verdana'
-        TopAxis.TicksInner.Color = 11119017
+        TopAxis.TicksInner.Color = clDarkgray
         TopAxis.Title.Font.Name = 'Verdana'
         View3D = False
+        View3DWalls = False
+        Zoom.Allow = False
         Align = alClient
         TabOrder = 1
+        ExplicitLeft = -96
+        ExplicitTop = -104
         DefaultCanvas = 'TGDIPlusCanvas'
         PrintMargins = (
           15
-          21
+          7
           15
-          21)
+          7)
         ColorPaletteIndex = 11
         object Series1: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = clRed
           Brush.BackColor = clDefault
           LinePen.Color = clRed
@@ -566,7 +619,6 @@ object IWChartInterpretation: TIWChartInterpretation
             0000C8884000000000000038400000000000188940}
         end
         object Series3: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = clBlue
           Title = 'Series2'
           Brush.BackColor = clDefault
@@ -590,7 +642,6 @@ object IWChartInterpretation: TIWChartInterpretation
             000000F03F0000000000002640}
         end
         object Series2: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = clGreen
           Title = 'Series3'
           Brush.BackColor = clDefault
@@ -614,7 +665,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00006075400000000000607040}
         end
         object Series4: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = clYellow
           Brush.BackColor = clDefault
           LinePen.Color = clYellow
@@ -637,7 +687,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00006067400000000000A06940}
         end
         object Series5: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = clFuchsia
           Brush.BackColor = clDefault
           LinePen.Color = clFuchsia
@@ -660,7 +709,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00008056400000000000003340}
         end
         object Series6: TErrorSeries
-          HoverElement = []
           Legend.Visible = False
           Marks.Visible = False
           Marks.OnTop = True
@@ -682,7 +730,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00000038400000000000804540A38B2EBAE8224540}
         end
         object Series7: TErrorSeries
-          HoverElement = []
           Legend.Visible = False
           Marks.Visible = False
           Marks.OnTop = True
@@ -703,7 +750,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00000038400000000000B08240C49687822B394440}
         end
         object Series8: TErrorSeries
-          HoverElement = []
           Legend.Visible = False
           Marks.Visible = False
           Marks.OnTop = True
@@ -724,7 +770,6 @@ object IWChartInterpretation: TIWChartInterpretation
             00000038400000000000388B4062ED1BD6BE414740}
         end
         object Series9: TErrorSeries
-          HoverElement = []
           Legend.Visible = False
           Marks.Visible = False
           Marks.OnTop = True
@@ -745,7 +790,6 @@ object IWChartInterpretation: TIWChartInterpretation
             0000003840000000000040534062ED1BD6BE414740}
         end
         object Series10: TErrorSeries
-          HoverElement = []
           Legend.Visible = False
           Marks.Visible = False
           Marks.OnTop = True
@@ -952,5 +996,14 @@ object IWChartInterpretation: TIWChartInterpretation
     object FDMemTempDataDTBlockingTUncertainty: TFloatField
       FieldName = 'BlockingTUncertainty'
     end
+  end
+  object ChartEditor1: TChartEditor
+    Chart = Chart1
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 716
+    Top = 233
   end
 end

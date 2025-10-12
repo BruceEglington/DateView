@@ -41,7 +41,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ServerController, DB, DVIW_uMain, DVIW_constants, DVIW_dmdata, DVIW_dm;
+  ServerController, DB, DVIW_uMain, DVIW_constants, DVIW_dmdata, DVIW_dm, usrIW_dm;
 
 
 
@@ -63,8 +63,19 @@ begin
   end;
   {Models}
   dmdDV.qIsoModels.Close;
-  dmdDV.qIsoModels.ParamByName('ISOSYSTEM').AsString := UserSession.Parameter2Chosen;
   dmdDV.cdsIsoModels.Close;
+  dmdDV.qIsoModels.SQL.Clear;
+  dmdDV.qIsoModels.SQL.Add('select IsoModels.ModelID, IsoModels.IsoSystem, IsoModels.ModelParam1,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelParam2, IsoModels.ModelParam3,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelParam4, IsoModels.ModelParam5,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelName, IsoSystem.IsoSystemName');
+  dmdDV.qIsoModels.SQL.Add('from IsoModels,IsoSystem');
+  dmdDV.qIsoModels.SQL.Add('where IsoModels.IsoSystem=IsoSystem.IsoSystem');
+  dmdDV.qIsoModels.SQL.Add('and IsoModels.IsoSystem = :IsoSystem');
+  //dmdDV.qIsoModels.SQL.Add('and IsoModels.ModelTypeID = :ModelTypeID');
+  //dmUser.SetDeveloperData(dmdDV.qIsoModels.Sql.Text);
+  dmdDV.qIsoModels.ParamByName('ISOSYSTEM').AsString := UserSession.Parameter2Chosen;
+  //dmdDV.qIsoModels.ParamByName('MODELTYPEID').AsString := UserSession.Parameter2Chosen;
   dmdDV.cdsIsoModels.Open;
   iwlPrevPage.Visible := (dmdDV.cdsIsoModels.RecordCount > iwDBg.RowLimit);
   iwlNextPage.Visible := (dmdDV.cdsIsoModels.RecordCount > iwDBg.RowLimit);

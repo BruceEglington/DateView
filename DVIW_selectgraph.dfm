@@ -17,6 +17,7 @@ object ISFSelectGraph: TISFSelectGraph
   DesignLeft = 2
   DesignTop = 2
   object iwrgPlotType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 112
     Top = 100
     Width = 361
@@ -28,6 +29,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgPlotType'
     ItemIndex = 0
     Items.Strings = (
@@ -47,6 +49,7 @@ object ISFSelectGraph: TISFSelectGraph
     Layout = glVertical
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 76
     Width = 152
@@ -55,12 +58,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Choose the plot required'
   end
   object iwcbPlotTypeGrouped: TIWCheckBox
+    AlignWithMargins = False
     Left = 537
     Top = 76
     Width = 392
@@ -71,6 +76,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     SubmitOnAsyncEvent = True
     Style = stNormal
     TabOrder = 1
@@ -78,6 +84,7 @@ object ISFSelectGraph: TISFSelectGraph
     FriendlyName = 'iwcbPlotTypeGrouped'
   end
   object iwbSubmitGraphSelection: TIWButton
+    AlignWithMargins = False
     Left = 94
     Top = 516
     Width = 220
@@ -87,11 +94,13 @@ object ISFSelectGraph: TISFSelectGraph
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmitGraphSelection'
     TabOrder = 8
     OnClick = iwbSubmitGraphSelectionClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 552
     Top = 103
     Width = 55
@@ -100,12 +109,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Group by'
   end
   object iwcbGroupBy: TIWComboBox
+    AlignWithMargins = False
     Left = 623
     Top = 103
     Width = 306
@@ -116,6 +127,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     OnChange = iwrgPDFChangeClick
     UseSize = False
     TabOrder = 2
@@ -133,6 +145,7 @@ object ISFSelectGraph: TISFSelectGraph
     NoSelectionText = '-- No Selection --'
   end
   object iwrgNormalisationType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 552
     Top = 190
     Width = 513
@@ -145,6 +158,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgPlotType'
     ItemIndex = 0
     Items.Strings = (
@@ -156,6 +170,7 @@ object ISFSelectGraph: TISFSelectGraph
     TabOrder = 3
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 534
     Top = 166
     Width = 181
@@ -164,12 +179,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Probability plot normalisation'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -179,6 +196,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -187,6 +205,7 @@ object ISFSelectGraph: TISFSelectGraph
     ExplicitHeight = 592
   end
   object iwlSpectrumAgeHeading: TIWLabel
+    AlignWithMargins = False
     Left = 94
     Top = 396
     Width = 178
@@ -195,12 +214,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSpectrumAges'
     Caption = 'Probability density age limits'
   end
   object iwlFromAge: TIWLabel
+    AlignWithMargins = False
     Left = 315
     Top = 419
     Width = 88
@@ -209,12 +230,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlFromAge'
     Caption = 'Older age limit'
   end
   object iweToAge: TIWEdit
+    AlignWithMargins = False
     Left = 406
     Top = 417
     Width = 67
@@ -224,12 +247,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweToAge'
     SubmitOnAsyncEvent = True
     TabOrder = 7
     Text = 'iweToAge'
   end
   object iwlToAge: TIWLabel
+    AlignWithMargins = False
     Left = 116
     Top = 419
     Width = 105
@@ -238,12 +263,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlToAge'
     Caption = 'Younger age limit'
   end
   object iweFromAge: TIWEdit
+    AlignWithMargins = False
     Left = 224
     Top = 417
     Width = 67
@@ -253,12 +280,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweFromAge'
     SubmitOnAsyncEvent = True
     TabOrder = 6
     Text = 'iweFromAge'
   end
   object iwcbSpectrumAges: TIWCheckBox
+    AlignWithMargins = False
     Left = 352
     Top = 392
     Width = 177
@@ -269,14 +298,17 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     SubmitOnAsyncEvent = True
     Style = stNormal
     TabOrder = 5
     OnClick = iwcbSpectrumAgesClick
+    OnChange = iwcbSpectrumAgesChange
     Checked = False
     FriendlyName = 'iwcbSpectrumAges'
   end
   object iwrgPDFType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 552
     Top = 274
     Width = 513
@@ -289,6 +321,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgShowAllSampleLocalities'
     ItemIndex = 1
     Items.Strings = (
@@ -298,6 +331,7 @@ object ISFSelectGraph: TISFSelectGraph
     TabOrder = 4
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 536
     Top = 254
     Width = 198
@@ -306,12 +340,14 @@ object ISFSelectGraph: TISFSelectGraph
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSpectrumAges'
     Caption = 'Probability density function type'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 599
     Top = 516
     Width = 220
@@ -321,11 +357,13 @@ object ISFSelectGraph: TISFSelectGraph
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 10
     OnClick = iwbReturnClick
   end
   object iwbReturnToResults: TIWButton
+    AlignWithMargins = False
     Left = 346
     Top = 516
     Width = 220
@@ -335,6 +373,7 @@ object ISFSelectGraph: TISFSelectGraph
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 9
     OnClick = iwbReturnToResultsClick

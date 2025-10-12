@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : can't format message 13:98 -- message file C:\Windows\SYSTEM32\firebird.msg not found.Unable to complete network request to host "bromo2.usask.ca".Failed to locate host machine.The specified name was not found in the hosts file or Domain Name Services
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EOleException
+Exception address  : 00C37C3E
+Exception Time     : 2025-05-02 22:29:36.842
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-05-02 22:28:46.213
+Running for        :  50 seconds
+Computer Name      : EGLINGTON
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 16.0.9
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\Win32\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 7700
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : ISFLogin (TISFLogin)
+Active Form list   : [1] ISFLogin (TISFLogin)
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+                     [7] ISFLogin (TISFLogin)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0
+Session ID         : lYsVpffTEASjxf9eP-MPQ9bEKqu
+Last Access        : 2025-05-02 22:29:35.594
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

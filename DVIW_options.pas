@@ -287,6 +287,7 @@ procedure TISFOptions.IWAppFormCreate(Sender: TObject);
 var
   i,j : integer;
 begin
+  //dmUser.SetDeveloperData('Options FormCreate');
   if UserSession.LoggedIn then
   begin
     TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
@@ -321,6 +322,7 @@ begin
   iweDateBand4Maximum.Text := UserSession.DateBand4Maximum;
   iweDateBand5Maximum.Text := UserSession.DateBand5Maximum;
   iweMinimumUncertaintyForDates.Text := UserSession.MinimumDateUncertainty;
+  //dmUser.SetDeveloperData('Options FormCreate 1');
   for i := 0 to iwcbGroupBy.Items.Count-1 do
   begin
     if (UserSession.GroupBy = iwcbGroupBy.Items.Strings[i]) then
@@ -343,30 +345,36 @@ begin
   begin
     iwrgPDFType.ItemIndex := 1;
   end;
+  //dmUser.SetDeveloperData('Options FormCreate 2');
   dmOpt.qOptionTypes.Close;
   dmOpt.cdsOptionTypes.Close;
   dmOpt.cdsOptionTypes.Open;
+  //dmUser.SetDeveloperData('Options FormCreate 3');
   dmOpt.qOptR.Close;
-  dmOpt.qOptR.ParamByName('USERID').AsString := UserSession.UserID;
-  dmOpt.qOptR.ParamByName('OptionTypeID').AsString := dmOpt.cdsOptionTypesOPTIONTYPEID.AsString;
+  dmOpt.qOptR.ParamByName('USERID').AsWideString := UserSession.UserID;
+  dmOpt.qOptR.ParamByName('OptionTypeID').AsWideString := dmOpt.cdsOptionTypesOPTIONTYPEID.AsString;
   dmOpt.cdsOptR.Close;
   dmOpt.cdsOptR.Open;
+  //dmUser.SetDeveloperData('Options FormCreate 4');
 
-  dmUser.qUserMaximumOutputLimits.Close;
-  dmUser.qUserMaximumOutputLimits.ParamByName('UserID').AsString := UserSession.UserID;
+  dmUser.qUserMaxOutputRecords.Close;
+  //dmUser.SetDeveloperData(dmUser.qUserMaxOutputRecords.SQL.Text);
+  dmUser.qUserMaxOutputRecords.ParamByName('UserID').AsWideString := UserSession.UserID;
   dmUser.qUserMaxOutputRecords.ParamByName('DownloadTypeID').AsInteger := 2;
-  dmUser.cdsUserMaximumOutputLimits.Close;
-  dmUser.cdsUserMaximumOutputLimits.Open;
-  if (dmUser.cdsUserMaximumOutputLimits.RecordCount < 1) then
+  dmUser.cdsUserMaxOutputRecords.Close;
+  dmUser.cdsUserMaxOutputRecords.Open;
+  //dmUser.SetDeveloperData('Options FormCreate 5');
+  if (dmUser.cdsUserMaxOutputRecords.RecordCount < 1) then
   begin
     dmUser.SetUserDownloadLimits(UserSession.UserID,0);
     dmUser.SetUserDownloadLimits(UserSession.UserID,1);
     dmUser.SetUserDownloadLimits(UserSession.UserID,2);
     dmUser.SetUserDownloadLimits(UserSession.UserID,3);
     dmUser.SetUserDownloadLimits(UserSession.UserID,4);
-    dmUser.cdsUserMaximumOutputLimits.Close;
-    dmUser.cdsUserMaximumOutputLimits.Open;
+    dmUser.cdsUserMaxOutputRecords.Close;
+    dmUser.cdsUserMaxOutputRecords.Open;
   end;
+  //dmUser.SetDeveloperData('Options FormCreate 6');
 end;
 
 procedure TISFOptions.IWAppFormRender(Sender: TObject);

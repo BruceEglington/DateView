@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : qUserMaximumOutputLimits: Type mismatch for field 'MAXALLOWED', expecting: Float actual: FMTBcd
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EOleException
+Exception address  : 011EA6FA
+Exception Time     : 2025-04-05 20:16:22.077
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-04-05 20:15:42.376
+Running for        :  39 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\Win32\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 12192
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Session ID         : KTatBjoBNFSUADrkMBA1wKMjb44
+Last Access        : 2025-04-05 20:16:21.859
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

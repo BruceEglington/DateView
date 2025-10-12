@@ -1099,6 +1099,16 @@ begin
   iLabelModelAgeIncrement := 400;
   dmdDV.qIsoModels.Close;
   dmdDV.cdsIsoModels.Close;
+  dmdDV.qIsoModels.Close;
+  dmdDV.qIsoModels.SQL.Clear;
+  dmdDV.qIsoModels.SQL.Add('select IsoModels.ModelID, IsoModels.IsoSystem, IsoModels.ModelParam1,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelParam2, IsoModels.ModelParam3,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelParam4, IsoModels.ModelParam5,');
+  dmdDV.qIsoModels.SQL.Add('  IsoModels.ModelName, IsoSystem.IsoSystemName');
+  dmdDV.qIsoModels.SQL.Add('from IsoModels,IsoSystem');
+  dmdDV.qIsoModels.SQL.Add('where IsoModels.IsoSystem=IsoSystem.IsoSystem');
+  dmdDV.qIsoModels.SQL.Add('and IsoModels.IsoSystem = :IsoSystem');
+  dmdDV.qIsoModels.SQL.Add('and IsoModels.ModelTypeID = :ModelTypeID');
   dmdDV.qIsoModels.ParamByName('IsoSystem').AsString := 'LuHf';
   dmdDV.qIsoModels.ParamByName('ModelTypeID').AsString := 'CHUR';
   dmdDV.cdsIsoModels.Open;

@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Cannot open file "C:\DevD12\DateViewIW2\Win32\Release\wwwroot\Files\Flexcell\FlxQueryCombined.xlsx". The system cannot find the path specified
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EFOpenError
+Exception address  : 00782B2B
+Exception Time     : 2025-03-30 18:37:44.843
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-03-30 18:35:59.837
+Running for        :  1 minute 45 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\wwwroot\
+Session count      : 1
+Current Thread ID  : 3976
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : ISFGrid (TISFGrid)
+Active Form list   : [1] ISFGrid (TISFGrid)
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+                     [7] ISFGrid (TISFGrid)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Session ID         : d7TVCH3eivr9-vfkK~ej9jUnnU8
+Last Access        : 2025-03-30 18:37:42.167
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

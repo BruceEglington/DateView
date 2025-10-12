@@ -1,0 +1,40 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Access violation at address 012A26B4 in module 'DVIW.exe' (offset 10326B4). Read of address 00000068
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EAccessViolation
+Exception address  : 012A26B4
+Exception Time     : 2025-05-02 22:09:42.570
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-05-02 22:09:39.036
+Running for        :  3 seconds
+Computer Name      : EGLINGTON
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 16.0.9
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\Win32\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 12176
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0
+Session ID         : y5n1g9VZS1afTEHbQRJXFp38Fx8
+Last Access        : 2025-05-02 22:09:42.540
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0
+Cookies Count      : 1
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

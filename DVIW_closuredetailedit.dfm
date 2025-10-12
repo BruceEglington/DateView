@@ -14,19 +14,14 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 229
     Top = 70
     Width = 108
     Height = 29
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -38,34 +33,21 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     Orientation = orHorizontal
   end
   object iwDBlcbIsoSystem: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 279
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    BGColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FocusColor = clNone
-    AutoHideOnMenuActivation = False
-    ItemsHaveValues = False
-    NoSelectionText = '-- No Selection --'
+    Font.PxSize = 12
     Required = True
-    RequireSelection = True
-    ScriptEvents = <>
-    UseSize = True
-    Style = stNormal
-    ButtonColor = clBtnFace
     Editable = False
     NonEditableAsLabel = True
-    SubmitOnAsyncEvent = True
-    TabOrder = 5
+    TabOrder = 6
     AutoEditable = True
     DataField = 'ISOSYSTEM'
     DataSource = dmDV.dsClosureTemperatures
@@ -74,233 +56,161 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'ISOSYSTEMNAME'
     ListSource = dmDV.dsIsoSystems
     DisableWhenEmpty = True
+    NoSelectionText = '-- No Selection --'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 98
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Return'
     Color = clWebLIGHTGREEN
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
-    ScriptEvents = <>
-    TabOrder = 6
+    TabOrder = 7
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 47
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Material'
-    RawText = False
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 34
     Top = 140
     Width = 70
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Iso. System'
-    RawText = False
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 168
     Width = 57
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Approach'
-    RawText = False
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 196
     Width = 151
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Closure Temperature (C)'
-    RawText = False
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 224
     Width = 168
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Temperature uncertainty (C)'
-    RawText = False
   end
   object iwDBeBlockingT: TIWDBEdit
+    AlignWithMargins = False
     Left = 209
     Top = 196
     Width = 78
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
-    BGColor = clNone
-    FocusColor = clNone
     Editable = False
     NonEditableAsLabel = True
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
     TabOrder = 1
     AutoEditable = True
     DataField = 'BLOCKINGT'
-    PasswordPrompt = False
     DataSource = dmDV.dsClosureTemperatures
+    PasswordPrompt = False
   end
   object iwDBeBlockingTUncertainty: TIWDBEdit
+    AlignWithMargins = False
     Left = 209
     Top = 224
     Width = 78
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
-    BGColor = clNone
-    FocusColor = clNone
     Editable = False
     NonEditableAsLabel = True
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
     TabOrder = 2
     AutoEditable = True
     DataField = 'BLOCKINGTUNCERTAINTY'
-    PasswordPrompt = False
     DataSource = dmDV.dsClosureTemperatures
+    PasswordPrompt = False
   end
   object iwDBlcbApproach: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 166
     Width = 279
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    BGColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FocusColor = clNone
-    AutoHideOnMenuActivation = False
-    ItemsHaveValues = False
-    NoSelectionText = '-- No Selection --'
+    Font.PxSize = 12
     Required = True
-    RequireSelection = True
-    ScriptEvents = <>
-    UseSize = True
-    Style = stNormal
-    ButtonColor = clBtnFace
     Editable = False
     NonEditableAsLabel = True
-    SubmitOnAsyncEvent = True
-    TabOrder = 3
+    TabOrder = 4
     AutoEditable = True
     DataField = 'APPROACHABR'
     DataSource = dmDV.dsClosureTemperatures
@@ -309,97 +219,73 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'APPROACHDESCRIPTION'
     ListSource = dmDV.dsApproach
     DisableWhenEmpty = True
+    NoSelectionText = '-- No Selection --'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 98
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
-    ScriptEvents = <>
-    TabOrder = 8
+    TabOrder = 9
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 98
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
-    ScriptEvents = <>
-    TabOrder = 9
+    TabOrder = 10
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 98
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Delete link'
     Confirmation = 'Are you sure you want to delete this sample?'
     Color = clWebLIGHTCORAL
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
-    ScriptEvents = <>
-    TabOrder = 7
+    TabOrder = 8
     OnClick = iwbDeleteClick
   end
   object iwDBlcbMaterial: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 279
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    BGColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FocusColor = clNone
-    AutoHideOnMenuActivation = False
-    ItemsHaveValues = False
-    NoSelectionText = '-- No Selection --'
+    Font.PxSize = 12
     Required = True
-    RequireSelection = True
-    ScriptEvents = <>
-    UseSize = True
-    Style = stNormal
-    ButtonColor = clBtnFace
     Editable = False
     NonEditableAsLabel = True
-    SubmitOnAsyncEvent = True
-    TabOrder = 4
+    TabOrder = 5
     AutoEditable = True
     DataField = 'MATERIALABR'
     DataSource = dmDV.dsClosureTemperatures
@@ -408,26 +294,64 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'MATERIALDESCRIPTION'
     ListSource = dmDV.dsMaterial
     DisableWhenEmpty = True
+    NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 98
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
-    ScriptEvents = <>
-    TabOrder = 10
+    TabOrder = 11
     OnClick = iwbEditClick
+  end
+  object IWLabel6: TIWLabel
+    AlignWithMargins = False
+    Left = 34
+    Top = 253
+    Width = 70
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    HasTabOrder = False
+    FriendlyName = 'IWLabel1'
+    Caption = 'Association'
+  end
+  object iwDBlcbAssociation: TIWDBLookupComboBox
+    AlignWithMargins = False
+    Left = 119
+    Top = 251
+    Width = 279
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    Required = True
+    Editable = False
+    NonEditableAsLabel = True
+    TabOrder = 3
+    AutoEditable = True
+    DataField = 'CLOSTMPASSOCID'
+    DataSource = dmDV.dsClosureTemperatures
+    FriendlyName = 'iwDBlcbAssociation'
+    KeyField = 'CLOSTMPASSOCID'
+    ListField = 'CLOSTMPASSOCID'
+    ListSource = dmDV.dsClosTmpAssoc
+    DisableWhenEmpty = True
+    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -453,7 +377,7 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ExplicitWidth = 716
     inherited IWFrameRegion: TIWRegion
       Width = 716
-      TabOrder = 11
+      TabOrder = 12
       ExplicitWidth = 716
       inherited iwrHeader: TIWRegion
         Width = 716
@@ -473,6 +397,9 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
+          inherited iwlSignOut: TIWLink
+            TabOrder = -1
+          end
         end
       end
     end

@@ -1,0 +1,2785 @@
+/3.2
+(ODB.1
+	FirstRootClassName:	"Project"
+	Roots:	2
+	Version:	32
+)
+
+(Project.2
+	Name:	"proj1.apr"
+	CreationDate:	"14-Jun-04 06:58:02"
+	GUIName:	"Project"
+	Win:	3
+	CSMgr:	4
+	DocExts:	5
+	VisGUIWidth:	70
+	Doc:	6
+	ActiveDoc:	6
+	Buttons:	347
+	Buttons:	348
+	Buttons:	349
+	Scripts:	350
+	Prefs:	351
+	WorkDir:	1176
+	WinX:	-4
+	WinY:	-3
+	WinW:	1032
+	WinH:	741
+	SerialNumber:	"825911110416"
+	SelColor:	1177
+	GUINames:	1178
+	GUINames:	1179
+	GUINames:	1180
+	GUINames:	1181
+	GUINames:	1182
+	GUINames:	1183
+	GUINames:	1184
+	TocWidthScale:	1.00000000000000
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	5
+	Y:	5
+	W:	238
+	H:	324
+)
+
+(CSMgr.4
+)
+
+(DocAct.5
+	Doc:	2
+)
+
+(View.6
+	Name:	"View1"
+	CreationDate:	"14-Jun-04 06:58:09"
+	GUIName:	"View"
+	Win:	7
+	CSMgr:	8
+	DocExts:	10
+	DocExts:	11
+	Graphics:	12
+	Theme:	19
+	Theme:	60
+	Theme:	101
+	Theme:	142
+	Theme:	183
+	Theme:	224
+	Theme:	265
+	Theme:	306
+	LastScale:	191512364.10892376000000
+	Dpy:	13
+	TOCWidth:	150
+	CoordPrecision:	2
+)
+
+(DocWin.7
+	Owner:	6
+	Open:	1
+	X:	-4
+	Y:	-4
+	W:	1034
+	H:	629
+)
+
+(CSMgr.8
+	Client:	9
+)
+
+(CSClient.9
+	Client:	10
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.10
+	Doc:	6
+)
+
+(DocAct.11
+	Doc:	6
+)
+
+(GList.12
+	Dpy:	13
+	FormatNumb:	18
+)
+
+(MapDpy.13
+	Left:	-198.00000000000000
+	Bottom:	-98.67980194091797
+	Top:	92.27584075927734
+	Right:	198.00000000000000
+	ReportUnits:	4
+	Units:	10
+	Scale:	14
+	FrameTop:	6.15625000000000
+	FrameRight:	9.05208333333333
+	PageDpy:	15
+	FitToPage:	1
+	MouseLoc:	17
+)
+
+(Numb.14
+	N:	0.02285879629630
+)
+
+(PageDpy.15
+	Top:	6.15625000000000
+	Right:	9.05208333333333
+	ReportUnits:	1
+	Units:	1
+	Scale:	16
+	ZoomRight:	9.05208333333333
+	ZoomTop:	6.15625000000000
+	GridSpacingX:	0.25000000000000
+	GridSpacingY:	0.25000000000000
+)
+
+(Numb.16
+	N:	96.00000000000000
+)
+
+(PointD.17
+	x:	-115.51898734177215
+	y:	130.54485485221767
+)
+
+(Numb.18
+)
+
+(FTheme.19
+	Name:	"Oce.shp"
+	Source:	20
+	Flags:	0x06
+	Legend:	44
+	Threshold:	57
+	View:	6
+	GSet:	58
+	LegEditScript:	"View.EditLegend"
+	TxPos:	59
+	LabelField:	25
+	SnapTolCursor:	1
+)
+
+(ShpSrc.20
+	Name:	21
+	FTab:	23
+)
+
+(SrcName.21
+	FileName:	22
+	Name:	"oce.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.22
+	Path:	"c:/inetpub/wwwroot/files/maps/oce.shp"
+)
+
+(FTab.23
+	Name:	"oce.dbf"
+	BTab:	24
+	Fields:	42
+	Fields:	25
+	Fields:	26
+	Fields:	27
+	Fields:	28
+	Fields:	29
+	Fields:	30
+	Fields:	31
+	Fields:	32
+	Fields:	33
+	Fields:	34
+	Fields:	35
+	Fields:	36
+	Fields:	37
+	Fields:	38
+	Fields:	39
+	Fields:	40
+	SelBits:	43
+	FSrc:	20
+)
+
+(dBASE.24
+	Name:	"oce.dbf"
+	Fields:	25
+	Fields:	26
+	Fields:	27
+	Fields:	28
+	Fields:	29
+	Fields:	30
+	Fields:	31
+	Fields:	32
+	Fields:	33
+	Fields:	34
+	Fields:	35
+	Fields:	36
+	Fields:	37
+	Fields:	38
+	Fields:	39
+	Fields:	40
+	FileName:	41
+)
+
+(Field.25
+	Name:	"Name"
+	Btab:	24
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.26
+	Name:	"Abbrevname"
+	Btab:	24
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.27
+	Name:	"Fips_code"
+	Btab:	24
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.28
+	Name:	"Wb_cntry"
+	Btab:	24
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.29
+	Name:	"Region"
+	Btab:	24
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.30
+	Name:	"Continent"
+	Btab:	24
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.31
+	Name:	"Capital"
+	Btab:	24
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.32
+	Name:	"Fao"
+	Btab:	24
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.33
+	Name:	"Ga_memb_yr"
+	Btab:	24
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.34
+	Name:	"Iaea"
+	Btab:	24
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.35
+	Name:	"Ibrd"
+	Btab:	24
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.36
+	Name:	"Imf"
+	Btab:	24
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.37
+	Name:	"Opec"
+	Btab:	24
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.38
+	Name:	"Unesco"
+	Btab:	24
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.39
+	Name:	"Who"
+	Btab:	24
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.40
+	Name:	"Wmo"
+	Btab:	24
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.41
+	Path:	"c:/inetpub/wwwroot/files/maps/oce.dbf"
+)
+
+(Field.42
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.43
+	NumBits:	3
+
+)
+
+(Legend.44
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	45
+	Class:	50
+	StdDevs:	1.00000000000000
+	NullSym:	51
+	NullValues:	55
+	StatValues:	56
+	Precision:	-3
+)
+
+(SymList.45
+	Child:	46
+)
+
+(BShSym.46
+	Color:	47
+	Outline:	1
+	OutlineColor:	48
+	OutlineWidth:	0.10000000000000
+	BgColor:	49
+)
+
+(TClr.47
+	Red:	0x476b
+	Green:	0x9d6c
+	Blue:	0x248d
+)
+
+(TClr.48
+)
+
+(TClr.49
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.50
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.51
+	Color:	52
+	Outline:	1
+	OutlineColor:	53
+	OutlineWidth:	0.10000000000000
+	BgColor:	54
+)
+
+(TClr.52
+	Name:	"Transparent"
+)
+
+(TClr.53
+	Name:	"Transparent"
+)
+
+(TClr.54
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.55
+)
+
+(NameDict.56
+)
+
+(Thresh.57
+)
+
+(GSet.58
+)
+
+(TxPosPly.59
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.60
+	Name:	"Asi_2.shp"
+	Source:	61
+	Flags:	0x06
+	Legend:	85
+	Threshold:	98
+	View:	6
+	GSet:	99
+	LegEditScript:	"View.EditLegend"
+	TxPos:	100
+	LabelField:	66
+	SnapTolCursor:	1
+)
+
+(ShpSrc.61
+	Name:	62
+	FTab:	64
+)
+
+(SrcName.62
+	FileName:	63
+	Name:	"asi_2.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.63
+	Path:	"c:/inetpub/wwwroot/files/maps/asi_2.shp"
+)
+
+(FTab.64
+	Name:	"asi_2.dbf"
+	BTab:	65
+	Fields:	83
+	Fields:	66
+	Fields:	67
+	Fields:	68
+	Fields:	69
+	Fields:	70
+	Fields:	71
+	Fields:	72
+	Fields:	73
+	Fields:	74
+	Fields:	75
+	Fields:	76
+	Fields:	77
+	Fields:	78
+	Fields:	79
+	Fields:	80
+	Fields:	81
+	SelBits:	84
+	FSrc:	61
+)
+
+(dBASE.65
+	Name:	"asi_2.dbf"
+	Fields:	66
+	Fields:	67
+	Fields:	68
+	Fields:	69
+	Fields:	70
+	Fields:	71
+	Fields:	72
+	Fields:	73
+	Fields:	74
+	Fields:	75
+	Fields:	76
+	Fields:	77
+	Fields:	78
+	Fields:	79
+	Fields:	80
+	Fields:	81
+	FileName:	82
+)
+
+(Field.66
+	Name:	"Name"
+	Btab:	65
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.67
+	Name:	"Abbrevname"
+	Btab:	65
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.68
+	Name:	"Fips_code"
+	Btab:	65
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.69
+	Name:	"Wb_cntry"
+	Btab:	65
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.70
+	Name:	"Region"
+	Btab:	65
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.71
+	Name:	"Continent"
+	Btab:	65
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.72
+	Name:	"Capital"
+	Btab:	65
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.73
+	Name:	"Fao"
+	Btab:	65
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.74
+	Name:	"Ga_memb_yr"
+	Btab:	65
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.75
+	Name:	"Iaea"
+	Btab:	65
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.76
+	Name:	"Ibrd"
+	Btab:	65
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.77
+	Name:	"Imf"
+	Btab:	65
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.78
+	Name:	"Opec"
+	Btab:	65
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.79
+	Name:	"Unesco"
+	Btab:	65
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.80
+	Name:	"Who"
+	Btab:	65
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.81
+	Name:	"Wmo"
+	Btab:	65
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.82
+	Path:	"c:/inetpub/wwwroot/files/maps/asi_2.dbf"
+)
+
+(Field.83
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.84
+	NumBits:	45
+
+)
+
+(Legend.85
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	86
+	Class:	91
+	StdDevs:	1.00000000000000
+	NullSym:	92
+	NullValues:	96
+	StatValues:	97
+	Precision:	-3
+)
+
+(SymList.86
+	Child:	87
+)
+
+(BShSym.87
+	Color:	88
+	Outline:	1
+	OutlineColor:	89
+	OutlineWidth:	0.10000000000000
+	BgColor:	90
+)
+
+(TClr.88
+	Red:	0xc8ea
+	Green:	0x2cd9
+	Blue:	0x93b7
+)
+
+(TClr.89
+)
+
+(TClr.90
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.91
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.92
+	Color:	93
+	Outline:	1
+	OutlineColor:	94
+	OutlineWidth:	0.10000000000000
+	BgColor:	95
+)
+
+(TClr.93
+	Name:	"Transparent"
+)
+
+(TClr.94
+	Name:	"Transparent"
+)
+
+(TClr.95
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.96
+)
+
+(NameDict.97
+)
+
+(Thresh.98
+)
+
+(GSet.99
+)
+
+(TxPosPly.100
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.101
+	Name:	"Eur_2.shp"
+	Source:	102
+	Flags:	0x06
+	Legend:	126
+	Threshold:	139
+	View:	6
+	GSet:	140
+	LegEditScript:	"View.EditLegend"
+	TxPos:	141
+	LabelField:	107
+	SnapTolCursor:	1
+)
+
+(ShpSrc.102
+	Name:	103
+	FTab:	105
+)
+
+(SrcName.103
+	FileName:	104
+	Name:	"eur_2.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.104
+	Path:	"c:/inetpub/wwwroot/files/maps/eur_2.shp"
+)
+
+(FTab.105
+	Name:	"eur_2.dbf"
+	BTab:	106
+	Fields:	124
+	Fields:	107
+	Fields:	108
+	Fields:	109
+	Fields:	110
+	Fields:	111
+	Fields:	112
+	Fields:	113
+	Fields:	114
+	Fields:	115
+	Fields:	116
+	Fields:	117
+	Fields:	118
+	Fields:	119
+	Fields:	120
+	Fields:	121
+	Fields:	122
+	SelBits:	125
+	FSrc:	102
+)
+
+(dBASE.106
+	Name:	"eur_2.dbf"
+	Fields:	107
+	Fields:	108
+	Fields:	109
+	Fields:	110
+	Fields:	111
+	Fields:	112
+	Fields:	113
+	Fields:	114
+	Fields:	115
+	Fields:	116
+	Fields:	117
+	Fields:	118
+	Fields:	119
+	Fields:	120
+	Fields:	121
+	Fields:	122
+	FileName:	123
+)
+
+(Field.107
+	Name:	"Name"
+	Btab:	106
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.108
+	Name:	"Abbrevname"
+	Btab:	106
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.109
+	Name:	"Fips_code"
+	Btab:	106
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.110
+	Name:	"Wb_cntry"
+	Btab:	106
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.111
+	Name:	"Region"
+	Btab:	106
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.112
+	Name:	"Continent"
+	Btab:	106
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.113
+	Name:	"Capital"
+	Btab:	106
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.114
+	Name:	"Fao"
+	Btab:	106
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.115
+	Name:	"Ga_memb_yr"
+	Btab:	106
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.116
+	Name:	"Iaea"
+	Btab:	106
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.117
+	Name:	"Ibrd"
+	Btab:	106
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.118
+	Name:	"Imf"
+	Btab:	106
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.119
+	Name:	"Opec"
+	Btab:	106
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.120
+	Name:	"Unesco"
+	Btab:	106
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.121
+	Name:	"Who"
+	Btab:	106
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.122
+	Name:	"Wmo"
+	Btab:	106
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.123
+	Path:	"c:/inetpub/wwwroot/files/maps/eur_2.dbf"
+)
+
+(Field.124
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.125
+	NumBits:	37
+
+)
+
+(Legend.126
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	127
+	Class:	132
+	StdDevs:	1.00000000000000
+	NullSym:	133
+	NullValues:	137
+	StatValues:	138
+	Precision:	-3
+)
+
+(SymList.127
+	Child:	128
+)
+
+(BShSym.128
+	Color:	129
+	Outline:	1
+	OutlineColor:	130
+	OutlineWidth:	0.10000000000000
+	BgColor:	131
+)
+
+(TClr.129
+	Red:	0x1d0a
+	Green:	0xb441
+	Blue:	0x3ad8
+)
+
+(TClr.130
+)
+
+(TClr.131
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.132
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.133
+	Color:	134
+	Outline:	1
+	OutlineColor:	135
+	OutlineWidth:	0.10000000000000
+	BgColor:	136
+)
+
+(TClr.134
+	Name:	"Transparent"
+)
+
+(TClr.135
+	Name:	"Transparent"
+)
+
+(TClr.136
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.137
+)
+
+(NameDict.138
+)
+
+(Thresh.139
+)
+
+(GSet.140
+)
+
+(TxPosPly.141
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.142
+	Name:	"Sam.shp"
+	Source:	143
+	Flags:	0x06
+	Legend:	167
+	Threshold:	180
+	View:	6
+	GSet:	181
+	LegEditScript:	"View.EditLegend"
+	TxPos:	182
+	LabelField:	148
+	SnapTolCursor:	1
+)
+
+(ShpSrc.143
+	Name:	144
+	FTab:	146
+)
+
+(SrcName.144
+	FileName:	145
+	Name:	"sam.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.145
+	Path:	"c:/inetpub/wwwroot/files/maps/sam.shp"
+)
+
+(FTab.146
+	Name:	"sam.dbf"
+	BTab:	147
+	Fields:	165
+	Fields:	148
+	Fields:	149
+	Fields:	150
+	Fields:	151
+	Fields:	152
+	Fields:	153
+	Fields:	154
+	Fields:	155
+	Fields:	156
+	Fields:	157
+	Fields:	158
+	Fields:	159
+	Fields:	160
+	Fields:	161
+	Fields:	162
+	Fields:	163
+	SelBits:	166
+	FSrc:	143
+)
+
+(dBASE.147
+	Name:	"sam.dbf"
+	Fields:	148
+	Fields:	149
+	Fields:	150
+	Fields:	151
+	Fields:	152
+	Fields:	153
+	Fields:	154
+	Fields:	155
+	Fields:	156
+	Fields:	157
+	Fields:	158
+	Fields:	159
+	Fields:	160
+	Fields:	161
+	Fields:	162
+	Fields:	163
+	FileName:	164
+)
+
+(Field.148
+	Name:	"Name"
+	Btab:	147
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.149
+	Name:	"Abbrevname"
+	Btab:	147
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.150
+	Name:	"Fips_code"
+	Btab:	147
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.151
+	Name:	"Wb_cntry"
+	Btab:	147
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.152
+	Name:	"Region"
+	Btab:	147
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.153
+	Name:	"Continent"
+	Btab:	147
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.154
+	Name:	"Capital"
+	Btab:	147
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.155
+	Name:	"Fao"
+	Btab:	147
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.156
+	Name:	"Ga_memb_yr"
+	Btab:	147
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.157
+	Name:	"Iaea"
+	Btab:	147
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.158
+	Name:	"Ibrd"
+	Btab:	147
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.159
+	Name:	"Imf"
+	Btab:	147
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.160
+	Name:	"Opec"
+	Btab:	147
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.161
+	Name:	"Unesco"
+	Btab:	147
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.162
+	Name:	"Who"
+	Btab:	147
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.163
+	Name:	"Wmo"
+	Btab:	147
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.164
+	Path:	"c:/inetpub/wwwroot/files/maps/sam.dbf"
+)
+
+(Field.165
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.166
+	NumBits:	13
+
+)
+
+(Legend.167
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	168
+	Class:	173
+	StdDevs:	1.00000000000000
+	NullSym:	174
+	NullValues:	178
+	StatValues:	179
+	Precision:	-3
+)
+
+(SymList.168
+	Child:	169
+)
+
+(BShSym.169
+	Color:	170
+	Outline:	1
+	OutlineColor:	171
+	OutlineWidth:	0.10000000000000
+	BgColor:	172
+)
+
+(TClr.170
+	Red:	0xb0a2
+	Green:	0x3039
+	Blue:	0x6ff5
+)
+
+(TClr.171
+)
+
+(TClr.172
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.173
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.174
+	Color:	175
+	Outline:	1
+	OutlineColor:	176
+	OutlineWidth:	0.10000000000000
+	BgColor:	177
+)
+
+(TClr.175
+	Name:	"Transparent"
+)
+
+(TClr.176
+	Name:	"Transparent"
+)
+
+(TClr.177
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.178
+)
+
+(NameDict.179
+)
+
+(Thresh.180
+)
+
+(GSet.181
+)
+
+(TxPosPly.182
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.183
+	Name:	"Nam.shp"
+	Source:	184
+	Flags:	0x06
+	Legend:	208
+	Threshold:	221
+	View:	6
+	GSet:	222
+	LegEditScript:	"View.EditLegend"
+	TxPos:	223
+	LabelField:	189
+	SnapTolCursor:	1
+)
+
+(ShpSrc.184
+	Name:	185
+	FTab:	187
+)
+
+(SrcName.185
+	FileName:	186
+	Name:	"nam.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.186
+	Path:	"c:/inetpub/wwwroot/files/maps/nam.shp"
+)
+
+(FTab.187
+	Name:	"nam.dbf"
+	BTab:	188
+	Fields:	206
+	Fields:	189
+	Fields:	190
+	Fields:	191
+	Fields:	192
+	Fields:	193
+	Fields:	194
+	Fields:	195
+	Fields:	196
+	Fields:	197
+	Fields:	198
+	Fields:	199
+	Fields:	200
+	Fields:	201
+	Fields:	202
+	Fields:	203
+	Fields:	204
+	SelBits:	207
+	FSrc:	184
+)
+
+(dBASE.188
+	Name:	"nam.dbf"
+	Fields:	189
+	Fields:	190
+	Fields:	191
+	Fields:	192
+	Fields:	193
+	Fields:	194
+	Fields:	195
+	Fields:	196
+	Fields:	197
+	Fields:	198
+	Fields:	199
+	Fields:	200
+	Fields:	201
+	Fields:	202
+	Fields:	203
+	Fields:	204
+	FileName:	205
+)
+
+(Field.189
+	Name:	"Name"
+	Btab:	188
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.190
+	Name:	"Abbrevname"
+	Btab:	188
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.191
+	Name:	"Fips_code"
+	Btab:	188
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.192
+	Name:	"Wb_cntry"
+	Btab:	188
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.193
+	Name:	"Region"
+	Btab:	188
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.194
+	Name:	"Continent"
+	Btab:	188
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.195
+	Name:	"Capital"
+	Btab:	188
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.196
+	Name:	"Fao"
+	Btab:	188
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.197
+	Name:	"Ga_memb_yr"
+	Btab:	188
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.198
+	Name:	"Iaea"
+	Btab:	188
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.199
+	Name:	"Ibrd"
+	Btab:	188
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.200
+	Name:	"Imf"
+	Btab:	188
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.201
+	Name:	"Opec"
+	Btab:	188
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.202
+	Name:	"Unesco"
+	Btab:	188
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.203
+	Name:	"Who"
+	Btab:	188
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.204
+	Name:	"Wmo"
+	Btab:	188
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.205
+	Path:	"c:/inetpub/wwwroot/files/maps/nam.dbf"
+)
+
+(Field.206
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.207
+	NumBits:	17
+
+)
+
+(Legend.208
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	209
+	Class:	214
+	StdDevs:	1.00000000000000
+	NullSym:	215
+	NullValues:	219
+	StatValues:	220
+	Precision:	-3
+)
+
+(SymList.209
+	Child:	210
+)
+
+(BShSym.210
+	Color:	211
+	Outline:	1
+	OutlineColor:	212
+	OutlineWidth:	0.10000000000000
+	BgColor:	213
+)
+
+(TClr.211
+	Red:	0x8063
+	Green:	0x573f
+	Blue:	0x211f
+)
+
+(TClr.212
+)
+
+(TClr.213
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.214
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.215
+	Color:	216
+	Outline:	1
+	OutlineColor:	217
+	OutlineWidth:	0.10000000000000
+	BgColor:	218
+)
+
+(TClr.216
+	Name:	"Transparent"
+)
+
+(TClr.217
+	Name:	"Transparent"
+)
+
+(TClr.218
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.219
+)
+
+(NameDict.220
+)
+
+(Thresh.221
+)
+
+(GSet.222
+)
+
+(TxPosPly.223
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.224
+	Name:	"Ant.shp"
+	Source:	225
+	Flags:	0x06
+	Legend:	249
+	Threshold:	262
+	View:	6
+	GSet:	263
+	LegEditScript:	"View.EditLegend"
+	TxPos:	264
+	LabelField:	230
+	SnapTolCursor:	1
+)
+
+(ShpSrc.225
+	Name:	226
+	FTab:	228
+)
+
+(SrcName.226
+	FileName:	227
+	Name:	"ant.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.227
+	Path:	"c:/inetpub/wwwroot/files/maps/ant.shp"
+)
+
+(FTab.228
+	Name:	"ant.dbf"
+	BTab:	229
+	Fields:	247
+	Fields:	230
+	Fields:	231
+	Fields:	232
+	Fields:	233
+	Fields:	234
+	Fields:	235
+	Fields:	236
+	Fields:	237
+	Fields:	238
+	Fields:	239
+	Fields:	240
+	Fields:	241
+	Fields:	242
+	Fields:	243
+	Fields:	244
+	Fields:	245
+	SelBits:	248
+	FSrc:	225
+)
+
+(dBASE.229
+	Name:	"ant.dbf"
+	Fields:	230
+	Fields:	231
+	Fields:	232
+	Fields:	233
+	Fields:	234
+	Fields:	235
+	Fields:	236
+	Fields:	237
+	Fields:	238
+	Fields:	239
+	Fields:	240
+	Fields:	241
+	Fields:	242
+	Fields:	243
+	Fields:	244
+	Fields:	245
+	FileName:	246
+)
+
+(Field.230
+	Name:	"Name"
+	Btab:	229
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.231
+	Name:	"Abbrevname"
+	Btab:	229
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.232
+	Name:	"Fips_code"
+	Btab:	229
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.233
+	Name:	"Wb_cntry"
+	Btab:	229
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.234
+	Name:	"Region"
+	Btab:	229
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.235
+	Name:	"Continent"
+	Btab:	229
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.236
+	Name:	"Capital"
+	Btab:	229
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.237
+	Name:	"Fao"
+	Btab:	229
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.238
+	Name:	"Ga_memb_yr"
+	Btab:	229
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.239
+	Name:	"Iaea"
+	Btab:	229
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.240
+	Name:	"Ibrd"
+	Btab:	229
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.241
+	Name:	"Imf"
+	Btab:	229
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.242
+	Name:	"Opec"
+	Btab:	229
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.243
+	Name:	"Unesco"
+	Btab:	229
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.244
+	Name:	"Who"
+	Btab:	229
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.245
+	Name:	"Wmo"
+	Btab:	229
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.246
+	Path:	"c:/inetpub/wwwroot/files/maps/ant.dbf"
+)
+
+(Field.247
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.248
+	NumBits:	1
+
+)
+
+(Legend.249
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	250
+	Class:	255
+	StdDevs:	1.00000000000000
+	NullSym:	256
+	NullValues:	260
+	StatValues:	261
+	Precision:	-3
+)
+
+(SymList.250
+	Child:	251
+)
+
+(BShSym.251
+	Color:	252
+	Outline:	1
+	OutlineColor:	253
+	OutlineWidth:	0.10000000000000
+	BgColor:	254
+)
+
+(TClr.252
+	Red:	0xc203
+	Green:	0x756b
+	Blue:	0x58a8
+)
+
+(TClr.253
+)
+
+(TClr.254
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.255
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.256
+	Color:	257
+	Outline:	1
+	OutlineColor:	258
+	OutlineWidth:	0.10000000000000
+	BgColor:	259
+)
+
+(TClr.257
+	Name:	"Transparent"
+)
+
+(TClr.258
+	Name:	"Transparent"
+)
+
+(TClr.259
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.260
+)
+
+(NameDict.261
+)
+
+(Thresh.262
+)
+
+(GSet.263
+)
+
+(TxPosPly.264
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.265
+	Name:	"Afr.shp"
+	Source:	266
+	Flags:	0x06
+	Legend:	290
+	Threshold:	303
+	View:	6
+	GSet:	304
+	LegEditScript:	"View.EditLegend"
+	TxPos:	305
+	LabelField:	271
+	SnapTolCursor:	1
+)
+
+(ShpSrc.266
+	Name:	267
+	FTab:	269
+)
+
+(SrcName.267
+	FileName:	268
+	Name:	"afr.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.268
+	Path:	"c:/inetpub/wwwroot/files/maps/afr.shp"
+)
+
+(FTab.269
+	Name:	"afr.dbf"
+	BTab:	270
+	Fields:	288
+	Fields:	271
+	Fields:	272
+	Fields:	273
+	Fields:	274
+	Fields:	275
+	Fields:	276
+	Fields:	277
+	Fields:	278
+	Fields:	279
+	Fields:	280
+	Fields:	281
+	Fields:	282
+	Fields:	283
+	Fields:	284
+	Fields:	285
+	Fields:	286
+	SelBits:	289
+	FSrc:	266
+)
+
+(dBASE.270
+	Name:	"afr.dbf"
+	Fields:	271
+	Fields:	272
+	Fields:	273
+	Fields:	274
+	Fields:	275
+	Fields:	276
+	Fields:	277
+	Fields:	278
+	Fields:	279
+	Fields:	280
+	Fields:	281
+	Fields:	282
+	Fields:	283
+	Fields:	284
+	Fields:	285
+	Fields:	286
+	FileName:	287
+)
+
+(Field.271
+	Name:	"Name"
+	Btab:	270
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.272
+	Name:	"Abbrevname"
+	Btab:	270
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.273
+	Name:	"Fips_code"
+	Btab:	270
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.274
+	Name:	"Wb_cntry"
+	Btab:	270
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.275
+	Name:	"Region"
+	Btab:	270
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.276
+	Name:	"Continent"
+	Btab:	270
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.277
+	Name:	"Capital"
+	Btab:	270
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.278
+	Name:	"Fao"
+	Btab:	270
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.279
+	Name:	"Ga_memb_yr"
+	Btab:	270
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.280
+	Name:	"Iaea"
+	Btab:	270
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.281
+	Name:	"Ibrd"
+	Btab:	270
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.282
+	Name:	"Imf"
+	Btab:	270
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.283
+	Name:	"Opec"
+	Btab:	270
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.284
+	Name:	"Unesco"
+	Btab:	270
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.285
+	Name:	"Who"
+	Btab:	270
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.286
+	Name:	"Wmo"
+	Btab:	270
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.287
+	Path:	"c:/inetpub/wwwroot/files/maps/afr.dbf"
+)
+
+(Field.288
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.289
+	NumBits:	49
+
+)
+
+(Legend.290
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	291
+	Class:	296
+	StdDevs:	1.00000000000000
+	NullSym:	297
+	NullValues:	301
+	StatValues:	302
+	Precision:	-3
+)
+
+(SymList.291
+	Child:	292
+)
+
+(BShSym.292
+	Color:	293
+	Outline:	1
+	OutlineColor:	294
+	OutlineWidth:	0.10000000000000
+	BgColor:	295
+)
+
+(TClr.293
+	Red:	0xd50c
+	Green:	0x9629
+	Blue:	0x27e6
+)
+
+(TClr.294
+)
+
+(TClr.295
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.296
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.297
+	Color:	298
+	Outline:	1
+	OutlineColor:	299
+	OutlineWidth:	0.10000000000000
+	BgColor:	300
+)
+
+(TClr.298
+	Name:	"Transparent"
+)
+
+(TClr.299
+	Name:	"Transparent"
+)
+
+(TClr.300
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.301
+)
+
+(NameDict.302
+)
+
+(Thresh.303
+)
+
+(GSet.304
+)
+
+(TxPosPly.305
+	HAlign:	3
+	VAlign:	3
+)
+
+(FTheme.306
+	Name:	"Country.shp"
+	Source:	307
+	Flags:	0x06
+	Legend:	331
+	Threshold:	344
+	View:	6
+	GSet:	345
+	LegEditScript:	"View.EditLegend"
+	TxPos:	346
+	LabelField:	312
+	SnapTolCursor:	1
+)
+
+(ShpSrc.307
+	Name:	308
+	FTab:	310
+)
+
+(SrcName.308
+	FileName:	309
+	Name:	"country.shp"
+	SubName:	"Polygon"
+	OwnerClass:	"ShpSrc"
+)
+
+(FN.309
+	Path:	"c:/inetpub/wwwroot/files/maps/country.shp"
+)
+
+(FTab.310
+	Name:	"country.dbf"
+	BTab:	311
+	Fields:	329
+	Fields:	312
+	Fields:	313
+	Fields:	314
+	Fields:	315
+	Fields:	316
+	Fields:	317
+	Fields:	318
+	Fields:	319
+	Fields:	320
+	Fields:	321
+	Fields:	322
+	Fields:	323
+	Fields:	324
+	Fields:	325
+	Fields:	326
+	Fields:	327
+	SelBits:	330
+	FSrc:	307
+)
+
+(dBASE.311
+	Name:	"country.dbf"
+	Fields:	312
+	Fields:	313
+	Fields:	314
+	Fields:	315
+	Fields:	316
+	Fields:	317
+	Fields:	318
+	Fields:	319
+	Fields:	320
+	Fields:	321
+	Fields:	322
+	Fields:	323
+	Fields:	324
+	Fields:	325
+	Fields:	326
+	Fields:	327
+	FileName:	328
+)
+
+(Field.312
+	Name:	"Name"
+	Btab:	311
+	Alias:	"Name"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.313
+	Name:	"Abbrevname"
+	Btab:	311
+	Alias:	"Abbrevname"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.314
+	Name:	"Fips_code"
+	Btab:	311
+	Alias:	"Fips_code"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.315
+	Name:	"Wb_cntry"
+	Btab:	311
+	Alias:	"Wb_cntry"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.316
+	Name:	"Region"
+	Btab:	311
+	Alias:	"Region"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.317
+	Name:	"Continent"
+	Btab:	311
+	Alias:	"Continent"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.318
+	Name:	"Capital"
+	Btab:	311
+	Alias:	"Capital"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.319
+	Name:	"Fao"
+	Btab:	311
+	Alias:	"Fao"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.320
+	Name:	"Ga_memb_yr"
+	Btab:	311
+	Alias:	"Ga_memb_yr"
+	Visible:	1
+	Type:	9
+	Order:	-1
+)
+
+(Field.321
+	Name:	"Iaea"
+	Btab:	311
+	Alias:	"Iaea"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.322
+	Name:	"Ibrd"
+	Btab:	311
+	Alias:	"Ibrd"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.323
+	Name:	"Imf"
+	Btab:	311
+	Alias:	"Imf"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.324
+	Name:	"Opec"
+	Btab:	311
+	Alias:	"Opec"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.325
+	Name:	"Unesco"
+	Btab:	311
+	Alias:	"Unesco"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.326
+	Name:	"Who"
+	Btab:	311
+	Alias:	"Who"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(Field.327
+	Name:	"Wmo"
+	Btab:	311
+	Alias:	"Wmo"
+	Visible:	1
+	Type:	4
+	Order:	-1
+)
+
+(FN.328
+	Path:	"c:/inetpub/wwwroot/files/maps/country.dbf"
+)
+
+(Field.329
+	Name:	"Shape"
+	Alias:	"Shape"
+	Visible:	1
+	Type:	19
+	Order:	-1
+)
+
+(Bitmap.330
+	NumBits:	165
+	NumBitsSet:	3
+	Bits:	00000000 00200000 00000000 0c000000 
+	Bits:	00000000 00000000 
+)
+
+(Legend.331
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	332
+	Class:	337
+	StdDevs:	1.00000000000000
+	NullSym:	338
+	NullValues:	342
+	StatValues:	343
+	Precision:	-3
+)
+
+(SymList.332
+	Child:	333
+)
+
+(BShSym.333
+	Color:	334
+	Outline:	1
+	OutlineColor:	335
+	OutlineWidth:	0.10000000000000
+	BgColor:	336
+)
+
+(TClr.334
+	Red:	0x9541
+	Green:	0xc6df
+	Blue:	0x60ed
+)
+
+(TClr.335
+)
+
+(TClr.336
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(LClass.337
+	IsText:	1
+	Precision:	-3
+)
+
+(BShSym.338
+	Color:	339
+	Outline:	1
+	OutlineColor:	340
+	OutlineWidth:	0.10000000000000
+	BgColor:	341
+)
+
+(TClr.339
+	Name:	"Transparent"
+)
+
+(TClr.340
+	Name:	"Transparent"
+)
+
+(TClr.341
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+
+(NameDict.342
+)
+
+(NameDict.343
+)
+
+(Thresh.344
+)
+
+(GSet.345
+)
+
+(TxPosPly.346
+	HAlign:	3
+	VAlign:	3
+)
+
+(LButn.347
+	HelpTopic:	"New_button"
+	Update:	"Doc.NewUpdate"
+	Label:	"&New"
+	Click:	"View.New"
+)
+
+(LButn.348
+	Disabled:	1
+	HelpTopic:	"Open_button"
+	Update:	"Doc.OpenUpdate"
+	Label:	"&Open"
+	Click:	"Doc.Open"
+)
+
+(LButn.349
+	Disabled:	1
+	HelpTopic:	"Print_button"
+	Update:	"Doc.ActionUpdate"
+	Label:	"P&rint"
+	Click:	"Doc.Action"
+)
+
+(NameDict.350
+)
+
+(NameDict.351
+	Obj:	352
+)
+
+(AVDict.352
+	InternalName:	"Table of Contents Defaults Dialog"
+)
+
+(FN.1176
+	Path:	"$HOME"
+)
+
+(TClr.1177
+	Red:	0xffff
+	Green:	0xffff
+)
+
+(AVStr.1178
+	S:	"View"
+)
+
+(AVStr.1179
+	S:	"Table"
+)
+
+(AVStr.1180
+	S:	"Chart"
+)
+
+(AVStr.1181
+	S:	"Layout"
+)
+
+(AVStr.1182
+	S:	"Script"
+)
+
+(AVStr.1183
+	S:	"Project"
+)
+
+(AVStr.1184
+	S:	"Appl"
+)
+

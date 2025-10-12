@@ -1,13 +1,8 @@
 program DVIW;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   IWStart,
-  Forms,
+  //Forms,
   ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase},
   DVIW_dmopt in 'DVIW_dmopt.pas' {dmOpt: TDataModule},
   DVIW_dm in 'DVIW_dm.pas' {dmDV: TDataModule},
@@ -111,12 +106,10 @@ uses
   usr_uDonate in '..\WebUserIW\usr_uDonate.pas' {ISFDonate: TIWAppForm},
   usr_uRegister in '..\WebUserIW\usr_uRegister.pas' {ISFRegister: TIWAppForm},
   usr_uRenew in '..\WebUserIW\usr_uRenew.pas' {ISFRenew: TIWAppForm},
-  IWRtlFix in '..\IntraWeb\IWRtlFix.pas',
   DVIW_datalookups in 'DVIW_datalookups.pas' {ISFDataLookups: TIWAppForm},
   DVIW_modelquery in 'DVIW_modelquery.pas' {ISFModelQuery: TIWAppForm},
   usr_uForgotten in '..\WebUserIW\usr_uForgotten.pas' {ISFForgotten: TIWAppForm},
-  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm},
-  DVIW_calcGDUpdfs in 'DVIW_calcGDUpdfs.pas' {ISFCalculateGDUPDFS: TIWAppForm};
+  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm};
 
 {$R *.res}
 

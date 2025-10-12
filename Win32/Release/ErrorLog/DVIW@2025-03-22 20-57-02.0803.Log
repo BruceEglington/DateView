@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : cdsClosureTemperatures: Field 'CLOSTMPASSOCID' not found
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EDatabaseError
+Exception address  : 00526066
+Exception Time     : 2025-03-22 20:57:02.080
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-03-22 20:51:20.930
+Running for        :  5 minutes 41 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\wwwroot\
+Session count      : 1
+Current Thread ID  : 19108
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Session ID         : RFgRg9f0VrsByYrcPojmcSJREOO
+Last Access        : 2025-03-22 20:57:01.322
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

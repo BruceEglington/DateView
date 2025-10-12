@@ -16,22 +16,8 @@ object ISFTerraneEdit: TISFTerraneEdit
   ShowHint = True
   DesignLeft = 2
   DesignTop = 2
-  object IWDBNavigator1: TIWDBNavigator
-    Left = 229
-    Top = 70
-    Width = 108
-    Height = 29
-    Confirmations.Delete = 'Are you sure you want to delete this record?'
-    Confirmations.Post = 'Are you sure you want to update this record?'
-    Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
-    DataSource = dmDV.dsTerranes
-    FriendlyName = 'IWDBNavigator1'
-    ImageHeight = 21
-    ImageWidth = 21
-    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
-    Orientation = orHorizontal
-  end
-  object IWDBEdit1: TIWDBEdit
+  object iwDBeTerrane: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 278
@@ -43,7 +29,8 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    FriendlyName = 'IWDBEdit1'
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeTerrane'
     SubmitOnAsyncEvent = True
     TabOrder = 1
     AutoEditable = True
@@ -52,6 +39,7 @@ object ISFTerraneEdit: TISFTerraneEdit
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 100
@@ -61,11 +49,13 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 3
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 47
@@ -74,12 +64,14 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Terrane'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 100
@@ -89,11 +81,13 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 100
@@ -103,11 +97,13 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 100
@@ -118,11 +114,13 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 30
     Top = 142
     Width = 58
@@ -131,12 +129,14 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Continent'
   end
   object iwDBlcbContinent: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 140
     Width = 279
@@ -146,6 +146,7 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -161,6 +162,7 @@ object ISFTerraneEdit: TISFTerraneEdit
     NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 100
@@ -170,6 +172,7 @@ object ISFTerraneEdit: TISFTerraneEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 7
     OnClick = iwbEditClick

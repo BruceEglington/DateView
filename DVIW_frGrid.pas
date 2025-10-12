@@ -127,6 +127,7 @@ type
     procedure iwbDownloadClick(Sender: TObject);
     procedure iwbDownloadSampleCoordinatesClick(Sender: TObject);
     procedure iwbDownloadCombinedClick(Sender: TObject);
+    procedure IWAppFormDestroy(Sender: TObject);
   public
   end;
 
@@ -137,6 +138,15 @@ implementation
 uses
   ServerController, DBClient, DVIW_dm, DVIW_details, DVIW_constants, DVIW_detailsedit,
   DVIW_refdetails, usrIW_dm;
+
+procedure TISFGrid.IWAppFormDestroy(Sender: TObject);
+begin
+  dmDV.cdsQuery1.Close;
+  dmDV.cdsQuery1Rec.Close;
+  dmDV.cdsQuerySamples.Close;
+  dmDV.cdsQueryInit.Close;
+  dmDV.cdsQueryCombined.Close;
+end;
 
 procedure TISFGrid.IWAppFormRender(Sender: TObject);
 begin
@@ -214,8 +224,9 @@ begin
     iwbDownloadCombined.Enabled := (MaxAllowed > 0);
     iwbDownloadInit.Enabled := (MaxAllowed > 0);
     iwbDownloadSampleCoordinates.Enabled := (MaxAllowed > 0);
+    //dmUser.SetDeveloperData('DateView - Grid FormCreate 0b');
     dmDV.Query1.Close;
-    dmDV.Query1.ParamByName('USERID').AsString := UserSession.UserID;
+    //dmDV.Query1.ParamByName('USERID').AsString := UserSession.UserID;
     dmDV.cdsQuery1.Close;
     //dmUser.SetDeveloperData('DateView - Grid FormCreate 1');
     UserSession.NumberOfPoints := 0;
@@ -223,6 +234,13 @@ begin
     if UserSession.IsDeveloper then
     begin
       //dmUser.SetDeveloperData('frGrid cdsQuery1RecCOUNT ' + IntToStr(UserSession.NumberOfPoints));
+    end;
+    if (UserSession.NumberOfPoints > MaxAllowed) then
+    begin
+      iwbDownloadCombined.Enabled := false;
+      iwbDownloadInit.Enabled := false;
+      iwbDownloadSampleCoordinates.Enabled := false;
+      iwlCanDownload.Text := 'Max. allowed is '+IntToStr(MaxAllowed)+' Please decreases number of records found';
     end;
     try
       dmDV.cdsQuery1.Open;
@@ -440,17 +458,17 @@ begin
   if ((Sender = iwbDownload) or (Sender = iwbDownloadCombined)) then
   begin
     IsInitialRatio := false;
-    dmUser.SetDeveloperData('IsInitialRatio false');
+    //dmUser.SetDeveloperData('IsInitialRatio false');
   end;
   if (Sender = iwbDownload) then
   begin
     IsCombined := false;
-    dmUser.SetDeveloperData('IsCombined false');
+    //dmUser.SetDeveloperData('IsCombined false');
   end;
   if (Sender = iwbDownloadCombined) then
   begin
     IsCombined := true;
-    dmUser.SetDeveloperData('IsCombined true');
+    //dmUser.SetDeveloperData('IsCombined true');
   end;
   if (Sender = iwbDownloadInit) then
   begin
@@ -461,7 +479,8 @@ begin
   MaxAllowed := dmUser.GetUserRowLimit(UserSession.UserID,DataTypeID);
   if (UserSession.NumberOfPoints >= MaxAllowed) then
   begin
-    WebApplication.ShowMessage('Only the first '+IntToStr(MaxAllowed)+' records will be downloaded');
+    iwlCanDownload.Text := 'Max. allowed is '+IntToStr(MaxAllowed)+' Please decreases number of records found';
+    WebApplication.ShowMessage('Max. allowed is '+IntToStr(MaxAllowed)+' Please decreases number of records found');
   end;
   //dmUser.SetDeveloperData('MaxAllowed = '+IntToStr(MaxAllowed)+' but query has '+IntToStr(UserSession.NumberOfPoints)+' records');
   if ((not IsInitialRatio) and (not IsCombined)) then
@@ -563,11 +582,12 @@ begin
   end;
   if (IsCombined) then
   begin
-    dmUser.SetDeveloperData('frGrid IsCombined '+dmDV.QueryCombined.SQL.Text);
+    //dmUser.SetDeveloperData('frGrid IsCombined '+dmDV.QueryCombined.SQL.Text);
     FDMemTableCombined.Open;
-    dmUser.SetDeveloperData('frGrid IsCombined 2');
+    //dmUser.SetDeveloperData('frGrid IsCombined 2');
+    //dmDV.cdsQueryCombined.Close;
     dmDV.cdsQueryCombined.Open;
-    dmUser.SetDeveloperData('frGrid IsCombined 3');
+    //dmUser.SetDeveloperData('frGrid IsCombined 3');
     dmDV.cdsQueryCombined.First;
     i := 1;
     repeat

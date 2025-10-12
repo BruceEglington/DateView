@@ -1,8 +1,12 @@
 object ISFVariables: TISFVariables
   Left = 0
   Top = 0
-  Width = 687
-  Height = 789
+  Width = 1374
+  Height = 1578
+  Margins.Left = 6
+  Margins.Top = 6
+  Margins.Right = 6
+  Margins.Bottom = 6
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -15,13 +19,19 @@ object ISFVariables: TISFVariables
   LockUntilLoaded = False
   LockOnSubmit = False
   ShowHint = True
+  PixelsPerInch = 192
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
-    Left = 104
-    Top = 128
-    Width = 553
-    Height = 609
+    AlignWithMargins = False
+    Left = 208
+    Top = 256
+    Width = 1106
+    Height = 1218
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -34,10 +44,13 @@ object ISFVariables: TISFVariables
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -48,6 +61,7 @@ object ISFVariables: TISFVariables
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -56,7 +70,6 @@ object ISFVariables: TISFVariables
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'VARIABLEID'
@@ -68,6 +81,7 @@ object ISFVariables: TISFVariables
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -86,6 +100,7 @@ object ISFVariables: TISFVariables
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,7 +109,6 @@ object ISFVariables: TISFVariables
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'VARIABLENAME'
@@ -106,6 +120,7 @@ object ISFVariables: TISFVariables
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -124,6 +139,7 @@ object ISFVariables: TISFVariables
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -132,7 +148,6 @@ object ISFVariables: TISFVariables
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ISOTOPESYSTEM'
@@ -144,6 +159,7 @@ object ISFVariables: TISFVariables
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -171,25 +187,36 @@ object ISFVariables: TISFVariables
     RowCurrentColor = clNone
   end
   object iwlSortedBy: TIWLabel
-    Left = 515
-    Top = 114
-    Width = 137
-    Height = 14
+    AlignWithMargins = False
+    Left = 1030
+    Top = 228
+    Width = 274
+    Height = 28
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Alignment = taRightJustify
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwlPrevPage: TIWLink
-    Left = 101
-    Top = 111
-    Width = 97
-    Height = 17
+    AlignWithMargins = False
+    Left = 202
+    Top = 222
+    Width = 194
+    Height = 34
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
@@ -198,6 +225,7 @@ object ISFVariables: TISFVariables
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -207,10 +235,15 @@ object ISFVariables: TISFVariables
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
-    Left = 227
-    Top = 111
-    Width = 65
-    Height = 17
+    AlignWithMargins = False
+    Left = 454
+    Top = 222
+    Width = 130
+    Height = 34
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
@@ -219,6 +252,7 @@ object ISFVariables: TISFVariables
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -228,56 +262,78 @@ object ISFVariables: TISFVariables
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
-    Left = 102
-    Top = 74
-    Width = 75
-    Height = 25
+    AlignWithMargins = False
+    Left = 204
+    Top = 148
+    Width = 150
+    Height = 50
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Caption = 'Close'
     Color = clWebLIGHTGREEN
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
-    Top = 55
-    Width = 83
-    Height = 734
+    Top = 110
+    Width = 166
+    Height = 1468
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Align = alLeft
     ZIndex = 1
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
     Alignment = taLeftJustify
     VAlign = vaMiddle
-    ExplicitHeight = 543
   end
   object iwbDownload: TIWButton
-    Left = 196
-    Top = 74
-    Width = 129
-    Height = 25
+    AlignWithMargins = False
+    Left = 392
+    Top = 148
+    Width = 258
+    Height = 50
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Caption = 'Download to Excel'
     Color = clBtnFace
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     TabOrder = 1
     OnClick = iwbDownloadClick
   end
   object iwmComment: TIWMemo
-    Left = 384
-    Top = 60
-    Width = 273
-    Height = 47
+    AlignWithMargins = False
+    Left = 768
+    Top = 120
+    Width = 546
+    Height = 94
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     ShowHint = False
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
@@ -286,6 +342,7 @@ object ISFVariables: TISFVariables
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
@@ -301,47 +358,51 @@ object ISFVariables: TISFVariables
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 687
-    Height = 55
+    Width = 1374
+    Height = 110
+    Margins.Left = 12
+    Margins.Top = 12
+    Margins.Right = 12
+    Margins.Bottom = 12
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     Align = alTop
-    Constraints.MaxHeight = 55
-    Constraints.MinHeight = 55
-    Constraints.MinWidth = 600
+    Constraints.MaxHeight = 110
+    Constraints.MinHeight = 110
+    Constraints.MinWidth = 1200
     Color = clNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -24
     Font.Name = 'Arial'
     Font.Style = []
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     TabStop = True
-    ExplicitWidth = 687
+    ExplicitWidth = 1374
     inherited IWFrameRegion: TIWRegion
-      Width = 687
+      Width = 1374
       TabOrder = 4
-      ExplicitWidth = 687
+      ExplicitWidth = 1374
       inherited iwrHeader: TIWRegion
-        Width = 687
-        ExplicitWidth = 687
+        Width = 1374
+        ExplicitWidth = 1374
         inherited iwrWelcome: TIWRegion
-          Width = 687
-          ExplicitWidth = 687
+          Width = 1374
+          ExplicitWidth = 1374
           inherited iwrDisplayUserName: TIWRegion
-            Width = 546
-            ExplicitWidth = 546
+            Width = 1092
+            ExplicitWidth = 1092
             inherited lblWelcome: TIWLabel
-              Left = 225
-              ExplicitLeft = 510
+              Left = 450
+              ExplicitLeft = 450
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 687
-          ExplicitWidth = 687
+          Width = 1374
+          ExplicitWidth = 1374
           inherited iwlSignOut: TIWLink
             TabOrder = -1
           end

@@ -63,7 +63,6 @@ object ISFFrameMenu: TISFFrameMenu
             Top = 0
             Width = 100
             Height = 150
-            Hint = ''
             Align = alLeft
             BorderOptions.Width = 0
             UseSize = True
@@ -1031,7 +1030,6 @@ object ISFFrameMenu: TISFFrameMenu
           Top = 0
           Width = 80
           Height = 174
-          Hint = ''
           Align = alLeft
           FriendlyName = 'IWMenu1'
           AttachedMenu = MainMenu1
@@ -1102,10 +1100,6 @@ object ISFFrameMenu: TISFFrameMenu
       object DefineSQL1: TMenuItem
         Caption = 'Define SQL'
         OnClick = SelectSQL1Click
-      end
-      object DefineGDUCurve1: TMenuItem
-        Caption = 'CalculateGDUCurve'
-        OnClick = DefineGDUCurve1Click
       end
     end
     object Graph1: TMenuItem

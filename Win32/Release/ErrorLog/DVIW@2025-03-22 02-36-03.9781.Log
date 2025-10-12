@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Field 'DEVINFOORDER' must have a value
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EDatabaseError
+Exception address  : 00B9607B
+Exception Time     : 2025-03-22 02:36:03.978
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-03-22 02:35:50.663
+Running for        :  13 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\wwwroot\
+Session count      : 1
+Current Thread ID  : 19772
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : ISFLogin (TISFLogin)
+Active Form list   : [1] ISFLogin (TISFLogin)
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+                     [7] ISFLogin (TISFLogin)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Session ID         : VkG6fazzS0BM8EfiLgwkZoa9Aaq
+Last Access        : 2025-03-22 02:36:02.583
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

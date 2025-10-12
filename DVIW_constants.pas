@@ -56,6 +56,7 @@ const
   usReferences = 'References';
   usGrid = 'Grid';
   usProvinces = 'Provinces';
+  usTerranes = 'Terranes';
   usSample = 'Sample';
   usSampleFrac = 'SampleFrac';
   usIdentifyPeaks = 'IdentifyPeaks';

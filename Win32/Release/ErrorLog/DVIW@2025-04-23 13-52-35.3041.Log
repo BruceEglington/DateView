@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Your session has expired due to inactivity.
+Your session has expired. You will have to restart the application. In order to keep sessions from expiring you may set the session timeout parameter to a higher value. The current session timeout value is 10 minutes.
+Exception class    : EExpiredSession
+Session ID         : NUGTn20mZTBfYKnhOQ17ncX1IYi
+Exception address  : 00975468
+Exception Time     : 2025-04-23 13:52:35.304
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-04-23 13:37:54.755
+Running for        :  14 minutes 40 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\Win32\Release\wwwroot\
+Session count      : 0
+Current Thread ID  : 8788
+------------------------------------------------------------------------------------------------------------------------
+Session ID         : NUGTn20mZTBfYKnhOQ17ncX1IYi
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

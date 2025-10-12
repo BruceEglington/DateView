@@ -10,8 +10,7 @@ uses
 
 type
   TISFProvinceEdit = class(TIWAppForm)
-    IWDBNavigator1: TIWDBNavigator;
-    IWDBEdit1: TIWDBEdit;
+    iwDBeProvince: TIWDBEdit;
     iwbReturn: TIWButton;
     IWLabel1: TIWLabel;
     iwbSave: TIWButton;
@@ -20,12 +19,14 @@ type
     IWLabel3: TIWLabel;
     iwDBlcbContinent: TIWDBLookupComboBox;
     TopBar: TISFTopBar;
+    iwbEdit: TIWButton;
     procedure IWAppFormRender(Sender: TObject);
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
     procedure iwbSaveClick(Sender: TObject);
     procedure iwbCancelChangesClick(Sender: TObject);
     procedure iwbDeleteClick(Sender: TObject);
+    procedure iwbEditClick(Sender: TObject);
   public
   end;
 
@@ -34,39 +35,72 @@ implementation
 {$R *.dfm}
 
 uses
-  ServerController, DVIW_dmStrat, DB, DVIW_provinces;
+  ServerController, DVIW_dmStrat, DB, DVIW_provinces, usrIW_dm;
 
 
 
 
 procedure TISFProvinceEdit.IWAppFormRender(Sender: TObject);
 begin
-  //iwbEdit.Enabled := UserSession.CanModify and (dmStrat.cdsProvinces.State in [dsBrowse]);
+  iwDBeProvince.Enabled := UserSession.CanModify and (dmStrat.cdsProvinces.State in [dsEdit,dsInsert]);
+  iwbEdit.Enabled := UserSession.CanModify and (dmStrat.cdsProvinces.State in [dsBrowse]);
   iwbSave.Enabled := UserSession.CanModify and (dmStrat.cdsProvinces.State in [dsEdit,dsInsert]);
   iwbCancelChanges.Enabled := UserSession.CanModify and (dmStrat.cdsProvinces.State in [dsEdit,dsInsert]);
   iwbDelete.Enabled := UserSession.CanDelete and (dmStrat.cdsProvinces.State in [dsBrowse]);
+  iwbReturn.Enabled := dmStrat.cdsProvinces.State in [dsBrowse];
 end;
 
 procedure TISFProvinceEdit.IWAppFormCreate(Sender: TObject);
+var
+  i : integer;
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   iwbDelete.Visible := UserSession.CanDelete;
-  iwDBNavigator1.Visible := UserSession.CanModifyPlus;
+  //dmUser.SetDeveloperData('Create provinceedit');
+  //dmUser.SetDeveloperData(UserSession.ParameterChosen);
+  dmStrat.qProvinces.Close;
+  dmStrat.cdsProvinces.Close;
+  dmStrat.qProvinces.SQL.Clear;
+  dmStrat.qProvinces.SQL.Add('SELECT DOMAINS.DOMAINNAME,DOMAINS.CONTINENTID,');
+  dmStrat.qProvinces.SQL.Add('  DOMAINS.DOMAINID,DOMAINS.DOMAINTYPEID');
+  dmStrat.qProvinces.SQL.Add('FROM DOMAINS,DOMAINTYPES');
+  dmStrat.qProvinces.SQL.Add('WHERE DOMAINS.DOMAINTYPEID=DOMAINTYPES.DOMAINTYPEID');
+  dmStrat.qProvinces.SQL.Add('AND DOMAINTYPES.DVLEVEL <= 2');
+  if (UserSession.IncludeContinentValues) then
+  begin
+    dmStrat.qProvinces.SQL.Add('AND ( DOMAINS.CONTINENTID = '+''''+UserSession.ContinentValues.Strings[0]+'''');
+    if (UserSession.ContinentValues.Count >1) then
+    begin
+      for i := 2 to UserSession.ContinentValues.Count do
+      begin
+        dmStrat.qProvinces.SQL.Add('OR DOMAINS.ContinentID = '+''''+UserSession.ContinentValues.Strings[i-1]+'''');
+      end;
+    end;
+    dmStrat.qProvinces.SQL.Add(' ) ');
+  end;
+  //dmUser.SetDeveloperData(dmStrat.qProvinces.SQL.Text);
   if UserSession.LoggedIn then
   begin
     TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
   end;
-  try
-    dmStrat.cdsProvinces.Locate('DOMAINID',UserSession.ParameterChosen,[]);
-  except
-  end;
+  //try
+    //dmUser.SetDeveloperData('provinceedit 0');
+    dmStrat.cdsProvinces.Open;
+    //dmUser.SetDeveloperData('provinceedit 0b');
+    dmStrat.cdsProvinces.Locate('DOMAINID',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
+    //dmUser.SetDeveloperData('provinceedit 1');
+  //except
+  //end;
   dmStrat.cdsContinents.Open;
-  iwDBEdit1.Editable := UserSession.CanModify;
+  //dmUser.SetDeveloperData('provinceedit 2');
+  iwDBeProvince.Editable := UserSession.CanModify;
   iwDBlcbContinent.Editable := UserSession.CanModify;
+  //dmUser.SetDeveloperData('provinceedit 3');
 end;
 
 procedure TISFProvinceEdit.iwbReturnClick(Sender: TObject);
 begin
+  dmStrat.cdsProvinces.Close;
   dmStrat.cdsContinents.Close;
   TIWAppForm(WebApplication.ActiveForm).Release;
   TISFProvinces.Create(WebApplication).Show;
@@ -74,16 +108,7 @@ end;
 
 procedure TISFProvinceEdit.iwbSaveClick(Sender: TObject);
 var
-  LocalNodeServer,LocalNodePath,
-  LocalNodeName,LocalNodeCharSet,
-  LocalNodeDBName,LocalNodeDBType,LocalNodeDBVersion,LocalNodeSQLDialect,
-  LocalNodeUserLogin,LocalNodeUserPassword : string;
-  RemoteNodeServer,RemoteNodePath,
-  RemoteNodeName,RemoteNodeCharSet,RemoteNodeDBName,
-  RemoteNodeDBType,RemoteNodeDBVersion,RemoteNodeSQLDialect,RemoteNodeUserLogin,
-  RemoteNodeUserPassword : string;
   i, Cnt : integer;
-  LocalTmpStringList, RemoteTmpStringList : TStringList;
 begin
   try
     dmStrat.cdsProvinces.Post;
@@ -91,75 +116,6 @@ begin
   end;
   try
     dmStrat.cdsProvinces.ApplyUpdates(0);
-    {
-    dmReplicate.cdsRemoteNodes.Open;
-    RemoteNodeName := dmReplicate.cdsRemoteNodesNODENAME.AsString;
-    //RemoteNodeCharSet := dmReplicate.cdsRemoteNodesNODECHARSET.AsString;
-    //RemoteNodeSQLDialect := dmReplicate.cdsRemoteNodesNODESQLDIALECT.AsString;
-    RemoteNodeServer := dmReplicate.cdsRemoteNodesNODESERVER.AsString;
-    RemoteNodePath := dmReplicate.cdsRemoteNodesNODEPATH.AsString;
-    RemoteNodeDBName := RemoteNodeServer+':'+RemoteNodePath;
-    //RemoteNodeDBName := dmReplicate.cdsRemoteNodesNODEDBNAME.AsString;
-    RemoteNodeDBType := dmReplicate.cdsRemoteNodesNODEDBTYPE.AsString;
-    RemoteNodeDBVersion := dmReplicate.cdsRemoteNodesNODEDBVERSION.AsString;
-    RemoteNodeUserLogin := dmReplicate.cdsRemoteNodesNODEUSERLOGIN.AsString;
-    RemoteNodeUserPassword := dmReplicate.cdsRemoteNodesNODEUSERPASSWORD.AsString;
-    RemoteTmpStringList := TStringList.Create;
-    RemoteTmpStringList.Clear;
-    RemoteTmpStringList.Text := dmReplicate.cdsRemoteNodesNODEDBSPECIFIC.AsString;
-    RemoteNodeCharSet := RemoteTmpStringList.Values['CHARSET'];
-    RemoteNodeSQLDialect := RemoteTmpStringList.Values['SQLDIALECT'];
-    RemoteTmpStringList.Free;
-    dmReplicate.cdsRemoteNodes.Close;
-    //dmUser.SetDeveloperData(RemoteNodeName);
-    //dmUser.SetDeveloperData(RemoteNodeCharSet);
-    //dmUser.SetDeveloperData(RemoteNodeDBName);
-    //dmUser.SetDeveloperData(RemoteNodeDBType);
-    //dmUser.SetDeveloperData(RemoteNodeDBVersion);
-    //dmUser.SetDeveloperData(RemoteNodeSQLDialect);
-    //dmUser.SetDeveloperData(RemoteNodeUserLogin);
-    //dmUser.SetDeveloperData(RemoteNodeUserPassword);
-    LocalTmpStringList := TStringList.Create;
-    dmReplicate.cdsLocalNodes.Open;
-    Cnt := dmReplicate.cdsLocalNodes.RecordCount;
-    for i := 1 to Cnt do
-    begin
-      LocalNodeName := dmReplicate.cdsLocalNodesNODENAME.AsString;
-      //LocalNodeCharSet := dmReplicate.cdsLocalNodesNODECHARSET.AsString;
-      //LocalNodeSQLDialect := dmReplicate.cdsLocalNodesNODESQLDIALECT.AsString;
-      LocalNodeServer := dmReplicate.cdsLocalNodesNODESERVER.AsString;
-      LocalNodePath := dmReplicate.cdsLocalNodesNODEPATH.AsString;
-      LocalNodeDBName := LocalNodeServer+':'+LocalNodePath;
-      //LocalNodeDBName := dmReplicate.cdsLocalNodesNODEDBNAME.AsString;
-      LocalNodeDBType := dmReplicate.cdsLocalNodesNODEDBTYPE.AsString;
-      LocalNodeDBVersion := dmReplicate.cdsLocalNodesNODEDBVERSION.AsString;
-      LocalNodeUserLogin := dmReplicate.cdsLocalNodesNODEUSERLOGIN.AsString;
-      LocalNodeUserPassword := dmReplicate.cdsLocalNodesNODEUSERPASSWORD.AsString;
-      LocalTmpStringList.Clear;
-      LocalTmpStringList.Text := dmReplicate.cdsLocalNodesNODEDBSPECIFIC.AsString;
-      LocalNodeCharSet := LocalTmpStringList.Values['CHARSET'];
-      LocalNodeSQLDialect := LocalTmpStringList.Values['SQLDIALECT'];
-      //dmUser.SetDeveloperData(LocalNodeName);
-      //dmUser.SetDeveloperData(LocalNodeCharSet);
-      //dmUser.SetDeveloperData(LocalNodeDBName);
-      //dmUser.SetDeveloperData(LocalNodeDBType);
-      //dmUser.SetDeveloperData(LocalNodeDBVersion);
-      //dmUser.SetDeveloperData(LocalNodeSQLDialect);
-      //dmUser.SetDeveloperData(LocalNodeUserLogin);
-      //dmUser.SetDeveloperData(LocalNodeUserPassword);
-      dmReplicate.ReplicateFromStratDB(LocalNodeServer,LocalNodePath,
-        LocalNodeName,LocalNodeCharSet,
-        LocalNodeDBName,LocalNodeDBType,LocalNodeDBVersion,LocalNodeSQLDialect,
-        LocalNodeUserLogin,LocalNodeUserPassword,
-        RemoteNodeServer,RemoteNodePath,
-        RemoteNodeName,RemoteNodeCharSet,RemoteNodeDBName,
-        RemoteNodeDBType,RemoteNodeDBVersion,RemoteNodeSQLDialect,RemoteNodeUserLogin,
-        RemoteNodeUserPassword,'ttNoTrace');
-      dmReplicate.cdsLocalNodes.Next;
-    end;
-    LocalTmpStringList.Free;
-    dmReplicate.cdsLocalNodes.Close;
-    }
   except
     WebApplication.ShowMessage('Not able to update changes to this record');
   end;
@@ -182,6 +138,11 @@ begin
   except
     WebApplication.ShowMessage('Not able to delete record',smAlert);
   end;
+end;
+
+procedure TISFProvinceEdit.iwbEditClick(Sender: TObject);
+begin
+  dmStrat.cdsProvinces.Edit;
 end;
 
 end.

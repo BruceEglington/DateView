@@ -1,7 +1,7 @@
 object ISFClosureTemperatures: TISFClosureTemperatures
   Left = 0
   Top = 0
-  Width = 787
+  Width = 978
   Height = 595
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
@@ -17,9 +17,10 @@ object ISFClosureTemperatures: TISFClosureTemperatures
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 98
     Top = 122
-    Width = 661
+    Width = 855
     Height = 474
     BorderColors.Color = clNone
     BorderColors.Light = clNone
@@ -33,11 +34,14 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     OnRenderCell = iwDBgRenderCell
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -48,6 +52,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -68,6 +73,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -86,6 +92,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -106,6 +113,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -124,6 +132,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -136,7 +145,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'APPROACHDESCRIPTION'
-        OnClick = iwDBgColumns0Click
         OnTitleClick = iwDBgColumns0TitleClick
         Title.Alignment = taCenter
         Title.BGColor = clNone
@@ -145,6 +153,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -163,6 +172,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -175,6 +185,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BLOCKINGT'
+        LinkField = 'CLOSTMPASSOCID'
         OnTitleClick = iwDBgColumns0TitleClick
         Title.Alignment = taCenter
         Title.BGColor = clNone
@@ -183,6 +194,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -201,6 +213,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -220,10 +233,51 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
         Title.Text = 'Uncertainty (C)'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        Css = ''
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'CLOSTMPASSOCID'
+        OnTitleClick = iwDBgColumns0TitleClick
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = []
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Association'
         Title.VAlign = vaMiddle
         Title.Visible = True
         Title.Width = '0'
@@ -247,6 +301,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     RowCurrentColor = clWebYELLOW
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 112
     Top = 101
     Width = 97
@@ -259,6 +314,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -268,6 +324,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 238
     Top = 101
     Width = 65
@@ -280,6 +337,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -289,6 +347,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 96
     Top = 72
     Width = 75
@@ -298,10 +357,12 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object iwbAddNewRecord: TIWButton
+    AlignWithMargins = False
     Left = 624
     Top = 72
     Width = 129
@@ -311,11 +372,13 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewRecord'
     TabOrder = 4
     OnClick = iwbAddNewRecordClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -325,6 +388,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -334,8 +398,9 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     ExplicitHeight = 541
   end
   object iwlSortedBy: TIWLabel
-    Left = 620
-    Top = 105
+    AlignWithMargins = False
+    Left = 796
+    Top = 102
     Width = 137
     Height = 14
     Alignment = taRightJustify
@@ -343,11 +408,13 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 328
     Top = 72
     Width = 129
@@ -357,11 +424,13 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 5
     OnClick = iwbEditClick
   end
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 200
     Top = 71
     Width = 108
@@ -379,7 +448,7 @@ object ISFClosureTemperatures: TISFClosureTemperatures
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 787
+    Width = 978
     Height = 55
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
@@ -399,26 +468,26 @@ object ISFClosureTemperatures: TISFClosureTemperatures
     TabStop = True
     ExplicitWidth = 787
     inherited IWFrameRegion: TIWRegion
-      Width = 787
+      Width = 978
       TabOrder = 2
       ExplicitWidth = 787
       inherited iwrHeader: TIWRegion
-        Width = 787
+        Width = 978
         ExplicitWidth = 787
         inherited iwrWelcome: TIWRegion
-          Width = 787
+          Width = 978
           ExplicitWidth = 787
           inherited iwrDisplayUserName: TIWRegion
-            Width = 646
+            Width = 837
             ExplicitWidth = 646
             inherited lblWelcome: TIWLabel
-              Left = 325
+              Left = 516
               ExplicitLeft = 325
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 787
+          Width = 978
           ExplicitWidth = 787
           inherited iwlSignOut: TIWLink
             TabOrder = -1

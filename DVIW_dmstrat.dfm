@@ -1,5 +1,4 @@
 object dmStrat: TdmStrat
-  OldCreateOrder = False
   Height = 729
   Width = 701
   object qContinents: TSQLQuery
@@ -12,13 +11,13 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 30
     Top = 58
-    object qContinentsCONTINENTID: TStringField
+    object qContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       FixedChar = True
       Size = 3
     end
-    object qContinentsCONTINENT: TStringField
+    object qContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object qContinentsDEFAULTDOMAINID: TIntegerField
@@ -35,9 +34,10 @@ object dmStrat: TdmStrat
     Aggregates = <>
     Params = <>
     ProviderName = 'dspContinents'
+    ReadOnly = True
     Left = 86
     Top = 58
-    object cdsContinentsCONTINENTID: TStringField
+    object cdsContinentsCONTINENTID: TWideStringField
       DisplayLabel = 'Continent ID'
       FieldName = 'CONTINENTID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -45,7 +45,7 @@ object dmStrat: TdmStrat
       FixedChar = True
       Size = 3
     end
-    object cdsContinentsCONTINENT: TStringField
+    object cdsContinentsCONTINENT: TWideStringField
       DisplayLabel = 'Continent'
       FieldName = 'CONTINENT'
     end
@@ -79,29 +79,30 @@ object dmStrat: TdmStrat
     Aggregates = <>
     Params = <>
     ProviderName = 'dspCountries'
+    ReadOnly = True
     Left = 84
     Top = 104
-    object cdsCountriesCOUNTRYID: TStringField
+    object cdsCountriesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsCountriesCOUNTRY: TStringField
+    object cdsCountriesCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsCountriesCONTINENTID: TStringField
+    object cdsCountriesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsCountriesCONTINENT: TStringField
+    object cdsCountriesCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
-    object cdsCountriesCOUNTRYHASRECORDS: TStringField
+    object cdsCountriesCOUNTRYHASRECORDS: TWideStringField
       FieldName = 'COUNTRYHASRECORDS'
       Required = True
       FixedChar = True
@@ -110,7 +111,7 @@ object dmStrat: TdmStrat
     object cdsCountriesSTARTINGVALUE: TIntegerField
       FieldName = 'STARTINGVALUE'
     end
-    object cdsCountriesDEFAULTMAPID: TStringField
+    object cdsCountriesDEFAULTMAPID: TWideStringField
       FieldName = 'DEFAULTMAPID'
       Required = True
     end
@@ -140,30 +141,6 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 368
     Top = 126
-    object qReferencesSOURCENUM: TIntegerField
-      FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qReferencesSOURCESHORT: TStringField
-      FieldName = 'SOURCESHORT'
-      Required = True
-      Size = 255
-    end
-    object qReferencesCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object qReferencesCONTINENT: TStringField
-      FieldName = 'CONTINENT'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qReferencesSOURCEYEAR: TSmallintField
-      FieldName = 'SOURCEYEAR'
-      Required = True
-    end
   end
   object dspReferences: TDataSetProvider
     DataSet = qReferences
@@ -179,31 +156,32 @@ object dmStrat: TdmStrat
     Top = 126
     object cdsReferencesSOURCENUM: TIntegerField
       FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsReferencesSOURCESHORT: TStringField
+    object cdsReferencesSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
-      Size = 255
+      FixedChar = True
+      Size = 100
     end
-    object cdsReferencesCONTINENTID: TStringField
+    object cdsReferencesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
-    object cdsReferencesCONTINENT: TStringField
-      FieldName = 'CONTINENT'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object cdsReferencesSOURCEYEAR: TSmallintField
+    object cdsReferencesSOURCEYEAR: TIntegerField
       FieldName = 'SOURCEYEAR'
       Required = True
     end
+    object cdsReferencesCONTINENT: TWideStringField
+      FieldName = 'CONTINENT'
+      Required = True
+      FixedChar = True
+    end
   end
   object qRefDetail: TSQLQuery
-    MaxBlobSize = 1
+    MaxBlobSize = -1
     Params = <
       item
         DataType = ftInteger
@@ -216,34 +194,6 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 368
     Top = 172
-    object qRefDetailSOURCENUM: TIntegerField
-      FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qRefDetailSOURCESHORT: TStringField
-      FieldName = 'SOURCESHORT'
-      Required = True
-      Size = 100
-    end
-    object qRefDetailSOURCEYEAR: TSmallintField
-      FieldName = 'SOURCEYEAR'
-      Required = True
-    end
-    object qRefDetailSOURCEDESCRIPTION: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
-    end
-    object qRefDetailCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object qRefDetailDOI: TStringField
-      FieldName = 'DOI'
-      Size = 100
-    end
   end
   object dspRefDetail: TDataSetProvider
     DataSet = qRefDetail
@@ -259,30 +209,31 @@ object dmStrat: TdmStrat
     Top = 172
     object cdsRefDetailSOURCENUM: TIntegerField
       FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefDetailSOURCESHORT: TStringField
+    object cdsRefDetailSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
+      FixedChar = True
       Size = 100
     end
-    object cdsRefDetailSOURCEYEAR: TSmallintField
+    object cdsRefDetailSOURCEYEAR: TIntegerField
       FieldName = 'SOURCEYEAR'
       Required = True
     end
-    object cdsRefDetailSOURCEDESCRIPTION: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
-    end
-    object cdsRefDetailCONTINENTID: TStringField
+    object cdsRefDetailCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
-    object cdsRefDetailDOI: TStringField
+    object cdsRefDetailSOURCEDESCRIPTION2: TWideMemoField
+      FieldName = 'SOURCEDESCRIPTION2'
+      BlobType = ftWideMemo
+    end
+    object cdsRefDetailDOI: TWideStringField
       FieldName = 'DOI'
+      FixedChar = True
       Size = 100
     end
   end
@@ -300,35 +251,37 @@ object dmStrat: TdmStrat
     Top = 218
     object cdsRefFullSOURCENUM: TIntegerField
       FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefFullSOURCESHORT: TStringField
+    object cdsRefFullSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
-      Size = 255
+      FixedChar = True
+      Size = 100
     end
-    object cdsRefFullSOURCEYEAR: TSmallintField
+    object cdsRefFullSOURCEYEAR: TIntegerField
       FieldName = 'SOURCEYEAR'
       Required = True
     end
-    object cdsRefFullSOURCEDESCRIPTION: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-    end
-    object cdsRefFullCONTINENTID: TStringField
+    object cdsRefFullCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
-    object cdsRefFullDOI: TStringField
-      FieldName = 'DOI'
-      Size = 100
-    end
-    object cdsRefFullWHOFORID: TStringField
+    object cdsRefFullWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
+      FixedChar = True
       Size = 5
+    end
+    object cdsRefFullDOI: TWideStringField
+      FieldName = 'DOI'
+      FixedChar = True
+      Size = 100
+    end
+    object cdsRefFullSOURCEDESCRIPTION: TBlobField
+      FieldName = 'SOURCEDESCRIPTION'
     end
   end
   object dsContinents: TDataSource
@@ -374,13 +327,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsDOMAINNAME: TStringField
+    object cdsDomainsDOMAINNAME: TWideStringField
       DisplayLabel = 'Domain Name'
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsDomainsCONTINENTID: TStringField
+    object cdsDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -403,7 +356,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsDOMAINTYPEID: TStringField
+    object cdsDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -451,12 +404,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainsDOMAINNAME: TStringField
+    object qDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object qDomainsCONTINENTID: TStringField
+    object qDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -477,7 +430,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDomainsDOMAINTYPEID: TStringField
+    object qDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -510,15 +463,16 @@ object dmStrat: TdmStrat
     Aggregates = <>
     Params = <>
     ProviderName = 'dspDomainTypes'
+    ReadOnly = True
     Left = 86
     Top = 176
-    object cdsDomainTypesDOMAINTYPEID: TStringField
+    object cdsDomainTypesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDomainTypesDOMAINTYPE: TStringField
+    object cdsDomainTypesDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
@@ -541,24 +495,15 @@ object dmStrat: TdmStrat
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
       'VendorLib=c:\exe32\fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2021v30.fdb'
+      'DataBase=c:\data\firebird\stratdb2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
-      'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
       'DriverUnit=DbxDevartInterBase'
-      'OptimizedNumerics=false'
-      'CharLength=1')
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 24
     Top = 8
   end
@@ -576,57 +521,24 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 368
     Top = 220
-    object IntegerField1: TIntegerField
-      FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object StringField1: TStringField
-      FieldName = 'SOURCESHORT'
-      Required = True
-      Size = 100
-    end
-    object SmallintField1: TSmallintField
-      FieldName = 'SOURCEYEAR'
-      Required = True
-    end
-    object MemoField1: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = -1
-    end
-    object StringField2: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object StringField3: TStringField
-      FieldName = 'DOI'
-      Size = 100
-    end
-    object qRefFullWHOFORID: TStringField
-      FieldName = 'WHOFORID'
-      Required = True
-      Size = 5
-    end
   end
   object qRefNew: TSQLQuery
     MaxBlobSize = -1
     Params = <>
     SQL.Strings = (
-      'select SOURCELISTB.SOURCEID, SOURCELISTB.CONTINENTID'
-      'from SOURCELISTB')
+      'select SOURCELIST.SOURCENUM, SOURCELIST.CONTINENTID'
+      'from SOURCELIST')
     SQLConnection = sqlcStrat
     Left = 408
     Top = 283
-    object qRefNewSOURCEID: TStringField
-      FieldName = 'SOURCEID'
+    object qRefNewSOURCENUM: TIntegerField
+      FieldName = 'SOURCENUM'
       Required = True
-      Size = 100
     end
-    object qRefNewCONTINENTID: TStringField
+    object qRefNewCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
   end
@@ -657,19 +569,20 @@ object dmStrat: TdmStrat
     SQL.Strings = (
       'SELECT DOMAINS.DOMAINNAME,DOMAINS.CONTINENTID,'
       '  DOMAINS.DOMAINID,DOMAINS.DOMAINTYPEID'
-      'FROM DOMAINS,CONTINENT,DOMAINTYPE'
-      'WHERE CONTINENT.CONTINENTID = DOMAINS.CONTINENTID'
-      'AND DOMAINS.DOMAINTYPEID=DOMAINTYPE.DOMAINTYPEID'
-      'AND DOMAINTYPE.DOMAINTYPELEVEL <= 2'
+      'FROM DOMAINS,CONTINENTS,DOMAINTYPES'
+      'WHERE CONTINENTS.CONTINENTID = DOMAINS.CONTINENTID'
+      'AND DOMAINS.DOMAINTYPEID=DOMAINTYPES.DOMAINTYPEID'
+      'AND DOMAINTYPES.DVLEVEL <= 2'
       'ORDER BY DOMAINS.DOMAINNAME')
+    SQLConnection = sqlcStrat
     Left = 16
     Top = 378
-    object qProvincesDOMAINNAME: TStringField
+    object qProvincesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 30
     end
-    object qProvincesCONTINENTID: TStringField
+    object qProvincesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -679,7 +592,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qProvincesDOMAINTYPEID: TStringField
+    object qProvincesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -696,12 +609,12 @@ object dmStrat: TdmStrat
     ProviderName = 'dspProvinces'
     Left = 72
     Top = 378
-    object cdsProvincesDOMAINNAME: TStringField
+    object cdsProvincesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 30
     end
-    object cdsProvincesCONTINENTID: TStringField
+    object cdsProvincesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -711,7 +624,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsProvincesDOMAINTYPEID: TStringField
+    object cdsProvincesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -728,33 +641,14 @@ object dmStrat: TdmStrat
     SQL.Strings = (
       'SELECT DOMAINS.DOMAINNAME,DOMAINS.CONTINENTID,'
       '  DOMAINS.DOMAINID,DOMAINS.DOMAINTYPEID'
-      'FROM DOMAINS,CONTINENT,DOMAINTYPE'
-      'WHERE CONTINENT.CONTINENTID = DOMAINS.CONTINENTID'
-      'AND DOMAINS.DOMAINTYPEID=DOMAINTYPE.DOMAINTYPEID'
-      'AND DOMAINTYPE.DOMAINTYPELEVEL > 2'
+      'FROM DOMAINS,CONTINENTS,DOMAINTYPES'
+      'WHERE CONTINENTS.CONTINENTID = DOMAINS.CONTINENTID'
+      'AND DOMAINS.DOMAINTYPEID=DOMAINTYPES.DOMAINTYPEID'
+      'AND DOMAINTYPES.DVLEVEL > 2'
       'ORDER BY DOMAINS.DOMAINNAME')
+    SQLConnection = sqlcStrat
     Left = 12
     Top = 428
-    object qTerranesDOMAINNAME: TStringField
-      FieldName = 'DOMAINNAME'
-      Required = True
-      Size = 30
-    end
-    object qTerranesCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object qTerranesDOMAINID: TIntegerField
-      FieldName = 'DOMAINID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qTerranesDOMAINTYPEID: TStringField
-      FieldName = 'DOMAINTYPEID'
-      Required = True
-      Size = 5
-    end
   end
   object dspTerranes: TDataSetProvider
     DataSet = qTerranes
@@ -767,24 +661,26 @@ object dmStrat: TdmStrat
     ProviderName = 'dspTerranes'
     Left = 68
     Top = 426
-    object cdsTerranesDOMAINNAME: TStringField
+    object cdsTerranesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
-      Size = 30
+      FixedChar = True
+      Size = 65
     end
-    object cdsTerranesCONTINENTID: TStringField
+    object cdsTerranesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object cdsTerranesDOMAINID: TIntegerField
       FieldName = 'DOMAINID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsTerranesDOMAINTYPEID: TStringField
+    object cdsTerranesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
+      FixedChar = True
       Size = 5
     end
   end
@@ -811,23 +707,23 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 12
     Top = 482
-    object qUsersWhoForUSERID: TStringField
+    object qUsersWhoForUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUsersWhoForWHOFORID: TStringField
+    object qUsersWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qUsersWhoForWHOFOR: TStringField
+    object qUsersWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       Size = 50
     end
-    object qUsersWhoForOWNER: TStringField
+    object qUsersWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       ProviderFlags = []
     end
@@ -844,22 +740,22 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUsersWhoFor'
     Left = 68
     Top = 482
-    object cdsUsersWhoForUSERID: TStringField
+    object cdsUsersWhoForUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
-    object cdsUsersWhoForWHOFORID: TStringField
+    object cdsUsersWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
     end
-    object cdsUsersWhoForWHOFOR: TStringField
+    object cdsUsersWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsUsersWhoForOWNER: TStringField
+    object cdsUsersWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       ProviderFlags = []
       ReadOnly = True

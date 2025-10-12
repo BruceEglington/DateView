@@ -46,6 +46,7 @@ type
     iwcbProvinces: TIWCheckBox;
     iwcbReferences: TIWCheckBox;
     iwcbIncludeUserOrgID: TIWCheckBox;
+    iwcbGDUs: TIWCheckBox;
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbNextStageOfQueryClick(Sender: TObject);
     procedure IWAppFormRender(Sender: TObject);
@@ -58,7 +59,7 @@ type
 implementation
 
 uses DVIW_dm, ServerController, DVIW_definequery1, DB_List_Combo,
-  DVIW_provinces, DVIW_constants, DVIW_uMain;
+  DVIW_provinces, DVIW_constants, DVIW_uMain, DVIW_Terranes;
 
 {$R *.dfm}
 
@@ -71,58 +72,71 @@ begin
   end;
   iwlblError.Visible := false;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  iwrIncludes.Visible := true;
   iwcbContinents.Checked := true;
   {
   iwcbContinents.Checked := UserSession.IncludeContinentValues;
   }
   UpdateListBoxValues(iwlContinents,dmDV.cdsContinents,'Continent','ContinentID',UserSession.ContinentValues);
-  iwcbUnits.Checked := UserSession.IncludeUnitValues;
-  iwcbLithologies.Checked := UserSession.IncludeLithologyValues;
-  iwcbMethods.Checked := UserSession.IncludeMethodValues;
-  iwcbMaterial.Checked := UserSession.IncludeMaterialValues;
-  iwcbIsotopeSystems.Checked := UserSession.IncludeIsotopeSystemValues;
-  iwcbApproaches.Checked := UserSession.IncludeApproachValues;
-  iwcbTechniques.Checked := UserSession.IncludeTechniqueValues;
-  iwcbInterpretations.Checked := UserSession.IncludeInterpretationValues;
-  iwcbReferences.Checked := UserSession.IncludeReferenceValues;
-  iwcbProvinces.Checked := UserSession.IncludeProvinceValues;
-  iwcbTerranes.Checked := UserSession.IncludeTerraneValues;
-  iwcbLIPS.Checked := UserSession.IncludeLIPValues;
-  iwcbOrogenicPeriods.Checked := UserSession.IncludeOrogenicPeriodValues;
-  iwcbChemTypes.Checked := UserSession.IncludeChemicalTypeValues;
-  iwcbGroupingList.Checked := UserSession.IncludeGroupValues;
-  iwcbBoundaries.Checked := UserSession.IncludeBoundaryValues;
-  iwcbBoundaryPos.Checked := UserSession.IncludeBoundaryPositionValues;
-  iwcbValidation.Checked := UserSession.IncludeValidationValues;
-  iwcbWhoFor.Checked := UserSession.IncludeWhoForValues;
-  iwcbUsersContributed.Checked := UserSession.IncludeUsersContributedValues;
-  iwcbIncludeUserOrgID.Checked := UserSession.IncludeUserOrgID;
+  if ((UserSession.UnitSender <> usProvinces) and (UserSession.UnitSender <> usTerranes)) then
+  begin
+    iwrIncludes.Visible := true;
+    iwcbUnits.Checked := UserSession.IncludeUnitValues;
+    iwcbLithologies.Checked := UserSession.IncludeLithologyValues;
+    iwcbMethods.Checked := UserSession.IncludeMethodValues;
+    iwcbMaterial.Checked := UserSession.IncludeMaterialValues;
+    iwcbIsotopeSystems.Checked := UserSession.IncludeIsotopeSystemValues;
+    iwcbApproaches.Checked := UserSession.IncludeApproachValues;
+    iwcbTechniques.Checked := UserSession.IncludeTechniqueValues;
+    iwcbInterpretations.Checked := UserSession.IncludeInterpretationValues;
+    iwcbReferences.Checked := UserSession.IncludeReferenceValues;
+    iwcbProvinces.Checked := UserSession.IncludeProvinceValues;
+    iwcbTerranes.Checked := UserSession.IncludeTerraneValues;
+    iwcbLIPS.Checked := UserSession.IncludeLIPValues;
+    iwcbOrogenicPeriods.Checked := UserSession.IncludeOrogenicPeriodValues;
+    iwcbChemTypes.Checked := UserSession.IncludeChemicalTypeValues;
+    iwcbGroupingList.Checked := UserSession.IncludeGroupValues;
+    iwcbBoundaries.Checked := UserSession.IncludeBoundaryValues;
+    iwcbBoundaryPos.Checked := UserSession.IncludeBoundaryPositionValues;
+    iwcbValidation.Checked := UserSession.IncludeValidationValues;
+    iwcbWhoFor.Checked := UserSession.IncludeWhoForValues;
+    iwcbUsersContributed.Checked := UserSession.IncludeUsersContributedValues;
+    iwcbIncludeUserOrgID.Checked := UserSession.IncludeUserOrgID;
+    iwcbGDUs.Checked := UserSession.IncludeGDUValues;
+  end else
+  begin
+    iwrIncludes.Visible := false;
+  end;
 end;
 
 procedure TISFDefineQuery.iwbNextStageOfQueryClick(Sender: TObject);
 begin
   UserSession.IncludeContinentValues := iwcbContinents.Checked;
   GetListBoxValues(iwlContinents,dmDV.cdsContinents,'Continent','ContinentID',UserSession.ContinentValues);
-  UserSession.IncludeReferenceValues := iwcbReferences.Checked;
-  UserSession.IncludeUnitValues := iwcbUnits.Checked;
-  UserSession.IncludeLithologyValues := iwcbLithologies.Checked;
-  UserSession.IncludeMethodValues := iwcbMethods.Checked;
-  UserSession.IncludeMaterialValues := iwcbMaterial.Checked;
-  UserSession.IncludeIsotopeSystemValues := iwcbIsotopeSystems.Checked;
-  UserSession.IncludeApproachValues := iwcbApproaches.Checked;
-  UserSession.IncludeTechniqueValues := iwcbTechniques.Checked;
-  UserSession.IncludeInterpretationValues := iwcbInterpretations.Checked;
-  UserSession.IncludeProvinceValues := iwcbProvinces.Checked;
-  UserSession.IncludeTerraneValues := iwcbTerranes.Checked;
-  UserSession.IncludeLIPValues := iwcbLIPS.Checked;
-  UserSession.IncludeOrogenicPeriodValues := iwcbOrogenicPeriods.Checked;
-  UserSession.IncludeChemicalTypeValues := iwcbChemTypes.Checked;
-  UserSession.IncludeGroupValues := iwcbGroupingList.Checked;
-  UserSession.IncludeBoundaryValues := iwcbBoundaries.Checked;
-  UserSession.IncludeBoundaryPositionValues := iwcbBoundaryPos.Checked;
-  UserSession.IncludeValidationValues := iwcbValidation.Checked;
-  UserSession.IncludeWhoForValues := iwcbWhoFor.Checked;
-  UserSession.IncludeUserOrgID := iwcbIncludeUserOrgID.Checked;
+  if ((UserSession.UnitSender <> usProvinces) and (UserSession.UnitSender <> usTerranes)) then
+  begin
+    UserSession.IncludeReferenceValues := iwcbReferences.Checked;
+    UserSession.IncludeUnitValues := iwcbUnits.Checked;
+    UserSession.IncludeLithologyValues := iwcbLithologies.Checked;
+    UserSession.IncludeMethodValues := iwcbMethods.Checked;
+    UserSession.IncludeMaterialValues := iwcbMaterial.Checked;
+    UserSession.IncludeIsotopeSystemValues := iwcbIsotopeSystems.Checked;
+    UserSession.IncludeApproachValues := iwcbApproaches.Checked;
+    UserSession.IncludeTechniqueValues := iwcbTechniques.Checked;
+    UserSession.IncludeInterpretationValues := iwcbInterpretations.Checked;
+    UserSession.IncludeProvinceValues := iwcbProvinces.Checked;
+    UserSession.IncludeTerraneValues := iwcbTerranes.Checked;
+    UserSession.IncludeLIPValues := iwcbLIPS.Checked;
+    UserSession.IncludeOrogenicPeriodValues := iwcbOrogenicPeriods.Checked;
+    UserSession.IncludeChemicalTypeValues := iwcbChemTypes.Checked;
+    UserSession.IncludeGroupValues := iwcbGroupingList.Checked;
+    UserSession.IncludeBoundaryValues := iwcbBoundaries.Checked;
+    UserSession.IncludeBoundaryPositionValues := iwcbBoundaryPos.Checked;
+    UserSession.IncludeValidationValues := iwcbValidation.Checked;
+    UserSession.IncludeWhoForValues := iwcbWhoFor.Checked;
+    UserSession.IncludeUserOrgID := iwcbIncludeUserOrgID.Checked;
+    UserSession.IncludeGDUValues := iwcbGDUs.Checked;
+  end;
   if Validate then
   begin
     UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
@@ -138,6 +152,8 @@ begin
     then TISFDefineQuery1.Create(WebApplication).Show;
     if ((UserSession.UnitSender=usProvinces))
     then TISFProvinces.Create(WebApplication).Show;
+    if ((UserSession.UnitSender=usTerranes))
+    then TISFTerranes.Create(WebApplication).Show;
   end;
 end;
 

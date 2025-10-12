@@ -38,6 +38,7 @@ type
     procedure iwrgPDFChangeClick(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
     procedure iwbReturnToResultsClick(Sender: TObject);
+    procedure iwcbSpectrumAgesChange(Sender: TObject);
   public
   end;
 
@@ -60,8 +61,8 @@ begin
   begin
     TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
   end;
-  iweFromAge.Text := FormatFloat('###0.00',UserSession.FromAge);
-  iweToAge.Text := FormatFloat('###0.00',UserSession.ToAge);
+  iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
+  iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
 end;
 
 procedure TISFSelectGraph.IWAppFormCreate(Sender: TObject);
@@ -80,6 +81,15 @@ begin
   //iweFromAge.Visible := UserSession.CanViewPlus;
   //iweToAge.Visible := UserSession.CanViewPlus;
   //iwcbSpectrumAges.Visible := UserSession.CanViewPlus;
+  if (UserSession.StartAtX >= UserSession.EndAtX) then
+  begin
+    UserSession.StartAtX := 0.0;
+    UserSession.EndAtX := 4600.0;
+  end;
+  iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
+  iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
+  //dmUser.SetDeveloperData('iweFromAge.Text FormCreate selectgraph = '+iweFromAge.Text);
+  //dmUser.SetDeveloperData('iweToAge.Text FormCreate selectgraph = '+iweToAge.Text);
   for i := 0 to iwcbGroupBy.Items.Count-1 do
   begin
     if (UserSession.GroupBy = iwcbGroupBy.Items.Strings[i]) then
@@ -122,6 +132,12 @@ begin
       if (iCode <> 0) then UserSession.EndAtX := SpectrumEndAge;
     //UserSession.StartAtX := UserSession.FromAge;
     //UserSession.EndAtX := UserSession.ToAge;
+    if (UserSession.StartAtX >= UserSession.EndAtX) then
+    begin
+      WebApplication.ShowMessage('Minimum must be less than maximum');
+      UserSession.StartAtX := SpectrumStartAge;
+      UserSession.EndAtX := SpectrumEndAge;
+    end;
     iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
     iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
     //dmUser.SetDeveloperData('StartAtX Submit 0b = '+FormatFloat('####0.00',UserSession.StartAtX));
@@ -586,6 +602,17 @@ begin
   end;
   //dmUser.SetDeveloperData('StartAtX Submit 1 = '+FormatFloat('####0.00',UserSession.StartAtX));
   //dmUser.SetDeveloperData('EndAtX Submit 1 = '+FormatFloat('####0.00',UserSession.EndAtX));
+end;
+
+procedure TISFSelectGraph.iwcbSpectrumAgesChange(Sender: TObject);
+begin
+  if iwcbSpectrumAges.Checked then
+  begin
+    iweFromAge.Text := FormatFloat('###0.00',SpectrumEndAge);
+    iweToAge.Text := FormatFloat('###0.00',SpectrumStartAge);
+    iwcbSpectrumAges.Checked := false;
+  end;
+  UserSession.PDFHasChanged := true;
 end;
 
 procedure TISFSelectGraph.iwcbSpectrumAgesClick(Sender: TObject);

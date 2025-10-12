@@ -1,15 +1,16 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{5DC7B5E8-6E4C-4986-A438-F7C6CDC0D550}</ProjectGuid>
-        <ProjectVersion>20.1</ProjectVersion>
+        <ProjectVersion>20.3</ProjectVersion>
         <MainSource>DVIW.dpr</MainSource>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Console</AppType>
+        <ProjectName Condition="'$(ProjectName)'==''">DVIW</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -35,6 +36,12 @@
         <Cfg_1>true</Cfg_1>
         <Base>true</Base>
     </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
         <Cfg_2>true</Cfg_2>
         <CfgParent>Base</CfgParent>
@@ -55,7 +62,6 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <Icon_MainIcon>DVIW_Icon2.ico</Icon_MainIcon>
-        <DCC_DcpOutput>C:\DCP32\</DCC_DcpOutput>
         <DCC_DcuOutput>C:\DCU64\</DCC_DcuOutput>
         <SanitizedProjectName>DVIW</SanitizedProjectName>
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
@@ -63,7 +69,6 @@
         <VerInfo_MajorVer>2</VerInfo_MajorVer>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Build>295</VerInfo_Build>
-        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Bde;FlexCel;VCLTee;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>4105</VerInfo_Locale>
         <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -81,26 +86,30 @@
         <DCC_DependencyCheckOutputName>C:\EXE\DVIW.exe</DCC_DependencyCheckOutputName>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <DCC_Platform>x86</DCC_Platform>
+        <DCC_Namespace>Vcl;VclTee;Data;Datasnap;System;Winapi;Vcl.Imaging;Xml;$(DCC_Namespace)</DCC_Namespace>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
         <VerInfo_Build>0</VerInfo_Build>
-        <DCC_UnitSearchPath>C:\DCU32;C:\Windows\System32;C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Win32;C:\Program Files (x86)\Devart\dbExpress\InterBase\Lib\Delphi29\Win32;C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Delphi29\Win32;C:\Users\bre255\AppData\Roaming\IntraWeb 15\LibD12W32;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_UnitSearchPath>C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Win32;C:\Program Files (x86)\Devart\dbExpress\InterBase\Lib\Delphi37\Win32;C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Delphi37\Win32;C:\Users\Bruce Eglington\AppData\Roaming\IntraWeb 16\LibD13W32;C:\Program Files (x86)\Steema Software\Steema TeeChart Pro VCL FMX 2025.45\Delphi37\Delphi37.win32;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>DVIW_Icon5.ico</Icon_MainIcon>
-        <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
+        <DCC_UsePackage>FMXTMSFNCMapsPkgDXE15;VCLTMSFNCMapsPkgDXE15;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
-        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <BT_BuildType>Debug</BT_BuildType>
-        <DCC_UnitSearchPath>C:\DCU64;C:\Program Files (x86)\Devart\dbExpress\InterBase\Lib\Delphi29\Win64;C:\Program Files (x86)\Steema Software\Steema TeeChart Pro VCL FMX 2023.39\Delphi29\Delphi29.win64;C:\Users\bre255\AppData\Roaming\IntraWeb 15\LibD12W64;C:\Users\bre255\AppData\Roaming\IntraWeb 15\LibD12W64\Debug;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <DCC_DcpOutput>C:\DCP64\</DCC_DcpOutput>
+        <DCC_UnitSearchPath>C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Win64;C:\Users\Bruce Eglington\AppData\Roaming\IntraWeb 16\LibD13W64;C:\Program Files (x86)\Steema Software\Steema TeeChart Pro VCL FMX 2025.45\Delphi37\Delphi37.win64;C:\Program Files (x86)\Devart\dbExpress\InterBase\Lib\Delphi37\Win64;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-        <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_UsePackage>FMXTMSFNCMapsPkgDXE15;VCLTMSFNCMapsPkgDXE15;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -110,18 +119,30 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
         <DCC_DebugInformation>2</DCC_DebugInformation>
-        <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>
         <DCC_IntegerOverflowCheck>false</DCC_IntegerOverflowCheck>
         <DCC_RangeChecking>false</DCC_RangeChecking>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
         <VerInfo_Build>0</VerInfo_Build>
+        <Icon_MainIcon>DVIW_Icon5.ico</Icon_MainIcon>
+        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
+        <DCC_ExeOutput>C:\EXE32</DCC_ExeOutput>
+        <DCC_DcuOutput>C:\DCU32\</DCC_DcuOutput>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <DCC_DebugInfoInExe>false</DCC_DebugInfoInExe>
+        <Debugger_LoadAllSymbols>false</Debugger_LoadAllSymbols>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
+        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
-        <DCC_Define>DEBUG;EUREKALOG;EUREKALOG_VER6;$(DCC_Define)</DCC_Define>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <Icon_MainIcon>DVIW_Icon5.ico</Icon_MainIcon>
@@ -132,8 +153,8 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_Define>madExcept;LeakChecking;$(DCC_Define)</DCC_Define>
         <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <MapFile>3</MapFile>
+        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
         <ILINK_MapFileType>DetailedSegments</ILINK_MapFileType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
@@ -141,10 +162,10 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_Define>madExcept;LeakChecking;$(DCC_Define)</DCC_Define>
         <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
-        <DCC_DcpOutput>C:\DCP64\</DCC_DcpOutput>
         <DCC_DcuOutput>C:\DCU64\</DCC_DcuOutput>
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <DCC_UnitSearchPath>C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Delphi37\Win64;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -526,7 +547,6 @@
             <Form>ISFRenew</Form>
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\IntraWeb\IWRtlFix.pas"/>
         <DCCReference Include="DVIW_datalookups.pas">
             <Form>ISFDataLookups</Form>
             <DesignClass>TIWAppForm</DesignClass>
@@ -541,11 +561,6 @@
         </DCCReference>
         <DCCReference Include="..\WebUserIW\usr_uLogin.pas">
             <Form>ISFLogin</Form>
-            <DesignClass>TIWAppForm</DesignClass>
-        </DCCReference>
-        <DCCReference Include="DVIW_calcGDUpdfs.pas">
-            <Form>ISFCalculateGDUPDFS</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
@@ -602,56 +617,24 @@
                     <VersionInfoKeys Name="Comments"/>
                 </VersionInfoKeys>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k370.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp370.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
-            <Deployment Version="4">
+            <Deployment Version="5">
                 <DeployFile LocalName="C:\EXE32\DVIW.exe" Configuration="Debug" Class="ProjectOutput"/>
-                <DeployFile LocalName="C:\EXE32\DVIW.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>DVIW.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="C:\EXE32\DVIW.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win32">
-                        <RemoteName>DVIW.rsm</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win64">
-                        <RemoteName>DVIW.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="C:\EXE64\DVIW.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win64">
-                        <RemoteName>DVIW.rsm</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
+                <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="Win32\Release\DVIW.exe" Configuration="Release" Class="ProjectOutput"/>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="OSX32">
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidClasses">
-                    <Platform Name="Android">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
@@ -753,6 +736,16 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\values-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStylesV35">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-v35</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-v35</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1223,6 +1216,9 @@
                     <Platform Name="Win64">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="Win64x">
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
@@ -1484,6 +1480,7 @@
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
             </Deployment>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

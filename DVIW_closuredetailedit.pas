@@ -27,6 +27,8 @@ type
     iwDBlcbMaterial: TIWDBLookupComboBox;
     iwbEdit: TIWButton;
     TopBar: TISFTopBar;
+    IWLabel6: TIWLabel;
+    iwDBlcbAssociation: TIWDBLookupComboBox;
     procedure IWAppFormRender(Sender: TObject);
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
@@ -68,10 +70,12 @@ begin
   iwDBlcbApproach.Editable := UserSession.CanModify;
   iwDBeBlockingT.Editable := UserSession.CanModify;
   iwDBeBlockingTUncertainty.Editable := UserSession.CanModify;
+  iwDBlcbAssociation.Editable := UserSession.CanModify;
   iwDBNavigator1.Visible := UserSession.CanModifyPlus;
   dmDV.cdsMaterial.Open;
   dmDV.cdsIsoSystems.Open;
   dmDV.cdsApproach.Open;
+  dmDV.cdsClosTmpAssoc.Open;
 end;
 
 procedure TISFClosureDetailEdit.iwbReturnClick(Sender: TObject);
@@ -79,6 +83,7 @@ begin
   dmDV.cdsMaterial.Close;
   dmDV.cdsIsoSystems.Close;
   dmDV.cdsApproach.Close;
+  dmDV.cdsClosTmpAssoc.Close;
   TIWAppForm(WebApplication.ActiveForm).Release;
   TISFClosureTemperatures.Create(WebApplication).Show;
 end;

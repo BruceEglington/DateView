@@ -23,11 +23,11 @@ type
     IWLabel9: TIWLabel;
     IWLabel10: TIWLabel;
     IWLabel11: TIWLabel;
-    IWDBEdit11: TIWDBEdit;
+    iwDBeRAGE: TIWDBEdit;
     IWLabel12: TIWLabel;
-    IWDBEdit12: TIWDBEdit;
+    iwDBeRAGEPERRORALL: TIWDBEdit;
     IWLabel13: TIWLabel;
-    IWDBEdit13: TIWDBEdit;
+    iwDBeRAGEMERRORALL: TIWDBEdit;
     IWLabel15: TIWLabel;
     iwDBeWeighting: TIWDBEdit;
     iwlDC1: TIWLabel;
@@ -232,6 +232,18 @@ type
     iwbMakePublic: TIWButton;
     IWLabel23: TIWLabel;
     iwcbRating: TIWComboBox;
+    IWLabel67: TIWLabel;
+    iwDBeRAGEPERRORTRACER: TIWDBEdit;
+    IWLabel68: TIWLabel;
+    iwDBeRAGEMERRORTRACER: TIWDBEdit;
+    IWLabel73: TIWLabel;
+    IWLabel74: TIWLabel;
+    iwDBeRAGEPERROR: TIWDBEdit;
+    IWLabel75: TIWLabel;
+    iwDBeiwDBeRAGEMERROR: TIWDBEdit;
+    IWLabel76: TIWLabel;
+    iwDBeIsotopeConstant: TIWDBEdit;
+    iwlIsotopeConstant: TIWLabel;
     procedure IWAppFormRender(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
     procedure iwbPostClick(Sender: TObject);
@@ -563,6 +575,16 @@ begin
       iwlDC2error.Visible := false;
       iwDBeDC2.Visible := false;
       iwDBeDC2error.Visible := false;
+    end;
+    if ((dmDV.cdsResultsISOTOPESYSTEM.AsString = 'PbPb') or
+        (dmDV.cdsResultsISOTOPESYSTEM.AsString = 'UPb')) then
+    begin
+      iwlIsotopeConstant.Visible := true;
+      iwDBeIsotopeConstant.Visible := true;
+    end else
+    begin
+      iwlIsotopeConstant.Visible := false;
+      iwDBeIsotopeConstant.Visible := false;
     end;
   except
   end;

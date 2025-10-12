@@ -72,6 +72,10 @@ type
     iweDomainFrom: TIWEdit;
     lblFromErrorDomains: TIWLabel;
     lblToErrorDomains: TIWLabel;
+    iwcbGDUs: TIWCheckBox;
+    iwrPlateModel: TIWRegion;
+    IWLabel10: TIWLabel;
+    iwcbPlateModel: TIWComboBox;
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbNextStageOfQueryClick(Sender: TObject);
     procedure IWAppFormRender(Sender: TObject);
@@ -99,6 +103,9 @@ begin
   end;
   iwlblError.Visible := false;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
+  iwrPlateModel.Visible := false;
+  iwcbGDUs.Checked := UserSession.IncludeGDUValues;
+  dmDV.cdsReconModels.Open;
   iwcbAreas.Checked := UserSession.IncludeAreaValues;
   dmDV.qCountries.Close;
   dmDV.cdsCountries.Close;
@@ -128,6 +135,11 @@ begin
   dmDV.qCountries.SQL.Add('order by Country.Country');
   //dmUser.SetDeveloperData('DefineQuery1');
   //dmUser.SetDeveloperData(dmDV.qCountries.SQL.Text);
+  if (UserSession.IncludeGDUValues) then
+  begin
+    iwrPlateModel.Visible := true;
+    dmDV.cdsReconModels.Open;
+  end;
   if ((UserSession.UnitSender = usDetailsEdit)
     or (UserSession.UnitSender = usDetails)
     or (UserSession.UnitSender = usProvinces)) then
@@ -217,6 +229,7 @@ begin
     iwcbWhoFor.Checked := UserSession.IncludeWhoForValues;
     iwcbUsersContributed.Checked := UserSession.IncludeUsersContributedValues;
     iwcbIncludeUserOrgID.Checked := UserSession.IncludeUserOrgID;
+    iwcbGDUs.Checked := UserSession.IncludeGDUValues;
   end else
   begin
     iwrIncludes.Visible := false;
@@ -227,6 +240,8 @@ procedure TISFDefineQuery1.iwbNextStageOfQueryClick(Sender: TObject);
 begin
   UserSession.IncludeAreaValues := iwcbAreas.Checked;
   if UserSession.IncludeAreaValues then GetListBoxValues(iwlAreas,dmDV.cdsCountries,'Country','CountryAbr',UserSession.AreaValues);
+  UserSession.IncludeGDUValues := iwcbGDUs.Checked;
+  if UserSession.IncludeGDUValues then GetComboBoxValue(iwcbPlateModel,dmDV.cdsReconModels,'ReconModel','ReconModelID',UserSession.PlateModelValue);
   //dmUser.SetDeveloperData(dmDV.qCountries.SQL.Text);
   if ((UserSession.UnitSender=usIdentifyPeaks) or (UserSession.UnitSender=usShowDetrital)
        or (UserSession.UnitSender=usIndividualAgeHf)
@@ -267,6 +282,7 @@ begin
     UserSession.IncludeValidationValues := iwcbValidation.Checked;
     UserSession.IncludeWhoForValues := iwcbWhoFor.Checked;
     UserSession.IncludeUserOrgID := iwcbIncludeUserOrgID.Checked;
+    UserSession.IncludeGDUValues := iwcbGDUs.Checked;
     if (UserSession.IncludeReferenceValues) then
     begin
       Usersession.ReferenceStartFrom := Trim(iweReferenceFrom.Text);
@@ -302,6 +318,7 @@ begin
   if UserSession.LoggedIn then
   begin
     iwcbAreas.Checked := UserSession.IncludeAreaValues;
+    iwcbGDUs.Checked := UserSession.IncludeGDUValues;
     //UpdateListBoxValues(iwlAreas,dmDV.cdsCountries,'Country','CountryAbr',UserSession.AreaValues);
   end;
 end;
@@ -315,6 +332,10 @@ begin
     UserSession.IncludeAreaValues := false;
     Result := false;
     iwlblError.Visible := true;
+  end;
+  if ((UserSession.PlateModelValue = '') and UserSession.IncludeGDUValues) then
+  begin
+    UserSession.IncludeGDUValues := false;
   end;
   if ((UserSession.UnitSender=usIdentifyPeaks) or (UserSession.UnitSender=usShowDetrital)
        or (UserSession.UnitSender=usIndividualAgeHf)

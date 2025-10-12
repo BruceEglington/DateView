@@ -1,5 +1,4 @@
 object dmOpt: TdmOpt
-  OldCreateOrder = False
   Height = 764
   Width = 702
   object sqlcDateView: TSQLConnection
@@ -10,24 +9,17 @@ object dmOpt: TdmOpt
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
       'VendorLib=c:\exe32\fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\dateview2021v30.fdb'
+      'DataBase=c:\data\firebird\dateview2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
       'DriverUnit=DbxDevartInterBase'
-      'OptimizedNumerics=false'
-      'CharLength=1')
+      'UseUnicode=true'
+      'Charset=UTF8'
+      '')
     Left = 24
     Top = 14
   end
@@ -58,12 +50,12 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 206
     Top = 126
-    object qOptUSERID: TStringField
+    object qOptUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptOPTIONTYPEID: TStringField
+    object qOptOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -75,7 +67,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptOPTIONTITLE: TStringField
+    object qOptOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -87,12 +79,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOpt'
     Left = 286
     Top = 124
-    object cdsOptUSERID: TStringField
+    object cdsOptUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptOPTIONTYPEID: TStringField
+    object cdsOptOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -104,7 +96,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptOPTIONTITLE: TStringField
+    object cdsOptOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -135,7 +127,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptInterp'
     Left = 268
     Top = 198
-    object cdsOptInterpUSERID: TStringField
+    object cdsOptInterpUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -145,7 +137,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptInterpINTERPABR: TStringField
+    object cdsOptInterpINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -187,7 +179,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptDates'
     Left = 264
     Top = 252
-    object cdsOptDatesUSERID: TStringField
+    object cdsOptDatesUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -238,7 +230,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptGraph'
     Left = 266
     Top = 300
-    object cdsOptGraphUSERID: TStringField
+    object cdsOptGraphUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -248,18 +240,18 @@ object dmOpt: TdmOpt
       Required = True
       DisplayFormat = '##0.00'
     end
-    object cdsOptGraphSHOWALLLOCALITIES: TStringField
+    object cdsOptGraphSHOWALLLOCALITIES: TWideStringField
       FieldName = 'SHOWALLLOCALITIES'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptGraphGROUPCATEGORY: TStringField
+    object cdsOptGraphGROUPCATEGORY: TWideStringField
       FieldName = 'GROUPCATEGORY'
       Required = True
       Size = 30
     end
-    object cdsOptGraphPDFTYPE: TStringField
+    object cdsOptGraphPDFTYPE: TWideStringField
       FieldName = 'PDFTYPE'
       Required = True
       Size = 3
@@ -288,12 +280,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptAll'
     Left = 70
     Top = 124
-    object cdsOptAllUSERID: TStringField
+    object cdsOptAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptAllOPTIONTYPEID: TStringField
+    object cdsOptAllOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -305,7 +297,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptAllOPTIONTITLE: TStringField
+    object cdsOptAllOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -328,7 +320,7 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 14
     Top = 186
-    object qOptInterpAllUSERID: TStringField
+    object qOptInterpAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -338,7 +330,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptInterpAllINTERPABR: TStringField
+    object qOptInterpAllINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -351,7 +343,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptInterpAll'
     Left = 74
     Top = 184
-    object cdsOptInterpAllUSERID: TStringField
+    object cdsOptInterpAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -361,7 +353,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptInterpAllINTERPABR: TStringField
+    object cdsOptInterpAllINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -385,7 +377,7 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 12
     Top = 240
-    object qOptDatesAllUSERID: TStringField
+    object qOptDatesAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -410,7 +402,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptDatesAll'
     Left = 64
     Top = 240
-    object cdsOptDatesAllUSERID: TStringField
+    object cdsOptDatesAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -457,12 +449,12 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 14
     Top = 126
-    object qOptAllUSERID: TStringField
+    object qOptAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptAllOPTIONTYPEID: TStringField
+    object qOptAllOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -474,7 +466,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptAllOPTIONTITLE: TStringField
+    object qOptAllOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -492,7 +484,7 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 158
     Top = 470
-    object qGraphAll2USERID: TStringField
+    object qGraphAll2USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -501,13 +493,13 @@ object dmOpt: TdmOpt
       FieldName = 'MINAGEERROR'
       Required = True
     end
-    object qGraphAll2SHOWALLLOCALITIES: TStringField
+    object qGraphAll2SHOWALLLOCALITIES: TWideStringField
       FieldName = 'SHOWALLLOCALITIES'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qGraphAll2GROUPCATEGORY: TStringField
+    object qGraphAll2GROUPCATEGORY: TWideStringField
       FieldName = 'GROUPCATEGORY'
       Required = True
       Size = 30
@@ -534,7 +526,7 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptGraphAll'
     Left = 68
     Top = 302
-    object cdsOptGraphAllUSERID: TStringField
+    object cdsOptGraphAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -543,18 +535,18 @@ object dmOpt: TdmOpt
       FieldName = 'MINAGEERROR'
       Required = True
     end
-    object cdsOptGraphAllSHOWALLLOCALITIES: TStringField
+    object cdsOptGraphAllSHOWALLLOCALITIES: TWideStringField
       FieldName = 'SHOWALLLOCALITIES'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptGraphAllGROUPCATEGORY: TStringField
+    object cdsOptGraphAllGROUPCATEGORY: TWideStringField
       FieldName = 'GROUPCATEGORY'
       Required = True
       Size = 30
     end
-    object cdsOptGraphAllPDFTYPE: TStringField
+    object cdsOptGraphAllPDFTYPE: TWideStringField
       FieldName = 'PDFTYPE'
       Required = True
       Size = 3
@@ -615,12 +607,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspoptM'
     Left = 484
     Top = 64
-    object cdsOptMUSERID: TStringField
+    object cdsOptMUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptMOPTIONTYPEID: TStringField
+    object cdsOptMOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -632,7 +624,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptMOPTIONTITLE: TStringField
+    object cdsOptMOPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -698,7 +690,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 116
-    object cdsOptMInterpUSERID: TStringField
+    object cdsOptMInterpUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -708,7 +700,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptMInterpINTERPABR: TStringField
+    object cdsOptMInterpINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -760,7 +752,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 164
-    object cdsOptMDatesUSERID: TStringField
+    object cdsOptMDatesUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -786,7 +778,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 212
-    object cdsOptMGraphUSERID: TStringField
+    object cdsOptMGraphUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -796,18 +788,18 @@ object dmOpt: TdmOpt
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsOptMGraphSHOWALLLOCALITIES: TStringField
+    object cdsOptMGraphSHOWALLLOCALITIES: TWideStringField
       FieldName = 'SHOWALLLOCALITIES'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptMGraphGROUPCATEGORY: TStringField
+    object cdsOptMGraphGROUPCATEGORY: TWideStringField
       FieldName = 'GROUPCATEGORY'
       Required = True
       Size = 30
     end
-    object cdsOptMGraphPDFTYPE: TStringField
+    object cdsOptMGraphPDFTYPE: TWideStringField
       FieldName = 'PDFTYPE'
       Required = True
       Size = 3
@@ -851,12 +843,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspUserGroups'
     Left = 68
     Top = 354
-    object cdsUserGroupsGROUPING: TStringField
+    object cdsUserGroupsGROUPING: TWideStringField
       FieldName = 'GROUPING'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserGroupsUSERID: TStringField
+    object cdsUserGroupsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -899,18 +891,18 @@ object dmOpt: TdmOpt
     ProviderName = 'dspUserFor'
     Left = 68
     Top = 406
-    object cdsUserForWHOFORID: TStringField
+    object cdsUserForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsUserForWHOFOR: TStringField
+    object cdsUserForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       Required = True
       Size = 50
     end
-    object cdsUserForOWNER: TStringField
+    object cdsUserForOWNER: TWideStringField
       FieldName = 'OWNER'
       Required = True
     end
@@ -953,12 +945,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 260
-    object cdsOptMInitialIRUSERID: TStringField
+    object cdsOptMInitialIRUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptMInitialIROPTIONTYPEID: TStringField
+    object cdsOptMInitialIROPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1024,12 +1016,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptInitial'
     Left = 264
     Top = 356
-    object cdsOptInitialUSERID: TStringField
+    object cdsOptInitialUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptInitialOPTIONTYPEID: TStringField
+    object cdsOptInitialOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       Required = True
       FixedChar = True
@@ -1078,12 +1070,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 308
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1135,12 +1127,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 460
     Top = 356
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1192,7 +1184,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 580
     Top = 116
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1202,7 +1194,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1238,7 +1230,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 580
     Top = 164
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1248,7 +1240,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1284,7 +1276,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 580
     Top = 212
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1294,7 +1286,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1330,7 +1322,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 580
     Top = 260
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1340,7 +1332,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1376,7 +1368,7 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 580
     Top = 308
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1386,7 +1378,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1421,14 +1413,14 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptionTypes'
     Left = 80
     Top = 520
-    object cdsOptionTypesOPTIONTYPEID: TStringField
+    object cdsOptionTypesOPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptionTypesOPTIONTYPE: TStringField
+    object cdsOptionTypesOPTIONTYPE: TWideStringField
       FieldName = 'OPTIONTYPE'
       Required = True
     end
@@ -1468,12 +1460,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 404
     Top = 492
-    object cdsOptRCap1USERID: TStringField
+    object cdsOptRCap1USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap1OPTIONTYPEID: TStringField
+    object cdsOptRCap1OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1485,7 +1477,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap1OPTIONTITLE: TStringField
+    object cdsOptRCap1OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1526,12 +1518,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 404
     Top = 540
-    object cdsOptRCap2USERID: TStringField
+    object cdsOptRCap2USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap2OPTIONTYPEID: TStringField
+    object cdsOptRCap2OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1543,7 +1535,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap2OPTIONTITLE: TStringField
+    object cdsOptRCap2OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1584,12 +1576,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 404
     Top = 588
-    object cdsOptRCap3USERID: TStringField
+    object cdsOptRCap3USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap3OPTIONTYPEID: TStringField
+    object cdsOptRCap3OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1601,7 +1593,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap3OPTIONTITLE: TStringField
+    object cdsOptRCap3OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1642,12 +1634,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 404
     Top = 636
-    object cdsOptRCap4USERID: TStringField
+    object cdsOptRCap4USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap4OPTIONTYPEID: TStringField
+    object cdsOptRCap4OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1659,7 +1651,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap4OPTIONTITLE: TStringField
+    object cdsOptRCap4OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1700,12 +1692,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 404
     Top = 684
-    object cdsOptRCap5USERID: TStringField
+    object cdsOptRCap5USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap5OPTIONTYPEID: TStringField
+    object cdsOptRCap5OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1717,7 +1709,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRCap5OPTIONTITLE: TStringField
+    object cdsOptRCap5OPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1752,12 +1744,12 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcDateView
     Left = 360
     Top = 440
-    object qOptRUSERID: TStringField
+    object qOptRUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptROPTIONTYPEID: TStringField
+    object qOptROPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1769,7 +1761,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptROPTIONTITLE: TStringField
+    object qOptROPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1792,12 +1784,12 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptR'
     Left = 444
     Top = 440
-    object cdsOptRUSERID: TStringField
+    object cdsOptRUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptROPTIONTYPEID: TStringField
+    object cdsOptROPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1809,7 +1801,7 @@ object dmOpt: TdmOpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptROPTIONTITLE: TStringField
+    object cdsOptROPTIONTITLE: TWideStringField
       FieldName = 'OPTIONTITLE'
       Required = True
       Size = 30
@@ -1861,12 +1853,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 524
     Top = 684
-    object cdsOptRVal5USERID: TStringField
+    object cdsOptRVal5USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRVal5OPTIONTYPEID: TStringField
+    object cdsOptRVal5OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1924,12 +1916,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 524
     Top = 636
-    object cdsOptRVal4USERID: TStringField
+    object cdsOptRVal4USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRVal4OPTIONTYPEID: TStringField
+    object cdsOptRVal4OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1986,12 +1978,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 524
     Top = 588
-    object cdsOptRVal3USERID: TStringField
+    object cdsOptRVal3USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRVal3OPTIONTYPEID: TStringField
+    object cdsOptRVal3OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2048,12 +2040,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 524
     Top = 540
-    object cdsOptRVal2USERID: TStringField
+    object cdsOptRVal2USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRVal2OPTIONTYPEID: TStringField
+    object cdsOptRVal2OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2110,12 +2102,12 @@ object dmOpt: TdmOpt
     Params = <>
     Left = 524
     Top = 492
-    object cdsOptRVal1USERID: TStringField
+    object cdsOptRVal1USERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptRVal1OPTIONTYPEID: TStringField
+    object cdsOptRVal1OPTIONTYPEID: TWideStringField
       FieldName = 'OPTIONTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2189,18 +2181,18 @@ object dmOpt: TdmOpt
     ProviderName = 'dspForList'
     Left = 72
     Top = 574
-    object cdsForListWHOFORID: TStringField
+    object cdsForListWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsForListWHOFOR: TStringField
+    object cdsForListWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       Required = True
       Size = 50
     end
-    object cdsForListOWNER: TStringField
+    object cdsForListOWNER: TWideStringField
       FieldName = 'OWNER'
       Required = True
     end
@@ -2211,6 +2203,7 @@ object dmOpt: TdmOpt
     Top = 574
   end
   object SQLMonitor1: TSQLMonitor
+    Active = True
     SQLConnection = sqlcDateView
     Left = 120
     Top = 16

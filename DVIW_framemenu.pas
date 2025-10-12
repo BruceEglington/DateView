@@ -67,7 +67,6 @@ type
     LookupsVariables1: TMenuItem;
     RawDataIndivAgeChem: TMenuItem;
     RawDataMultiAgeChem: TMenuItem;
-    DefineGDUCurve1: TMenuItem;
     procedure SelectUnit1Click(Sender: TObject);
     procedure SelectReferences1Click(Sender: TObject);
     procedure SelectSampleFracs1Click(Sender: TObject);
@@ -109,7 +108,6 @@ type
     procedure LookupsVariables1Click(Sender: TObject);
     procedure RawDataMultiAgeChemClick(Sender: TObject);
     procedure RawDataIndivAgeChemClick(Sender: TObject);
-    procedure DefineGDUCurve1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -132,38 +130,8 @@ uses
   DVIW_samples, DVIW_samplesfractions, DVIW_selectgraph, DVIW_units,
   DVIW_unitareas, ServerController, DVIW_dm, DVIW_uMain, DVIW_referencequery,
   DVIW_constants, DVIW_samplequery, DVIW_unitquery, DVIW_selectcalculations,
-  DVIW_variables, DVIW_calcGDUpdfs;
+  DVIW_variables;
 
-procedure TISFFrameMenu.DefineGDUCurve1Click(Sender: TObject);
-var
-  WasSuccessful : boolean;
-begin
-  {
-  try
-    dmDV.cdsGDUs.Close;
-  except
-  end;
-  if UserSession.LoggedIn then
-  begin
-    if UserSession.IsDeveloper then
-    begin
-      dmDV.CalculateGDUPDFS(WasSuccessful);
-    end;
-  end else
-  begin
-    UserSession.NeedLogin(TIWAppFormClass(WebApplication.ActiveForm.ClassType));
-  end;
-  }
-  if UserSession.LoggedIn then
-  begin
-    UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
-    TIWAppForm(WebApplication.ActiveForm).Release;
-    TISFCalculateGDUPDFS.Create(WebApplication).Show;
-  end else
-  begin
-    UserSession.NeedLogin(TIWAppFormClass(WebApplication.ActiveForm.ClassType));
-  end;
-end;
 
 procedure TISFFrameMenu.LookupIsotopeSystems1Click(Sender: TObject);
 begin
@@ -372,9 +340,6 @@ begin
     UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
     TIWAppForm(WebApplication.ActiveForm).Release;
     TISFDefineQuery.Create(WebApplication).Show;
-    {
-    TISFProvinces.Create(WebApplication).Show;
-    }
   end else
   begin
     UserSession.NeedLogin(TIWAppFormClass(WebApplication.ActiveForm.ClassType));
@@ -425,9 +390,11 @@ procedure TISFFrameMenu.LookupsTerranes1Click(Sender: TObject);
 begin
   if UserSession.LoggedIn then
   begin
+    UserSession.UnitSender := usTerranes;
     UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
     TIWAppForm(WebApplication.ActiveForm).Release;
-    TISFTerranes.Create(WebApplication).Show;
+    TISFDefineQuery.Create(WebApplication).Show;
+    //TISFTerranes.Create(WebApplication).Show;
   end else
   begin
     UserSession.NeedLogin(TIWAppFormClass(WebApplication.ActiveForm.ClassType));

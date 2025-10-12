@@ -1,7 +1,7 @@
 object ISFModels: TISFModels
   Left = 0
   Top = 0
-  Width = 784
+  Width = 1063
   Height = 549
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
@@ -17,9 +17,10 @@ object ISFModels: TISFModels
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 94
     Top = 150
-    Width = 649
+    Width = 867
     Height = 239
     BorderColors.Color = clNone
     BorderColors.Light = clNone
@@ -33,10 +34,13 @@ object ISFModels: TISFModels
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -47,6 +51,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -67,6 +72,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -85,6 +91,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -107,6 +114,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -125,6 +133,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -144,6 +153,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -162,6 +172,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -181,6 +192,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -199,6 +211,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -218,6 +231,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -236,6 +250,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -255,6 +270,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -273,6 +289,7 @@ object ISFModels: TISFModels
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -292,6 +309,7 @@ object ISFModels: TISFModels
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -319,6 +337,7 @@ object ISFModels: TISFModels
     RowCurrentColor = clNone
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 96
     Top = 127
     Width = 97
@@ -331,6 +350,7 @@ object ISFModels: TISFModels
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -340,6 +360,7 @@ object ISFModels: TISFModels
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 222
     Top = 127
     Width = 65
@@ -352,6 +373,7 @@ object ISFModels: TISFModels
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -361,6 +383,7 @@ object ISFModels: TISFModels
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 92
     Top = 76
     Width = 75
@@ -370,10 +393,12 @@ object ISFModels: TISFModels
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 182
     Top = 76
     Width = 129
@@ -383,11 +408,13 @@ object ISFModels: TISFModels
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 1
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 326
     Top = 76
     Width = 129
@@ -397,11 +424,13 @@ object ISFModels: TISFModels
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 3
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNewModel: TIWButton
+    AlignWithMargins = False
     Left = 472
     Top = 76
     Width = 133
@@ -411,13 +440,15 @@ object ISFModels: TISFModels
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewModel'
     TabOrder = 5
     OnClick = iwbAddNewModelClick
   end
   object iwlSortedBy: TIWLabel
-    Left = 601
-    Top = 132
+    AlignWithMargins = False
+    Left = 809
+    Top = 130
     Width = 137
     Height = 14
     Alignment = taRightJustify
@@ -425,12 +456,14 @@ object ISFModels: TISFModels
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -440,6 +473,7 @@ object ISFModels: TISFModels
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -447,9 +481,10 @@ object ISFModels: TISFModels
     VAlign = vaMiddle
   end
   object IWMemo1: TIWMemo
+    AlignWithMargins = False
     Left = 94
     Top = 403
-    Width = 649
+    Width = 867
     Height = 142
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
@@ -458,6 +493,7 @@ object ISFModels: TISFModels
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = True
     HorizScrollBar = False
     VertScrollBar = False
@@ -467,8 +503,8 @@ object ISFModels: TISFModels
     FriendlyName = 'IWMemo1'
     Lines.Strings = (
       
-        'Model curves are defined according to the following general form' +
-        'ula:'
+        'CHUR and DM model curves are defined according to the following ' +
+        'general formula:'
       ''
       '  Model value at time T = a (T^2) + b (T) + c'
       ''
@@ -481,7 +517,7 @@ object ISFModels: TISFModels
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 784
+    Width = 1063
     Height = 55
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
@@ -501,26 +537,26 @@ object ISFModels: TISFModels
     TabStop = True
     ExplicitWidth = 784
     inherited IWFrameRegion: TIWRegion
-      Width = 784
+      Width = 1063
       TabOrder = 7
       ExplicitWidth = 784
       inherited iwrHeader: TIWRegion
-        Width = 784
+        Width = 1063
         ExplicitWidth = 784
         inherited iwrWelcome: TIWRegion
-          Width = 784
+          Width = 1063
           ExplicitWidth = 784
           inherited iwrDisplayUserName: TIWRegion
-            Width = 643
+            Width = 922
             ExplicitWidth = 643
             inherited lblWelcome: TIWLabel
-              Left = 322
+              Left = 601
               ExplicitLeft = 510
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 784
+          Width = 1063
           ExplicitWidth = 784
           inherited iwlSignOut: TIWLink
             TabOrder = -1

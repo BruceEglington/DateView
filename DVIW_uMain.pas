@@ -9,13 +9,14 @@ unit DVIW_uMain;
 interface
 
 uses
-  Classes, SysUtils, IWAppForm, IWApplication, IWTypes, Controls,
-  IWBaseControl, IWControl, IWCompButton, Forms,
+  System.Classes, System.SysUtils, IWAppForm, IWApplication, IWTypes, Vcl.Controls,
+  IWBaseControl, IWControl, IWCompButton, Vcl.Forms,
   IWCompRectangle, IWCompLabel, IWDBStdCtrls,
   IWCompText, IWCompExtCtrls,
   IWCompMemo, DVIW_frTopBar, IWCompCheckbox, IWCompEdit,
   IWVCLBaseControl, IWBaseHTMLControl, IWVCLBaseContainer, IWContainer,
-  IWHTMLContainer, IWRegion, IWHTML40Container, DVIW_framemenu, Menus;
+  IWHTMLContainer, IWRegion, IWHTML40Container, DVIW_framemenu, Vcl.Menus,
+  DVIW_dm;
 
 type
   TISFMain = class(TIWAppForm)
@@ -59,7 +60,6 @@ type
     procedure FrameMenuRawDataIndivAgeHfClick(Sender: TObject);
     procedure FrameMenuRawDataMultiAgeChemClick(Sender: TObject);
     procedure iwb_TestDestroyClick(Sender: TObject);
-    procedure FrameMenuDefineGDUCurve1Click(Sender: TObject);
   public
   protected
     procedure LoadWelcomeMessage;
@@ -75,16 +75,11 @@ uses
   ServerController, IWHTMLControls, IWColor, Graphics,
   System.IOUtils,
   IniFiles,
-  IWBaseForm, jpeg, DVIW_constants, DVIW_dm, usrIW_dm;
+  IWBaseForm, jpeg, DVIW_constants, usrIW_dm;
 
 procedure TISFMain.FrameMenuDefine1Click(Sender: TObject);
 begin
   FrameMenu.SelectInterpretedRecords1Click(Sender);
-end;
-
-procedure TISFMain.FrameMenuDefineGDUCurve1Click(Sender: TObject);
-begin
-  FrameMenu.DefineGDUCurve1Click(Sender);
 end;
 
 procedure TISFMain.FrameMenuRawDataIdentifyAgePeaks1Click(Sender: TObject);
@@ -146,8 +141,9 @@ begin
   iwlNumUses.Visible := false;
   ShowUsagePermissions := false; // normally false
   iwbPermissions.Visible := ShowUsagePermissions;
-  //if (UserSession.LoggedIn) then LoadWelcomeMessage;       //bme
-  if ((UserSession.ShowDebugButtons) and (UserSession.LoggedIn)) then
+  if (UserSession.LoggedIn) then LoadWelcomeMessage;       //bme
+  if (UserSession.LoggedIn) then dmDV.cdsNumRecords.Open;       //bme
+  if ((UserSession.ShowDebugButtons) and (UserSession.IsDeveloper) and (UserSession.LoggedIn)) then
   begin
     iwbPermissions.Visible := true;
     iwbCheckGetIniFile.Visible := true;
@@ -169,7 +165,7 @@ begin
     dmUser.cdsProgress.Close;
     dmUser.cdsProgress.Open;
     UserSession.ProgressDate := dmUser.cdsProgressPROGRESSDATE.AsString;
-    dmUser.cdsProgress.Close;
+    //dmUser.cdsProgress.Close;
     dmUser.qThisProgram.Close;
     dmUser.qThisProgram.ParamByName('SOFTWAREID').AsString := UserSession.ThisProgram;
     dmUser.cdsThisProgram.Close;
@@ -253,7 +249,7 @@ begin
   //PublicPath := TPath.GetHomePath;
   CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
   URLBase := '/';
-  UserSession.ShowDebugButtons := true;
+  UserSession.ShowDebugButtons := false;
   UserSession.DelayConnections := false;
   UserControlPath := 'localhost:c:/Data/Firebird/UserControl.fdb';
   StratDBPath := 'localhost:c:/Data/Firebird/StratDB.fdb';
@@ -382,7 +378,7 @@ end;
 
 procedure TISFMain.TopBariwlSignOutClick(Sender: TObject);
 begin
-  //dmDV.cdsNumRecords.Close;
+  dmDV.cdsNumRecords.Close;
   TopBar.iwlSignOutClick(Sender);
 end;
 

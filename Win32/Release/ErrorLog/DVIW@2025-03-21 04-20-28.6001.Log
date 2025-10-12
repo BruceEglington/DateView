@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : qUsers: Type mismatch for field 'USERID', expecting: WideString actual: String
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EOleException
+Exception address  : 0115A6FA
+Exception Time     : 2025-03-21 04:20:28.600
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : DVIW.exe
+Application Version: 1.0.0.0
+Started at         : 2025-03-21 04:20:15.550
+Running for        :  13 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\DateViewIW2\wwwroot\
+Session count      : 1
+Current Thread ID  : 13540
+Application Path   : C:\DevD12\DateViewIW2\Win32\Release\
+Active Form        : ISFLogin (TISFLogin)
+Active Form list   : [1] ISFLogin (TISFLogin)
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmOpt (TdmOpt)
+                     [3] dmDV (TdmDV)
+                     [4] dmStrat (TdmStrat)
+                     [5] dmgDV (TdmgDV)
+                     [6] dmdDV (TdmdDV)
+                     [7] ISFLogin (TISFLogin)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Session ID         : uvyWzdzAWfcko5LhNRyujo3n4ki
+Last Access        : 2025-03-21 04:20:27.750
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

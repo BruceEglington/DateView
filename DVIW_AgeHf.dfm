@@ -16,7 +16,7 @@ object ISFAgeHf: TISFAgeHf
   LockOnSubmit = False
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -3151
+  DesignTop = 2
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
@@ -88,6 +88,7 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbReturnToSampleList: TIWButton
+        AlignWithMargins = False
         Left = 17
         Top = 19
         Width = 217
@@ -97,11 +98,13 @@ object ISFAgeHf: TISFAgeHf
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 39
         OnClick = iwbReturnToSampleListClick
       end
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 270
         Top = 19
         Width = 155
@@ -111,6 +114,7 @@ object ISFAgeHf: TISFAgeHf
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 40
         OnClick = iwbReturnClick
@@ -126,6 +130,7 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlSampleNoHeading: TIWLabel
+        AlignWithMargins = False
         Left = 11
         Top = 3
         Width = 128
@@ -134,12 +139,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSampleNoHeading'
         Caption = 'Sample :'
       end
       object iwlSampleNo: TIWLabel
+        AlignWithMargins = False
         Left = 145
         Top = 3
         Width = 37
@@ -148,12 +155,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'nd'
       end
       object iwlSourceShortHeading: TIWLabel
+        AlignWithMargins = False
         Left = 461
         Top = 13
         Width = 71
@@ -162,12 +171,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSourceShortHeading'
         Caption = 'Source :'
       end
       object iwlSourceShort: TIWLabel
+        AlignWithMargins = False
         Left = 538
         Top = 13
         Width = 24
@@ -176,12 +187,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSourceShort'
         Caption = 'nd'
       end
       object iwlLongitude: TIWLabel
+        AlignWithMargins = False
         Left = 11
         Top = 69
         Width = 69
@@ -190,12 +203,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlLongitude'
         Caption = 'Longitude'
       end
       object iwlLatitude: TIWLabel
+        AlignWithMargins = False
         Left = 222
         Top = 69
         Width = 57
@@ -204,12 +219,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlLatitude'
         Caption = 'Latitude'
       end
       object iwlElevation: TIWLabel
+        AlignWithMargins = False
         Left = 406
         Top = 69
         Width = 66
@@ -218,12 +235,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlElevation'
         Caption = 'Elevation'
       end
       object iwlElevationUnits: TIWLabel
+        AlignWithMargins = False
         Left = 563
         Top = 69
         Width = 12
@@ -232,12 +251,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlElevationUnits'
         Caption = 'm'
       end
       object iweLongitude: TIWEdit
+        AlignWithMargins = False
         Left = 77
         Top = 67
         Width = 90
@@ -249,12 +270,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLongitude'
         SubmitOnAsyncEvent = True
         TabOrder = 44
         Text = 'iweLongitude'
       end
       object iweLatitude: TIWEdit
+        AlignWithMargins = False
         Left = 277
         Top = 67
         Width = 90
@@ -266,12 +289,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLatitude'
         SubmitOnAsyncEvent = True
         TabOrder = 45
         Text = 'iweLatitude'
       end
       object iweElevation: TIWEdit
+        AlignWithMargins = False
         Left = 467
         Top = 67
         Width = 90
@@ -283,12 +308,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweElevation'
         SubmitOnAsyncEvent = True
         TabOrder = 46
         Text = 'iweElevation'
       end
       object iwlCountryAbr: TIWLabel
+        AlignWithMargins = False
         Left = 851
         Top = 69
         Width = 81
@@ -297,12 +324,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlCountryAbr'
         Caption = 'CountryAbr'
       end
       object iwlContinentID: TIWLabel
+        AlignWithMargins = False
         Left = 739
         Top = 69
         Width = 85
@@ -311,12 +340,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlContinentID'
         Caption = 'ContinentID'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 11
         Top = 45
         Width = 62
@@ -325,12 +356,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel13'
         Caption = 'Lithology'
       end
       object iweLithology: TIWEdit
+        AlignWithMargins = False
         Left = 77
         Top = 42
         Width = 290
@@ -342,12 +375,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLithology'
         SubmitOnAsyncEvent = True
         TabOrder = 54
         Text = 'iweLithology'
       end
       object iweLithClass: TIWEdit
+        AlignWithMargins = False
         Left = 406
         Top = 42
         Width = 290
@@ -359,6 +394,7 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLithClass'
         SubmitOnAsyncEvent = True
         TabOrder = 56
@@ -386,6 +422,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object iwChartHfInitial: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -417,10 +454,10 @@ object ISFAgeHf: TISFAgeHf
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -429,39 +466,39 @@ object ISFAgeHf: TISFAgeHf
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.0000#'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = '176Hf/177Hf (i)'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -470,7 +507,6 @@ object ISFAgeHf: TISFAgeHf
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object Series1: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -486,7 +522,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series2: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -505,7 +540,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series3: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clRed
             Title = 'Included'
             ValueFormat = '#,##0.00#'
@@ -524,7 +558,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series4: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clBlue
             Title = 'Excluded'
             ValueFormat = '#,##0.00#'
@@ -555,6 +588,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object iwIWChartHfEpsilon: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -586,10 +620,10 @@ object ISFAgeHf: TISFAgeHf
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -598,39 +632,39 @@ object ISFAgeHf: TISFAgeHf
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.00'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Epsilon (Hf)'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -639,7 +673,6 @@ object ISFAgeHf: TISFAgeHf
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object Series7: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             ColorEachLine = False
             SeriesColor = clBlack
@@ -656,7 +689,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series8: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             ShowInLegend = False
             Title = 'AgeTicks'
@@ -674,7 +706,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series9: TPointSeries
-            HoverElement = [heCurrent]
             Title = 'Included'
             ClickableLine = False
             Pointer.Brush.Color = clRed
@@ -691,7 +722,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series10: TPointSeries
-            HoverElement = [heCurrent]
             Title = 'Excluded'
             ClickableLine = False
             Pointer.Brush.Color = clBlue
@@ -731,6 +761,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object IWLabel1: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 138
@@ -739,12 +770,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel3'
           Caption = 'Graph Options'
         end
         object iweGraphAgeFrom: TIWEdit
+          AlignWithMargins = False
           Left = 12
           Top = 70
           Width = 59
@@ -755,11 +788,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweGraphAgeFrom'
           SubmitOnAsyncEvent = True
           Text = '0.0'
         end
         object IWLabel11: TIWLabel
+          AlignWithMargins = False
           Left = 94
           Top = 73
           Width = 117
@@ -768,12 +803,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object iweGraphAgeTo: TIWEdit
+          AlignWithMargins = False
           Left = 236
           Top = 70
           Width = 59
@@ -784,26 +821,26 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweGraphAgeTo'
           SubmitOnAsyncEvent = True
           TabOrder = 1
           Text = '4500.0'
         end
         object iwbReplotModels: TIWButton
+          AlignWithMargins = False
           Left = 330
           Top = 71
           Width = 142
           Height = 25
           Caption = 'Update Model Curves'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbReplotModels'
           TabOrder = 13
           OnClick = iwbReplotModelsClick
         end
         object iwe75Min: TIWEdit
+          AlignWithMargins = False
           Left = 12
           Top = 110
           Width = 59
@@ -814,12 +851,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Min'
           SubmitOnAsyncEvent = True
           TabOrder = 2
           Text = '0.0'
         end
         object IWLabel25: TIWLabel
+          AlignWithMargins = False
           Left = 94
           Top = 113
           Width = 117
@@ -828,12 +867,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object iwe75Max: TIWEdit
+          AlignWithMargins = False
           Left = 236
           Top = 110
           Width = 59
@@ -844,12 +885,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Max'
           SubmitOnAsyncEvent = True
           TabOrder = 3
           Text = '4500.0'
         end
         object iwe68Min: TIWEdit
+          AlignWithMargins = False
           Left = 12
           Top = 134
           Width = 59
@@ -860,12 +903,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Min'
           SubmitOnAsyncEvent = True
           TabOrder = 5
           Text = '0.280'
         end
         object IWLabel26: TIWLabel
+          AlignWithMargins = False
           Left = 94
           Top = 137
           Width = 140
@@ -874,12 +919,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= 176Hf/177Hf <='
         end
         object iwe68Max: TIWEdit
+          AlignWithMargins = False
           Left = 236
           Top = 134
           Width = 59
@@ -890,12 +937,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Max'
           SubmitOnAsyncEvent = True
           TabOrder = 6
           Text = '0.284'
         end
         object iwe86Min: TIWEdit
+          AlignWithMargins = False
           Left = 484
           Top = 112
           Width = 59
@@ -906,12 +955,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe86Min'
           SubmitOnAsyncEvent = True
           TabOrder = 7
           Text = '0.0'
         end
         object IWLabel27: TIWLabel
+          AlignWithMargins = False
           Left = 566
           Top = 115
           Width = 117
@@ -920,12 +971,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object iwe86Max: TIWEdit
+          AlignWithMargins = False
           Left = 727
           Top = 112
           Width = 59
@@ -936,12 +989,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe86Max'
           SubmitOnAsyncEvent = True
           TabOrder = 8
           Text = '4500.0'
         end
         object iwe76Max: TIWEdit
+          AlignWithMargins = False
           Left = 727
           Top = 136
           Width = 59
@@ -952,12 +1007,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe76Max'
           SubmitOnAsyncEvent = True
           TabOrder = 10
           Text = '5.0'
         end
         object IWLabel28: TIWLabel
+          AlignWithMargins = False
           Left = 566
           Top = 141
           Width = 102
@@ -966,12 +1023,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Eps. Hf <='
         end
         object iwe76Min: TIWEdit
+          AlignWithMargins = False
           Left = 484
           Top = 136
           Width = 59
@@ -982,26 +1041,26 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe76Min'
           SubmitOnAsyncEvent = True
           TabOrder = 9
           Text = '-5.0'
         end
         object iwbScaleConcordiaAxes: TIWButton
+          AlignWithMargins = False
           Left = 580
           Top = 183
           Width = 136
           Height = 25
           Caption = 'Rescale Axes'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbScaleConcordiaAxes'
           TabOrder = 14
           OnClick = iwbScaleAxesClick
         end
         object iwcbConcordiaAutoscale: TIWCheckBox
+          AlignWithMargins = False
           Left = 580
           Top = 223
           Width = 136
@@ -1012,6 +1071,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 15
@@ -1019,6 +1079,7 @@ object ISFAgeHf: TISFAgeHf
           FriendlyName = 'iwcbConcordiaAutoscale'
         end
         object iweConcordanceFrom: TIWEdit
+          AlignWithMargins = False
           Left = 12
           Top = 184
           Width = 59
@@ -1029,12 +1090,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweConcordanceFrom'
           SubmitOnAsyncEvent = True
           TabOrder = 11
           Text = '90.0'
         end
         object IWLabel5: TIWLabel
+          AlignWithMargins = False
           Left = 82
           Top = 185
           Width = 165
@@ -1043,12 +1106,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= % Concordance <='
         end
         object iweConcordanceTo: TIWEdit
+          AlignWithMargins = False
           Left = 236
           Top = 184
           Width = 59
@@ -1059,12 +1124,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweConcordanceTo'
           SubmitOnAsyncEvent = True
           TabOrder = 12
           Text = '110.0'
         end
         object iwcbExcluded: TIWCheckBox
+          AlignWithMargins = False
           Left = 518
           Top = 30
           Width = 121
@@ -1075,6 +1142,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 47
@@ -1083,6 +1151,7 @@ object ISFAgeHf: TISFAgeHf
           FriendlyName = 'iwcbExcluded'
         end
         object iwcbIncluded: TIWCheckBox
+          AlignWithMargins = False
           Left = 369
           Top = 30
           Width = 121
@@ -1093,6 +1162,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 48
@@ -1101,6 +1171,7 @@ object ISFAgeHf: TISFAgeHf
           FriendlyName = 'iwcbIncluded'
         end
         object IWEdit3: TIWEdit
+          AlignWithMargins = False
           Left = 958
           Top = 110
           Width = 59
@@ -1111,12 +1182,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Min'
           SubmitOnAsyncEvent = True
           TabOrder = 49
           Text = '0.0'
         end
         object IWLabel32: TIWLabel
+          AlignWithMargins = False
           Left = 1040
           Top = 113
           Width = 117
@@ -1125,12 +1198,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object IWEdit4: TIWEdit
+          AlignWithMargins = False
           Left = 1182
           Top = 110
           Width = 59
@@ -1141,12 +1216,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Max'
           SubmitOnAsyncEvent = True
           TabOrder = 50
           Text = '4500.0'
         end
         object IWEdit5: TIWEdit
+          AlignWithMargins = False
           Left = 958
           Top = 134
           Width = 59
@@ -1157,12 +1234,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Min'
           SubmitOnAsyncEvent = True
           TabOrder = 51
           Text = '0.280'
         end
         object IWLabel33: TIWLabel
+          AlignWithMargins = False
           Left = 1040
           Top = 137
           Width = 140
@@ -1171,12 +1250,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= 176Hf/177Hf <='
         end
         object IWEdit6: TIWEdit
+          AlignWithMargins = False
           Left = 1182
           Top = 134
           Width = 59
@@ -1187,12 +1268,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Max'
           SubmitOnAsyncEvent = True
           TabOrder = 52
           Text = '0.284'
         end
         object iwcbIncludeSampleZones: TIWCheckBox
+          AlignWithMargins = False
           Left = 12
           Top = 234
           Width = 202
@@ -1203,6 +1286,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 57
@@ -1211,6 +1295,7 @@ object ISFAgeHf: TISFAgeHf
           FriendlyName = 'iwcbIncludeSampleZones'
         end
         object iwlSampleZones: TIWListbox
+          AlignWithMargins = False
           Left = 12
           Top = 261
           Width = 284
@@ -1220,6 +1305,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           RequireSelection = False
           Editable = False
           TabOrder = 58
@@ -1250,6 +1336,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object IWChartHfModelInitial: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -1281,10 +1368,10 @@ object ISFAgeHf: TISFAgeHf
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -1293,39 +1380,39 @@ object ISFAgeHf: TISFAgeHf
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.0000#'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Model 176Hf/177Hf (i)'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -1334,7 +1421,6 @@ object ISFAgeHf: TISFAgeHf
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object LineSeries1: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -1350,7 +1436,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object PointSeries1: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -1369,7 +1454,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object PointSeries2: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clRed
             Title = 'Included'
             ValueFormat = '#,##0.00#'
@@ -1388,7 +1472,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object PointSeries3: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clBlue
             Title = 'Excluded'
             ValueFormat = '#,##0.00#'
@@ -1419,29 +1502,25 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbIdentifyMinMaxValues: TIWButton
+        AlignWithMargins = False
         Left = 466
         Top = 6
         Width = 447
         Height = 25
         Caption = 'Transfer Minimum, Maximum and Median for Database Insertion'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbIdentifyMinMaxValues'
         TabOrder = 18
         OnClick = iwbIdentifyMinMaxValuesClick
       end
       object iwbRecalculate: TIWButton
+        AlignWithMargins = False
         Left = 97
         Top = 6
         Width = 240
         Height = 25
         Caption = 'Recalculate Epsilon and Model Ages'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbRecalculate'
         TabOrder = 17
         OnClick = iwbRecalculateClick
@@ -1476,6 +1555,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator1: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -1491,6 +1571,7 @@ object ISFAgeHf: TISFAgeHf
           Orientation = orHorizontal
         end
         object IWLabel8: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 408
@@ -1499,6 +1580,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -1525,6 +1607,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgSummaryValues: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 1001
@@ -1542,10 +1625,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -1556,6 +1642,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1576,6 +1663,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1594,6 +1682,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1614,6 +1703,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1632,6 +1722,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1652,6 +1743,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1670,6 +1762,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1690,6 +1783,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1708,6 +1802,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1728,6 +1823,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1746,6 +1842,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1766,6 +1863,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1784,6 +1882,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1804,6 +1903,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1822,6 +1922,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1841,6 +1942,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1859,6 +1961,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1879,6 +1982,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1897,6 +2001,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1916,6 +2021,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1934,6 +2040,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1954,6 +2061,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2022,6 +2130,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBnData: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -2037,6 +2146,7 @@ object ISFAgeHf: TISFAgeHf
           Orientation = orHorizontal
         end
         object IWLabel9: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 38
@@ -2045,12 +2155,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
           Caption = 'Data'
         end
         object iwlCount: TIWLabel
+          AlignWithMargins = False
           Left = 857
           Top = 51
           Width = 56
@@ -2060,12 +2172,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlCount'
           Caption = 'iwlCount'
         end
         object iwbDownloadData: TIWButton
+          AlignWithMargins = False
           Left = 296
           Top = 42
           Width = 140
@@ -2076,20 +2190,19 @@ object ISFAgeHf: TISFAgeHf
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbDownloadData'
           TabOrder = 16
           OnClick = iwbDownloadDataClick
         end
         object iwbIncludeExcludeData: TIWButton
+          AlignWithMargins = False
           Left = 510
           Top = 42
           Width = 173
           Height = 25
           Caption = 'Include / Exclude record'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbIncludeExcludeData'
           TabOrder = 53
           OnClick = iwbIncludeExcludeDataClick
@@ -2115,6 +2228,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgData: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 1360
@@ -2132,10 +2246,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -2146,6 +2263,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2168,6 +2286,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2186,6 +2305,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2207,6 +2327,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2225,6 +2346,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2246,6 +2368,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2264,6 +2387,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2284,6 +2408,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2302,6 +2427,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2323,6 +2449,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2341,6 +2468,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2361,6 +2489,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2379,6 +2508,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2400,6 +2530,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2418,6 +2549,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2439,6 +2571,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2457,6 +2590,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2478,6 +2612,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2496,6 +2631,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2516,6 +2652,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2534,6 +2671,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2554,6 +2692,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2572,6 +2711,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2591,6 +2731,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2609,6 +2750,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2630,6 +2772,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2648,6 +2791,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2668,6 +2812,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2686,6 +2831,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2706,6 +2852,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2724,6 +2871,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2745,6 +2893,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2763,6 +2912,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2783,6 +2933,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2801,6 +2952,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2821,6 +2973,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2839,6 +2992,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2858,6 +3012,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2897,20 +3052,19 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbCreateNewDMPeakRecords: TIWButton
+        AlignWithMargins = False
         Left = 518
         Top = 165
         Width = 347
         Height = 25
         Caption = 'Create New Summary Records for Identified Peaks'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCreateNewDMPeakRecords'
         TabOrder = 38
         OnClick = iwbCreateNewDMPeakRecordsClick
       end
       object IWLabel14: TIWLabel
+        AlignWithMargins = False
         Left = 21
         Top = 35
         Width = 94
@@ -2919,12 +3073,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Strat. Unit from'
       end
       object iweUnitFrom: TIWEdit
+        AlignWithMargins = False
         Left = 136
         Top = 33
         Width = 59
@@ -2936,12 +3092,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweUnitFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 29
         Text = 'A'
       end
       object IWLabel15: TIWLabel
+        AlignWithMargins = False
         Left = 216
         Top = 35
         Width = 12
@@ -2950,12 +3108,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'to'
       end
       object iweUnitTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 32
         Width = 59
@@ -2967,12 +3127,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweUnitTo'
         SubmitOnAsyncEvent = True
         TabOrder = 30
         Text = 'zz'
       end
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 21
         Top = 63
         Width = 97
@@ -2981,12 +3143,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Reference from'
       end
       object IWLabel18: TIWLabel
+        AlignWithMargins = False
         Left = 21
         Top = 93
         Width = 88
@@ -2995,12 +3159,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Province from'
       end
       object IWLabel19: TIWLabel
+        AlignWithMargins = False
         Left = 21
         Top = 120
         Width = 82
@@ -3009,12 +3175,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Terrane from'
       end
       object iweTerraneFrom: TIWEdit
+        AlignWithMargins = False
         Left = 136
         Top = 114
         Width = 59
@@ -3026,12 +3194,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweTerraneFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 35
         Text = 'A'
       end
       object iweProvinceFrom: TIWEdit
+        AlignWithMargins = False
         Left = 136
         Top = 87
         Width = 59
@@ -3043,12 +3213,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweProvinceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 33
         Text = 'A'
       end
       object iweReferenceFrom: TIWEdit
+        AlignWithMargins = False
         Left = 136
         Top = 60
         Width = 59
@@ -3060,12 +3232,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweReferenceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 31
         Text = 'A'
       end
       object IWLabel20: TIWLabel
+        AlignWithMargins = False
         Left = 216
         Top = 63
         Width = 12
@@ -3074,12 +3248,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'to'
       end
       object IWLabel21: TIWLabel
+        AlignWithMargins = False
         Left = 216
         Top = 114
         Width = 12
@@ -3088,12 +3264,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'to'
       end
       object IWLabel22: TIWLabel
+        AlignWithMargins = False
         Left = 216
         Top = 93
         Width = 12
@@ -3102,12 +3280,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'to'
       end
       object iweTerraneTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 114
         Width = 59
@@ -3119,12 +3299,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweTerraneTo'
         SubmitOnAsyncEvent = True
         TabOrder = 36
         Text = 'zz'
       end
       object iweProvinceTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 87
         Width = 59
@@ -3136,12 +3318,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweProvinceTo'
         SubmitOnAsyncEvent = True
         TabOrder = 34
         Text = 'zz'
       end
       object iweReferenceTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 60
         Width = 59
@@ -3153,12 +3337,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweReferenceTo'
         SubmitOnAsyncEvent = True
         TabOrder = 32
         Text = 'zz'
       end
       object IWText2: TIWText
+        AlignWithMargins = False
         Left = 342
         Top = 29
         Width = 247
@@ -3169,6 +3355,7 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'IWText1'
         Lines.Strings = (
           
@@ -3180,15 +3367,13 @@ object ISFAgeHf: TISFAgeHf
         WantReturns = True
       end
       object iwbCreateNewHfInitialRecords: TIWButton
+        AlignWithMargins = False
         Left = 54
         Top = 166
         Width = 347
         Height = 25
         Caption = 'Create New Summary Records for Identified Initial Values'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCreateNewHfInitialRecords'
         TabOrder = 37
         OnClick = iwbCreateNewHfInitialRecordsClick
@@ -3204,6 +3389,7 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton1: TIWButton
+        AlignWithMargins = False
         Left = 17
         Top = 59
         Width = 217
@@ -3213,11 +3399,13 @@ object ISFAgeHf: TISFAgeHf
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 42
         OnClick = iwbReturnToSampleListClick
       end
       object IWButton2: TIWButton
+        AlignWithMargins = False
         Left = 270
         Top = 59
         Width = 155
@@ -3227,6 +3415,7 @@ object ISFAgeHf: TISFAgeHf
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 43
         OnClick = iwbReturnClick
@@ -3271,6 +3460,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWChart1: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 900
@@ -3307,10 +3497,10 @@ object ISFAgeHf: TISFAgeHf
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laTop
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Alignment = taRightJustify
           SubFoot.Font.Color = clGray
           SubFoot.Font.Name = 'Verdana'
@@ -3326,38 +3516,38 @@ object ISFAgeHf: TISFAgeHf
           Title.Text.Strings = (
             'Hf T(DM) Probability')
           BottomAxis.Axis.Color = 4210752
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Probability'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -3366,7 +3556,6 @@ object ISFAgeHf: TISFAgeHf
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object Series5: TLineSeries
-            HoverElement = [heCurrent]
             ColorEachLine = False
             SeriesColor = clRed
             Title = 'Included'
@@ -3381,7 +3570,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series6: TLineSeries
-            HoverElement = [heCurrent]
             ColorEachLine = False
             SeriesColor = 16711808
             Title = 'All'
@@ -3396,7 +3584,6 @@ object ISFAgeHf: TISFAgeHf
             YValues.Order = loNone
           end
           object Series11: TPointSeries
-            HoverElement = [heCurrent]
             Marks.Symbol.Brush.Color = clBlack
             SeriesColor = clBlack
             Title = 'Peaks'
@@ -3427,6 +3614,7 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 14
         Width = 181
@@ -3435,11 +3623,13 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Probability Options'
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 369
         Top = 40
         Width = 211
@@ -3448,12 +3638,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Min. 1 sigma age uncertainty'
       end
       object IWLabel6: TIWLabel
+        AlignWithMargins = False
         Left = 82
         Top = 65
         Width = 165
@@ -3462,12 +3654,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= % Concordance <='
       end
       object IWEdit1: TIWEdit
+        AlignWithMargins = False
         Left = 12
         Top = 64
         Width = 59
@@ -3478,12 +3672,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 22
         Text = '90.0'
       end
       object IWEdit2: TIWEdit
+        AlignWithMargins = False
         Left = 236
         Top = 64
         Width = 59
@@ -3494,12 +3690,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceTo'
         SubmitOnAsyncEvent = True
         TabOrder = 23
         Text = '110.0'
       end
       object iweMinimumUncertainty: TIWEdit
+        AlignWithMargins = False
         Left = 575
         Top = 40
         Width = 43
@@ -3510,12 +3708,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweMinimumUncertainty'
         SubmitOnAsyncEvent = True
         TabOrder = 21
         Text = '5.0'
       end
       object iweAgeTo: TIWEdit
+        AlignWithMargins = False
         Left = 236
         Top = 38
         Width = 59
@@ -3526,12 +3726,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweAgeTo'
         SubmitOnAsyncEvent = True
         TabOrder = 20
         Text = '4500.0'
       end
       object IWLabel7: TIWLabel
+        AlignWithMargins = False
         Left = 94
         Top = 41
         Width = 117
@@ -3540,12 +3742,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= Age (Ma) <='
       end
       object iweAgeFrom: TIWEdit
+        AlignWithMargins = False
         Left = 12
         Top = 38
         Width = 59
@@ -3556,26 +3760,26 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweAgeFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 19
         Text = '0.0'
       end
       object iwbRefresh: TIWButton
+        AlignWithMargins = False
         Left = 352
         Top = 105
         Width = 120
         Height = 25
         Caption = 'Refresh'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbRefresh'
         TabOrder = 24
         OnClick = iwbRefreshClick
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 632
         Top = 40
         Width = 20
@@ -3584,12 +3788,14 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Ma'
       end
       object iwrgAndOr: TIWRadioGroup
+        AlignWithMargins = False
         Left = 727
         Top = 62
         Width = 89
@@ -3601,6 +3807,7 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwrgAndOr'
         ItemIndex = 0
         Items.Strings = (
@@ -3610,6 +3817,7 @@ object ISFAgeHf: TISFAgeHf
         TabOrder = 55
       end
       object IWLabel12: TIWLabel
+        AlignWithMargins = False
         Left = 708
         Top = 40
         Width = 113
@@ -3618,35 +3826,32 @@ object ISFAgeHf: TISFAgeHf
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel10'
         Caption = 'Probability type'
       end
       object iwbCalculatePDF: TIWButton
+        AlignWithMargins = False
         Left = 560
         Top = 104
         Width = 177
         Height = 25
         Caption = 'Calculate PDF'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCalculate PDF'
         TabOrder = 25
         OnClick = iwbCalculatePDFClick
       end
       object iwbScaleProbabilityXAxis: TIWButton
+        AlignWithMargins = False
         Left = 352
         Top = 74
         Width = 120
         Height = 25
         Caption = 'Rescale X Axis'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbScaleProbabilityXAxis'
         TabOrder = 59
         OnClick = iwbScaleProbabilityXAxisClick
@@ -3662,15 +3867,13 @@ object ISFAgeHf: TISFAgeHf
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbIdentifyPeaks: TIWButton
+        AlignWithMargins = False
         Left = 369
         Top = 3
         Width = 140
         Height = 25
         Caption = 'Identify Peaks'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbIdentifyPeaks'
         TabOrder = 26
         OnClick = iwbIdentifyPeaksClick
@@ -3705,6 +3908,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator2: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -3720,6 +3924,7 @@ object ISFAgeHf: TISFAgeHf
           Orientation = orHorizontal
         end
         object IWLabel29: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 133
@@ -3728,6 +3933,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -3754,6 +3960,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgPeaks: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 897
@@ -3771,10 +3978,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -3785,6 +3995,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -3804,6 +4015,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -3822,6 +4034,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -3841,6 +4054,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -3859,6 +4073,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -3878,6 +4093,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -3896,6 +4112,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -3915,6 +4132,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -3933,6 +4151,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -3952,6 +4171,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4020,6 +4240,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator3: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -4035,6 +4256,7 @@ object ISFAgeHf: TISFAgeHf
           Orientation = orHorizontal
         end
         object IWLabel30: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 145
@@ -4043,12 +4265,14 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
           Caption = 'Probability Curve'
         end
         object iwbDownloadPDFcurves: TIWButton
+          AlignWithMargins = False
           Left = 296
           Top = 42
           Width = 140
@@ -4059,11 +4283,13 @@ object ISFAgeHf: TISFAgeHf
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbDownloadPDFcurves'
           TabOrder = 27
           OnClick = iwbDownloadPDFcurvesClick
         end
         object iwbTransferToPeak: TIWButton
+          AlignWithMargins = False
           Left = 744
           Top = 42
           Width = 169
@@ -4071,9 +4297,6 @@ object ISFAgeHf: TISFAgeHf
           Visible = False
           Caption = 'Transfer To Peak List'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbTransferToPeak'
           TabOrder = 28
           OnClick = iwbTransferToPeakClick
@@ -4099,6 +4322,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgPDFs: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 897
@@ -4116,10 +4340,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = False
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -4130,6 +4357,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4151,6 +4379,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4169,6 +4398,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4188,6 +4418,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4206,6 +4437,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4225,6 +4457,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4276,6 +4509,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object IWDBNavigator4: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 32
           Width = 120
@@ -4291,6 +4525,7 @@ object ISFAgeHf: TISFAgeHf
           Orientation = orHorizontal
         end
         object IWLabel31: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 7
           Width = 247
@@ -4299,6 +4534,7 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -4349,6 +4585,7 @@ object ISFAgeHf: TISFAgeHf
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object iwDBgExistingData: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 1225
@@ -4366,10 +4603,13 @@ object ISFAgeHf: TISFAgeHf
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -4380,6 +4620,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4399,6 +4640,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4417,6 +4659,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4436,6 +4679,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4454,6 +4698,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4473,6 +4718,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4491,6 +4737,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4510,6 +4757,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4528,6 +4776,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4547,6 +4796,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4565,6 +4815,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4584,6 +4835,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4602,6 +4854,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4621,6 +4874,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4639,6 +4893,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4658,6 +4913,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4676,6 +4932,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4695,6 +4952,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4713,6 +4971,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4732,6 +4991,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4750,6 +5010,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4769,6 +5030,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4787,6 +5049,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4806,6 +5069,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -4824,6 +5088,7 @@ object ISFAgeHf: TISFAgeHf
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -4843,6 +5108,7 @@ object ISFAgeHf: TISFAgeHf
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True

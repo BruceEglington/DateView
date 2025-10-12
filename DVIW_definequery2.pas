@@ -142,6 +142,11 @@ type
     iwcbIncludeIgneous: TIWCheckBox;
     iwcbIncludeSedimentary: TIWCheckBox;
     iwcbIncludeMetamorphicAndOther: TIWCheckBox;
+    iwrPlateModelGDUs: TIWRegion;
+    iwlGDUs: TIWListbox;
+    iwcbIncludePlateModelGDUs: TIWCheckBox;
+    IWLabel7: TIWLabel;
+    iwcbPlateModel: TIWComboBox;
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbSubmitQueryClick(Sender: TObject);
     procedure IWAppFormRender(Sender: TObject);
@@ -190,6 +195,7 @@ begin
   iwcbIncludeIgneous.Checked := UserSession.IncludeIgneous;
   iwcbIncludeSedimentary.Checked := UserSession.IncludeSedimentary;
   iwcbIncludeMetamorphicAndOther.Checked := UserSession.IncludeMetamorphicAndOther;
+  iwcbIncludePlateModelGDUs.Checked := UserSession.IncludeGDUValues;
   iwrMethodologies.Visible := UserSession.IncludeMethodValues;
   iwrMaterialAnalysed.Visible := UserSession.IncludeMaterialValues;
   iwrIsotopeSystems.Visible := UserSession.IncludeIsotopeSystemValues;
@@ -209,6 +215,7 @@ begin
   iwrWhoFor.Visible := UserSession.IncludeWhoForValues;
   iwrContributors.Visible := UserSession.IncludeUsersContributedValues;
   iwrAccount.Visible := UserSession.IncludeUserOrgID;
+  iwrPlateModelGDUs.Visible := UserSession.IncludeGDUValues;
   //iwrRecordID.Visible := UserSession.IncludeUsersContributedValues;
   iwcbGoDirectToGraphs.Checked := UserSession.GoDirectToGraphs;
   if (UserSession.IncludeUnitValues) then iwcbUnits.Checked := UserSession.IncludeUnitValues;
@@ -230,6 +237,7 @@ begin
   if (UserSession.IncludeBoundaryPositionValues) then iwcbBoundaryPos.Checked := UserSession.IncludeBoundaryPositionValues;
   if (UserSession.IncludeValidationValues) then iwcbValidation.Checked := UserSession.IncludeValidationValues;
   if (UserSession.IncludeWhoForValues) then iwcbWhoFor.Checked := UserSession.IncludeWhoForValues;
+  if (UserSession.IncludeGDUValues) then iwcbIncludePlateModelGDUs.Checked := UserSession.IncludeGDUValues;
   if (UserSession.IncludeUserOrgID) then
   begin
     iwcbIncludeUserOrgID.Checked := UserSession.IncludeUserOrgID;
@@ -635,8 +643,15 @@ begin
     end;
   end;
   }
+  if (UserSession.IncludeGDUValues) then UpdateListBoxValues(iwlGDUs,dmDV.cdsGDUs,'GDUConcatenation','GDUID',UserSession.GDUValues);
   iwcbUsersContributed.Visible := UserSession.IsDeveloper;
   iwlUsersContributed.Visible := UserSession.IsDeveloper;
+  //if (UserSession.IncludeIgneous) then dmUser.SetDeveloperData('IncludeIgneous is true')
+  //else dmUser.SetDeveloperData('IncludeIgneous is false');
+  //if (UserSession.IncludeSedimentary) then dmUser.SetDeveloperData('IncludeSedimentary is true')
+  //else dmUser.SetDeveloperData('IncludeSedimentary is false');
+  //if (UserSession.IncludeMetamorphicAndOther) then dmUser.SetDeveloperData('IncludeMetamorphicAndOther is true')
+  //else dmUser.SetDeveloperData('IncludeMetamorphicAndOther is false');
 end;
 
 procedure TISFDefineQuery2.iwbSubmitQueryClick(Sender: TObject);
@@ -673,6 +688,7 @@ begin
   UserSession.IncludeWhoForValues := iwcbWhoFor.Checked;
   UserSession.IncludeUsersContributedValues := iwcbUsersContributed.Checked;
   UserSession.IncludeAgeUnitsValue := iwcbIncludeAgeUnits.Checked;
+  UserSession.IncludeGDUValues := iwcbIncludePlateModelGDUs.Checked;
   UserSession.IncludeUserOrgID := iwcbIncludeUserOrgID.Checked;
   if (UserSession.IncludeUserOrgID) then
   begin
@@ -692,6 +708,9 @@ begin
   if UserSession.IncludeReferenceValues then GetListBoxValues(iwlReferences,dmDV.cdsReferences,'SourceSHORT','SourceNum',UserSession.ReferenceValues);
   if UserSession.IncludeProvinceValues then GetListBoxValues(iwlProvinces,dmDV.cdsProvinces,'DomainName','DomainID',UserSession.ProvinceValues);
   if UserSession.IncludeTerraneValues then GetListBoxValues(iwlTerranes,dmDV.cdsTerranes,'DomainName','DomainID',UserSession.TerraneValues);
+
+  //if UserSession.IncludeTerraneValues then dmUser.SetDeveloperData('TerraneCount = '+IntToStr(UserSession.TerraneValues.Count));
+
   if UserSession.IncludeLIPValues then GetListBoxValues(iwlLIPS,dmDV.cdsLIPS,'LIPNAME','LIPID',UserSession.LIPValues);
   if UserSession.IncludeOrogenicPeriodValues then GetListBoxValues(iwlOrogenicPeriods,dmDV.cdsOrogenicPeriods,'Orogenicperiod','OrogenicPeriodID',UserSession.OrogenicPeriodValues);
   if UserSession.IncludeChemicalTypeValues then GetListBoxValues(iwlChemTypes,dmDV.cdsChemTypes,'ChemicalType','ChemTypeAbr',UserSession.ChemicalTypeValues);
@@ -701,6 +720,7 @@ begin
   if UserSession.IncludeValidationValues then GetListBoxValues(iwlValidation,dmDV.cdsValidationStatus,'ValidationStatus','ValidStatusID',UserSession.ValidationValues);
   if UserSession.IncludeWhoForValues then GetListBoxValues(iwlWhoFor,dmDV.cdsWhoFor,'WhoFor','WhoForID',UserSession.WhoForValues);
   if UserSession.IncludeUsersContributedValues then GetListBoxValues(iwlUsersContributed,dmDV.cdsUsersContributed,'USERID','USERID',UserSession.UsersContributedValues);
+  if UserSession.IncludeGDUValues then GetListBoxValues(iwlGDUs,dmDV.cdsGDUs,'GDUConcatenation','GDUID',UserSession.GDUValues);
   UserSession.IncludeDateFromValue := iwcbFromDate.Checked;
   UserSession.IncludeDateToValue := iwcbToDate.Checked;
   if UserSession.IncludeDateFromValue then UserSession.DateFromField := Trim(iweFromDate.Text);
@@ -792,6 +812,7 @@ begin
   if ((UserSession.IncludeValidationValues) and (UserSession.ValidationValues.Count=0)) then UserSession.IncludeValidationValues := false;
   if ((UserSession.IncludeWhoForValues) and (UserSession.WhoForValues.Count=0)) then UserSession.IncludeWhoForValues := false;
   if ((UserSession.IncludeUsersContributedValues) and (UserSession.UsersContributedValues.Count=0)) then UserSession.IncludeUsersContributedValues := false;
+  if ((UserSession.IncludeGDUValues) and (UserSession.GDUValues.Count=0)) then UserSession.IncludeGDUValues := false;
   if (UserSession.PreferenceLevelValue = '') then UserSession.PreferenceLevelValue := '1';
   if UserSession.IncludeDateFromValue then
   begin
@@ -874,6 +895,7 @@ begin
     and not UserSession.IncludeRecordIDValueRange
     and not UserSession.IncludeCoordinates
     and not UserSession.IncludeUserOrgID
+    and not UserSession.IncludeGDUValues
     and not UserSession.IncludeDateToValue) then
   begin
       Result := false;
@@ -930,6 +952,7 @@ begin
     if ((UserSession.IncludeValidationValues) and (UserSession.ValidationValues.Count > MaxQueryValuesAllowed)) then Result := false;
     if ((UserSession.IncludeWhoForValues) and (UserSession.WhoForValues.Count > MaxQueryValuesAllowed)) then Result := false;
     if ((UserSession.IncludeUsersContributedValues) and (UserSession.UsersContributedValues.Count > MaxQueryValuesAllowed)) then Result := false;
+    if ((UserSession.IncludeGDUValues) and (UserSession.GDUValues.Count > MaxQueryValuesAllowed)) then Result := false;
     if (Result = false) then
     begin
       iwlblErrorTop.Text := 'Too many values selected for one of the query fields';
@@ -978,6 +1001,7 @@ begin
   iwcbUsersContributed.Checked := false;
   iwcbCoordinates.Checked := false;
   iwcbRecordIDrange.Checked := false;
+  iwcbIncludePlateModelGDUs.Checked := false;
 end;
 
 procedure TISFDefineQuery2.iwbCancelClick(Sender: TObject);

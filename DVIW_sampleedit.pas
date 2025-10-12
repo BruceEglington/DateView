@@ -24,11 +24,11 @@ type
     IWLabel7: TIWLabel;
     IWLabel8: TIWLabel;
     IWLabel9: TIWLabel;
-    IWDBEdit2: TIWDBEdit;
-    IWDBEdit3: TIWDBEdit;
+    iwDBeLatitude: TIWDBEdit;
+    iwDBeLongitude: TIWDBEdit;
     IWDBEdit4: TIWDBEdit;
-    IWDBEdit5: TIWDBEdit;
-    IWDBEdit6: TIWDBEdit;
+    iwDBeLatitudePrecision: TIWDBEdit;
+    iwDBeLongitudePrecision: TIWDBEdit;
     IWDBEdit7: TIWDBEdit;
     iwdblcbCountry: TIWDBLookupComboBox;
     iwbSaveChanges: TIWButton;
@@ -74,6 +74,7 @@ type
     iwdblcbLithology: TIWDBLookupComboBox;
     IWLabel24: TIWLabel;
     IWDBEdit1: TIWDBEdit;
+    iwbSwopLatitudeLongitude: TIWButton;
     procedure IWAppFormRender(Sender: TObject);
     procedure IWAppFormCreate(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
@@ -84,6 +85,7 @@ type
     procedure iwbEditClick(Sender: TObject);
     procedure iwbCopySampleNoClick(Sender: TObject);
     procedure iwbUTM2DDClick(Sender: TObject);
+    procedure iwbSwopLatitudeLongitudeClick(Sender: TObject);
   public
   end;
 
@@ -106,7 +108,9 @@ begin
     iwbCancelChanges.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsEdit,dsInsert]);
     iwbEdit.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsBrowse]);
     iwbReturn.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsBrowse]);
+    iwbSwopLatitudeLongitude.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsEdit,dsInsert]);
   end;
+  dmUser.SetDeveloperData('in AppFormRender');
 end;
 
 procedure TISFSampleEdit.IWAppFormCreate(Sender: TObject);
@@ -114,9 +118,11 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
+  dmUser.SetDeveloperData('in AppFormCreate');
     TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
   end;
   //dmUser.SetDeveloperData('after inserting default new sample '+UserSession.ParameterChosen);
+  dmUser.SetDeveloperData('Sample chosen is '+UserSession.ParameterChosen);
   dmDV.cdsSmpLoc.Locate('SAMPLENO',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
   dmDV.cdsContinents.Open;
   dmDV.cdsCountries.Open;
@@ -151,6 +157,28 @@ begin
   dmDV.qSmpLoc.ParamByName('LASTSAMPLE').Value := tmpSampleNo;
   dmDV.cdsSmpLoc.Close;
   dmDV.cdsSmpLoc.Open;
+end;
+
+procedure TISFSampleEdit.iwbSwopLatitudeLongitudeClick(Sender: TObject);
+var
+  tLatitude, tLongitude,
+  tLatitudePrecision, tLongitudePrecision : double;
+begin
+  tLatitude := dmDV.cdsSmpLocLATITUDE.AsFloat;
+  tLatitudePrecision := dmDV.cdsSmpLocLATITUDEPRECISION.AsFloat;
+  tLongitude := dmDV.cdsSmpLocLONGITUDE.AsFloat;
+  tLongitudePrecision := dmDV.cdsSmpLocLONGITUDEPRECISION.AsFloat;
+  dmDV.cdsSmpLoc.Edit;
+  dmDV.cdsSmpLocLATITUDE.AsFloat := tLongitude;
+  dmDV.cdsSmpLocLATITUDEPRECISION.AsFloat := tLongitudePrecision;
+  dmDV.cdsSmpLocLONGITUDE.AsFloat := tLatitude;
+  dmDV.cdsSmpLocLONGITUDEPRECISION.AsFloat := tLatitudePrecision;
+  dmDV.cdsSmpLoc.Post;
+  try
+    dmDV.cdsSmpLoc.ApplyUpdates(0);
+  except
+    WebApplication.ShowMessage('Not able to update changes to this record');
+  end;
 end;
 
 procedure TISFSampleEdit.iwbUTM2DDClick(Sender: TObject);
