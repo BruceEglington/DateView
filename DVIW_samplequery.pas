@@ -47,10 +47,6 @@ uses
 procedure TISFSampleQuery.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   iweSampleFrom.Text := UserSession.SampleStartFrom;
   iweSampleTo.Text := UserSession.SampleEndWith;
   iwcbContinents.Checked := UserSession.IncludeContinentValues;
@@ -65,7 +61,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   iweSampleFrom.Text := UserSession.SampleStartFrom;
   iweSampleTo.Text := UserSession.SampleEndWith;

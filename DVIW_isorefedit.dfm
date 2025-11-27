@@ -17,6 +17,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 229
     Top = 70
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 98
@@ -41,11 +43,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 94
@@ -54,12 +58,14 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Reference Type'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 98
@@ -69,11 +75,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 98
@@ -83,11 +91,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 98
@@ -98,11 +108,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 154
     Width = 79
@@ -111,12 +123,14 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Reference ID'
   end
   object iwDBlcbRefType: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 120
     Width = 341
@@ -126,6 +140,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -137,9 +152,9 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     ListField = 'SOURCETYPE'
     ListSource = dmDV.dsRefTypes
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbRefID: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 147
     Width = 571
@@ -149,6 +164,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     OnChange = iwDBlcbRefIDChange
     Editable = False
     NonEditableAsLabel = True
@@ -161,9 +177,9 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     ListField = 'SOURCESHORT'
     ListSource = dmDV.dsReferences
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 98
@@ -173,11 +189,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 7
     OnClick = iwbEditClick
   end
   object iwDBmSourceDes: TIWDBMemo
+    AlignWithMargins = False
     Left = 136
     Top = 184
     Width = 589
@@ -189,6 +207,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = True
     HorizScrollBar = False
     VertScrollBar = False
@@ -201,6 +220,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     FriendlyName = 'iwDBmSourceDes'
   end
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 32
     Top = 340
     Width = 675
@@ -217,10 +237,13 @@ object ISFIsoRefEdit: TISFIsoRefEdit
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -231,6 +254,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -239,7 +263,6 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'REFNUM'
@@ -250,6 +273,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -268,6 +292,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -276,7 +301,6 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCETYPE'
@@ -287,6 +311,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -305,6 +330,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -313,7 +339,6 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCESHORT'
@@ -324,6 +349,7 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -394,9 +420,6 @@ object ISFIsoRefEdit: TISFIsoRefEdit
         inherited iwrSignInOut: TIWRegion
           Width = 735
           ExplicitWidth = 735
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

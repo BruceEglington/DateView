@@ -1,12 +1,8 @@
 object ISFVariables: TISFVariables
   Left = 0
   Top = 0
-  Width = 1374
-  Height = 1578
-  Margins.Left = 6
-  Margins.Top = 6
-  Margins.Right = 6
-  Margins.Bottom = 6
+  Width = 687
+  Height = 789
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -19,19 +15,14 @@ object ISFVariables: TISFVariables
   LockUntilLoaded = False
   LockOnSubmit = False
   ShowHint = True
-  PixelsPerInch = 192
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
     AlignWithMargins = False
-    Left = 208
-    Top = 256
-    Width = 1106
-    Height = 1218
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 104
+    Top = 128
+    Width = 553
+    Height = 609
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -188,14 +179,10 @@ object ISFVariables: TISFVariables
   end
   object iwlSortedBy: TIWLabel
     AlignWithMargins = False
-    Left = 1030
-    Top = 228
-    Width = 274
-    Height = 28
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 515
+    Top = 114
+    Width = 137
+    Height = 14
     Alignment = taRightJustify
     Font.Color = clNone
     Font.FontName = 'Arial'
@@ -209,14 +196,10 @@ object ISFVariables: TISFVariables
   end
   object iwlPrevPage: TIWLink
     AlignWithMargins = False
-    Left = 202
-    Top = 222
-    Width = 194
-    Height = 34
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 101
+    Top = 111
+    Width = 97
+    Height = 17
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
@@ -236,14 +219,10 @@ object ISFVariables: TISFVariables
   end
   object iwlNextPage: TIWLink
     AlignWithMargins = False
-    Left = 454
-    Top = 222
-    Width = 130
-    Height = 34
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 227
+    Top = 111
+    Width = 65
+    Height = 17
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
@@ -263,14 +242,10 @@ object ISFVariables: TISFVariables
   end
   object iwbClose: TIWButton
     AlignWithMargins = False
-    Left = 204
-    Top = 148
-    Width = 150
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 102
+    Top = 74
+    Width = 75
+    Height = 25
     Caption = 'Close'
     Color = clWebLIGHTGREEN
     Font.Color = clNone
@@ -284,13 +259,9 @@ object ISFVariables: TISFVariables
   object rectLeft: TIWRectangle
     AlignWithMargins = False
     Left = 0
-    Top = 110
-    Width = 166
-    Height = 1468
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Top = 55
+    Width = 83
+    Height = 734
     Align = alLeft
     ZIndex = 1
     Font.Color = clWebBLACK
@@ -305,14 +276,10 @@ object ISFVariables: TISFVariables
   end
   object iwbDownload: TIWButton
     AlignWithMargins = False
-    Left = 392
-    Top = 148
-    Width = 258
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 196
+    Top = 74
+    Width = 129
+    Height = 25
     Caption = 'Download to Excel'
     Color = clBtnFace
     Font.Color = clNone
@@ -326,14 +293,10 @@ object ISFVariables: TISFVariables
   end
   object iwmComment: TIWMemo
     AlignWithMargins = False
-    Left = 768
-    Top = 120
-    Width = 546
-    Height = 94
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
+    Left = 384
+    Top = 60
+    Width = 273
+    Height = 47
     ShowHint = False
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
@@ -358,54 +321,52 @@ object ISFVariables: TISFVariables
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 1374
-    Height = 110
-    Margins.Left = 12
-    Margins.Top = 12
-    Margins.Right = 12
-    Margins.Bottom = 12
+    Width = 687
+    Height = 55
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     Align = alTop
-    Constraints.MaxHeight = 110
-    Constraints.MinHeight = 110
-    Constraints.MinWidth = 1200
+    Constraints.MaxHeight = 55
+    Constraints.MinHeight = 55
+    Constraints.MinWidth = 600
     Color = clNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = []
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     TabStop = True
-    ExplicitWidth = 1374
+    ExplicitWidth = 687
     inherited IWFrameRegion: TIWRegion
-      Width = 1374
+      Width = 687
       TabOrder = 4
-      ExplicitWidth = 1374
+      ExplicitWidth = 687
       inherited iwrHeader: TIWRegion
-        Width = 1374
-        ExplicitWidth = 1374
+        Width = 687
+        ExplicitWidth = 687
         inherited iwrWelcome: TIWRegion
-          Width = 1374
-          ExplicitWidth = 1374
+          Width = 687
+          ExplicitWidth = 687
           inherited iwrDisplayUserName: TIWRegion
-            Width = 1092
-            ExplicitWidth = 1092
+            Width = 546
+            ExplicitWidth = 546
             inherited lblWelcome: TIWLabel
-              Left = 450
-              ExplicitLeft = 450
+              Left = 225
+              ExplicitLeft = 225
+              ExplicitHeight = 14
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 1374
-          ExplicitWidth = 1374
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
+          Width = 687
+          ExplicitWidth = 687
         end
       end
     end

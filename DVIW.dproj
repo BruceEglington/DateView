@@ -62,7 +62,6 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <Icon_MainIcon>DVIW_Icon2.ico</Icon_MainIcon>
-        <DCC_DcuOutput>C:\DCU64\</DCC_DcuOutput>
         <SanitizedProjectName>DVIW</SanitizedProjectName>
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
@@ -108,7 +107,7 @@
         <DCC_UnitSearchPath>C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Win64;C:\Users\Bruce Eglington\AppData\Roaming\IntraWeb 16\LibD13W64;C:\Program Files (x86)\Steema Software\Steema TeeChart Pro VCL FMX 2025.45\Delphi37\Delphi37.win64;C:\Program Files (x86)\Devart\dbExpress\InterBase\Lib\Delphi37\Win64;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>C:\DCU64\</DCC_DcuOutput>
         <DCC_UsePackage>FMXTMSFNCMapsPkgDXE15;VCLTMSFNCMapsPkgDXE15;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
@@ -120,25 +119,30 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
-        <DCC_DebugInformation>2</DCC_DebugInformation>
         <DCC_IntegerOverflowCheck>false</DCC_IntegerOverflowCheck>
         <DCC_RangeChecking>false</DCC_RangeChecking>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
         <VerInfo_Build>0</VerInfo_Build>
         <Icon_MainIcon>DVIW_Icon5.ico</Icon_MainIcon>
-        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
         <DCC_ExeOutput>C:\EXE32</DCC_ExeOutput>
         <DCC_DcuOutput>C:\DCU32\</DCC_DcuOutput>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <DCC_DebugInfoInExe>false</DCC_DebugInfoInExe>
         <Debugger_LoadAllSymbols>false</Debugger_LoadAllSymbols>
+        <DCC_DebugInformation>2</DCC_DebugInformation>
+        <DCC_DebugInfoInExe>false</DCC_DebugInfoInExe>
+        <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
-        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>2</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
@@ -151,30 +155,26 @@
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
         <DCC_DcuOutput>C:\DCU32\</DCC_DcuOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <DCC_Define>madExcept;LeakChecking;$(DCC_Define)</DCC_Define>
         <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
         <MapFile>3</MapFile>
         <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
         <ILINK_MapFileType>DetailedSegments</ILINK_MapFileType>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <DCC_Define>madExcept;LeakChecking;$(DCC_Define)</DCC_Define>
         <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
         <DCC_DcuOutput>C:\DCU64\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
         <DCC_UnitSearchPath>C:\Program Files (x86)\Devart\dbExpress\InterBase\Bin\Delphi37\Win64;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="ServerController.pas">
-            <Form>IWServerController</Form>
-            <DesignClass>TIWServerControllerBase</DesignClass>
-        </DCCReference>
         <DCCReference Include="DVIW_dmopt.pas">
             <Form>dmOpt</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -196,11 +196,11 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="DVIW_uMain.pas"/>
-        <DCCReference Include="DVIW_constants.pas"/>
         <DCCReference Include="DVIW_frTopBar.pas">
             <Form>ISFTopBar</Form>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="DVIW_constants.pas"/>
         <DCCReference Include="DVIW_area.pas">
             <Form>ISFAreas</Form>
             <DesignClass>TIWAppForm</DesignClass>
@@ -563,6 +563,10 @@
             <Form>ISFLogin</Form>
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
+        <DCCReference Include="ServerController.pas">
+            <Form>IWServerController</Form>
+            <DesignClass>TIWServerControllerBase</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -627,7 +631,19 @@
             </Platforms>
             <Deployment Version="5">
                 <DeployFile LocalName="C:\EXE32\DVIW.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="C:\EXE32\DVIW.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>DVIW.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>DVIW.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win32\Release\DVIW.exe" Configuration="Release" Class="ProjectOutput"/>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="OSX32">

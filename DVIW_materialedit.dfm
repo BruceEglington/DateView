@@ -17,6 +17,7 @@ object ISFMaterialEdit: TISFMaterialEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 227
     Top = 70
     Width = 108
@@ -32,6 +33,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     Orientation = orHorizontal
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 121
@@ -43,6 +45,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -52,6 +55,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 96
@@ -61,11 +65,13 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 3
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 63
@@ -74,12 +80,14 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Material ID'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 142
     Width = 47
@@ -88,12 +96,14 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Material'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 406
@@ -105,6 +115,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 1
@@ -114,6 +125,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     PasswordPrompt = False
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 96
@@ -123,11 +135,13 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 96
@@ -137,11 +151,13 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 75
     Width = 96
@@ -152,11 +168,13 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 96
@@ -166,6 +184,7 @@ object ISFMaterialEdit: TISFMaterialEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 7
     OnClick = iwbEditClick
@@ -214,9 +233,6 @@ object ISFMaterialEdit: TISFMaterialEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

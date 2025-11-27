@@ -61,7 +61,7 @@ begin
   iwbAddNew.Visible := UserSession.CanModify;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmStrat.qDomains.Close;
   dmStrat.qDomains.SQL.Clear;

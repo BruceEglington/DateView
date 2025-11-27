@@ -28,6 +28,7 @@ object ISFModels: TISFModels
     BGColor = clNone
     BorderSize = 1
     BorderStyle = tfDefault
+    Caption = 'ISOSYSTEMNAME'
     CellPadding = 2
     CellSpacing = 0
     Font.Color = clNone
@@ -60,7 +61,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELID'
@@ -100,7 +100,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELNAME'
@@ -142,7 +141,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELPARAM1'
@@ -181,7 +179,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELPARAM2'
@@ -220,7 +217,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELPARAM3'
@@ -259,7 +255,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELPARAM4'
@@ -298,7 +293,6 @@ object ISFModels: TISFModels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MODELPARAM5'
@@ -314,6 +308,120 @@ object ISFModels: TISFModels
         Title.Height = '0'
         Title.ShowHint = True
         Title.Text = 'Factor'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'ISOSYSTEMNAME'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Iso. System'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'MODELTYPEID'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Model Type ID'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.Color = clNone
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'MODELTYPE'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.Color = clNone
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Model Type'
         Title.VAlign = vaMiddle
         Title.Visible = True
         Title.Width = '0'
@@ -535,32 +643,28 @@ object ISFModels: TISFModels
     ParentFont = False
     TabOrder = 0
     TabStop = True
-    ExplicitWidth = 784
+    ExplicitWidth = 1063
     inherited IWFrameRegion: TIWRegion
       Width = 1063
       TabOrder = 7
-      ExplicitWidth = 784
+      ExplicitWidth = 1063
       inherited iwrHeader: TIWRegion
         Width = 1063
-        ExplicitWidth = 784
+        ExplicitWidth = 1063
         inherited iwrWelcome: TIWRegion
           Width = 1063
-          ExplicitWidth = 784
+          ExplicitWidth = 1063
           inherited iwrDisplayUserName: TIWRegion
             Width = 922
-            ExplicitWidth = 643
+            ExplicitWidth = 922
             inherited lblWelcome: TIWLabel
-              Left = 601
               ExplicitLeft = 510
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
           Width = 1063
-          ExplicitWidth = 784
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
+          ExplicitWidth = 1063
         end
       end
     end

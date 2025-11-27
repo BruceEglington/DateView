@@ -18,6 +18,7 @@ object ISFUnits: TISFUnits
   DesignLeft = 2
   DesignTop = 2
   object iwDBgUnits: TIWDBGrid
+    AlignWithMargins = False
     Left = 96
     Top = 138
     Width = 635
@@ -34,10 +35,13 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -48,6 +52,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -56,7 +61,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITID'
@@ -68,6 +72,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -86,6 +91,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,7 +100,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITNAME'
@@ -108,6 +113,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -126,6 +132,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -134,7 +141,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITRANK'
@@ -146,6 +152,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -164,6 +171,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -172,7 +180,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'FORMATIONOFFSET'
@@ -183,6 +190,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -201,6 +209,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -209,7 +218,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'FORMATIONOFFSET2'
@@ -220,6 +228,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -238,6 +247,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -246,7 +256,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'FORMATIONOFFSET3'
@@ -257,6 +266,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -275,6 +285,7 @@ object ISFUnits: TISFUnits
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -283,7 +294,6 @@ object ISFUnits: TISFUnits
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'GISID'
@@ -295,6 +305,7 @@ object ISFUnits: TISFUnits
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -322,6 +333,7 @@ object ISFUnits: TISFUnits
     RowCurrentColor = clNone
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 98
     Top = 119
     Width = 97
@@ -334,6 +346,7 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -343,6 +356,7 @@ object ISFUnits: TISFUnits
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 224
     Top = 119
     Width = 65
@@ -355,6 +369,7 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -364,6 +379,7 @@ object ISFUnits: TISFUnits
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 94
     Top = 78
     Width = 75
@@ -374,11 +390,13 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     TabOrder = 1
     OnClick = iwbCloseClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 184
     Top = 78
     Width = 129
@@ -389,11 +407,13 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 2
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 328
     Top = 78
     Width = 129
@@ -404,11 +424,13 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 4
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNewUnit: TIWButton
+    AlignWithMargins = False
     Left = 474
     Top = 78
     Width = 133
@@ -419,11 +441,13 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewUnit'
     TabOrder = 6
     OnClick = iwbAddNewUnitClick
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 543
     Top = 120
     Width = 137
@@ -433,12 +457,14 @@ object ISFUnits: TISFUnits
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -448,6 +474,7 @@ object ISFUnits: TISFUnits
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -456,6 +483,7 @@ object ISFUnits: TISFUnits
     ExplicitHeight = 559
   end
   object iwbDownload: TIWButton
+    AlignWithMargins = False
     Left = 626
     Top = 78
     Width = 129
@@ -465,6 +493,7 @@ object ISFUnits: TISFUnits
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     OnClick = iwbDownloadClick
   end
@@ -512,9 +541,6 @@ object ISFUnits: TISFUnits
         inherited iwrSignInOut: TIWRegion
           Width = 895
           ExplicitWidth = 895
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

@@ -142,7 +142,6 @@ object ISFSelectGraph: TISFSelectGraph
       'User-defined Group')
     Sorted = True
     FriendlyName = 'iwcbGroupBy'
-    NoSelectionText = '-- No Selection --'
   end
   object iwrgNormalisationType: TIWRadioGroup
     AlignWithMargins = False
@@ -422,9 +421,6 @@ object ISFSelectGraph: TISFSelectGraph
         inherited iwrSignInOut: TIWRegion
           Width = 1105
           ExplicitWidth = 1105
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

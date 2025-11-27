@@ -56,7 +56,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmDV.cdsLaboratories.Open;
   dmDV.cdsIsoLab.Locate('LABORATORYABR',UserSession.ParameterChosen,[]);

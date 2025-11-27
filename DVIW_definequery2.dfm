@@ -7,7 +7,7 @@ object ISFDefineQuery2: TISFDefineQuery2
   OnRender = IWAppFormRender
   AllowPageAccess = True
   ConnectionMode = cmAny
-  Title = 'Define query'
+  Title = 'Define query (3)'
   OnCreate = IWAppFormCreate
   Background.Fixed = False
   HandleTabs = False
@@ -16,7 +16,7 @@ object ISFDefineQuery2: TISFDefineQuery2
   LockOnSubmit = True
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -2047
+  DesignTop = 2
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
@@ -57,17 +57,16 @@ object ISFDefineQuery2: TISFDefineQuery2
             Width = 1342
             ExplicitWidth = 1342
             inherited lblWelcome: TIWLabel
-              Left = 350
-              ExplicitLeft = 1692
+              Width = 1342
+              ExplicitLeft = 0
+              ExplicitWidth = 1342
+              ExplicitHeight = 20
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
           Width = 1483
           ExplicitWidth = 1483
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

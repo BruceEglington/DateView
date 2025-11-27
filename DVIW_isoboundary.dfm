@@ -17,6 +17,7 @@ object ISFIsoBoundary: TISFIsoBoundary
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 227
     Top = 70
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoBoundary: TISFIsoBoundary
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 92
@@ -41,11 +43,13 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 7
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 218
@@ -54,12 +58,14 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Sample position relative to boundary'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 92
@@ -69,11 +75,13 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 92
@@ -83,11 +91,13 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 92
@@ -98,11 +108,13 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 6
     OnClick = iwbDeleteClick
   end
   object iwDBlcbPosRel: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 272
     Top = 120
     Width = 205
@@ -112,6 +124,7 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 2
@@ -123,9 +136,9 @@ object ISFIsoBoundary: TISFIsoBoundary
     ListField = 'BOUNDARYPOSITION'
     ListSource = dmDV.dsBoundaryPositions
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBgrid: TIWDBGrid
+    AlignWithMargins = False
     Left = 30
     Top = 198
     Width = 595
@@ -142,10 +155,13 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = True
     Columns = <
       item
@@ -156,6 +172,7 @@ object ISFIsoBoundary: TISFIsoBoundary
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -164,7 +181,6 @@ object ISFIsoBoundary: TISFIsoBoundary
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BOUNDARYPOSITION'
@@ -175,6 +191,7 @@ object ISFIsoBoundary: TISFIsoBoundary
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -193,6 +210,7 @@ object ISFIsoBoundary: TISFIsoBoundary
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -201,7 +219,6 @@ object ISFIsoBoundary: TISFIsoBoundary
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BOUNDARYNAME'
@@ -212,6 +229,7 @@ object ISFIsoBoundary: TISFIsoBoundary
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = []
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -239,6 +257,7 @@ object ISFIsoBoundary: TISFIsoBoundary
     RowCurrentColor = clWebYELLOW
   end
   object iwDBlcbBoundary: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 148
     Width = 341
@@ -248,6 +267,7 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -259,9 +279,9 @@ object ISFIsoBoundary: TISFIsoBoundary
     ListField = 'BOUNDARYNAME'
     ListSource = dmDV.dsBoundaries
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 150
     Width = 57
@@ -270,12 +290,14 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Boundary'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 92
@@ -285,6 +307,7 @@ object ISFIsoBoundary: TISFIsoBoundary
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 1
     OnClick = iwbEditClick
@@ -333,9 +356,6 @@ object ISFIsoBoundary: TISFIsoBoundary
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

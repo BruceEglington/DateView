@@ -49,7 +49,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmDV.cdsOrogenicPeriods.Open;
 end;
@@ -57,10 +57,6 @@ end;
 procedure TISFOrogenicPeriods.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   iwlPrevPage.Visible := (dmDV.cdsOrogenicPeriods.RecordCount > iwDBg.RowLimit);
   iwlNextPage.Visible := (dmDV.cdsOrogenicPeriods.RecordCount > iwDBg.RowLimit);
 end;

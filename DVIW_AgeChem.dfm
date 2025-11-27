@@ -61,9 +61,6 @@ object ISFAgeChem: TISFAgeChem
         inherited iwrSignInOut: TIWRegion
           Width = 1500
           ExplicitWidth = 1500
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -88,6 +85,7 @@ object ISFAgeChem: TISFAgeChem
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbReturnToSampleList: TIWButton
+        AlignWithMargins = False
         Left = 17
         Top = 19
         Width = 217
@@ -97,11 +95,13 @@ object ISFAgeChem: TISFAgeChem
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 15
         OnClick = iwbReturnToSampleListClick
       end
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 270
         Top = 19
         Width = 155
@@ -111,6 +111,7 @@ object ISFAgeChem: TISFAgeChem
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 16
         OnClick = iwbReturnClick
@@ -126,6 +127,7 @@ object ISFAgeChem: TISFAgeChem
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlSampleNoHeading: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 3
         Width = 128
@@ -134,12 +136,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSampleNoHeading'
         Caption = 'Sample :'
       end
       object iwlSampleNo: TIWLabel
+        AlignWithMargins = False
         Left = 150
         Top = 3
         Width = 37
@@ -148,12 +152,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'nd'
       end
       object iwlSourceShortHeading: TIWLabel
+        AlignWithMargins = False
         Left = 466
         Top = 13
         Width = 71
@@ -162,12 +168,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSourceShortHeading'
         Caption = 'Source :'
       end
       object iwlSourceShort: TIWLabel
+        AlignWithMargins = False
         Left = 543
         Top = 13
         Width = 24
@@ -176,12 +184,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSourceShort'
         Caption = 'nd'
       end
       object iwlLongitude: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 69
         Width = 69
@@ -190,12 +200,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlLongitude'
         Caption = 'Longitude'
       end
       object iwlLatitude: TIWLabel
+        AlignWithMargins = False
         Left = 227
         Top = 69
         Width = 57
@@ -204,12 +216,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlLatitude'
         Caption = 'Latitude'
       end
       object iwlElevation: TIWLabel
+        AlignWithMargins = False
         Left = 411
         Top = 69
         Width = 66
@@ -218,12 +232,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlElevation'
         Caption = 'Elevation'
       end
       object iwlElevationUnits: TIWLabel
+        AlignWithMargins = False
         Left = 568
         Top = 69
         Width = 12
@@ -232,11 +248,13 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlElevationUnits'
         Caption = 'm'
       end
       object iweLongitude: TIWEdit
+        AlignWithMargins = False
         Left = 82
         Top = 67
         Width = 90
@@ -248,12 +266,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLongitude'
         SubmitOnAsyncEvent = True
         TabOrder = 20
         Text = 'iweLongitude'
       end
       object iweLatitude: TIWEdit
+        AlignWithMargins = False
         Left = 282
         Top = 67
         Width = 90
@@ -265,12 +285,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLatitude'
         SubmitOnAsyncEvent = True
         TabOrder = 21
         Text = 'iweLatitude'
       end
       object iweElevation: TIWEdit
+        AlignWithMargins = False
         Left = 472
         Top = 67
         Width = 90
@@ -282,12 +304,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweElevation'
         SubmitOnAsyncEvent = True
         TabOrder = 22
         Text = 'iweElevation'
       end
       object iwlCountryAbr: TIWLabel
+        AlignWithMargins = False
         Left = 856
         Top = 69
         Width = 81
@@ -296,12 +320,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlCountryAbr'
         Caption = 'CountryAbr'
       end
       object iwlContinentID: TIWLabel
+        AlignWithMargins = False
         Left = 744
         Top = 69
         Width = 85
@@ -310,12 +336,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlContinentID'
         Caption = 'ContinentID'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 15
         Top = 42
         Width = 62
@@ -324,12 +352,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel13'
         Caption = 'Lithology'
       end
       object iweLithology: TIWEdit
+        AlignWithMargins = False
         Left = 83
         Top = 42
         Width = 290
@@ -341,12 +371,14 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLithology'
         SubmitOnAsyncEvent = True
         TabOrder = 30
         Text = 'iweLithology'
       end
       object iweLithClass: TIWEdit
+        AlignWithMargins = False
         Left = 410
         Top = 42
         Width = 290
@@ -358,6 +390,7 @@ object ISFAgeChem: TISFAgeChem
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweLithClass'
         SubmitOnAsyncEvent = True
         TabOrder = 31
@@ -385,6 +418,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object iwChartHfInitial: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -416,10 +450,10 @@ object ISFAgeChem: TISFAgeChem
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -428,39 +462,39 @@ object ISFAgeChem: TISFAgeChem
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.0000#'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Variable 1'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -469,7 +503,6 @@ object ISFAgeChem: TISFAgeChem
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object Series1: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -485,7 +518,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series2: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -504,7 +536,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series3: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clRed
             Title = 'Included'
             ValueFormat = '#,##0.00#'
@@ -523,7 +554,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series4: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clBlue
             Title = 'Excluded'
             ValueFormat = '#,##0.00#'
@@ -554,6 +584,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object iwIWChartHfEpsilon: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -585,10 +616,10 @@ object ISFAgeChem: TISFAgeChem
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -597,39 +628,39 @@ object ISFAgeChem: TISFAgeChem
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.00'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Variable 2'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -638,7 +669,6 @@ object ISFAgeChem: TISFAgeChem
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object Series7: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             ColorEachLine = False
             SeriesColor = clBlack
@@ -655,7 +685,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series8: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             ShowInLegend = False
             Title = 'AgeTicks'
@@ -673,7 +702,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series9: TPointSeries
-            HoverElement = [heCurrent]
             Title = 'Included'
             ClickableLine = False
             Pointer.Brush.Color = clRed
@@ -690,7 +718,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object Series10: TPointSeries
-            HoverElement = [heCurrent]
             Title = 'Excluded'
             ClickableLine = False
             Pointer.Brush.Color = clBlue
@@ -730,6 +757,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object IWLabel1: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 138
@@ -738,11 +766,13 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           HasTabOrder = False
           FriendlyName = 'IWLabel3'
           Caption = 'Graph Options'
         end
         object iwe75Min: TIWEdit
+          AlignWithMargins = False
           Left = 16
           Top = 70
           Width = 59
@@ -753,11 +783,13 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Min'
           SubmitOnAsyncEvent = True
           Text = '0.0'
         end
         object IWLabel25: TIWLabel
+          AlignWithMargins = False
           Left = 98
           Top = 73
           Width = 117
@@ -766,12 +798,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object iwe75Max: TIWEdit
+          AlignWithMargins = False
           Left = 240
           Top = 70
           Width = 59
@@ -782,12 +816,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Max'
           SubmitOnAsyncEvent = True
           TabOrder = 1
           Text = '4500.0'
         end
         object iwe68Min: TIWEdit
+          AlignWithMargins = False
           Left = 16
           Top = 94
           Width = 59
@@ -798,12 +834,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Min'
           SubmitOnAsyncEvent = True
           TabOrder = 2
           Text = '0.280'
         end
         object iwlVar1: TIWLabel
+          AlignWithMargins = False
           Left = 98
           Top = 97
           Width = 122
@@ -812,12 +850,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlVar1'
           Caption = '<= Variable 1 <='
         end
         object iwe68Max: TIWEdit
+          AlignWithMargins = False
           Left = 240
           Top = 94
           Width = 59
@@ -828,12 +868,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Max'
           SubmitOnAsyncEvent = True
           TabOrder = 3
           Text = '0.284'
         end
         object iwe86Min: TIWEdit
+          AlignWithMargins = False
           Left = 488
           Top = 72
           Width = 59
@@ -844,12 +886,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe86Min'
           SubmitOnAsyncEvent = True
           TabOrder = 5
           Text = '0.0'
         end
         object IWLabel27: TIWLabel
+          AlignWithMargins = False
           Left = 570
           Top = 75
           Width = 117
@@ -858,12 +902,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object iwe86Max: TIWEdit
+          AlignWithMargins = False
           Left = 731
           Top = 72
           Width = 59
@@ -874,12 +920,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe86Max'
           SubmitOnAsyncEvent = True
           TabOrder = 6
           Text = '4500.0'
         end
         object iwe76Max: TIWEdit
+          AlignWithMargins = False
           Left = 731
           Top = 96
           Width = 59
@@ -890,12 +938,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe76Max'
           SubmitOnAsyncEvent = True
           TabOrder = 8
           Text = '5.0'
         end
         object iwlVar2: TIWLabel
+          AlignWithMargins = False
           Left = 570
           Top = 101
           Width = 122
@@ -904,12 +954,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlVar2'
           Caption = '<= Variable 2 <='
         end
         object iwe76Min: TIWEdit
+          AlignWithMargins = False
           Left = 488
           Top = 96
           Width = 59
@@ -920,26 +972,26 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe76Min'
           SubmitOnAsyncEvent = True
           TabOrder = 7
           Text = '-5.0'
         end
         object iwbScaleConcordiaAxes: TIWButton
+          AlignWithMargins = False
           Left = 584
           Top = 143
           Width = 136
           Height = 25
           Caption = 'Rescale Axes'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbScaleConcordiaAxes'
           TabOrder = 11
           OnClick = iwbScaleAxesClick
         end
         object iwcbGraphsAutoscale: TIWCheckBox
+          AlignWithMargins = False
           Left = 584
           Top = 183
           Width = 136
@@ -950,6 +1002,7 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 12
@@ -957,6 +1010,7 @@ object ISFAgeChem: TISFAgeChem
           FriendlyName = 'iwcbGraphsAutoscale'
         end
         object iweConcordanceFrom: TIWEdit
+          AlignWithMargins = False
           Left = 16
           Top = 144
           Width = 59
@@ -967,12 +1021,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweConcordanceFrom'
           SubmitOnAsyncEvent = True
           TabOrder = 9
           Text = '90.0'
         end
         object IWLabel5: TIWLabel
+          AlignWithMargins = False
           Left = 86
           Top = 145
           Width = 165
@@ -981,12 +1037,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= % Concordance <='
         end
         object iweConcordanceTo: TIWEdit
+          AlignWithMargins = False
           Left = 240
           Top = 144
           Width = 59
@@ -997,12 +1055,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iweConcordanceTo'
           SubmitOnAsyncEvent = True
           TabOrder = 10
           Text = '110.0'
         end
         object iwcbExcluded: TIWCheckBox
+          AlignWithMargins = False
           Left = 518
           Top = 30
           Width = 121
@@ -1013,6 +1073,7 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Arial'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 23
@@ -1021,6 +1082,7 @@ object ISFAgeChem: TISFAgeChem
           FriendlyName = 'iwcbExcluded'
         end
         object iwcbIncluded: TIWCheckBox
+          AlignWithMargins = False
           Left = 369
           Top = 30
           Width = 121
@@ -1031,6 +1093,7 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Arial'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 24
@@ -1039,6 +1102,7 @@ object ISFAgeChem: TISFAgeChem
           FriendlyName = 'iwcbIncluded'
         end
         object IWEdit3: TIWEdit
+          AlignWithMargins = False
           Left = 958
           Top = 110
           Width = 59
@@ -1049,12 +1113,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Min'
           SubmitOnAsyncEvent = True
           TabOrder = 25
           Text = '0.0'
         end
         object IWLabel32: TIWLabel
+          AlignWithMargins = False
           Left = 1040
           Top = 113
           Width = 117
@@ -1063,12 +1129,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel5'
           Caption = '<= Age (Ma) <='
         end
         object IWEdit4: TIWEdit
+          AlignWithMargins = False
           Left = 1182
           Top = 110
           Width = 59
@@ -1079,12 +1147,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe75Max'
           SubmitOnAsyncEvent = True
           TabOrder = 26
           Text = '4500.0'
         end
         object IWEdit5: TIWEdit
+          AlignWithMargins = False
           Left = 958
           Top = 134
           Width = 59
@@ -1095,12 +1165,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Min'
           SubmitOnAsyncEvent = True
           TabOrder = 27
           Text = '0.280'
         end
         object iwlVar3: TIWLabel
+          AlignWithMargins = False
           Left = 1040
           Top = 137
           Width = 122
@@ -1109,12 +1181,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlVar3'
           Caption = '<= Variable 3 <='
         end
         object IWEdit6: TIWEdit
+          AlignWithMargins = False
           Left = 1182
           Top = 134
           Width = 59
@@ -1125,12 +1199,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           FriendlyName = 'iwe68Max'
           SubmitOnAsyncEvent = True
           TabOrder = 28
           Text = '0.284'
         end
         object iwcbIncludeSampleZones: TIWCheckBox
+          AlignWithMargins = False
           Left = 16
           Top = 194
           Width = 202
@@ -1141,6 +1217,7 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
           TabOrder = 32
@@ -1149,6 +1226,7 @@ object ISFAgeChem: TISFAgeChem
           FriendlyName = 'iwcbIncludeSampleZones'
         end
         object iwlSampleZones: TIWListbox
+          AlignWithMargins = False
           Left = 16
           Top = 221
           Width = 284
@@ -1158,12 +1236,12 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           RequireSelection = False
           Editable = False
           TabOrder = 33
           FriendlyName = 'iwlSampleZones'
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
       end
       object iwrGraphSplit23: TIWRegion
@@ -1188,6 +1266,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.Style = cbsNone
         Color = clWebLEMONCHIFFON
         object IWChartHfModelInitial: TIWChart
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 450
@@ -1219,10 +1298,10 @@ object ISFAgeChem: TISFAgeChem
           Gradient.MidColor = 15395562
           Gradient.StartColor = 15395562
           Gradient.Visible = True
-          LeftWall.Color = 14745599
+          LeftWall.Color = clLightyellow
           Legend.Alignment = laBottom
           Legend.Font.Name = 'Verdana'
-          RightWall.Color = 14745599
+          RightWall.Color = clLightyellow
           SubFoot.Font.Name = 'Verdana'
           SubTitle.Font.Name = 'Verdana'
           Title.Font.Name = 'Verdana'
@@ -1231,39 +1310,39 @@ object ISFAgeChem: TISFAgeChem
           Title.Visible = False
           BottomAxis.Axis.Color = 4210752
           BottomAxis.AxisValuesFormat = '#,##0.0##'
-          BottomAxis.Grid.Color = 11119017
+          BottomAxis.Grid.Color = clDarkgray
           BottomAxis.LabelsFormat.Font.Name = 'Verdana'
-          BottomAxis.TicksInner.Color = 11119017
+          BottomAxis.TicksInner.Color = clDarkgray
           BottomAxis.Title.Caption = 'Age (Ma)'
           BottomAxis.Title.Font.Name = 'Verdana'
           BottomAxis.Title.Font.Style = [fsBold]
           DepthAxis.Axis.Color = 4210752
-          DepthAxis.Grid.Color = 11119017
+          DepthAxis.Grid.Color = clDarkgray
           DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthAxis.TicksInner.Color = 11119017
+          DepthAxis.TicksInner.Color = clDarkgray
           DepthAxis.Title.Font.Name = 'Verdana'
           DepthTopAxis.Axis.Color = 4210752
-          DepthTopAxis.Grid.Color = 11119017
+          DepthTopAxis.Grid.Color = clDarkgray
           DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-          DepthTopAxis.TicksInner.Color = 11119017
+          DepthTopAxis.TicksInner.Color = clDarkgray
           DepthTopAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Axis.Color = 4210752
           LeftAxis.AxisValuesFormat = '#,##0.0000#'
-          LeftAxis.Grid.Color = 11119017
+          LeftAxis.Grid.Color = clDarkgray
           LeftAxis.LabelsFormat.Font.Name = 'Verdana'
-          LeftAxis.TicksInner.Color = 11119017
+          LeftAxis.TicksInner.Color = clDarkgray
           LeftAxis.Title.Caption = 'Variable 3'
           LeftAxis.Title.Font.Name = 'Verdana'
           LeftAxis.Title.Font.Style = [fsBold]
           RightAxis.Axis.Color = 4210752
-          RightAxis.Grid.Color = 11119017
+          RightAxis.Grid.Color = clDarkgray
           RightAxis.LabelsFormat.Font.Name = 'Verdana'
-          RightAxis.TicksInner.Color = 11119017
+          RightAxis.TicksInner.Color = clDarkgray
           RightAxis.Title.Font.Name = 'Verdana'
           TopAxis.Axis.Color = 4210752
-          TopAxis.Grid.Color = 11119017
+          TopAxis.Grid.Color = clDarkgray
           TopAxis.LabelsFormat.Font.Name = 'Verdana'
-          TopAxis.TicksInner.Color = 11119017
+          TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
           Align = alClient
@@ -1272,7 +1351,6 @@ object ISFAgeChem: TISFAgeChem
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
           object LineSeries1: TLineSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -1288,7 +1366,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object PointSeries1: TPointSeries
-            HoverElement = [heCurrent]
             Legend.Visible = False
             SeriesColor = clBlack
             ShowInLegend = False
@@ -1307,7 +1384,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object PointSeries2: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clRed
             Title = 'Included'
             ValueFormat = '#,##0.00#'
@@ -1326,7 +1402,6 @@ object ISFAgeChem: TISFAgeChem
             YValues.Order = loNone
           end
           object PointSeries3: TPointSeries
-            HoverElement = [heCurrent]
             SeriesColor = clBlue
             Title = 'Excluded'
             ValueFormat = '#,##0.00#'
@@ -1357,15 +1432,13 @@ object ISFAgeChem: TISFAgeChem
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbIdentifyMinMaxValues: TIWButton
+        AlignWithMargins = False
         Left = 466
         Top = 6
         Width = 447
         Height = 25
         Caption = 'Transfer Minimum, Maximum and Median for Database Insertion'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbIdentifyMinMaxValues'
         TabOrder = 14
       end
@@ -1399,6 +1472,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator1: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -1414,6 +1488,7 @@ object ISFAgeChem: TISFAgeChem
           Orientation = orHorizontal
         end
         object IWLabel8: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 388
@@ -1422,6 +1497,7 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -1448,6 +1524,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgSummaryValues: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 1001
@@ -1465,10 +1542,13 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -1479,6 +1559,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1487,7 +1568,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -1498,6 +1578,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1516,6 +1597,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1524,7 +1606,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'SampleNo'
@@ -1535,6 +1616,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1553,6 +1635,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1561,7 +1644,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Frac'
@@ -1572,6 +1654,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1590,6 +1673,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1598,7 +1682,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Age'
@@ -1609,6 +1692,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1627,6 +1711,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1635,7 +1720,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgePlus95'
@@ -1646,6 +1730,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1664,6 +1749,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1672,7 +1758,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgeMinus95'
@@ -1683,6 +1768,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1701,6 +1787,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1709,7 +1796,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Initial'
@@ -1720,6 +1806,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1738,6 +1825,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1746,7 +1834,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'InitialError'
@@ -1757,6 +1844,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1775,6 +1863,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1783,7 +1872,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Epsilon'
@@ -1794,6 +1882,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1812,6 +1901,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1820,7 +1910,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'EpsilonError'
@@ -1831,6 +1920,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1849,6 +1939,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1857,7 +1948,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Ymodeli'
@@ -1868,6 +1958,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1936,6 +2027,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBnData: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -1951,6 +2043,7 @@ object ISFAgeChem: TISFAgeChem
           Orientation = orHorizontal
         end
         object IWLabel9: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 38
@@ -1959,12 +2052,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
           Caption = 'Data'
         end
         object iwlCount: TIWLabel
+          AlignWithMargins = False
           Left = 857
           Top = 51
           Width = 56
@@ -1974,12 +2069,14 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 10
           Font.Style = []
+          Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'iwlCount'
           Caption = 'iwlCount'
         end
         object iwbDownloadData: TIWButton
+          AlignWithMargins = False
           Left = 296
           Top = 42
           Width = 140
@@ -1990,20 +2087,19 @@ object ISFAgeChem: TISFAgeChem
           Font.Color = clNone
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbDownloadData'
           TabOrder = 13
           OnClick = iwbDownloadDataClick
         end
         object iwbIncludeExcludeData: TIWButton
+          AlignWithMargins = False
           Left = 510
           Top = 42
           Width = 173
           Height = 25
           Caption = 'Include / Exclude record'
           Color = clBtnFace
-          Font.Color = clNone
-          Font.Size = 10
-          Font.Style = []
           FriendlyName = 'iwbIncludeExcludeData'
           TabOrder = 29
           OnClick = iwbIncludeExcludeDataClick
@@ -2029,6 +2125,7 @@ object ISFAgeChem: TISFAgeChem
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgData: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 1360
@@ -2046,10 +2143,13 @@ object ISFAgeChem: TISFAgeChem
           Font.FontName = 'Verdana'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -2060,6 +2160,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2068,7 +2169,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -2082,6 +2182,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2100,6 +2201,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2109,7 +2211,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'SampleNo'
@@ -2121,6 +2222,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2139,6 +2241,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2148,7 +2251,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Frac'
@@ -2160,6 +2262,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2178,6 +2281,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2186,7 +2290,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'ZoneID'
@@ -2198,6 +2301,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2216,6 +2320,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2225,7 +2330,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PreferredAge'
@@ -2237,6 +2341,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2255,6 +2360,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2264,7 +2370,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PreferredAgeSigma'
@@ -2275,6 +2380,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2293,6 +2399,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2302,7 +2409,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PercentConcordance'
@@ -2314,6 +2420,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2332,6 +2439,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2341,7 +2449,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'IncludeYN'
@@ -2353,6 +2460,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2371,6 +2479,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2380,7 +2489,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var1'
@@ -2392,6 +2500,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2410,6 +2519,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2419,7 +2529,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var1Sigma'
@@ -2430,6 +2539,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2448,6 +2558,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2456,7 +2567,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var2'
@@ -2468,6 +2578,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2486,6 +2597,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2494,7 +2606,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var2Sigma'
@@ -2505,6 +2616,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2523,6 +2635,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2532,7 +2645,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var3'
@@ -2544,6 +2656,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2562,6 +2675,7 @@ object ISFAgeChem: TISFAgeChem
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -2571,7 +2685,6 @@ object ISFAgeChem: TISFAgeChem
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Var3Sigma'
@@ -2582,6 +2695,7 @@ object ISFAgeChem: TISFAgeChem
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -2622,6 +2736,7 @@ object ISFAgeChem: TISFAgeChem
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton1: TIWButton
+        AlignWithMargins = False
         Left = 17
         Top = 59
         Width = 217
@@ -2631,11 +2746,13 @@ object ISFAgeChem: TISFAgeChem
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 18
         OnClick = iwbReturnToSampleListClick
       end
       object IWButton2: TIWButton
+        AlignWithMargins = False
         Left = 270
         Top = 59
         Width = 155
@@ -2645,6 +2762,7 @@ object ISFAgeChem: TISFAgeChem
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 19
         OnClick = iwbReturnClick

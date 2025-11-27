@@ -18,6 +18,7 @@ object ISFNewRecord2: TISFNewRecord2
   DesignLeft = 2
   DesignTop = 2
   object iwbNextStageOfQuery: TIWButton
+    AlignWithMargins = False
     Left = 95
     Top = 75
     Width = 200
@@ -27,10 +28,12 @@ object ISFNewRecord2: TISFNewRecord2
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbNextStageOfQuery'
     OnClick = iwbNextStageOfQueryClick
   end
   object iwcbArea: TIWComboBox
+    AlignWithMargins = False
     Left = 95
     Top = 150
     Width = 310
@@ -40,14 +43,15 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NonEditableAsLabel = True
     TabOrder = 1
     ItemIndex = -1
     Sorted = True
     FriendlyName = 'iwcbArea'
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 95
     Top = 128
     Width = 29
@@ -56,12 +60,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Area'
   end
   object IWText1: TIWText
+    AlignWithMargins = False
     Left = 422
     Top = 126
     Width = 247
@@ -72,6 +78,7 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWText1'
     Lines.Strings = (
       'Specify the Area within which the new '
@@ -83,6 +90,7 @@ object ISFNewRecord2: TISFNewRecord2
     WantReturns = True
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -92,6 +100,7 @@ object ISFNewRecord2: TISFNewRecord2
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -100,6 +109,7 @@ object ISFNewRecord2: TISFNewRecord2
     ExplicitHeight = 195
   end
   object iwbCancel: TIWButton
+    AlignWithMargins = False
     Left = 335
     Top = 75
     Width = 200
@@ -109,11 +119,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancel'
     TabOrder = 12
     OnClick = iwbCancelClick
   end
   object iweUnitTo: TIWEdit
+    AlignWithMargins = False
     Left = 320
     Top = 256
     Width = 59
@@ -125,12 +137,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweUnitTo'
     SubmitOnAsyncEvent = True
     TabOrder = 3
     Text = 'zz'
   end
   object iweUnitFrom: TIWEdit
+    AlignWithMargins = False
     Left = 216
     Top = 256
     Width = 59
@@ -142,12 +156,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweUnitFrom'
     SubmitOnAsyncEvent = True
     TabOrder = 2
     Text = 'A'
   end
   object IWLabel10: TIWLabel
+    AlignWithMargins = False
     Left = 101
     Top = 259
     Width = 94
@@ -156,12 +172,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Strat. Unit from'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 296
     Top = 259
     Width = 12
@@ -170,11 +188,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 101
     Top = 315
     Width = 80
@@ -183,12 +203,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Sample from'
   end
   object iweSampleFrom: TIWEdit
+    AlignWithMargins = False
     Left = 216
     Top = 312
     Width = 59
@@ -200,12 +222,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweSampleFrom'
     SubmitOnAsyncEvent = True
     TabOrder = 6
     Text = '0'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 296
     Top = 315
     Width = 12
@@ -214,11 +238,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to'
   end
   object iweSampleTo: TIWEdit
+    AlignWithMargins = False
     Left = 320
     Top = 312
     Width = 59
@@ -230,12 +256,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweSampleTo'
     SubmitOnAsyncEvent = True
     TabOrder = 7
     Text = 'zz'
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 101
     Top = 343
     Width = 88
@@ -244,12 +272,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Province from'
   end
   object iweProvinceFrom: TIWEdit
+    AlignWithMargins = False
     Left = 216
     Top = 340
     Width = 59
@@ -261,12 +291,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweProvinceFrom'
     SubmitOnAsyncEvent = True
     TabOrder = 8
     Text = 'A'
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 296
     Top = 343
     Width = 12
@@ -275,11 +307,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to'
   end
   object iweProvinceTo: TIWEdit
+    AlignWithMargins = False
     Left = 320
     Top = 340
     Width = 59
@@ -291,12 +325,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweProvinceTo'
     SubmitOnAsyncEvent = True
     TabOrder = 9
     Text = 'zz'
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 101
     Top = 372
     Width = 82
@@ -305,12 +341,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Terrane from'
   end
   object iweTerraneFrom: TIWEdit
+    AlignWithMargins = False
     Left = 216
     Top = 369
     Width = 59
@@ -322,12 +360,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweTerraneFrom'
     SubmitOnAsyncEvent = True
     TabOrder = 10
     Text = 'A'
   end
   object IWLabel8: TIWLabel
+    AlignWithMargins = False
     Left = 296
     Top = 372
     Width = 12
@@ -336,11 +376,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to'
   end
   object iweTerraneTo: TIWEdit
+    AlignWithMargins = False
     Left = 320
     Top = 369
     Width = 59
@@ -352,12 +394,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweTerraneTo'
     SubmitOnAsyncEvent = True
     TabOrder = 11
     Text = 'zz'
   end
   object IWLabel9: TIWLabel
+    AlignWithMargins = False
     Left = 101
     Top = 287
     Width = 97
@@ -366,12 +410,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Reference from'
   end
   object iweReferenceFrom: TIWEdit
+    AlignWithMargins = False
     Left = 216
     Top = 284
     Width = 59
@@ -383,12 +429,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweReferenceFrom'
     SubmitOnAsyncEvent = True
     TabOrder = 4
     Text = 'A'
   end
   object IWLabel11: TIWLabel
+    AlignWithMargins = False
     Left = 296
     Top = 287
     Width = 12
@@ -397,11 +445,13 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to'
   end
   object iweReferenceTo: TIWEdit
+    AlignWithMargins = False
     Left = 320
     Top = 285
     Width = 59
@@ -413,12 +463,14 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweReferenceTo'
     SubmitOnAsyncEvent = True
     TabOrder = 5
     Text = 'zz'
   end
   object IWText2: TIWText
+    AlignWithMargins = False
     Left = 422
     Top = 294
     Width = 247
@@ -429,6 +481,7 @@ object ISFNewRecord2: TISFNewRecord2
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWText1'
     Lines.Strings = (
       
@@ -482,9 +535,6 @@ object ISFNewRecord2: TISFNewRecord2
         inherited iwrSignInOut: TIWRegion
           Width = 689
           ExplicitWidth = 689
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

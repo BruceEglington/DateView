@@ -1,0 +1,21 @@
+object ISFTopBar: TISFTopBar
+  Left = 0
+  Top = 0
+  Width = 984
+  Height = 55
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  Constraints.MaxHeight = 55
+  Constraints.MinHeight = 55
+  Constraints.MinWidth = 600
+  Color = clNone
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Arial'
+  Font.Style = []
+  ParentColor = False
+  ParentFont = False
+  TabOrder = 0
+  TabStop = True
+end

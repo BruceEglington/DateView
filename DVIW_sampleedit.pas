@@ -110,7 +110,7 @@ begin
     iwbReturn.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsBrowse]);
     iwbSwopLatitudeLongitude.Visible := UserSession.CanModify and (dmDV.cdsSmpLoc.State in [dsEdit,dsInsert]);
   end;
-  dmUser.SetDeveloperData('in AppFormRender');
+  //dmUser.SetDeveloperData('in AppFormRender');
 end;
 
 procedure TISFSampleEdit.IWAppFormCreate(Sender: TObject);
@@ -118,11 +118,11 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-  dmUser.SetDeveloperData('in AppFormCreate');
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    //dmUser.SetDeveloperData('in AppFormCreate');
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   //dmUser.SetDeveloperData('after inserting default new sample '+UserSession.ParameterChosen);
-  dmUser.SetDeveloperData('Sample chosen is '+UserSession.ParameterChosen);
+  //dmUser.SetDeveloperData('Sample chosen is '+UserSession.ParameterChosen);
   dmDV.cdsSmpLoc.Locate('SAMPLENO',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
   dmDV.cdsContinents.Open;
   dmDV.cdsCountries.Open;

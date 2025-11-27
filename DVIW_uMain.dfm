@@ -219,7 +219,6 @@ object ISFMain: TISFMain
         Top = 6
         Width = 117
         Height = 25
-        Visible = False
         Caption = 'Permissions'
         Color = clBtnFace
         FriendlyName = 'iwbPermissions'
@@ -232,7 +231,6 @@ object ISFMain: TISFMain
         Top = 32
         Width = 117
         Height = 25
-        Visible = False
         Caption = 'Check Ini File'
         Color = clBtnFace
         FriendlyName = 'iwbCheckGetIniFile'
@@ -409,12 +407,7 @@ object ISFMain: TISFMain
             Width = 831
             ExplicitWidth = 831
             inherited lblWelcome: TIWLabel
-              Left = 510
-              Width = 64
-              Alignment = taRightJustify
-              NoWrap = True
               ExplicitLeft = 510
-              ExplicitWidth = 64
             end
           end
         end
@@ -423,7 +416,6 @@ object ISFMain: TISFMain
           ExplicitWidth = 972
           inherited iwlSignOut: TIWLink
             OnClick = TopBariwlSignOutClick
-            TabOrder = -1
           end
           inherited lnkSignIn: TIWLink
             OnClick = TopBarlnkSignInClick

@@ -17,6 +17,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 239
     Top = 72
     Width = 108
@@ -32,6 +33,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Orientation = orHorizontal
   end
   object iwDBlcbIncluded: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 168
     Width = 279
@@ -41,6 +43,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -53,9 +56,9 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     ListField = 'YESNO'
     ListSource = dmDV.dsYesNo
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 108
@@ -65,11 +68,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 7
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 69
@@ -78,12 +83,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Sample no.'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 170
     Width = 51
@@ -92,12 +99,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Included'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 198
     Width = 70
@@ -106,12 +115,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Iso. System'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 226
     Width = 48
@@ -120,12 +131,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Latitude'
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 254
     Width = 60
@@ -134,12 +147,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Longitude'
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 280
     Width = 79
@@ -148,12 +163,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Elevation (m)'
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 225
     Top = 230
     Width = 57
@@ -162,12 +179,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object IWLabel8: TIWLabel
+    AlignWithMargins = False
     Left = 223
     Top = 256
     Width = 57
@@ -176,12 +195,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object IWLabel9: TIWLabel
+    AlignWithMargins = False
     Left = 225
     Top = 280
     Width = 57
@@ -190,12 +211,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object iwDBeLatitude: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 226
     Width = 78
@@ -208,6 +231,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -218,6 +242,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBeLongitude: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 254
     Width = 78
@@ -230,6 +255,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -240,6 +266,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBeElevation: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 280
     Width = 78
@@ -252,6 +279,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -262,6 +290,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBeLatitudePrecision: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 228
     Width = 78
@@ -274,6 +303,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -284,6 +314,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBeLongitudePrecision: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 254
     Width = 78
@@ -296,6 +327,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -306,6 +338,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBeElevationPrecision: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 280
     Width = 78
@@ -318,6 +351,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
@@ -328,6 +362,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBlcbIsoSystem: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 196
     Width = 279
@@ -337,6 +372,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -349,9 +385,9 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     ListField = 'ISOSYSTEMNAME'
     ListSource = dmDV.dsIsoSystems
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 356
     Top = 74
     Width = 108
@@ -361,11 +397,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 13
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 473
     Top = 74
     Width = 108
@@ -375,11 +413,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelChanges'
     TabOrder = 14
     OnClick = iwbCancelChangesClick
   end
   object iwbDeleteSample: TIWButton
+    AlignWithMargins = False
     Left = 708
     Top = 73
     Width = 108
@@ -390,11 +430,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
     TabOrder = 11
     OnClick = iwbDeleteSampleClick
   end
   object iwDBlcbSample: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 279
@@ -404,6 +446,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     OnChange = iwDBlcbSampleChange
     Editable = False
@@ -417,9 +460,9 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     ListField = 'SAMPLENO'
     ListSource = dmDV.dsSamples
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel10: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 140
     Width = 48
@@ -428,12 +471,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Fraction'
   end
   object IWText1: TIWText
+    AlignWithMargins = False
     Left = 422
     Top = 180
     Width = 339
@@ -444,6 +489,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWText1'
     Lines.Strings = (
       ' 1 second = 0.00028 decimal degrees'
@@ -459,6 +505,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     WantReturns = True
   end
   object iwbAdd: TIWButton
+    AlignWithMargins = False
     Left = 590
     Top = 73
     Width = 108
@@ -468,11 +515,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAdd'
     TabOrder = 12
     OnClick = iwbAddClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 122
     Top = 74
     Width = 108
@@ -482,11 +531,13 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 15
     OnClick = iwbEditClick
   end
   object IWLabel11: TIWLabel
+    AlignWithMargins = False
     Left = 432
     Top = 110
     Width = 118
@@ -495,12 +546,14 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Original sample no.'
   end
   object iwDBeOriginalNo: TIWDBEdit
+    AlignWithMargins = False
     Left = 553
     Top = 110
     Width = 140
@@ -512,6 +565,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeOriginalNo'
     SubmitOnAsyncEvent = True
     TabOrder = 16
@@ -521,6 +575,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     PasswordPrompt = False
   end
   object iwDBlcbFrac: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 279
@@ -530,6 +585,7 @@ object ISFSmpRegEdit: TISFSmpRegEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -588,9 +644,6 @@ object ISFSmpRegEdit: TISFSmpRegEdit
         inherited iwrSignInOut: TIWRegion
           Width = 831
           ExplicitWidth = 831
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

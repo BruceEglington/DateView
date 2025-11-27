@@ -17,6 +17,7 @@ object ISFUserWhoFor: TISFUserWhoFor
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 229
     Top = 70
     Width = 108
@@ -33,6 +34,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Orientation = orHorizontal
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 60
@@ -44,6 +46,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -53,6 +56,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 98
@@ -62,11 +66,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 7
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 13
@@ -75,12 +81,14 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'ID'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 144
     Width = 50
@@ -89,12 +97,14 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Who For'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 264
@@ -106,6 +116,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 3
@@ -115,6 +126,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     PasswordPrompt = False
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 98
@@ -124,11 +136,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 98
@@ -138,11 +152,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 75
     Width = 98
@@ -153,11 +169,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 6
     OnClick = iwbDeleteClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 98
@@ -167,11 +185,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 1
     OnClick = iwbEditClick
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 32
     Top = 183
     Width = 97
@@ -184,6 +204,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -193,6 +214,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 158
     Top = 183
     Width = 65
@@ -205,6 +227,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -214,6 +237,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Caption = 'Next page'
   end
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 32
     Top = 200
     Width = 553
@@ -230,10 +254,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -244,6 +271,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -252,7 +280,6 @@ object ISFUserWhoFor: TISFUserWhoFor
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'WHOFORID'
@@ -264,6 +291,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -282,6 +310,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -290,7 +319,6 @@ object ISFUserWhoFor: TISFUserWhoFor
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'WHOFOR'
@@ -302,6 +330,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -320,6 +349,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -328,7 +358,6 @@ object ISFUserWhoFor: TISFUserWhoFor
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'OWNER'
@@ -340,6 +369,7 @@ object ISFUserWhoFor: TISFUserWhoFor
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -367,6 +397,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     RowCurrentColor = clWebYELLOW
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 446
     Top = 186
     Width = 137
@@ -376,12 +407,14 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwbNew: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 106
     Width = 98
@@ -391,11 +424,13 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 10
     OnClick = iwbNewClick
   end
   object iwbPublish: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 137
     Width = 98
@@ -405,6 +440,7 @@ object ISFUserWhoFor: TISFUserWhoFor
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 11
     OnClick = iwbPublishClick
@@ -453,9 +489,6 @@ object ISFUserWhoFor: TISFUserWhoFor
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

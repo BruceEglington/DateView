@@ -169,8 +169,9 @@ procedure TISFDefineQuery2.IWAppFormCreate(Sender: TObject);
 begin
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
+  TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   iwlblErrorTop.Visible := false;
   iwlblErrorBottom.Visible := false;
   iwlblErrorEpsilonFrom.Visible := false;
@@ -846,10 +847,6 @@ end;
 
 procedure TISFDefineQuery2.IWAppFormRender(Sender: TObject);
 begin
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
 end;
 

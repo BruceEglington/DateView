@@ -2,37 +2,46 @@ unit ServerController;
 
 interface
 
+
 uses
-  System.SysUtils, System.Classes, IWServerControllerBase, IWBaseForm, Web.HTTPApp,
+  System.SysUtils, System.Classes, IWServerControllerBase, IWBaseForm,
+ //Web.HTTPApp,
+  System.DateUtils,
   // For OnNewSession Event
+  //UserSessionUnit,
   IWApplication, IWAppForm, IW.Browser.Browser,
   IW.HTTP.Request, IW.HTTP.Reply,
+  IWGlobal,
   //IW.Browser.Browser,
   IW.Browser.Other, IW.Browser.Firefox, IW.Browser.FirefoxMobile,
   IW.Browser.InternetExplorer, IW.Browser.Webkit, IW.Browser.SafariMobile,
   IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
   IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
   IW.Browser.SearchEngine,
-  Winapi.Windows,
-  IWGlobal,
+  //Winapi.Windows,
   // For OnNewSession Event
   System.IniFiles,
+  IW.Common.AppInfo,
   midaslib,
   DVIW_constants,
-  usrIW_dm, DVIW_dmopt, DVIW_dm, DVIW_dmstrat,
+  usrIW_dm,
+  DVIW_dmopt, DVIW_dm, DVIW_dmstrat,
   DVIW_dmdata, DVIW_dmgraphics;
 
 type
   TIWServerController = class(TIWServerControllerBase)
-    procedure IWServerControllerBaseNewSession(ASession: TIWApplication);
     procedure IWServerControllerBaseGetMainForm(var vMainForm: TIWBaseForm);
+    procedure IWServerControllerBaseNewSession(ASession: TIWApplication);
     procedure IWServerControllerBaseBrowserCheck(aSession: TIWApplication;
       var rBrowser: TBrowser);
   private
+    { Private declarations }
     procedure GetIniFile;
   public
+    { Public declarations }
   end;
 
+type
   TExportType = (
     et_Xls,
     et_Xlsx,
@@ -41,17 +50,28 @@ type
     et_Html
   );
 
+  // This is a class which you can add variables to that are specific to the user. Add variables
+  // to this class instead of creating global variables. This object can references by using:
+  //   UserSession
+  // So if a variable named UserName of type string is added, it can be referenced by using:
+  //   UserSession.UserName
+  // Such variables are similar to globals in a normal application, however these variables are
+  // specific to each user.
+  //
+  // See the IntraWeb Manual for more details.
   TUserSession = class(TComponent)
   public
+    //UserSessionID : integer;
     LoggedIn : boolean; // User logged in or not
     LastVisitedForm : TIWAppFormClass; // This is interesting for the Login form only
 
-    UserID : widestring;
+    UserID,
+	UserPassword,
+	UserDisplayName : widestring;
+
     ThisProgram : widestring;
     ThisProgramName : widestring;
-    UserPassword,
-    UserDisplayName : widestring;
-    //URLonTerminate : string;
+    ProgTitle : string;
     CanView : boolean;
     CanModify : boolean;
     CanInsert : boolean;
@@ -61,9 +81,11 @@ type
     CanExport : boolean;
     CanViewPlus : boolean;
     CanModifyPlus : boolean;
-    //UserSessionID : integer;
     ThisLoginTime : TDateTime;
     DoMemCheck : boolean;
+
+    NumRecordsFound : integer;
+
     RecordChosen : string;
     ParameterChosen: string;
     UnitSender : string;
@@ -75,13 +97,18 @@ type
     NumRecordsPerPage : integer;
     PageNum, PageNumTotal : integer;
 
-    NumRecordsFound : integer;
     AgeChosen : double;
 
-    //IncludePlateModelValues : boolean;
-    IncludeGDUValues : boolean;
     IncludeContinentValues : boolean;
+    ContinentValues : TStringList;
     IncludeAreaValues : boolean;
+    AreaValues : TStringList;
+    IncludeReferenceValues: Boolean;
+    ReferenceValues: TStringList;
+    IncludeValidationValues: Boolean;
+    ValidationValues: TStringList;
+    IncludeWhoForValues: Boolean;
+    WhoForValues: TStringList;
     IncludeUnitValues: Boolean;
     IncludeLithologyValues: Boolean;
     IncludeMaterialValues: Boolean;
@@ -94,12 +121,9 @@ type
     IncludeProvinceValues: Boolean;
     IncludeTerraneValues: Boolean;
     IncludeOrogenicPeriodValues: Boolean;
-    IncludeReferenceValues: Boolean;
     IncludeChemicalTypeValues: Boolean;
     IncludeBoundaryPositionValues: Boolean;
     IncludeBoundaryValues: Boolean;
-    IncludeValidationValues: Boolean;
-    IncludeWhoForValues: Boolean;
     IncludePlateValues: Boolean;
     IncludeAgeUnitsValue: Boolean;
     AgeUnitsValue: string;
@@ -108,11 +132,11 @@ type
     IncludeIsochronOnlyValue: Boolean;
     IncludeIgneous, IncludeSedimentary,
     IncludeMetamorphicAndOther : boolean;
+    //IncludePlateModelValues : boolean;
+    IncludeGDUValues : boolean;
 
     PlateModelValue : String;
     GDUValues : TStringList;
-    ContinentValues : TStringList;
-    AreaValues : TStringList;
     UnitValues: TStringList;
     LithologyValues: TStringList;
     MaterialValues: TStringList;
@@ -125,12 +149,9 @@ type
     ProvinceValues: TStringList;
     TerraneValues: TStringList;
     OrogenicPeriodValues: TStringList;
-    ReferenceValues: TStringList;
     ChemicalTypeValues: TStringList;
     BoundaryPositionValues: TStringList;
     BoundaryValues: TStringList;
-    ValidationValues: TStringList;
-    WhoForValues: TStringList;
     //PlateValues: TStringList;
     DecayUncertaintyValues: TStringList;
     UsersContributedValues : TStringList;
@@ -245,11 +266,7 @@ type
     destructor Destroy; override;
     procedure SetCookies;
     procedure GetCookies;
-    function LocalDateTimeFromUTCDateTime(const UTCDateTime: TDateTime): TDateTime;
     procedure GetStringsValues(AStrings: TStrings; AKey: String; AValueList: TStringList);
-    procedure MakeDonation(AForm: TIWAppFormClass);
-    procedure AfterDonate;
-    procedure CheckGetIniFile;
   end;
 
 // Procs
@@ -263,12 +280,21 @@ implementation
 
 uses
   System.IOUtils,
-  IWInit, usr_insufficientright, usr_uDBInterface, usr_uDonate,
-  DVIW_uMain, usr_uForgotten, usr_uLogin, usr_uRegister, usr_constants;
+  IWInit,
+  usr_insufficientright,
+  usr_uLogin, usr_uRegister,
+  usr_uDBInterface, 
+  DVIW_uMain, usr_uForgotten,
+  usr_constants;
 
 function IWServerController: TIWServerController;
 begin
   Result := TIWServerController(GServerController);
+end;
+
+function UserSession: TUserSession;
+begin
+  Result := TUserSession(WebApplication.Data);
 end;
 
 procedure TIWServerController.IWServerControllerBaseBrowserCheck(
@@ -359,107 +385,10 @@ begin
   GetIniFile;
 end;
 
-function UserSession: TUserSession;
-begin
-  Result := TUserSession(WebApplication.Data);
-end;
-
-{
-LocalDateTime := TTimeZone.Local.ToLocalTime(UniversalDateTime);
-In the other direction use ToUniversalTime
-SystemTimeToTzSpecificLocalTimeEx instead of FileTimeToLocalFileTime
-
-
-
-you can use TzSpecificLocalTimeToSystemTime and SystemTimeToTzSpecificLocalTime from kernel32.
-
-var
-  Form1: TForm1;
-
-function TzSpecificLocalTimeToSystemTime(lpTimeZoneInformation: PTimeZoneInformation; var lpLocalTime, lpUniversalTime: TSystemTime): BOOL; stdcall;
-function SystemTimeToTzSpecificLocalTime(lpTimeZoneInformation: PTimeZoneInformation; var lpUniversalTime,lpLocalTime: TSystemTime): BOOL; stdcall;
-
-implementation
-
-function TzSpecificLocalTimeToSystemTime; external kernel32 name 'TzSpecificLocalTimeToSystemTime';
-function SystemTimeToTzSpecificLocalTime; external kernel32 name 'SystemTimeToTzSpecificLocalTime';
-
-
-Function DateTime2UnivDateTime(d:TDateTime):TDateTime;
-var
- TZI:TTimeZoneInformation;
- LocalTime, UniversalTime:TSystemTime;
-begin
-  GetTimeZoneInformation(tzi);
-  DateTimeToSystemTime(d,LocalTime);
-  TzSpecificLocalTimeToSystemTime(@tzi,LocalTime,UniversalTime);
-  Result := SystemTimeToDateTime(UniversalTime);
-
-end;
-
-Function UnivDateTime2LocalDateTime(d:TDateTime):TDateTime;
-var
- TZI:TTimeZoneInformation;
- LocalTime, UniversalTime:TSystemTime;
-begin
-  GetTimeZoneInformation(tzi);
-  DateTimeToSystemTime(d,UniversalTime);
-  SystemTimeToTzSpecificLocalTime(@tzi,UniversalTime,LocalTime);
-  Result := SystemTimeToDateTime(LocalTime);
-end;
-
-
-procedure TForm1.Button1Click(Sender: TObject);
-var
-
- Date,Univdate,DateAgain:TDateTime;
-
-begin
-  Date := Now;
-  Univdate := DateTime2UnivDateTime(Date);
-  DateAgain := UnivDateTime2LocalDateTime(Univdate);
-  Showmessage(DateTimeToStr(Date) +#13#10 + DateTimeToStr(Univdate)+#13#10 + DateTimeToStr(DateAgain));
-end;
-
-There is a small mistake in the code above. In UnivDateTime2LocalDateTime,
-the line DateTimeToSystemTime(d,LocalTime); should read DateTimeToSystemTime(d,UniversalTime);
-
-
-
-
-function NowUTC: TDateTime;
-Var UTC: TSystemTime;
-begin
-  GetSystemTime(UTC);
-  Result := SystemTimeToDateTime(UTC);
-end;
-
-function UTCToLocal(UTC: TDateTime): TDateTime;
-begin
-  Result := IncMinute(UTC, UTCToLocalTimeOffsetMinutes);
-end;
-
-function UTCToLocalTimeOffsetMinutes: Int16;
-Var UTC: TSystemTime;
-    UTC2: TSystemTime;
-    t  : TDateTime;
-    t2 : TDateTime;
-begin
-  GetSystemTime(UTC);
-  GetLocalTime(UTC2);
-  t  := SystemTimeToDateTime(UTC);
-  t2 := SystemTimeToDateTime(UTC2);
-  Result := System.DateUtils.MinutesBetween(t,t2);
-end;
-
-
-}
 
 procedure TIWServerController.GetIniFile;
 var
   AppIni   : TIniFile;
-  //tmpStr   : string;
-  //iCode    : integer;
   DebugButtons,
   DebugDelayConnections,
   URLBase,
@@ -473,9 +402,7 @@ var
   StratDBPath,
   DateViewPath,
   DBUserName, DBPassword,
-  //DBSpecific,
   DBSQLDialectStr,DBCharSet,
-  //DataPath   : string;
   PublicPath : string;
 begin
   // --------------------------------------------------------------------------------
@@ -483,6 +410,7 @@ begin
   // uses GetPublicPath i.e. based on INI file in the ProgramData folder of subfolders
   //
   // --------------------------------------------------------------------------------
+
   dmUser.sqlcWebUser.Connected := false;
   dmOpt.sqlcDateView.Connected := false;
   dmDV.sqlcDateView.Connected := false;
@@ -491,42 +419,42 @@ begin
   dmdDV.sqlcDateView.Connected := false;
   URLBase := '/';
   DBMonitor := 'Active';
-  UserSession.ShowDebugButtons := false;
+  UserSession.ShowDebugButtons := true;
   UserSession.DelayConnections := false;
-  UserControlPath := 'c:\Data\Firebird\UserControl2025v30_utf8.fdb';
-  StratDBPath := 'c:\Data\Firebird\StratDB2025v30_utf8.fdb';
-  DateViewPath := 'c:\Data\Firebird\DateView2025v30_utf8.fdb';
+  UserControlPath := 'c:\Data\Firebird\UserControl2025v50_utf8.fdb';
+  StratDBPath := 'c:\Data\Firebird\StratDB2025v50_utf8.fdb';
+  DateViewPath := 'c:\Data\Firebird\DateView2025v50_utf8.fdb';
   DriverName := 'DevartFirebird';
-  LibraryName := 'dbexpida41.dll';
-  VendorLib := 'fbclient.dll';
+  LibraryName := 'c:\exe32\dbexpida41.dll';
+  VendorLib := 'c:\exe32\fbclient.dll';
   GetDriverFunc := 'getSQLDriverFirebird';
   DBUserName := 'SYSDBA';
-  DBPassword := 'masterkey';
+  DBPassword := 'V0lcano3^';
   DBSQLDialectStr := '3';
-  DBCharSet := 'ASCII';
+  DBCharSet := 'UTF8';
   PublicPath := TPath.GetPublicPath;
   //PublicPath := TPath.GetHomePath;  //changed to HomePath to see if this is cause of program not working on Thera2
   CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
   IniFilePath := CommonFilePath;
   IniFilename := IniFilePath + 'dateview.ini';
   AppIni := TIniFile.Create(IniFilename);
-  //try
+  try
     URLBase := AppIni.ReadString('URLBase','URLBase','/dateview');
     if (URLBase = '/') then URLBase := '';
-    UserControlPath := AppIni.ReadString('Paths','UserControl path','c:\Data\Firebird\UserControl2025v30_utf8.fdb');
-    StratDBPath := AppIni.ReadString('Paths','StratDB path','c:\Data\Firebird\StratDB2025v30_utf8.fdb');
-    DateViewPath := AppIni.ReadString('Paths','DateView path','c:\Data\Firebird\DateView2025v30_utf8.fdb');
-    LibraryName := AppIni.ReadString('Parameters','LibraryName','dbexpida41.dll');
-    VendorLib := AppIni.ReadString('Parameters','VendorLib','fbclient.dll');
-    GetDriverFunc := AppIni.ReadString('Parameters','GetDriverFunc','getSQLDriverFirebird');
+    UserControlPath := AppIni.ReadString('Paths','UserControl path','c:\Data\Firebird\UserControl2025v50_utf8.fdb');
+    StratDBPath := AppIni.ReadString('Paths','StratDB path','c:\Data\Firebird\StratDB2025v50_utf8.fdb');
+    DateViewPath := AppIni.ReadString('Paths','DateView path','c:\Data\Firebird\DateView2025v50_utf8.fdb');
     DriverName := AppIni.ReadString('Parameters','DriverName','DevartFirebird');
+    LibraryName := AppIni.ReadString('Parameters','LibraryName','c:\exe32\dbexpida41.dll');
+    VendorLib := AppIni.ReadString('Parameters','VendorLib','c:\exe32\fbclient.dll');
+    GetDriverFunc := AppIni.ReadString('Parameters','GetDriverFunc','getSQLDriverFirebird');
     DBUserName := AppIni.ReadString('Parameters','User_Name','SYSDBA');
-    DBPassword := AppIni.ReadString('Parameters','Password','Zbxc456~');
+    DBPassword := AppIni.ReadString('Parameters','Password','V0lcano3^');
     DBSQLDialectStr := AppIni.ReadString('Parameters','SQLDialect','3');
     DBCharSet := AppIni.ReadString('Parameters','Charset','UTF8');
-    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','Inactive');
-    DebugButtons := AppIni.ReadString('Debug','Buttons','InActive');
-    DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
+    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','Active');
+    DebugButtons := AppIni.ReadString('Debug','Buttons','Active');
+    //DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
     if (DebugButtons = 'Active') then UserSession.ShowDebugButtons := true;
     if (DebugDelayConnections = 'true') then UserSession.DelayConnections := true;
 
@@ -536,7 +464,7 @@ begin
     HostPort := AppIni.ReadString('Email','HostPort','587');
     EmailUserID := AppIni.ReadString('Email','EmailUserID','aht820@usask.ca');
     EmailPassword := AppIni.ReadString('Email','EmailPassword','nuC7Sy3Af4bu');
-    URLonTerminate := AppIni.ReadString('URL','URLonTerminate','https://sil.usask.ca');
+    URLonTerminate := AppIni.ReadString('URL','URLonTerminate','http://sil.usask.ca');
     FromEmailAddress := Trim(FromEmailAddress);
     FromName := Trim(FromName);
     HostName := Trim(HostName);
@@ -545,236 +473,133 @@ begin
     EmailPassword := Trim(EmailPassword);
     URLonTerminate := Trim(URLonTerminate);
     //define connection parameters for UserControl connection
-    dmUser.sqlcWebUser.Connected := false;
-    dmUser.sqlcWebUser.Params.Clear;
-    dmUser.sqlcWebUser.DriverName := DriverName;
-    dmUser.sqlcWebUser.LibraryName := LibraryName;
-    dmUser.sqlcWebUser.VendorLib := VendorLib;
-    dmUser.sqlcWebUser.GetDriverFunc := GetDriverFunc;
-    dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
-    dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
-    dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
-    dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
-    dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
-    dmUser.sqlcWebUser.Params.Append('LocaleCode=0000');
-    dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmUser.sqlcWebUser.Params.Append('WaitOnLocks=True');
-    //dmUser.sqlcWebUser.Params.Append('CharLength=1');
-    //dmUser.sqlcWebUser.Params.Append('EnableBCD=True');
-    //dmUser.sqlcWebUser.Params.Append('OptimizedNumerics=False');
-    //dmUser.sqlcWebUser.Params.Append('LongStrings=True');
-    //dmUser.sqlcWebUser.Params.Append('UseQuoteChar=False');
-    dmUser.sqlcWebUser.Params.Append('UseUnicode=true');
+    try
+      dmUser.sqlcWebUser.Connected := false;
+      dmUser.sqlcWebUser.Params.Clear;
+      dmUser.sqlcWebUser.Params.Append('LibraryName='+LibraryName);
+      dmUser.sqlcWebUser.Params.Append('VendorLib='+VendorLib);
+      dmUser.sqlcWebUser.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
+
+      dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
+      dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
+      dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
+      dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
+      //dmUser.sqlcWebUser.Params.Append('LocaleCode=0000');
+      dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmUser.sqlcWebUser.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmUser.sqlcWebUser');
+    end;
     //define connection parameters for StratDB connection
-    dmStrat.sqlcStrat.Connected := false;
-    dmStrat.sqlcStrat.Params.Clear;
-    dmStrat.sqlcStrat.LibraryName := LibraryName;
-    dmStrat.sqlcStrat.VendorLib := VendorLib;
-    dmStrat.sqlcStrat.GetDriverFunc := GetDriverFunc;
-    dmStrat.sqlcStrat.Params.Append('DriverName='+DriverName);
-    dmStrat.sqlcStrat.Params.Append('Database='+StratDBPath);
-    dmStrat.sqlcStrat.Params.Append('User_Name='+DBUserName);
-    dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
-    dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
-    dmStrat.sqlcStrat.Params.Append('LocaleCode=0000');
-    dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmStrat.sqlcStrat.Params.Append('WaitOnLocks=True');
-    //dmStrat.sqlcStrat.Params.Append('CharLength=1');
-    //dmStrat.sqlcStrat.Params.Append('EnableBCD=True');
-    //dmStrat.sqlcStrat.Params.Append('OptimizedNumerics=False');
-    //dmStrat.sqlcStrat.Params.Append('LongStrings=True');
-    //dmStrat.sqlcStrat.Params.Append('UseQuoteChar=False');
-    //dmStrat.sqlcStrat.Params.Append('FetchAll=False');
-    dmStrat.sqlcStrat.Params.Append('UseUnicode=true');
-    //define connection parameters for StratDB charts connection
-    dmgDV.sqlcDateView.Connected := false;
-    dmgDV.sqlcDateView.Params.Clear;
-    dmgDV.sqlcDateView.LibraryName := LibraryName;
-    dmgDV.sqlcDateView.VendorLib := VendorLib;
-    dmgDV.sqlcDateView.GetDriverFunc := GetDriverFunc;
-    dmgDV.sqlcDateView.Params.Append('DriverName='+DriverName);
-    dmgDV.sqlcDateView.Params.Append('Database='+DateViewPath);
-    dmgDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
-    dmgDV.sqlcDateView.Params.Append('Password='+DBPassword);
-    dmgDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmgDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
-    dmgDV.sqlcDateView.Params.Append('LocaleCode=0000');
-    dmgDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmgDV.sqlcDateView.Params.Append('WaitOnLocks=True');
-    //dmgDV.sqlcDateView.Params.Append('CharLength=1');
-    //dmgDV.sqlcDateView.Params.Append('EnableBCD=True');
-    //dmgDV.sqlcDateView.Params.Append('OptimizedNumerics=False');
-    //dmgDV.sqlcDateView.Params.Append('LongStrings=True');
-    //dmgDV.sqlcDateView.Params.Append('UseQuoteChar=False');
-    //dmgDV.sqlcDateView.Params.Append('FetchAll=False');
-    dmgDV.sqlcDateView.Params.Append('UseUnicode=true');
-    //define connection parameters for StratDB data connection
-    dmdDV.sqlcDateView.Connected := false;
-    dmdDV.sqlcDateView.Params.Clear;
-    dmdDV.sqlcDateView.LibraryName := LibraryName;
-    dmdDV.sqlcDateView.VendorLib := VendorLib;
-    dmdDV.sqlcDateView.GetDriverFunc := GetDriverFunc;
-    dmdDV.sqlcDateView.Params.Append('DriverName='+DriverName);
-    dmdDV.sqlcDateView.Params.Append('Database='+DateViewPath);
-    dmdDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
-    dmdDV.sqlcDateView.Params.Append('Password='+DBPassword);
-    dmdDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmdDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
-    dmdDV.sqlcDateView.Params.Append('LocaleCode=0000');
-    dmdDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmdDV.sqlcDateView.Params.Append('WaitOnLocks=True');
-    //dmdDV.sqlcDateView.Params.Append('CharLength=1');
-    //dmdDV.sqlcDateView.Params.Append('EnableBCD=True');
-    //dmdDV.sqlcDateView.Params.Append('OptimizedNumerics=False');
-    //dmdDV.sqlcDateView.Params.Append('LongStrings=True');
-    //dmdDV.sqlcDateView.Params.Append('UseQuoteChar=False');
-    //dmdDV.sqlcDateView.Params.Append('FetchAll=False');
-    dmdDV.sqlcDateView.Params.Append('UseUnicode=true');
+    try
+      dmStrat.sqlcStrat.Connected := false;
+      dmStrat.sqlcStrat.Params.Clear;
+      dmStrat.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStrat.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStrat.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStrat.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStrat.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStrat.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStrat.sqlcStrat.Params.Append('LocaleCode=0000');
+      dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStrat.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStrat.sqlcStrat');
+    end;
     //define connection parameters for DateView connection
-    dmDV.sqlcDateView.Connected := false;
-    dmDV.sqlcDateView.Params.Clear;
-    dmDV.sqlcDateView.LibraryName := LibraryName;
-    dmDV.sqlcDateView.VendorLib := VendorLib;
-    dmDV.sqlcDateView.GetDriverFunc := GetDriverFunc;
-    dmDV.sqlcDateView.Params.Append('DriverName='+DriverName);
-    dmDV.sqlcDateView.Params.Append('Database='+DateViewPath);
-    dmDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
-    dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
-    dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
-    dmDV.sqlcDateView.Params.Append('LocaleCode=0000');
-    dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmDV.sqlcDateView.Params.Append('WaitOnLocks=True');
-    //dmDV.sqlcDateView.Params.Append('CharLength=1');
-    //dmDV.sqlcDateView.Params.Append('EnableBCD=True');
-    //dmDV.sqlcDateView.Params.Append('OptimizedNumerics=False');
-    //dmDV.sqlcDateView.Params.Append('LongStrings=True');
-    //dmDV.sqlcDateView.Params.Append('UseQuoteChar=False');
-    //dmDV.sqlcDateView.Params.Append('FetchAll=False');
-    dmDV.sqlcDateView.Params.Append('UseUnicode=true');
-    //define connection parameters for Options connection
-    dmOpt.sqlcDateView.Connected := false;
-    dmOpt.sqlcDateView.Params.Clear;
-    dmOpt.sqlcDateView.LibraryName := LibraryName;
-    dmOpt.sqlcDateView.VendorLib := VendorLib;
-    dmOpt.sqlcDateView.GetDriverFunc := GetDriverFunc;
-    dmOpt.sqlcDateView.Params.Append('DriverName='+DriverName);
-    dmOpt.sqlcDateView.Params.Append('Database='+DateViewPath);
-    dmOpt.sqlcDateView.Params.Append('User_Name='+DBUserName);
-    dmOpt.sqlcDateView.Params.Append('Password='+DBPassword);
-    dmOpt.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
-    dmOpt.sqlcDateView.Params.Append('Charset='+DBCharSet);
-    dmOpt.sqlcDateView.Params.Append('LocaleCode=0000');
-    dmOpt.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-    //dmOpt.sqlcDateView.Params.Append('WaitOnLocks=True');
-    //dmOpt.sqlcDateView.Params.Append('CharLength=1');
-    //dmOpt.sqlcDateView.Params.Append('EnableBCD=True');
-    //dmOpt.sqlcDateView.Params.Append('OptimizedNumerics=False');
-    //dmOpt.sqlcDateView.Params.Append('LongStrings=True');
-    //dmOpt.sqlcDateView.Params.Append('UseQuoteChar=False');
-    //dmOpt.sqlcDateView.Params.Append('FetchAll=False');
-    dmOpt.sqlcDateView.Params.Append('UseUnicode=true');
+    try
+      dmDV.sqlcDateView.Connected := false;
+      dmDV.sqlcDateView.Params.Clear;
+      dmDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmDV.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmDV.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmDV.sqlcDateView.Params.Append('LocaleCode=0000');
+      dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmDV.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmDV.sqlcDateView');
+    end;
+    //define connection parameters for DateView graphics connection
+    try
+      dmgDV.sqlcDateView.Connected := false;
+      dmgDV.sqlcDateView.Params.Clear;
+      dmgDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmgDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmgDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmgDV.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmgDV.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmgDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmgDV.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmgDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmgDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmgDV.sqlcDateView.Params.Append('LocaleCode=0000');
+      dmgDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmgDV.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dgmDV.sqlcDateView');
+    end;
+    //define connection parameters for DateView data connection
+    try
+      dmdDV.sqlcDateView.Connected := false;
+      dmdDV.sqlcDateView.Params.Clear;
+      dmdDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmdDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmdDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmdDV.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmdDV.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmdDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmdDV.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmdDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmdDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmdDV.sqlcDateView.Params.Append('LocaleCode=0000');
+      dmdDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmdDV.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dgmDV.sqlcDateView');
+    end;
+    //define connection parameters for DateView options connection
+    try
+      dmOpt.sqlcDateView.Connected := false;
+      dmOpt.sqlcDateView.Params.Clear;
+      dmOpt.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmOpt.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmOpt.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmOpt.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmOpt.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmOpt.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmOpt.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmOpt.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmOpt.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmOpt.sqlcDateView.Params.Append('LocaleCode=0000');
+      dmOpt.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmOpt.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dgmDV.sqlcDateView');
+    end;
     if (DBMonitor = 'Active') then
     begin
       dmUser.SQLMonitor1.Active := true;
       dmStrat.SQLMonitor1.Active := true;
-      dmgDV.SQLMonitor1.Active := true;
       dmDV.SQLMonitor1.Active := true;
       dmOpt.SQLMonitor1.Active := true;
     end else
     begin
       dmUser.SQLMonitor1.Active := false;
       dmStrat.SQLMonitor1.Active := false;
-      dmgDV.SQLMonitor1.Active := false;
       dmDV.SQLMonitor1.Active := false;
       dmOpt.SQLMonitor1.Active := false;
     end;
-  //finally
-  //  AppIni.Free;
-  //end;
-  //dmUser.SetDeveloperData(dmDV.sqlcDateView.Params.Text);
-  //dmUser.SetDeveloperData('GetIniFile');
-  //dmUser.SetDeveloperData('IniFile = '+IniFileName);
-  //dmUser.SetDeveloperData('URLBase = '+URLBase);
-  //dmUser.SetDeveloperData('UserControlPath = '+UserControlPath);
-  //dmUser.SetDeveloperData('StratDBPath = '+StratDBPath);
-  //dmUser.SetDeveloperData('DateViewPath = '+DateViewPath);
-end;
-
-procedure TUserSession.CheckGetIniFile;
-var
-  AppIni   : TIniFile;
-  //tmpStr   : string;
-  //iCode    : integer;
-  DebugButtons,
-  DebugDelayConnections,
-  URLBase,
-  DBMonitor,
-  LibraryName, VendorLib, GetDriverFunc,
-  DriverName,
-  IniFileName,
-  IniFilePath,
-  CommonFilePath,
-  UserControlPath,
-  StratDBPath,
-  DateViewPath,
-  DBUserName, DBPassword,
-  //DBSpecific,
-  DBSQLDialectStr,DBCharSet,
-  //DataPath   : string;
-  PublicPath : string;
-begin
-  PublicPath := TPath.GetPublicPath;
-  //PublicPath := TPath.GetHomePath;
-  CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
-  URLBase := '/';
-  UserSession.ShowDebugButtons := true;
-  UserSession.DelayConnections := false;
-  UserControlPath := 'localhost:c:/Data/Firebird/UserControl.fdb';
-  StratDBPath := 'localhost:c:/Data/Firebird/StratDB.fdb';
-  DateViewPath := 'localhost:c:/Data/Firebird/DateView.fdb';
-  DriverName := 'DevartFirebird';
-  LibraryName := 'dbexpida41.dll';
-  VendorLib := 'fbclient.dll';
-  GetDriverFunc := 'getSQLDriverFirebird';
-  DBUserName := 'SYSDBA';
-  DBPassword := 'masterkey';
-  DBSQLDialectStr := '3';
-  DBCharSet := 'ASCII';
-  DBMonitor := 'Active';
-  IniFilePath := CommonFilePath;
-  IniFilename := IniFilePath + 'dateview.ini';
-  AppIni := TIniFile.Create(IniFilename);
-  try
-    URLBase := AppIni.ReadString('URLBase','URLBase','/dateview');
-    if (URLBase = '/') then URLBase := '';
-    UserControlPath := AppIni.ReadString('Paths','UserControl path','bromo2.usask.ca:s:/Data/Firebird/UserControl2015v25.fdb');
-    StratDBPath := AppIni.ReadString('Paths','StratDB path','bromo2.usask.ca:s:/Data/Firebird/StratDB2015v25.fdb');
-    DateViewPath := AppIni.ReadString('Paths','DateView path','bromo2.usask.ca:s:/Data/Firebird/DateView2015v25.fdb');
-    DriverName := AppIni.ReadString('Parameters','DriverName','DevartFirebird');
-    LibraryName := AppIni.ReadString('Parameters','LibraryName','dbexpida41.dll');
-    VendorLib := AppIni.ReadString('Parameters','VendorLib','fbclient.dll');
-    GetDriverFunc := AppIni.ReadString('Parameters','GetDriverFunc','getSQLDriverFirebird');
-    DBUserName := AppIni.ReadString('Parameters','User_Name','SYSDBA');
-    DBPassword := AppIni.ReadString('Parameters','Password','masterkey');
-    DBSQLDialectStr := AppIni.ReadString('Parameters','SQLDialect','3');
-    DBCharSet := AppIni.ReadString('Parameters','Charset','UTF8');
-    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','active');
-    DebugButtons := AppIni.ReadString('Debug','Buttons','Active');
-    DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
-    if (DebugButtons = 'Active') then UserSession.ShowDebugButtons := true;
-    if (DebugDelayConnections = 'true') then UserSession.DelayConnections := true;
-    //dmUser.SetDeveloperData('CheckGetIniFile');
-    //dmUser.SetDeveloperData('IniFile = '+IniFileName);
-    //dmUser.SetDeveloperData('URLBase = '+URLBase);
-    //dmUser.SetDeveloperData('UserControlPath = '+UserControlPath);
-    //dmUser.SetDeveloperData('StratDBPath = '+StratDBPath);
-    //dmUser.SetDeveloperData('DateViewPath = '+DateViewPath);
-    //dmUser.SetDeveloperData('DriverName = '+DriverName);
-    //dmUser.SetDeveloperData('SQLDialect = '+DBSQLDialectStr);
-    //dmUser.SetDeveloperData('Charset = '+DBCharset);
   finally
     AppIni.Free;
   end;
@@ -788,21 +613,17 @@ begin
   //UserSessionID := integer(@Self);
   LoggedIn := FALSE;
   dmUser := TdmUser.Create(Self);
-  dmOpt := TdmOpt.Create(Self);
-  dmDV := TdmDV.Create(Self);
-  dmStrat := TdmStrat.Create(Self);
-  dmgDV := TdmgDV.Create(Self);
-  dmdDV := TdmdDV.Create(Self);
   dmUser.sqlcWebUser.Connected := false;
-  dmOpt.sqlcDateView.Connected := false;
-  dmDV.sqlcDateView.Connected := false;
+  dmStrat := TdmStrat.Create(Self);
   dmStrat.sqlcStrat.Connected := false;
-  dmgDV.sqlcDateView.Connected := false;
+  dmDV := TdmDV.Create(Self);
+  dmDV.sqlcDateView.Connected := false;
+  dmdDV := TdmdDV.Create(Self);
   dmdDV.sqlcDateView.Connected := false;
-  //dmReplicate := TdmReplicate.Create(Self);
-  //dmReplicate.sqlcStrat.Connected := false;
-  PlateModelValue := '';
-  GDUValues := TStringList.Create;
+  dmgDV := TdmgDV.Create(Self);
+  dmgDV.sqlcDateView.Connected := false;
+  dmOpt := TdmOpt.Create(Self);
+  dmOpt.sqlcDateView.Connected := false;
   ContinentValues := TStringList.Create;
   AreaValues := TStringList.Create;
   UnitValues := TStringList.Create;
@@ -889,7 +710,7 @@ begin
   UserSession.IsFirstShow := true;
   UserSession.WhereAmI := 'AfterLogin';
   UserSession.ThisProgram := 'DateViewWeb';
-  //dmUser.SetDeveloperData('AfterLogin');
+  dmUser.SetDeveloperData('AfterLogin');
   //dmDV.SQLMonitor1.Active := false;
   //dmDV.SQLMonitor1.FileName := DefaultFlexCellFolder+dmDV.sqlcDateView.Name+'.TXT';
   //dmDV.SQLMonitor1.Active := true;
@@ -899,12 +720,12 @@ begin
   UserSession.CanModify := false;
   UserSession.CanInsert := false;
   UserSession.CanDelete := false;
-  UserSession.IsDeveloper := false;
+  UserSession.IsDeveloper := true;        //bme  - should be false here
   UserSession.CanValidate := false;
   UserSession.CanExport := false;
   UserSession.CanViewPlus := false;
   UserSession.CanModifyPlus := false;
-  //dmUser.SetDeveloperData('AfterLogin before CheckRights');
+  dmUser.SetDeveloperData('AfterLogin before CheckRights');
   //if not UserSession.IsDeveloper then dmUser.SetDeveloperData('IsDeveloper is FALSE')
   //                               else dmUser.SetDeveloperData('IsDeveloper is TRUE');
   CheckRights(UserSession.ThisProgram,UserSession.UserID,UserSession.UserPassword,
@@ -1839,22 +1660,6 @@ begin
   end;
 end;
 
-function TUserSession.LocalDateTimeFromUTCDateTime(const UTCDateTime: TDateTime): TDateTime;
-var
-  LocalSystemTime: TSystemTime;
-  UTCSystemTime: TSystemTime;
-  LocalFileTime: TFileTime;
-  UTCFileTime: TFileTime;
-begin
-  DateTimeToSystemTime(UTCDateTime, UTCSystemTime);
-  SystemTimeToFileTime(UTCSystemTime, UTCFileTime);
-  if FileTimeToLocalFileTime(UTCFileTime, LocalFileTime)
-  and FileTimeToSystemTime(LocalFileTime, LocalSystemTime) then begin
-    Result := SystemTimeToDateTime(LocalSystemTime);
-  end else begin
-    Result := UTCDateTime;  // Default to UTC if any conversion function fails.
-  end;
-end;
 
 procedure TUserSession.GetStringsValues(AStrings: TStrings;
                            AKey: String; AValueList: TStringList);
@@ -1876,26 +1681,10 @@ begin
   end;
 end;
 
-procedure TUserSession.MakeDonation(AForm: TIWAppFormClass);
-begin
-  LastVisitedForm := AForm;
-  TIWAppForm(WebApplication.ActiveForm).Release;
-  TISFDonate.Create(WebApplication).Show;
-end;
-
-procedure TUserSession.AfterDonate;
-begin
-  TIWAppForm(WebApplication.ActiveForm).Release;
-  if ( LastVisitedForm.ClassNameIs(TISFDonate.ClassName))  then
-    TISFMain.Create(WebApplication).Show
-  else
-    LastVisitedForm.Create(WebApplication).Show;
-end;
-
-
 
 initialization
   TIWServerController.SetServerControllerClass;
+
 
 end.
 

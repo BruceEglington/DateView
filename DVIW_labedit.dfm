@@ -17,6 +17,7 @@ object ISFLabEdit: TISFLabEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 229
     Top = 70
     Width = 108
@@ -33,6 +34,7 @@ object ISFLabEdit: TISFLabEdit
     Orientation = orHorizontal
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 121
@@ -44,6 +46,7 @@ object ISFLabEdit: TISFLabEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 1
@@ -53,6 +56,7 @@ object ISFLabEdit: TISFLabEdit
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 98
@@ -62,11 +66,13 @@ object ISFLabEdit: TISFLabEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 6
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 39
@@ -75,12 +81,14 @@ object ISFLabEdit: TISFLabEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Lab ID'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 142
     Width = 63
@@ -89,12 +97,14 @@ object ISFLabEdit: TISFLabEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Laboratory'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 406
@@ -106,6 +116,7 @@ object ISFLabEdit: TISFLabEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -115,6 +126,7 @@ object ISFLabEdit: TISFLabEdit
     PasswordPrompt = False
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 98
@@ -124,11 +136,13 @@ object ISFLabEdit: TISFLabEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 3
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 98
@@ -138,11 +152,13 @@ object ISFLabEdit: TISFLabEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 75
     Width = 98
@@ -153,11 +169,13 @@ object ISFLabEdit: TISFLabEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 5
     OnClick = iwbDeleteClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 98
@@ -167,6 +185,7 @@ object ISFLabEdit: TISFLabEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     OnClick = iwbEditClick
   end
@@ -214,9 +233,6 @@ object ISFLabEdit: TISFLabEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

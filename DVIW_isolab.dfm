@@ -17,6 +17,7 @@ object ISFIsoLab: TISFIsoLab
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 225
     Top = 72
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoLab: TISFIsoLab
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 94
@@ -41,11 +43,13 @@ object ISFIsoLab: TISFIsoLab
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 5
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 63
@@ -54,12 +58,14 @@ object ISFIsoLab: TISFIsoLab
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Laboratory'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 345
     Top = 74
     Width = 94
@@ -69,11 +75,13 @@ object ISFIsoLab: TISFIsoLab
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 2
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 458
     Top = 74
     Width = 94
@@ -83,11 +91,13 @@ object ISFIsoLab: TISFIsoLab
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 3
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 572
     Top = 73
     Width = 94
@@ -98,11 +108,13 @@ object ISFIsoLab: TISFIsoLab
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object iwDBlcbLab: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 120
     Width = 341
@@ -112,6 +124,7 @@ object ISFIsoLab: TISFIsoLab
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     OnChange = iwDBlcbLabChange
     Editable = False
     NonEditableAsLabel = True
@@ -124,9 +137,9 @@ object ISFIsoLab: TISFIsoLab
     ListField = 'LABORATORYNAME'
     ListSource = dmDV.dsLaboratories
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBgrid: TIWDBGrid
+    AlignWithMargins = False
     Left = 30
     Top = 168
     Width = 595
@@ -143,10 +156,13 @@ object ISFIsoLab: TISFIsoLab
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -157,6 +173,7 @@ object ISFIsoLab: TISFIsoLab
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -165,7 +182,6 @@ object ISFIsoLab: TISFIsoLab
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LABORATORYNAME'
@@ -176,6 +192,7 @@ object ISFIsoLab: TISFIsoLab
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -203,6 +220,7 @@ object ISFIsoLab: TISFIsoLab
     RowCurrentColor = clWebYELLOW
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 118
     Top = 74
     Width = 94
@@ -212,6 +230,7 @@ object ISFIsoLab: TISFIsoLab
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     OnClick = iwbEditClick
   end
@@ -259,9 +278,6 @@ object ISFIsoLab: TISFIsoLab
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

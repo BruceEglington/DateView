@@ -45,10 +45,6 @@ uses
 procedure TISFValidCheck.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   dmDV.cdsIsoValid2.Edit;
 end;
 
@@ -57,7 +53,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   iwbClearObjection.Visible := UserSession.CanValidate;
 end;

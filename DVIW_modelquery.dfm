@@ -17,6 +17,7 @@ object ISFModelQuery: TISFModelQuery
   DesignLeft = 2
   DesignTop = 2
   object iwbSubmit: TIWButton
+    AlignWithMargins = False
     Left = 210
     Top = 170
     Width = 75
@@ -26,10 +27,12 @@ object ISFModelQuery: TISFModelQuery
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmit'
     OnClick = iwbSubmitClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -39,6 +42,7 @@ object ISFModelQuery: TISFModelQuery
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -46,6 +50,7 @@ object ISFModelQuery: TISFModelQuery
     VAlign = vaMiddle
   end
   object iwcbIsoSystem: TIWComboBox
+    AlignWithMargins = False
     Left = 92
     Top = 113
     Width = 309
@@ -55,13 +60,14 @@ object ISFModelQuery: TISFModelQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NonEditableAsLabel = True
     TabOrder = 1
     ItemIndex = -1
     FriendlyName = 'iwcbIsoSystem'
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 94
     Top = 87
     Width = 96
@@ -70,6 +76,7 @@ object ISFModelQuery: TISFModelQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
@@ -119,9 +126,6 @@ object ISFModelQuery: TISFModelQuery
         inherited iwrSignInOut: TIWRegion
           Width = 727
           ExplicitWidth = 727
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

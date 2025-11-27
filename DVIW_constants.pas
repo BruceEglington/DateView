@@ -18,6 +18,14 @@ const
   ValueForCanModifyPlus = 'ModifyDateViewPlus';
   ValueForPublished = 'PUBL';
   ValueForCaptured = 'Capt';
+  ValueForDM2 = 'DM2';
+  ValueForDM = 'DM';
+  ValueForCrustalResidence = 'CrsRs';
+  ValueForZircon = 'zr';
+  ValueForModelInitialAtFormationAge = 'MdlRa';
+  ValueForLuHf = 'LuHf';
+  ValueForCHUR = 'CHUR';
+  ValueForCrustIntermediate = 'CCI';
 
   gbGrouping = 'User-defined Group';
   gbProvince = 'Province';
@@ -68,7 +76,7 @@ const
 
   MaxSamp    = 1000;
   MaxSeries  = 5;
-  MaxGuestRecords = 10;
+  MaxGuestRecords = 50;
   AgeTolerance : double = 20000.0;
   Steps        = 2500;
   SpectrumStartAge = 0.0;
@@ -80,7 +88,7 @@ const
   DefaultMissingValue = -999.99;
 
   NothingChosen = 'nothing';
-  Copyright1 = '(c) Dr Bruce Eglington (2004-2022)';
+  Copyright1 = '(c) Dr Bruce Eglington (2004-2025)';
   Copyright2 = 'DateView Geochronology Database';
 
 

@@ -16,7 +16,7 @@ object ISFDetailsEdit: TISFDetailsEdit
   LockOnSubmit = True
   ShowHint = True
   DesignLeft = 2
-  DesignTop = 2
+  DesignTop = -2629
   object IWLabel1: TIWLabel
     AlignWithMargins = False
     Left = 96
@@ -419,7 +419,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 30
+    TabOrder = 31
     AutoEditable = True
     DataField = 'SIGMAPERCENTDC1'
     DataSource = dmDV.dsResultsExtra
@@ -607,7 +607,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 31
+    TabOrder = 32
     AutoEditable = True
     DataField = 'DECAYCONST2'
     DataSource = dmDV.dsResultsExtra
@@ -645,7 +645,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 32
+    TabOrder = 33
     AutoEditable = True
     DataField = 'SIGMAPERCENTDC2'
     DataSource = dmDV.dsResultsExtra
@@ -695,7 +695,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCETYPE'
@@ -734,7 +733,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '20'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'REFNUM'
@@ -773,7 +771,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCESHORT'
@@ -803,7 +800,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -857,7 +854,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'VALIDATIONSTATUS'
@@ -898,7 +894,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DATEDONE'
@@ -937,7 +932,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DONEBY'
@@ -1035,7 +1029,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SAMPLENO'
@@ -1076,7 +1069,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'FRAC'
@@ -1115,7 +1107,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'INCLUDED'
@@ -1154,7 +1145,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LONGITUDE'
@@ -1194,7 +1184,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LATITUDE'
@@ -1234,7 +1223,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ELEVATION'
@@ -1274,7 +1262,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ORIGINALNO'
@@ -1313,7 +1300,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LITHOLOGY'
@@ -1352,7 +1338,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IGSN'
@@ -1391,7 +1376,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LONGITUDEPRECISION'
@@ -1430,7 +1414,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LATITUDEPRECISION'
@@ -1469,7 +1452,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ELEVATIONPRECISION'
@@ -1497,7 +1479,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -1583,7 +1565,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINNAME'
@@ -1624,7 +1605,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
@@ -1652,7 +1632,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -1706,7 +1686,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINNAME'
@@ -1747,7 +1726,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
@@ -1775,7 +1753,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -1844,7 +1822,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'CHEMICALTYPE'
@@ -1873,7 +1850,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -1927,7 +1904,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'OROGENICPERIOD'
@@ -1957,7 +1933,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -2424,7 +2400,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 33
+    TabOrder = 34
     AutoEditable = True
     DataField = 'PROBOFFIT'
     DataSource = dmDV.dsIsoStatistics
@@ -2463,7 +2439,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 34
+    TabOrder = 35
     AutoEditable = True
     DataField = 'ALPHA'
     DataSource = dmDV.dsIsoStatistics
@@ -2502,7 +2478,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 35
+    TabOrder = 36
     AutoEditable = True
     DataField = 'MSWD'
     DataSource = dmDV.dsIsoStatistics
@@ -2541,7 +2517,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 36
+    TabOrder = 37
     AutoEditable = True
     DataField = 'FCUTOFF'
     DataSource = dmDV.dsIsoStatistics
@@ -2579,7 +2555,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 41
+    TabOrder = 42
     AutoEditable = True
     DataField = 'PROBOFCONCORDANCE'
     DataSource = dmDV.dsIsoStatistics
@@ -2619,7 +2595,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 38
+    TabOrder = 39
     AutoEditable = True
     DataField = 'NREG'
     DataSource = dmDV.dsIsoStatistics
@@ -2658,7 +2634,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 39
+    TabOrder = 40
     AutoEditable = True
     DataField = 'NSAMPLES'
     DataSource = dmDV.dsIsoStatistics
@@ -2681,7 +2657,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 40
+    TabOrder = 41
     AutoEditable = True
     DataField = 'NREPLICATES'
     DataSource = dmDV.dsIsoStatistics
@@ -2720,7 +2696,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 37
+    TabOrder = 38
     AutoEditable = True
     DataField = 'DEGFREEDOM'
     DataSource = dmDV.dsIsoStatistics
@@ -2802,7 +2778,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LABORATORYNAME'
@@ -2832,7 +2807,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -2876,7 +2851,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     HorizScrollBar = False
     VertScrollBar = True
     Required = False
-    TabOrder = 42
+    TabOrder = 43
     SubmitOnAsyncEvent = True
     AutoEditable = True
     DataField = 'COMMENT'
@@ -2915,7 +2890,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 45
+    TabOrder = 46
     AutoEditable = True
     DataField = 'CONFIDENTIAL'
     DataSource = dmDV.dscdsResults
@@ -2954,7 +2929,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 46
+    TabOrder = 47
     AutoEditable = True
     DataField = 'INITRATIO'
     DataSource = dmDV.dsIsoInit
@@ -2993,7 +2968,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 47
+    TabOrder = 48
     AutoEditable = True
     DataField = 'INITRATIOERROR'
     DataSource = dmDV.dsIsoInit
@@ -3032,7 +3007,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 48
+    TabOrder = 49
     AutoEditable = True
     DataField = 'EPSILON'
     DataSource = dmDV.dsIsoInit
@@ -3071,7 +3046,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 49
+    TabOrder = 50
     AutoEditable = True
     DataField = 'EPSILONERROR'
     DataSource = dmDV.dsIsoInit
@@ -3110,7 +3085,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 50
+    TabOrder = 51
     AutoEditable = True
     DataField = 'INITIALRATIO3D'
     DataSource = dmDV.dsIsoInit
@@ -3149,7 +3124,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 51
+    TabOrder = 52
     AutoEditable = True
     DataField = 'INITIALRATIO3DERROR'
     DataSource = dmDV.dsIsoInit
@@ -3187,7 +3162,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 52
+    TabOrder = 53
     AutoEditable = True
     DataField = 'MODEL'
     DataSource = dmDV.dsIsoInit
@@ -3242,7 +3217,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 54
+    TabOrder = 55
     AutoEditable = True
     DataField = 'MUPERROR'
     DataSource = dmDV.dsIsoInit
@@ -3265,7 +3240,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 55
+    TabOrder = 56
     AutoEditable = True
     DataField = 'MUMERROR'
     DataSource = dmDV.dsIsoInit
@@ -3304,7 +3279,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 53
+    TabOrder = 54
     AutoEditable = True
     DataField = 'MU'
     DataSource = dmDV.dsIsoInit
@@ -3370,7 +3345,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'GROUPING'
@@ -3400,7 +3374,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -3486,7 +3460,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BOUNDARYPOSITION'
@@ -3525,7 +3498,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BOUNDARYNAME'
@@ -3555,7 +3527,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -3625,7 +3597,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IMAGETYPE'
@@ -3664,7 +3635,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IMAGEID'
@@ -3694,7 +3664,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -3748,7 +3718,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'WHOFOR'
@@ -3778,7 +3747,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -3815,7 +3784,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'LITHOLOGY'
     ListSource = dmDV.dsLithol
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbPost: TIWButton
     AlignWithMargins = False
@@ -3830,7 +3798,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbPost'
-    TabOrder = 43
+    TabOrder = 44
     OnClick = iwbPostClick
   end
   object iwbApplyUpdates: TIWButton
@@ -3846,7 +3814,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
-    TabOrder = 44
+    TabOrder = 45
     OnClick = iwbApplyUpdatesClick
   end
   object iwDBlcbInterpretation: TIWDBLookupComboBox
@@ -3876,7 +3844,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'INTERPRETATION'
     ListSource = dmDV.dsInterpretations
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbPrefLevel: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -3905,7 +3872,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'PREFSHORT'
     ListSource = dmDV.dsPrefLevels
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbMethod: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -3934,7 +3900,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'AGEUNITS'
     ListSource = dmDV.dsAgeUnits
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBnReferences: TIWDBNavigator
     AlignWithMargins = False
@@ -4157,7 +4122,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbCancelChanges'
-    TabOrder = 56
+    TabOrder = 57
     OnClick = iwbCancelChangesClick
   end
   object iwbAddReference: TIWButton
@@ -4173,7 +4138,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddReference'
-    TabOrder = 58
+    TabOrder = 59
     OnClick = iwbAddReferenceClick
   end
   object iwbAddLaboratory: TIWButton
@@ -4189,7 +4154,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddLaboratory'
-    TabOrder = 59
+    TabOrder = 60
     OnClick = iwbAddLaboratoryClick
   end
   object iwbAddProvince: TIWButton
@@ -4205,7 +4170,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddProvince'
-    TabOrder = 61
+    TabOrder = 62
     OnClick = iwbAddProvinceClick
   end
   object iwbAddTerrane: TIWButton
@@ -4221,7 +4186,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddTerrane'
-    TabOrder = 62
+    TabOrder = 63
     OnClick = iwbAddTerraneClick
   end
   object iwbAddGroup: TIWButton
@@ -4237,7 +4202,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddGroup'
-    TabOrder = 63
+    TabOrder = 64
     OnClick = iwbAddGroupClick
   end
   object iwbAddChemType: TIWButton
@@ -4253,7 +4218,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddChemType'
-    TabOrder = 64
+    TabOrder = 65
     OnClick = iwbAddChemTypeClick
   end
   object iwbAddOrogenic: TIWButton
@@ -4269,7 +4234,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddOrogenic'
-    TabOrder = 65
+    TabOrder = 66
     OnClick = iwbAddOrogenicClick
   end
   object iwbAddBoundary: TIWButton
@@ -4285,7 +4250,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddBoundary'
-    TabOrder = 66
+    TabOrder = 67
     OnClick = iwbAddBoundaryClick
   end
   object iwbAddImage: TIWButton
@@ -4301,7 +4266,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddImage'
-    TabOrder = 67
+    TabOrder = 68
     OnClick = iwbAddImageClick
   end
   object iwbAddWhoFor: TIWButton
@@ -4317,7 +4282,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddWhoFor'
-    TabOrder = 68
+    TabOrder = 69
     OnClick = iwbAddWhoForClick
   end
   object iwbAddSample: TIWButton
@@ -4333,7 +4298,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddSample'
-    TabOrder = 69
+    TabOrder = 70
     OnClick = iwbAddSampleClick
   end
   object iwbDeleteReference: TIWButton
@@ -4350,7 +4315,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteReference'
-    TabOrder = 70
+    TabOrder = 71
     OnClick = iwbDeleteReferenceClick
   end
   object iwbDeleteLaboratory: TIWButton
@@ -4367,7 +4332,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteLaboratory'
-    TabOrder = 71
+    TabOrder = 72
     OnClick = iwbDeleteLaboratoryClick
   end
   object iwbDeleteProvince: TIWButton
@@ -4384,7 +4349,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteProvince'
-    TabOrder = 72
+    TabOrder = 73
     OnClick = iwbDeleteProvinceClick
   end
   object iwbDeleteTerrane: TIWButton
@@ -4401,7 +4366,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteTerrane'
-    TabOrder = 73
+    TabOrder = 74
     OnClick = iwbDeleteTerraneClick
   end
   object iwbDeleteGroup: TIWButton
@@ -4418,7 +4383,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteGroup'
-    TabOrder = 74
+    TabOrder = 75
     OnClick = iwbDeleteGroupClick
   end
   object iwbDeleteChemType: TIWButton
@@ -4435,7 +4400,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteChemType'
-    TabOrder = 75
+    TabOrder = 76
     OnClick = iwbDeleteChemTypeClick
   end
   object iwbDeleteOrogenic: TIWButton
@@ -4452,7 +4417,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteOrogenic'
-    TabOrder = 76
+    TabOrder = 77
     OnClick = iwbDeleteOrogenicClick
   end
   object iwbDeleteBoundary: TIWButton
@@ -4469,7 +4434,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteBoundary'
-    TabOrder = 77
+    TabOrder = 78
     OnClick = iwbDeleteBoundaryClick
   end
   object iwbDeleteImage: TIWButton
@@ -4486,7 +4451,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteImage'
-    TabOrder = 78
+    TabOrder = 79
     OnClick = iwbDeleteImageClick
   end
   object iwbDeleteWhoFor: TIWButton
@@ -4503,7 +4468,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteWhoFor'
-    TabOrder = 79
+    TabOrder = 80
     OnClick = iwbDeleteWhoForClick
   end
   object iwbDeleteSample: TIWButton
@@ -4520,7 +4485,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
-    TabOrder = 80
+    TabOrder = 81
     OnClick = iwbDeleteSampleClick
   end
   object iwlFooterProgramName: TIWLabel
@@ -4596,7 +4561,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'METHODNAME'
     ListSource = dmDV.dsMethods
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbValidate: TIWButton
     AlignWithMargins = False
@@ -4611,7 +4575,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbValidate'
-    TabOrder = 60
+    TabOrder = 61
     OnClick = iwbValidateClick
   end
   object rectLeft: TIWRectangle
@@ -4643,7 +4607,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'Add Initial ratio data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddInitialRatioData'
-    TabOrder = 82
+    TabOrder = 83
     OnClick = iwbAddInitialRatioDataClick
   end
   object iwbAddStatisticsData: TIWButton
@@ -4655,7 +4619,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'Add Statistics data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddStatisticsData'
-    TabOrder = 83
+    TabOrder = 84
     OnClick = iwbAddStatisticsDataClick
   end
   object iwbAddOtherInterceptData: TIWButton
@@ -4667,7 +4631,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'Add Other Intercept data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddOtherInterceptData'
-    TabOrder = 81
+    TabOrder = 82
     OnClick = iwbAddOtherInterceptDataClick
   end
   object iwbRawData: TIWButton
@@ -4679,7 +4643,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'View raw data'
     Color = clBtnFace
     FriendlyName = '111'
-    TabOrder = 97
+    TabOrder = 98
     OnClick = iwbRawDataClick
   end
   object iwbDelete: TIWButton
@@ -4696,7 +4660,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDelete'
-    TabOrder = 57
+    TabOrder = 58
     OnClick = iwbDeleteClick
   end
   object iwbEdit: TIWButton
@@ -4712,7 +4676,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbEdit'
-    TabOrder = 84
+    TabOrder = 85
     OnClick = iwbEditClick
   end
   object IWDBLabel1: TIWDBLabel
@@ -4745,7 +4709,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbObjection'
-    TabOrder = 85
+    TabOrder = 86
     OnClick = iwbObjectionClick
   end
   object iwbNewErrorRec: TIWButton
@@ -4761,7 +4725,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbNewErrorRec'
-    TabOrder = 86
+    TabOrder = 87
     OnClick = iwbNewErrorRecClick
   end
   object iwbReturnBottom: TIWButton
@@ -4777,7 +4741,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbReturnBottom'
-    TabOrder = 87
+    TabOrder = 88
     OnClick = iwbReturnClick
   end
   object iwbEditBottom: TIWButton
@@ -4793,7 +4757,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbEditBottom'
-    TabOrder = 88
+    TabOrder = 89
     OnClick = iwbEditClick
   end
   object iwbApplyUpdatesBottom: TIWButton
@@ -4809,7 +4773,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdatesBottom'
-    TabOrder = 89
+    TabOrder = 90
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelChangesBottom: TIWButton
@@ -4825,7 +4789,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbCancelChangesBottom'
-    TabOrder = 90
+    TabOrder = 91
     OnClick = iwbCancelChangesClick
   end
   object IWLabel16: TIWLabel
@@ -4860,7 +4824,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.PxSize = 12
     FriendlyName = 'iwDBeStratDBID'
     SubmitOnAsyncEvent = True
-    TabOrder = 91
+    TabOrder = 92
     AutoEditable = False
     DataField = 'GISID'
     DataSource = dmDV.dsStratDBLink
@@ -4912,7 +4876,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddLIP'
-    TabOrder = 92
+    TabOrder = 93
     OnClick = iwbAddLIPClick
   end
   object iwbDeleteLIP: TIWButton
@@ -4929,7 +4893,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteLIP'
-    TabOrder = 93
+    TabOrder = 94
     OnClick = iwbDeleteLIPClick
   end
   object iwDBgLIP: TIWDBGrid
@@ -4976,7 +4940,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LIPNAME'
@@ -5006,7 +4969,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     FromStart = True
     HighlightColor = clNone
     HighlightRows = False
-    Options = [dgIndicator, dgShowTitles]
+    Options = [dgShowTitles]
     RefreshMode = rmAutomatic
     RowLimit = 0
     RollOver = True
@@ -5025,7 +4988,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'New Comment'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddComment'
-    TabOrder = 94
+    TabOrder = 95
     OnClick = iwbAddCommentClick
   end
   object iwbLinkRawData: TIWButton
@@ -5037,7 +5000,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'Link raw data'
     Color = clBtnFace
     FriendlyName = 'iwbRawData'
-    TabOrder = 96
+    TabOrder = 97
     OnClick = iwbLinkRawDataClick
   end
   object iwDBlcbArea: TIWDBLookupComboBox
@@ -5058,7 +5021,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 98
+    TabOrder = 99
     AutoEditable = True
     DataField = 'COUNTRYABR'
     DataSource = dmDV.dscdsResults
@@ -5067,7 +5030,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'COUNTRY'
     ListSource = dmDV.dsCountries
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbUnit: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -5087,7 +5049,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 99
+    TabOrder = 100
     AutoEditable = True
     DataField = 'UNITID'
     DataSource = dmDV.dscdsResults
@@ -5096,7 +5058,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'UNITNAME'
     ListSource = dmDV.dsUnitArea
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbMaterial: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -5116,7 +5077,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 100
+    TabOrder = 101
     AutoEditable = True
     DataField = 'MATERIALABR'
     DataSource = dmDV.dscdsResults
@@ -5125,7 +5086,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'MATERIALDESCRIPTION'
     ListSource = dmDV.dsMaterial
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbIsoSys: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -5145,7 +5105,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 101
+    TabOrder = 102
     AutoEditable = True
     DataField = 'ISOTOPESYSTEM'
     DataSource = dmDV.dscdsResults
@@ -5154,7 +5114,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'ISOSYSTEMNAME'
     ListSource = dmDV.dsIsoSystems
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbApproach: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -5174,7 +5133,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 102
+    TabOrder = 103
     AutoEditable = True
     DataField = 'APPROACHABR'
     DataSource = dmDV.dscdsResults
@@ -5183,7 +5142,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'APPROACHDESCRIPTION'
     ListSource = dmDV.dsApproach
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbTechnique: TIWDBLookupComboBox
     AlignWithMargins = False
@@ -5203,7 +5161,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     UseSize = False
     Editable = False
     NonEditableAsLabel = True
-    TabOrder = 103
+    TabOrder = 104
     AutoEditable = True
     DataField = 'TECHABR'
     DataSource = dmDV.dscdsResults
@@ -5212,7 +5170,6 @@ object ISFDetailsEdit: TISFDetailsEdit
     ListField = 'TECHNIQUE'
     ListSource = dmDV.dsTechniques
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbMakePublic: TIWButton
     AlignWithMargins = False
@@ -5223,7 +5180,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     Caption = 'Make public'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbMakePublic'
-    TabOrder = 113
+    TabOrder = 114
     OnClick = iwbMakePublicClick
   end
   object IWLabel67: TIWLabel
@@ -5420,7 +5377,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     AlignWithMargins = False
     Left = 206
     Top = 767
-    Width = 59
+    Width = 71
     Height = 21
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
@@ -5455,6 +5412,44 @@ object ISFDetailsEdit: TISFDetailsEdit
     FriendlyName = 'iwlIsotopeConstant'
     Caption = 'Isotope constant ='
   end
+  object IWLabel77: TIWLabel
+    AlignWithMargins = False
+    Left = 299
+    Top = 765
+    Width = 71
+    Height = 15
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = []
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'iwlDC1error'
+    Caption = '+/- 1 sigma '
+  end
+  object iwDBeSigmaIsotopeConstant: TIWDBEdit
+    AlignWithMargins = False
+    Left = 392
+    Top = 766
+    Width = 59
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Editable = False
+    NonEditableAsLabel = True
+    Font.Color = clNone
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeSigmaIsotopeConstant'
+    SubmitOnAsyncEvent = True
+    TabOrder = 30
+    AutoEditable = True
+    DataField = 'SIGMAISOTOPECONSTANT'
+    DataSource = dmDV.dsResultsExtra
+    PasswordPrompt = False
+  end
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
@@ -5479,7 +5474,7 @@ object ISFDetailsEdit: TISFDetailsEdit
     ExplicitWidth = 1023
     inherited IWFrameRegion: TIWRegion
       Width = 1023
-      TabOrder = 95
+      TabOrder = 96
       ExplicitWidth = 1023
       inherited iwrHeader: TIWRegion
         Width = 1023
@@ -5491,7 +5486,6 @@ object ISFDetailsEdit: TISFDetailsEdit
             Width = 882
             ExplicitWidth = 882
             inherited lblWelcome: TIWLabel
-              Left = 561
               ExplicitLeft = 510
             end
           end
@@ -5499,9 +5493,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         inherited iwrSignInOut: TIWRegion
           Width = 1023
           ExplicitWidth = 1023
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -5655,7 +5646,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'RECORDID'
@@ -5696,7 +5686,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'INTERPABR'
@@ -5735,7 +5724,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'ISOTOPESYSTEM'
@@ -5774,7 +5762,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'MATERIALABR'
@@ -5813,7 +5800,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'APPROACHABR'
@@ -5852,7 +5838,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'PREFLEVEL'
@@ -5891,7 +5876,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'RAGE'
@@ -5930,7 +5914,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'RAGEPERROR'
@@ -5969,7 +5952,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'RAGEMERROR'
@@ -6008,7 +5990,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'AGEUNITS'
@@ -6055,7 +6036,7 @@ object ISFDetailsEdit: TISFDetailsEdit
       Caption = 'Create New Record'
       Color = clWebLIGHTSKYBLUE
       FriendlyName = 'iwbCreateEquivalentRecord'
-      TabOrder = 104
+      TabOrder = 105
       OnClick = iwbCreateEquivalentRecordClick
     end
     object iwcbMaterial: TIWComboBox
@@ -6071,11 +6052,10 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 105
+      TabOrder = 106
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbMaterial'
-      NoSelectionText = '-- No Selection --'
     end
     object iwcbIsotopeSystem: TIWComboBox
       AlignWithMargins = False
@@ -6090,11 +6070,10 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 106
+      TabOrder = 107
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbIsotopeSystem'
-      NoSelectionText = '-- No Selection --'
     end
     object iwcbApproach: TIWComboBox
       AlignWithMargins = False
@@ -6109,11 +6088,10 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 107
+      TabOrder = 108
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbApproach'
-      NoSelectionText = '-- No Selection --'
     end
     object iwcbTechnique: TIWComboBox
       AlignWithMargins = False
@@ -6128,11 +6106,10 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 108
+      TabOrder = 109
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbTechnique'
-      NoSelectionText = '-- No Selection --'
     end
     object iwcbInterpretation: TIWComboBox
       AlignWithMargins = False
@@ -6147,11 +6124,10 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 109
+      TabOrder = 110
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbInterpretation'
-      NoSelectionText = '-- No Selection --'
     end
     object IWLabel20: TIWLabel
       AlignWithMargins = False
@@ -6185,7 +6161,7 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.PxSize = 12
       FriendlyName = 'iweDate'
       SubmitOnAsyncEvent = True
-      TabOrder = 110
+      TabOrder = 111
     end
     object IWLabel21: TIWLabel
       AlignWithMargins = False
@@ -6219,7 +6195,7 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
-      TabOrder = 111
+      TabOrder = 112
     end
     object IWLabel22: TIWLabel
       AlignWithMargins = False
@@ -6253,7 +6229,7 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
-      TabOrder = 112
+      TabOrder = 113
     end
     object iwlAgeUnitsNew: TIWLabel
       AlignWithMargins = False
@@ -6300,11 +6276,21 @@ object ISFDetailsEdit: TISFDetailsEdit
       Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
-      TabOrder = 114
+      TabOrder = 115
       ItemIndex = -1
       Sorted = True
       FriendlyName = 'iwcbUnit'
-      NoSelectionText = '-- No Selection --'
+    end
+    object iwbDM2_from_Initial: TIWButton
+      AlignWithMargins = False
+      Left = 623
+      Top = 400
+      Width = 234
+      Height = 25
+      Caption = 'Calculate T(2DM) from epsilon/initial'
+      Color = clBtnFace
+      FriendlyName = 'iwbDM2_from_Initial'
+      OnClick = iwbDM2_from_InitialClick
     end
   end
 end

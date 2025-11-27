@@ -69,7 +69,7 @@ begin
   //iwDBNavigator1.Visible := UserSession.CanModifyPlus;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmOpt.qUserFor.Close;
   dmOpt.qUserFor.ParamByName('USERID').AsString := UserSession.UserID;

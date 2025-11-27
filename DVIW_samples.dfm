@@ -749,9 +749,6 @@ object ISFSamples: TISFSamples
         inherited iwrSignInOut: TIWRegion
           Width = 900
           ExplicitWidth = 900
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

@@ -61,9 +61,6 @@ object ISFUnitEdit: TISFUnitEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -78,6 +75,7 @@ object ISFUnitEdit: TISFUnitEdit
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object IWLabel3: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 25
       Width = 27
@@ -86,12 +84,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Area'
     end
     object iwDBlcbArea: TIWDBLookupComboBox
+      AlignWithMargins = False
       Left = 117
       Top = 19
       Width = 372
@@ -101,6 +101,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       RequireSelection = False
       NonEditableAsLabel = True
       AutoEditable = False
@@ -109,7 +110,6 @@ object ISFUnitEdit: TISFUnitEdit
       ListField = 'COUNTRY'
       ListSource = dmDV.dsCountries
       DisableWhenEmpty = True
-      NoSelectionText = '-- No Selection --'
     end
   end
   object iwrUnitDetails: TIWRegion
@@ -122,6 +122,7 @@ object ISFUnitEdit: TISFUnitEdit
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object IWLabel1: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 16
       Width = 58
@@ -130,12 +131,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Strat. Unit'
     end
     object iwDBeUnitName: TIWDBEdit
+      AlignWithMargins = False
       Left = 117
       Top = 14
       Width = 370
@@ -147,6 +150,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwDBeUnitName'
       SubmitOnAsyncEvent = True
       TabOrder = 1
@@ -156,6 +160,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object IWLabel2: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 42
       Width = 31
@@ -164,12 +169,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Rank'
     end
     object iwDBlcbUnitRank: TIWDBLookupComboBox
+      AlignWithMargins = False
       Left = 117
       Top = 40
       Width = 372
@@ -179,6 +186,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       Required = True
       Editable = False
       NonEditableAsLabel = True
@@ -191,9 +199,9 @@ object ISFUnitEdit: TISFUnitEdit
       ListField = 'UNITRANK'
       ListSource = dmDV.dsUnitRanks
       DisableWhenEmpty = True
-      NoSelectionText = '-- No Selection --'
     end
     object IWLabel4: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 70
       Width = 46
@@ -202,12 +210,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Offset 1'
     end
     object IWLabel5: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 96
       Width = 46
@@ -216,12 +226,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Offset 2'
     end
     object IWLabel6: TIWLabel
+      AlignWithMargins = False
       Left = 32
       Top = 122
       Width = 46
@@ -230,12 +242,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Offset 3'
     end
     object IWLabel7: TIWLabel
+      AlignWithMargins = False
       Left = 33
       Top = 150
       Width = 62
@@ -244,12 +258,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'StratDB ID'
     end
     object iwdbeStratDBID: TIWDBEdit
+      AlignWithMargins = False
       Left = 117
       Top = 148
       Width = 78
@@ -262,6 +278,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeStratDBID'
       SubmitOnAsyncEvent = True
       TabOrder = 3
@@ -271,6 +288,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object iwdbeOffset3: TIWDBEdit
+      AlignWithMargins = False
       Left = 117
       Top = 122
       Width = 78
@@ -283,6 +301,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeOffset3'
       SubmitOnAsyncEvent = True
       TabOrder = 4
@@ -292,6 +311,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object iwdbeOffset2: TIWDBEdit
+      AlignWithMargins = False
       Left = 117
       Top = 96
       Width = 78
@@ -304,6 +324,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeOffset2'
       SubmitOnAsyncEvent = True
       TabOrder = 5
@@ -313,6 +334,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object iwdbeOffset1: TIWDBEdit
+      AlignWithMargins = False
       Left = 117
       Top = 68
       Width = 78
@@ -325,6 +347,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeOffset1'
       SubmitOnAsyncEvent = True
       TabOrder = 6
@@ -334,6 +357,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object IWLabel8: TIWLabel
+      AlignWithMargins = False
       Left = 553
       Top = 20
       Width = 40
@@ -342,12 +366,14 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
       FriendlyName = 'IWLabel1'
       Caption = 'Unit ID'
     end
     object iwdbeUnitID: TIWDBEdit
+      AlignWithMargins = False
       Left = 607
       Top = 16
       Width = 78
@@ -360,6 +386,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeUnitID'
       SubmitOnAsyncEvent = True
       TabOrder = 7
@@ -369,6 +396,7 @@ object ISFUnitEdit: TISFUnitEdit
       PasswordPrompt = False
     end
     object IWDBEdit1: TIWDBEdit
+      AlignWithMargins = False
       Left = 607
       Top = 43
       Width = 78
@@ -380,6 +408,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
+      Font.PxSize = 12
       FriendlyName = 'iwdbeUnitID'
       SubmitOnAsyncEvent = True
       TabOrder = 8
@@ -399,6 +428,7 @@ object ISFUnitEdit: TISFUnitEdit
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwbReturn: TIWButton
+      AlignWithMargins = False
       Left = 5
       Top = 7
       Width = 96
@@ -408,11 +438,13 @@ object ISFUnitEdit: TISFUnitEdit
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbReturn'
       TabOrder = 9
       OnClick = iwbReturnClick
     end
     object iwbEdit: TIWButton
+      AlignWithMargins = False
       Left = 121
       Top = 7
       Width = 96
@@ -422,11 +454,13 @@ object ISFUnitEdit: TISFUnitEdit
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbEdit'
       TabOrder = 10
       OnClick = iwbEditClick
     end
     object IWDBNavigator1: TIWDBNavigator
+      AlignWithMargins = False
       Left = 232
       Top = 3
       Width = 108
@@ -442,6 +476,7 @@ object ISFUnitEdit: TISFUnitEdit
       Orientation = orHorizontal
     end
     object iwbSaveChanges: TIWButton
+      AlignWithMargins = False
       Left = 354
       Top = 7
       Width = 96
@@ -451,11 +486,13 @@ object ISFUnitEdit: TISFUnitEdit
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbSaveChanges'
       TabOrder = 11
       OnClick = iwbSaveChangesClick
     end
     object iwbCancelChanges: TIWButton
+      AlignWithMargins = False
       Left = 471
       Top = 7
       Width = 96
@@ -465,11 +502,13 @@ object ISFUnitEdit: TISFUnitEdit
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbSaveChanges'
       TabOrder = 12
       OnClick = iwbCancelChangesClick
     end
     object iwbDelete: TIWButton
+      AlignWithMargins = False
       Left = 588
       Top = 7
       Width = 96
@@ -480,6 +519,7 @@ object ISFUnitEdit: TISFUnitEdit
       Font.Color = clNone
       Font.Size = 9
       Font.Style = []
+      Font.PxSize = 12
       FriendlyName = 'iwbDelete'
       TabOrder = 14
       OnClick = iwbDeleteClick

@@ -118,7 +118,7 @@ var
 begin
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   //iwrDomainInfo.Visible := false;
   //iwrDomainRange.Visible := false;
@@ -559,10 +559,6 @@ end;
 
 procedure TISFDefineRawDataSampleQuery.IWAppFormRender(Sender: TObject);
 begin
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
 end;
 

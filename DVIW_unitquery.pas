@@ -45,10 +45,6 @@ uses
 procedure TISFUnitQuery.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   iweFrom.Text := UserSession.UnitStartFrom;
   iweTo.Text := UserSession.UnitEndWith;
   UpdateListBoxValues(iwlAreas,dmDV.cdsCountries,'Country','CountryAbr',UserSession.AreaValues);
@@ -60,7 +56,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   iweFrom.Text := UserSession.UnitStartFrom;
   iweTo.Text := UserSession.UnitEndWith;

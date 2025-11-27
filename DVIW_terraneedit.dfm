@@ -159,7 +159,6 @@ object ISFTerraneEdit: TISFTerraneEdit
     ListField = 'CONTINENT'
     ListSource = dmStrat.dsContinents
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
     AlignWithMargins = False
@@ -221,9 +220,6 @@ object ISFTerraneEdit: TISFTerraneEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

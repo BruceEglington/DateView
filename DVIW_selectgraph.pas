@@ -57,10 +57,6 @@ uses ServerController, DVIW_constants, DVIW_dmgraphics,
 procedure TISFSelectGraph.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
   iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
 end;
@@ -72,7 +68,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   iwbReturnToResults.Enabled := not UserSession.GoDirectToGraphs;
   //iwlSpectrumAgeHeading.Visible := UserSession.CanViewPlus;

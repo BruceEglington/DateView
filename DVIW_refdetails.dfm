@@ -475,9 +475,6 @@ object ISFRefDetails: TISFRefDetails
         inherited iwrSignInOut: TIWRegion
           Width = 946
           ExplicitWidth = 946
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

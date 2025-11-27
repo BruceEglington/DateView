@@ -61,9 +61,6 @@ object ISFOptions: TISFOptions
         inherited iwrSignInOut: TIWRegion
           Width = 1142
           ExplicitWidth = 1142
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -275,7 +272,6 @@ object ISFOptions: TISFOptions
             'two=2')
           Sorted = True
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
         object IWLabel6: TIWLabel
           AlignWithMargins = False
@@ -351,7 +347,6 @@ object ISFOptions: TISFOptions
             'two=2')
           Sorted = True
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
         object IWLabel8: TIWLabel
           AlignWithMargins = False
@@ -427,7 +422,6 @@ object ISFOptions: TISFOptions
             'two=2')
           Sorted = True
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
         object IWLabel10: TIWLabel
           AlignWithMargins = False
@@ -503,7 +497,6 @@ object ISFOptions: TISFOptions
             'two=2')
           Sorted = True
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
         object IWLabel12: TIWLabel
           AlignWithMargins = False
@@ -579,7 +572,6 @@ object ISFOptions: TISFOptions
             'two=2')
           Sorted = True
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
         object lblInterpretation5Values: TIWLabel
           AlignWithMargins = False
@@ -1668,7 +1660,6 @@ object ISFOptions: TISFOptions
             'User-defined Group')
           Sorted = True
           FriendlyName = 'iwcbGroupBy'
-          NoSelectionText = '-- No Selection --'
         end
       end
       object iwrBottomButtons: TIWRegion
@@ -1780,7 +1771,6 @@ object ISFOptions: TISFOptions
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'OPTIONTYPEID'
@@ -1822,7 +1812,6 @@ object ISFOptions: TISFOptions
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'OPTIONTYPE'
@@ -2561,7 +2550,6 @@ object ISFOptions: TISFOptions
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'DOWNLOADTYPEID'
@@ -2600,7 +2588,6 @@ object ISFOptions: TISFOptions
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'DOWNLOADTYPE'
@@ -2639,7 +2626,6 @@ object ISFOptions: TISFOptions
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'MAXALLOWED'

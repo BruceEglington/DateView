@@ -139,10 +139,13 @@ begin
   //LeftTree.iwlRecordIDsAll.Visible := UserSession.IsDeveloper;
   //MainMenu1.DefineSQL1.Visible := UserSession.IsDeveloper;
   iwlNumUses.Visible := false;
-  ShowUsagePermissions := false; // normally false
+  ShowUsagePermissions := true; // normally false
   iwbPermissions.Visible := ShowUsagePermissions;
-  if (UserSession.LoggedIn) then LoadWelcomeMessage;       //bme
+  //if (UserSession.LoggedIn) then LoadWelcomeMessage;       //bme
   if (UserSession.LoggedIn) then dmDV.cdsNumRecords.Open;       //bme
+  //UserSession.ShowDebugButtons := true;
+  //UserSession.IsDeveloper := true;
+  //UserSession.LoggedIn := true;
   if ((UserSession.ShowDebugButtons) and (UserSession.IsDeveloper) and (UserSession.LoggedIn)) then
   begin
     iwbPermissions.Visible := true;

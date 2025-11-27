@@ -61,7 +61,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MATERIALDESCRIPTION'
@@ -101,7 +100,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ISOSYSTEMNAME'
@@ -141,7 +139,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'APPROACHDESCRIPTION'
@@ -181,7 +178,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BLOCKINGT'
@@ -222,7 +218,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'BLOCKINGTUNCERTAINTY'
@@ -261,7 +256,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'CLOSTMPASSOCID'
@@ -489,9 +483,6 @@ object ISFClosureTemperatures: TISFClosureTemperatures
         inherited iwrSignInOut: TIWRegion
           Width = 978
           ExplicitWidth = 787
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
           inherited lnkSignIn: TIWLink
             Left = 562
             ExplicitLeft = 562

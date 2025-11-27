@@ -290,7 +290,7 @@ begin
   //dmUser.SetDeveloperData('Options FormCreate');
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   UserSession.PDFHasChanged := true;

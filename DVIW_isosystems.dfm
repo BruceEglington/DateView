@@ -17,6 +17,7 @@ object ISFIsoSystems: TISFIsoSystems
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 100
     Top = 132
     Width = 553
@@ -33,10 +34,13 @@ object ISFIsoSystems: TISFIsoSystems
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -47,6 +51,7 @@ object ISFIsoSystems: TISFIsoSystems
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -55,7 +60,6 @@ object ISFIsoSystems: TISFIsoSystems
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ISOSYSTEM'
@@ -67,6 +71,7 @@ object ISFIsoSystems: TISFIsoSystems
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -85,6 +90,7 @@ object ISFIsoSystems: TISFIsoSystems
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         Header = False
         Height = '0'
         ShowHint = True
@@ -93,7 +99,6 @@ object ISFIsoSystems: TISFIsoSystems
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ISOSYSTEMNAME'
@@ -105,6 +110,7 @@ object ISFIsoSystems: TISFIsoSystems
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 12
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -123,6 +129,7 @@ object ISFIsoSystems: TISFIsoSystems
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -131,7 +138,6 @@ object ISFIsoSystems: TISFIsoSystems
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DECAYCONST1'
@@ -142,6 +148,7 @@ object ISFIsoSystems: TISFIsoSystems
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -160,6 +167,7 @@ object ISFIsoSystems: TISFIsoSystems
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -168,7 +176,6 @@ object ISFIsoSystems: TISFIsoSystems
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DECAYCONST2'
@@ -179,6 +186,7 @@ object ISFIsoSystems: TISFIsoSystems
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -206,6 +214,7 @@ object ISFIsoSystems: TISFIsoSystems
     RowCurrentColor = clNone
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 515
     Top = 114
     Width = 137
@@ -215,12 +224,14 @@ object ISFIsoSystems: TISFIsoSystems
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 101
     Top = 111
     Width = 97
@@ -233,6 +244,7 @@ object ISFIsoSystems: TISFIsoSystems
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -242,6 +254,7 @@ object ISFIsoSystems: TISFIsoSystems
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 227
     Top = 111
     Width = 65
@@ -254,6 +267,7 @@ object ISFIsoSystems: TISFIsoSystems
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -263,6 +277,7 @@ object ISFIsoSystems: TISFIsoSystems
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 74
     Width = 75
@@ -272,10 +287,12 @@ object ISFIsoSystems: TISFIsoSystems
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -285,6 +302,7 @@ object ISFIsoSystems: TISFIsoSystems
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -292,6 +310,7 @@ object ISFIsoSystems: TISFIsoSystems
     VAlign = vaMiddle
   end
   object iwbDownload: TIWButton
+    AlignWithMargins = False
     Left = 196
     Top = 74
     Width = 129
@@ -301,6 +320,7 @@ object ISFIsoSystems: TISFIsoSystems
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     TabOrder = 1
     OnClick = iwbDownloadClick
@@ -349,9 +369,6 @@ object ISFIsoSystems: TISFIsoSystems
         inherited iwrSignInOut: TIWRegion
           Width = 693
           ExplicitWidth = 693
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

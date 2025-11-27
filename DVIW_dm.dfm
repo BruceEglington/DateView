@@ -7,8 +7,8 @@ object dmDV: TdmDV
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=c:\exe32\dbexpida41.dll'
-      'VendorLib=c:\exe32\fbclient.dll'
+      'LibraryName=c:\exe64\dbexpida41.dll'
+      'VendorLib=c:\exe64\fbclient.dll'
       'DataBase=c:\data\firebird\dateview2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
@@ -923,6 +923,10 @@ object dmDV: TdmDV
     object qIsoSystemsDECAYCONST2: TFloatField
       FieldName = 'DECAYCONST2'
     end
+    object qIsoSystemsISOTOPECONSTANT: TFloatField
+      FieldName = 'ISOTOPECONSTANT'
+      Required = True
+    end
   end
   object dspIsoSystems: TDataSetProvider
     DataSet = qIsoSystems
@@ -961,6 +965,10 @@ object dmDV: TdmDV
       DisplayLabel = 'Decay Const 2'
       FieldName = 'DECAYCONST2'
       DisplayFormat = '0.00000e+00'
+    end
+    object cdsIsoSystemsISOTOPECONSTANT: TFloatField
+      FieldName = 'ISOTOPECONSTANT'
+      Required = True
     end
   end
   object qPrefLevels: TSQLQuery
@@ -1144,21 +1152,6 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 212
     Top = 596
-    object StringField2: TWideStringField
-      FieldName = 'SAMPLENO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qSamplesCONTINENTID: TWideStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object qSamplesCOUNTRYABR: TWideStringField
-      FieldName = 'COUNTRYABR'
-      Required = True
-      Size = 3
-    end
   end
   object dspSamples: TDataSetProvider
     DataSet = qSamples
@@ -1173,19 +1166,21 @@ object dmDV: TdmDV
     Left = 270
     Top = 592
     object cdsSamplesSAMPLENO: TWideStringField
-      DisplayLabel = 'Sample'
       FieldName = 'SAMPLENO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
+      Size = 50
     end
     object cdsSamplesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object cdsSamplesCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
+      FixedChar = True
       Size = 3
     end
   end
@@ -2219,7 +2214,7 @@ object dmDV: TdmDV
       'ISORGR30.DecayConst1,ISORGR30.DecayConst2,'
       'ISORGR30.SigmaPercentDC1,ISORGR30.SigmaPercentDC2,'
       'ISORGR30.DateString,ISORGR30.RegisteredUser,'
-      'ISORGR30.ISOTOPECONSTANT'
+      'ISORGR30.ISOTOPECONSTANT, ISORGR30.SIGMAISOTOPECONSTANT'
       'from isorgr30'
       'where ISORGR30.RecordID=:RecordID')
     SQLConnection = sqlcDateView
@@ -2254,6 +2249,10 @@ object dmDV: TdmDV
     end
     object qResultsExtraISOTOPECONSTANT: TFloatField
       FieldName = 'ISOTOPECONSTANT'
+      Required = True
+    end
+    object qResultsExtraSIGMAISOTOPECONSTANT: TFloatField
+      FieldName = 'SIGMAISOTOPECONSTANT'
       Required = True
     end
   end
@@ -2295,7 +2294,12 @@ object dmDV: TdmDV
     object cdsResultsExtraISOTOPECONSTANT: TFloatField
       FieldName = 'ISOTOPECONSTANT'
       Required = True
-      DisplayFormat = '###0.000'
+      DisplayFormat = '###0.0000'
+    end
+    object cdsResultsExtraSIGMAISOTOPECONSTANT: TFloatField
+      FieldName = 'SIGMAISOTOPECONSTANT'
+      Required = True
+      DisplayFormat = '###0.0000'
     end
   end
   object qIsoInit: TSQLQuery
@@ -2929,15 +2933,19 @@ object dmDV: TdmDV
     object qSmpLocSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
+      FixedChar = True
+      Size = 50
     end
     object qSmpLocCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object qSmpLocCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object qSmpLocLATITUDE: TFloatField
@@ -2961,25 +2969,34 @@ object dmDV: TdmDV
     object qSmpLocELEVATIONPRECISION: TFloatField
       FieldName = 'ELEVATIONPRECISION'
     end
+    object qSmpLocORIGINALNO: TWideStringField
+      FieldName = 'ORIGINALNO'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object qSmpLocLITHOLOGY: TWideStringField
+      FieldName = 'LITHOLOGY'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object qSmpLocIGSN: TWideStringField
+      FieldName = 'IGSN'
+      FixedChar = True
+      Size = 50
+    end
     object qSmpLocCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
-      ReadOnly = True
+      FixedChar = True
     end
     object qSmpLocCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
+      FixedChar = True
       Size = 30
-    end
-    object qSmpLocORIGINALNO: TWideStringField
-      FieldName = 'ORIGINALNO'
-      Required = True
-    end
-    object qSmpLocLITHOLOGY: TWideStringField
-      FieldName = 'LITHOLOGY'
-      Required = True
-      Size = 50
     end
     object qSmpLocLITHCLASSID: TWideStringField
       FieldName = 'LITHCLASSID'
@@ -2992,11 +3009,7 @@ object dmDV: TdmDV
       FieldName = 'LITHCLASS'
       ProviderFlags = []
       ReadOnly = True
-    end
-    object qSmpLocIGSN: TWideStringField
-      FieldName = 'IGSN'
-      Required = True
-      Size = 50
+      FixedChar = True
     end
   end
   object dspSmpLoc: TDataSetProvider
@@ -3016,15 +3029,19 @@ object dmDV: TdmDV
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
+      Size = 50
     end
     object cdsSmpLocCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object cdsSmpLocCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
+      FixedChar = True
       Size = 3
     end
     object cdsSmpLocLATITUDE: TFloatField
@@ -3054,25 +3071,35 @@ object dmDV: TdmDV
       FieldName = 'ELEVATIONPRECISION'
       DisplayFormat = '#####0.00'
     end
+    object cdsSmpLocORIGINALNO: TWideStringField
+      FieldName = 'ORIGINALNO'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsSmpLocLITHOLOGY: TWideStringField
+      FieldName = 'LITHOLOGY'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsSmpLocIGSN: TWideStringField
+      FieldName = 'IGSN'
+      FixedChar = True
+      Size = 50
+    end
     object cdsSmpLocCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
+      FixedChar = True
     end
     object cdsSmpLocCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
+      FixedChar = True
       Size = 30
-    end
-    object cdsSmpLocORIGINALNO: TWideStringField
-      FieldName = 'ORIGINALNO'
-      Required = True
-    end
-    object cdsSmpLocLITHOLOGY: TWideStringField
-      FieldName = 'LITHOLOGY'
-      Required = True
-      Size = 50
     end
     object cdsSmpLocLITHCLASSID: TWideStringField
       FieldName = 'LITHCLASSID'
@@ -3085,11 +3112,7 @@ object dmDV: TdmDV
       FieldName = 'LITHCLASS'
       ProviderFlags = []
       ReadOnly = True
-    end
-    object cdsSmpLocIGSN: TWideStringField
-      FieldName = 'IGSN'
-      Required = True
-      Size = 50
+      FixedChar = True
     end
   end
   object qIsoFor: TSQLQuery
@@ -5382,20 +5405,6 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 212
     Top = 688
-    object qSmpFracSAMPLENO: TWideStringField
-      FieldName = 'SAMPLENO'
-      Required = True
-    end
-    object qSmpFracFRAC: TWideStringField
-      FieldName = 'FRAC'
-      Required = True
-      Size = 15
-    end
-    object qSmpFracZONEID: TWideStringField
-      FieldName = 'ZONEID'
-      Required = True
-      Size = 2
-    end
   end
   object dspSmpFrac: TDataSetProvider
     DataSet = qSmpFrac
@@ -5411,18 +5420,20 @@ object dmDV: TdmDV
     Top = 688
     object cdsSmpFracSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
+      Size = 50
     end
     object cdsSmpFracFRAC: TWideStringField
       FieldName = 'FRAC'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
-      Size = 15
+      FixedChar = True
+      Size = 50
     end
     object cdsSmpFracZONEID: TWideStringField
       FieldName = 'ZONEID'
       Required = True
+      FixedChar = True
       Size = 2
     end
   end
@@ -5462,9 +5473,9 @@ object dmDV: TdmDV
     Top = 688
     object cdsFracsForSampleFRAC: TWideStringField
       FieldName = 'FRAC'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
-      Size = 15
+      FixedChar = True
+      Size = 50
     end
   end
   object dsFracsForSample: TDataSource
@@ -5744,18 +5755,20 @@ object dmDV: TdmDV
     Top = 612
     object cdsSmpFracRangeSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
+      Size = 50
     end
     object cdsSmpFracRangeFRAC: TWideStringField
       FieldName = 'FRAC'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
-      Size = 15
+      FixedChar = True
+      Size = 50
     end
     object cdsSmpFracRangeZONEID: TWideStringField
       FieldName = 'ZONEID'
       Required = True
+      FixedChar = True
       Size = 2
     end
   end
@@ -6320,6 +6333,7 @@ object dmDV: TdmDV
     Top = 726
   end
   object SQLMonitor1: TSQLMonitor
+    Active = True
     SQLConnection = sqlcDateView
     Left = 88
     Top = 16
@@ -6350,11 +6364,13 @@ object dmDV: TdmDV
     object cdsSampleZonesZONEID: TWideStringField
       FieldName = 'ZONEID'
       Required = True
+      FixedChar = True
       Size = 2
     end
     object cdsSampleZonesZONETYPE: TWideStringField
       FieldName = 'ZONETYPE'
       Required = True
+      FixedChar = True
     end
   end
   object dsSampleZones: TDataSource

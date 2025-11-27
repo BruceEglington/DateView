@@ -80,7 +80,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RECORDID'
@@ -122,7 +121,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'COUNTRY'
@@ -162,7 +160,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITNAME'
@@ -202,7 +199,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LITHOLOGY'
@@ -242,7 +238,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ISOSYSTEMNAME'
@@ -282,7 +277,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'MATERIALDESCRIPTION'
@@ -322,7 +316,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'APPROACHDESCRIPTION'
@@ -362,7 +355,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'TECHNIQUE'
@@ -402,7 +394,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = True
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'INTERPRETATION'
@@ -442,7 +433,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PREFLEVEL'
@@ -482,7 +472,6 @@ object ISFGrid: TISFGrid
         Width = '50'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RAGE'
@@ -522,7 +511,6 @@ object ISFGrid: TISFGrid
         Width = '50'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RAGEPERROR'
@@ -561,7 +549,6 @@ object ISFGrid: TISFGrid
         Width = '50'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RAGEMERROR'
@@ -600,7 +587,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGEUNITS'
@@ -639,7 +625,6 @@ object ISFGrid: TISFGrid
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCESHORT'
@@ -954,7 +939,6 @@ object ISFGrid: TISFGrid
             Width = 1039
             ExplicitWidth = 1039
             inherited lblWelcome: TIWLabel
-              Left = 718
               ExplicitLeft = 510
             end
           end
@@ -962,9 +946,6 @@ object ISFGrid: TISFGrid
         inherited iwrSignInOut: TIWRegion
           Width = 1180
           ExplicitWidth = 1180
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

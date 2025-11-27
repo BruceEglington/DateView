@@ -17,6 +17,7 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 227
     Top = 70
     Width = 108
@@ -32,6 +33,7 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 94
@@ -41,11 +43,13 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 58
@@ -54,12 +58,14 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Strat. Unit'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 94
@@ -69,11 +75,13 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 94
@@ -83,11 +91,13 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 94
@@ -98,11 +108,13 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 4
     OnClick = iwbDeleteClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 154
     Width = 27
@@ -111,12 +123,14 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Area'
   end
   object iwDBlcbUnit: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 112
     Top = 120
     Width = 365
@@ -126,6 +140,7 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -137,9 +152,9 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     ListField = 'UNITNAME'
     ListSource = dmDV.dsUnits
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbArea: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 112
     Top = 152
     Width = 365
@@ -149,6 +164,7 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 2
@@ -160,9 +176,9 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     ListField = 'COUNTRY'
     ListSource = dmDV.dsCountries
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 94
@@ -172,6 +188,7 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 7
     OnClick = iwbEditClick
@@ -220,9 +237,6 @@ object ISFUnitAreaEdit: TISFUnitAreaEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

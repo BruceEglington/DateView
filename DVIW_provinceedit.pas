@@ -81,7 +81,7 @@ begin
   //dmUser.SetDeveloperData(dmStrat.qProvinces.SQL.Text);
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   //try
     //dmUser.SetDeveloperData('provinceedit 0');

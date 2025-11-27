@@ -17,6 +17,7 @@ object ISFIsoProvince: TISFIsoProvince
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 231
     Top = 72
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoProvince: TISFIsoProvince
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 102
@@ -41,11 +43,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 51
@@ -54,12 +58,14 @@ object ISFIsoProvince: TISFIsoProvince
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Province'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 102
@@ -69,11 +75,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 102
@@ -83,11 +91,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 692
     Top = 73
     Width = 102
@@ -98,11 +108,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 3
     OnClick = iwbDeleteClick
   end
   object iwDBlcb: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 120
     Width = 341
@@ -112,6 +124,7 @@ object ISFIsoProvince: TISFIsoProvince
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 2
@@ -123,9 +136,9 @@ object ISFIsoProvince: TISFIsoProvince
     ListField = 'DOMAINNAME'
     ListSource = dmDV.dsProvinces
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBgrid: TIWDBGrid
+    AlignWithMargins = False
     Left = 30
     Top = 170
     Width = 595
@@ -142,10 +155,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -156,6 +172,7 @@ object ISFIsoProvince: TISFIsoProvince
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -164,7 +181,6 @@ object ISFIsoProvince: TISFIsoProvince
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINNAME'
@@ -175,6 +191,7 @@ object ISFIsoProvince: TISFIsoProvince
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -193,6 +210,7 @@ object ISFIsoProvince: TISFIsoProvince
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -201,7 +219,6 @@ object ISFIsoProvince: TISFIsoProvince
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
@@ -212,6 +229,7 @@ object ISFIsoProvince: TISFIsoProvince
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -230,6 +248,7 @@ object ISFIsoProvince: TISFIsoProvince
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -238,7 +257,6 @@ object ISFIsoProvince: TISFIsoProvince
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINTYPEID'
@@ -249,6 +267,7 @@ object ISFIsoProvince: TISFIsoProvince
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -276,6 +295,7 @@ object ISFIsoProvince: TISFIsoProvince
     RowCurrentColor = clWebYELLOW
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 102
@@ -285,11 +305,13 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 6
     OnClick = iwbEditClick
   end
   object iwbAddProvince: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 102
@@ -299,6 +321,7 @@ object ISFIsoProvince: TISFIsoProvince
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddProvince'
     TabOrder = 7
     OnClick = iwbAddProvinceClick
@@ -347,9 +370,6 @@ object ISFIsoProvince: TISFIsoProvince
         inherited iwrSignInOut: TIWRegion
           Width = 901
           ExplicitWidth = 901
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

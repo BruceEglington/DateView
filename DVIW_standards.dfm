@@ -17,6 +17,7 @@ object ISFStandards: TISFStandards
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 94
     Top = 150
     Width = 649
@@ -33,10 +34,13 @@ object ISFStandards: TISFStandards
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = False
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -47,6 +51,7 @@ object ISFStandards: TISFStandards
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -55,7 +60,6 @@ object ISFStandards: TISFStandards
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'STANDARDID'
@@ -67,6 +71,7 @@ object ISFStandards: TISFStandards
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -85,6 +90,7 @@ object ISFStandards: TISFStandards
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -93,7 +99,6 @@ object ISFStandards: TISFStandards
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'STANDARDNAME'
@@ -107,6 +112,7 @@ object ISFStandards: TISFStandards
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -134,6 +140,7 @@ object ISFStandards: TISFStandards
     RowCurrentColor = clNone
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 96
     Top = 127
     Width = 97
@@ -146,6 +153,7 @@ object ISFStandards: TISFStandards
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -155,6 +163,7 @@ object ISFStandards: TISFStandards
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 222
     Top = 127
     Width = 65
@@ -167,6 +176,7 @@ object ISFStandards: TISFStandards
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -176,6 +186,7 @@ object ISFStandards: TISFStandards
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 92
     Top = 76
     Width = 75
@@ -185,10 +196,12 @@ object ISFStandards: TISFStandards
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 182
     Top = 76
     Width = 129
@@ -198,11 +211,13 @@ object ISFStandards: TISFStandards
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 1
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 326
     Top = 76
     Width = 129
@@ -212,11 +227,13 @@ object ISFStandards: TISFStandards
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 3
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNewStandard: TIWButton
+    AlignWithMargins = False
     Left = 472
     Top = 76
     Width = 133
@@ -226,11 +243,13 @@ object ISFStandards: TISFStandards
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewStandard'
     TabOrder = 5
     OnClick = iwbAddNewStandardClick
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 601
     Top = 132
     Width = 137
@@ -240,12 +259,14 @@ object ISFStandards: TISFStandards
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -255,6 +276,7 @@ object ISFStandards: TISFStandards
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -306,9 +328,6 @@ object ISFStandards: TISFStandards
         inherited iwrSignInOut: TIWRegion
           Width = 784
           ExplicitWidth = 784
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

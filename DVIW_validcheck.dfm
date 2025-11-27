@@ -17,6 +17,7 @@ object ISFValidCheck: TISFValidCheck
   DesignLeft = 2
   DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 73
@@ -28,6 +29,7 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     AutoEditable = False
@@ -36,6 +38,7 @@ object ISFValidCheck: TISFValidCheck
     PasswordPrompt = False
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 134
     Width = 121
@@ -47,6 +50,7 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit2'
     SubmitOnAsyncEvent = True
     TabOrder = 1
@@ -56,6 +60,7 @@ object ISFValidCheck: TISFValidCheck
     PasswordPrompt = False
   end
   object IWDBEdit4: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 160
     Width = 153
@@ -67,6 +72,7 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit4'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -76,6 +82,7 @@ object ISFValidCheck: TISFValidCheck
     PasswordPrompt = False
   end
   object IWDBEdit5: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 186
     Width = 121
@@ -87,6 +94,7 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit4'
     SubmitOnAsyncEvent = True
     TabOrder = 3
@@ -96,6 +104,7 @@ object ISFValidCheck: TISFValidCheck
     PasswordPrompt = False
   end
   object IWDBMemo1: TIWDBMemo
+    AlignWithMargins = False
     Left = 104
     Top = 246
     Width = 565
@@ -107,6 +116,7 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
@@ -119,6 +129,7 @@ object ISFValidCheck: TISFValidCheck
     FriendlyName = 'IWDBMemo1'
   end
   object iwbSaveReturn: TIWButton
+    AlignWithMargins = False
     Left = 378
     Top = 76
     Width = 231
@@ -128,11 +139,13 @@ object ISFValidCheck: TISFValidCheck
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveReturn'
     TabOrder = 5
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 60
@@ -141,12 +154,14 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Record ID'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 136
     Width = 101
@@ -155,12 +170,14 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Validation Status'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 162
     Width = 101
@@ -169,12 +186,14 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel3'
     Caption = 'First objection by'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 188
     Width = 130
@@ -183,12 +202,14 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel4'
     Caption = 'Date for this objection'
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 224
     Width = 68
@@ -197,12 +218,14 @@ object ISFValidCheck: TISFValidCheck
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel5'
     Caption = 'Comments'
   end
   object iwbCancelReturn: TIWButton
+    AlignWithMargins = False
     Left = 98
     Top = 76
     Width = 223
@@ -212,11 +235,13 @@ object ISFValidCheck: TISFValidCheck
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelReturn'
     TabOrder = 6
     OnClick = iwbReturnClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -226,6 +251,7 @@ object ISFValidCheck: TISFValidCheck
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -233,6 +259,7 @@ object ISFValidCheck: TISFValidCheck
     VAlign = vaMiddle
   end
   object iwbClearObjection: TIWButton
+    AlignWithMargins = False
     Left = 662
     Top = 76
     Width = 119
@@ -242,6 +269,7 @@ object ISFValidCheck: TISFValidCheck
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClearObjection'
     TabOrder = 7
     OnClick = iwbClearObjectionClick
@@ -290,9 +318,6 @@ object ISFValidCheck: TISFValidCheck
         inherited iwrSignInOut: TIWRegion
           Width = 800
           ExplicitWidth = 800
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

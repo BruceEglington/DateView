@@ -126,7 +126,6 @@ type
     cdsValidationStatusVALIDSTATUSID: TWideStringField;
     cdsValidationStatusVALIDATIONSTATUS: TWideStringField;
     qSamples: TSQLQuery;
-    StringField2: TWideStringField;
     dspSamples: TDataSetProvider;
     cdsSamples: TClientDataSet;
     qBoundaries: TSQLQuery;
@@ -421,11 +420,6 @@ type
     DataSetProvider3: TDataSetProvider;
     ClientDataSet3: TClientDataSet;
     DataSource3: TDataSource;
-    qSamplesCONTINENTID: TWideStringField;
-    qSamplesCOUNTRYABR: TWideStringField;
-    cdsSamplesCONTINENTID: TWideStringField;
-    cdsSamplesCOUNTRYABR: TWideStringField;
-    cdsSamplesSAMPLENO: TWideStringField;
     qCountriesCOUNTRYHASRECORDS: TWideStringField;
     cdsCountriesCOUNTRYHASRECORDS: TWideStringField;
     cdsRecordIDsRECORDID: TIntegerField;
@@ -574,17 +568,12 @@ type
     cdsIsoForWHOFOR: TWideStringField;
     cdsIsoRef2RECORDID: TIntegerField;
     cdsIsoRef2SOURCETYPEID: TWideStringField;
-    cdsSmpLocSAMPLENO: TWideStringField;
-    cdsSmpLocCONTINENTID: TWideStringField;
-    cdsSmpLocCOUNTRYABR: TWideStringField;
     cdsSmpLocLATITUDE: TFloatField;
     cdsSmpLocLONGITUDE: TFloatField;
     cdsSmpLocELEVATION: TFloatField;
     cdsSmpLocLATITUDEPRECISION: TFloatField;
     cdsSmpLocLONGITUDEPRECISION: TFloatField;
     cdsSmpLocELEVATIONPRECISION: TFloatField;
-    cdsSmpLocCONTINENT: TWideStringField;
-    cdsSmpLocCOUNTRY: TWideStringField;
     qRecordIDsRECORDID: TIntegerField;
     qResultsCOUNTRYABR: TWideStringField;
     qResultsUNITNAME: TWideStringField;
@@ -651,17 +640,6 @@ type
     qIsoImagesIMAGETYPEID: TWideStringField;
     qIsoImagesIMAGEID: TIntegerField;
     qIsoImagesIMAGETYPE: TWideStringField;
-    qSmpLocSAMPLENO: TWideStringField;
-    qSmpLocCONTINENTID: TWideStringField;
-    qSmpLocCOUNTRYABR: TWideStringField;
-    qSmpLocLATITUDE: TFloatField;
-    qSmpLocLONGITUDE: TFloatField;
-    qSmpLocELEVATION: TFloatField;
-    qSmpLocLATITUDEPRECISION: TFloatField;
-    qSmpLocLONGITUDEPRECISION: TFloatField;
-    qSmpLocELEVATIONPRECISION: TFloatField;
-    qSmpLocCONTINENT: TWideStringField;
-    qSmpLocCOUNTRY: TWideStringField;
     qNewResult: TSQLQuery;
     dspDisplayImages: TDataSetProvider;
     qIsoForRECORDID: TIntegerField;
@@ -670,8 +648,6 @@ type
     Query1Rec: TSQLQuery;
     dspQuery1Rec: TDataSetProvider;
     cdsQuery1Rec: TClientDataSet;
-    qSmpLocORIGINALNO: TWideStringField;
-    cdsSmpLocORIGINALNO: TWideStringField;
     qSmpRegORIGINALNO: TWideStringField;
     cdsSmpRegORIGINALNO: TWideStringField;
     cdsIsoRef2REFNUM: TIntegerField;
@@ -697,13 +673,10 @@ type
     dspSmpFrac: TDataSetProvider;
     cdsSmpFrac: TClientDataSet;
     dsSmpFrac: TDataSource;
-    cdsSmpFracSAMPLENO: TWideStringField;
-    cdsSmpFracFRAC: TWideStringField;
     qFracsForSample: TSQLQuery;
     dspFracsForSample: TDataSetProvider;
     cdsFracsForSample: TClientDataSet;
     dsFracsForSample: TDataSource;
-    cdsFracsForSampleFRAC: TWideStringField;
     qStratDBLink: TSQLQuery;
     cdsStratDBLink: TClientDataSet;
     dsStratDBLink: TDataSource;
@@ -755,8 +728,6 @@ type
     dspSmpFracRange: TDataSetProvider;
     cdsSmpFracRange: TClientDataSet;
     dsSmpFracRange: TDataSource;
-    cdsSmpFracRangeSAMPLENO: TWideStringField;
-    cdsSmpFracRangeFRAC: TWideStringField;
     cdsRefFullDOI: TWideStringField;
     qUnitsUNITID: TIntegerField;
     cdsUnitsUNITID: TIntegerField;
@@ -919,20 +890,10 @@ type
     cdsQueryInitMUMERROR: TFloatField;
     cdsQueryInitMODEL: TWideStringField;
     SQLMonitor1: TSQLMonitor;
-    qSmpLocLITHOLOGY: TWideStringField;
-    qSmpLocLITHCLASSID: TWideStringField;
-    qSmpLocLITHCLASS: TWideStringField;
-    cdsSmpLocLITHOLOGY: TWideStringField;
-    cdsSmpLocLITHCLASSID: TWideStringField;
-    cdsSmpLocLITHCLASS: TWideStringField;
     qSampleZones: TSQLQuery;
     dspSampleZones: TDataSetProvider;
     cdsSampleZones: TClientDataSet;
     dsSampleZones: TDataSource;
-    cdsSampleZonesZONEID: TWideStringField;
-    cdsSampleZonesZONETYPE: TWideStringField;
-    cdsSmpFracRangeZONEID: TWideStringField;
-    cdsSmpFracZONEID: TWideStringField;
     qSameSampleResults: TSQLQuery;
     dspSameSampleResults: TDataSetProvider;
     cdsSameSampleResults: TClientDataSet;
@@ -957,14 +918,9 @@ type
     cdsSameSampleResultsRAGEPERROR: TFloatField;
     cdsSameSampleResultsRAGEMERROR: TFloatField;
     cdsSameSampleResultsAGEUNITS: TWideStringField;
-    qSmpFracSAMPLENO: TWideStringField;
-    qSmpFracFRAC: TWideStringField;
-    qSmpFracZONEID: TWideStringField;
     cdsQueryInitWHOFORID: TWideStringField;
     cdsQuerySamplesLITHOLOGY: TWideStringField;
     cdsQuery1RecCOUNT: TFMTBCDField;
-    qSmpLocIGSN: TWideStringField;
-    cdsSmpLocIGSN: TWideStringField;
     qLitholLITHGROUPID: TSmallintField;
     qLitholLITHGROUP: TWideStringField;
     cdsLitholLITHGROUPID: TSmallintField;
@@ -1167,6 +1123,48 @@ type
     cdsQuery1UNITNAME: TWideStringField;
     cdsQuery1REFNUM: TIntegerField;
     cdsQuery1WHOFORID: TWideStringField;
+    cdsSamplesSAMPLENO: TWideStringField;
+    cdsSamplesCONTINENTID: TWideStringField;
+    cdsSamplesCOUNTRYABR: TWideStringField;
+    cdsSmpLocSAMPLENO: TWideStringField;
+    cdsSmpLocCONTINENTID: TWideStringField;
+    cdsSmpLocCOUNTRYABR: TWideStringField;
+    cdsSmpLocORIGINALNO: TWideStringField;
+    cdsSmpLocLITHOLOGY: TWideStringField;
+    cdsSmpLocIGSN: TWideStringField;
+    cdsSmpLocCONTINENT: TWideStringField;
+    cdsSmpLocCOUNTRY: TWideStringField;
+    cdsSmpLocLITHCLASSID: TWideStringField;
+    cdsSmpLocLITHCLASS: TWideStringField;
+    cdsSmpFracRangeSAMPLENO: TWideStringField;
+    cdsSmpFracRangeFRAC: TWideStringField;
+    cdsSmpFracRangeZONEID: TWideStringField;
+    cdsSmpFracSAMPLENO: TWideStringField;
+    cdsSmpFracFRAC: TWideStringField;
+    cdsSmpFracZONEID: TWideStringField;
+    cdsFracsForSampleFRAC: TWideStringField;
+    cdsSampleZonesZONEID: TWideStringField;
+    cdsSampleZonesZONETYPE: TWideStringField;
+    qResultsExtraSIGMAISOTOPECONSTANT: TFloatField;
+    cdsResultsExtraSIGMAISOTOPECONSTANT: TFloatField;
+    qIsoSystemsISOTOPECONSTANT: TFloatField;
+    cdsIsoSystemsISOTOPECONSTANT: TFloatField;
+    qSmpLocSAMPLENO: TWideStringField;
+    qSmpLocCONTINENTID: TWideStringField;
+    qSmpLocCOUNTRYABR: TWideStringField;
+    qSmpLocLATITUDE: TFloatField;
+    qSmpLocLONGITUDE: TFloatField;
+    qSmpLocELEVATION: TFloatField;
+    qSmpLocLATITUDEPRECISION: TFloatField;
+    qSmpLocLONGITUDEPRECISION: TFloatField;
+    qSmpLocELEVATIONPRECISION: TFloatField;
+    qSmpLocORIGINALNO: TWideStringField;
+    qSmpLocLITHOLOGY: TWideStringField;
+    qSmpLocIGSN: TWideStringField;
+    qSmpLocCONTINENT: TWideStringField;
+    qSmpLocCOUNTRY: TWideStringField;
+    qSmpLocLITHCLASSID: TWideStringField;
+    qSmpLocLITHCLASS: TWideStringField;
     procedure cdsIsoValidReconcileError(DataSet: TCustomClientDataSet;
       E: EReconcileError; UpdateKind: TUpdateKind;
       var Action: TReconcileAction);
@@ -1344,7 +1342,7 @@ begin
     try
       dmUser.cdsDevInfo.Open;
       dmUser.cdsDevInfo.Insert;
-      dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+      dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
       dmUser.cdsDevInfoQUERYCHECK.AsString := 'ConstructUnitAreaQueryProvinces '+dmDV.qProvinces.SQL.Text;
       dmUser.cdsDevInfo.ApplyUpdates(0);
       dmUser.cdsDevInfo.Close;
@@ -1380,7 +1378,7 @@ begin
     try
       dmUser.cdsDevInfo.Open;
       dmUser.cdsDevInfo.Insert;
-      dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+      dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
       dmUser.cdsDevInfoQUERYCHECK.AsString := 'ConstructUnitAreaQueryTerranes '+dmDV.qTerranes.SQL.Text;
       dmUser.cdsDevInfo.ApplyUpdates(0);
       dmUser.cdsDevInfo.Close;
@@ -1419,7 +1417,7 @@ begin
     try
       dmUser.cdsDevInfo.Open;
       dmUser.cdsDevInfo.Insert;
-      dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+      dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
       dmUser.cdsDevInfoQUERYCHECK.AsString := 'ConstructUnitAreaQueryContinentReferences '+dmDV.qReferences.SQL.Text;
       dmUser.cdsDevInfo.ApplyUpdates(0);
       dmUser.cdsDevInfo.Close;
@@ -1465,7 +1463,7 @@ begin
     try
       dmUser.cdsDevInfo.Open;
       dmUser.cdsDevInfo.Insert;
-      dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+      dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
       dmUser.cdsDevInfoQUERYCHECK.AsString := 'ConstructUnitAreaQuerySamples '+dmDV.qSamples.SQL.Text;
       dmUser.cdsDevInfo.ApplyUpdates(0);
       dmUser.cdsDevInfo.Close;
@@ -1512,7 +1510,7 @@ begin
     try
       dmUser.cdsDevInfo.Open;
       dmUser.cdsDevInfo.Insert;
-      dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+      dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
       dmUser.cdsDevInfoQUERYCHECK.AsString := 'ConstructUnitAreaQueryFractions '+dmDV.qSmpFrac.SQL.Text;
       dmUser.cdsDevInfo.ApplyUpdates(0);
       dmUser.cdsDevInfo.Close;
@@ -1733,7 +1731,7 @@ begin
   end;
   if UserSession.IsDeveloper then
   begin
-      dmUser.SetDeveloperData('SubmitQuery1b '+dmDV.Query1.SQL.Text);
+      //dmUser.SetDeveloperData('SubmitQuery1b '+dmDV.Query1.SQL.Text);
       //dmUser.SetDeveloperData('SubmitQueryInitb '+dmDV.QueryInit.SQL.Text);
       //dmUser.SetDeveloperData('SubmitQuery1Combinedb '+dmDV.QueryCombined.SQL.Text);
   end;
@@ -4402,7 +4400,7 @@ begin
       dmDV.cdsIsoValid2.Append;
       dmDV.cdsIsoValid2RECORDID.AsInteger := NextAvailableRecordID;
       dmDV.cdsIsoValid2VALIDSTATUSID.AsString := 'Capt';
-      dmDV.cdsIsoValid2DATEDONE.AsDateTime := Now;
+      dmDV.cdsIsoValid2DATEDONE.AsDateTime := TDateTime.NowUTC;
       dmDV.cdsIsoValid2DONEBY.AsString := UserSession.UserID;
       dmDV.cdsIsoValid2.Post;
       }
@@ -4429,7 +4427,7 @@ begin
       dmDV.cdsIsoValid2.Append;
       dmDV.cdsIsoValid2RECORDID.AsInteger := NextAvailableRecordID;
       dmDV.cdsIsoValid2VALIDSTATUSID.AsString := 'NotYt';
-      dmDV.cdsIsoValid2DATEDONE.AsDateTime := Now;
+      dmDV.cdsIsoValid2DATEDONE.AsDateTime := TDateTime.NowUTC;
       dmDV.cdsIsoValid2DONEBY.AsString := 'Nobody';
       dmDV.cdsIsoValid2.Post;
       try
@@ -4784,7 +4782,7 @@ begin
   end;
   if UserSession.IsDeveloper then
   begin
-    dmUser.SetDeveloperData('ConstructClosureTemperatureQuery '+dmDV.qClosureTemperatures.SQL.Text);
+    //dmUser.SetDeveloperData('ConstructClosureTemperatureQuery '+dmDV.qClosureTemperatures.SQL.Text);
   end;
 end;
 
@@ -4848,7 +4846,7 @@ begin
       begin
         dmUser.cdsDevInfo.Open;
         dmUser.cdsDevInfo.Insert;
-        dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+        dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
         dmUser.cdsDevInfoQUERYCHECK.AsString := dmDV.qRefNew.SQL.Text;
         dmUser.cdsDevInfo.ApplyUpdates(0);
         dmUser.cdsDevInfo.Close;
@@ -4873,7 +4871,7 @@ begin
       begin
         dmUser.cdsDevInfo.Open;
         dmUser.cdsDevInfo.Insert;
-        dmUser.cdsDevInfoDATESAVED.AsDateTime := Now;
+        dmUser.cdsDevInfoDATESAVED.AsDateTime := TDateTime.NowUTC;
         dmUser.cdsDevInfoQUERYCHECK.AsString := dmDV.qRefNew.SQL.Text;
         dmUser.cdsDevInfo.ApplyUpdates(0);
         dmUser.cdsDevInfo.Close;

@@ -244,6 +244,9 @@ type
     IWLabel76: TIWLabel;
     iwDBeIsotopeConstant: TIWDBEdit;
     iwlIsotopeConstant: TIWLabel;
+    IWLabel77: TIWLabel;
+    iwDBeSigmaIsotopeConstant: TIWDBEdit;
+    iwbDM2_from_Initial: TIWButton;
     procedure IWAppFormRender(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
     procedure iwbPostClick(Sender: TObject);
@@ -317,11 +320,13 @@ type
     procedure iwdbgSameSampleResultsColumns0Click(ASender: TObject;
       const AValue: string);
     procedure iwbMakePublicClick(Sender: TObject);
+    procedure iwbDM2_from_InitialClick(Sender: TObject);
   public
     ISFDetailsEdit: TISFDetailsEdit;
   protected
     UsersOwnData : boolean;
     function Validate : Boolean ;
+    function DM2_Age_From_Epsilon(AgeInitial, InitialRatio, Epsilon, tDC1, tKCHUR, tRchur, tKc, tKdm, tRdm : double) : double;
     procedure ClearErrorMessages ;
   end;
 
@@ -335,7 +340,7 @@ uses
   DVIW_isoterrane, DVIW_isogrouping, DVIW_isoorogenic, DVIW_isoboundary,
   DVIW_isochemtype, DVIW_isoimage, DVIW_isofor, DVIW_smpregedit,
   DVIW_samplegeoedit, DVIW_sampleregdataedit, DVIW_isolipedit, usrIW_dm,
-  DB_List_Combo;
+  DB_List_Combo, DVIW_dmdata;
 
 
 function TISFDetailsEdit.Validate: Boolean;
@@ -414,6 +419,12 @@ begin
     iwbCancelChangesBottom.Visible := (UsersOwnData or UserSession.CanModify) and (dmDV.cdsRecordIDs.State in [dsEdit,dsInsert]);
     iwbEditBottom.Visible := (UsersOwnData or UserSession.CanModify) and (dmDV.cdsRecordIDs.State in [dsBrowse]);
     iwrSameSampleRecords.Visible := UserSession.CanInsert and (dmDV.cdsRecordIDs.State in [dsBrowse,dsEdit]);
+    //iwbDM2_from_Initial.Visible :=  UserSession.CanInsert and (dmDV.cdsRecordIDs.State in [dsBrowse,dsEdit]);
+    iwbDM2_from_Initial.Visible :=  UserSession.CanInsert and (dmDV.cdsRecordIDs.State in [dsBrowse,dsEdit])
+      and (dmDV.cdsResultsMATERIALABR.AsString=ValueForZircon)
+      and (dmDV.cdsResultsAPPROACHABR.AsString=ValueForModelInitialAtFormationAge)
+      and (dmDV.cdsResultsISOTOPESYSTEM.AsString=ValueForLuHf)
+      and ((dmDV.cdsIsoInitINITRATIO.AsString <> '') or (dmDV.cdsIsoInitEPSILON.AsString <> ''));
   end;
   iwDBeStratDBID.Editable := (UsersOwnData or UserSession.CanModifyPlus) and (dmDV.cdsRecordIDs.State in [dsEdit]);
   iwbDelete.Visible := UserSession.CanDelete and (dmDV.cdsRecordIDs.State in [dsBrowse]);
@@ -676,7 +687,7 @@ begin
   if UserSession.LoggedIn then
   begin
     UserSession.UnitSender := usDetailsEdit;
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
     dmDV.qRecordIDs.Close;
     dmDV.qRecordIDs.ParamByName('RECORDID').AsString := UserSession.RecordChosen;
     dmDV.cdsRecordIDs.Close;
@@ -780,7 +791,6 @@ var
   tLabIDNew, tWhoForIDNew : string;
 begin
   //WebApplication.ShowMessage('Not yet implemented.',smAlert);
-  //
   //dmUser.SetDeveloperData('Starting submit for NewRecord');
   GetComboBoxValue(iwcbInterpretation,dmDV.cdsInterpretations,'Interpretation','InterpAbr',UserSession.NewInterpretationID);
   GetComboBoxValue(iwcbMaterial,dmDV.cdsMaterial,'MaterialDescription','MaterialAbr',UserSession.NewMaterialID);
@@ -1249,12 +1259,110 @@ begin
   end;
 end;
 
+procedure TISFDetailsEdit.iwbDM2_from_InitialClick(Sender: TObject);
+var
+  tRecordID : integer;
+  tExists : boolean;
+  tRchur, tKchur, tRchuratage,
+  tRdm, tKdm,
+  tKcc : double;
+  tAge, tAgePlus95, tAgeMinus95 : double;
+  tAgeInitial, tInitRatio, tEpsilon, tDecayConst1 : double;
+begin
+  //WebApplication.ShowMessage('Not yet implemented',smAlert);
+  // check whether DM2 record already exists
+  tExists := false;
+  dmDV.cdsSameSampleResults.First;
+  repeat
+     if ((dmDV.cdsSameSampleResultsINTERPABR.AsString = ValueForCrustalResidence)
+       and  (dmDV.cdsSameSampleResultsAPPROACHABR.AsString = ValueForDM2))
+     then tExists := true;
+    dmDV.cdsSameSampleResults.Next;
+  until dmDV.cdsSameSampleResults.Eof;
+  if not tExists then
+  begin
+    //calculate T(2DM) age for this sample
+    tRecordID := dmDV.cdsSameSampleResultsRECORDID.AsInteger;
+    tAgeInitial := dmDV.cdsSameSampleResultsRAGE.AsFloat;
+    tInitRatio :=  dmDV.cdsIsoInitInitRatio.AsFloat;
+    tEpsilon :=  dmDV.cdsIsoInitEPSILON.AsFloat;
+    //WebApplication.ShowMessage('Init ratio = '+FormatFloat('##0.000000',tInitRatio),smAlert);
+    //WebApplication.ShowMessage('Epsilon = '+FormatFloat('###0.000',tEpsilon),smAlert);
+    //IsotopeSystem
+    dmdDV.qIsoSystem.Close;
+    dmdDV.cdsIsoSystem.Close;
+    dmdDV.qIsoSystem.ParamByName('ISOSYSTEM').AsString := ValueForLuHf;
+    dmdDV.cdsIsoSystem.Open;
+    tDecayConst1 := dmdDV.cdsIsoSystemDECAYCONST1.AsFloat;
+    dmdDV.cdsIsoSystem.Close;
+    //Models
+    dmdDV.qIsoModelApproach.Close;
+    dmdDV.cdsIsoModelApproach.Close;
+    dmdDV.qIsoModelApproach.SQL.Clear;
+    dmdDV.qIsoModelApproach.SQL.Add('select IsoModels.ModelID, IsoModels.IsoSystem, IsoModels.ModelTypeID,');
+    dmdDV.qIsoModelApproach.SQL.Add('  IsoModels.ModelParam1,IsoModels.ModelParam2, IsoModels.ModelParam3,');
+    dmdDV.qIsoModelApproach.SQL.Add('  IsoModels.ModelParam4, IsoModels.ModelParam5,');
+    dmdDV.qIsoModelApproach.SQL.Add('  IsoModels.ModelName, IsoSystem.IsoSystemName,');
+    dmdDV.qIsoModelApproach.SQL.Add('  IsoModelTypes.ModelType');
+    dmdDV.qIsoModelApproach.SQL.Add('from IsoModels,IsoSystem,IsoModelTypes');
+    dmdDV.qIsoModelApproach.SQL.Add('where IsoModels.IsoSystem=IsoSystem.IsoSystem');
+    dmdDV.qIsoModelApproach.SQL.Add('and IsoModels.ModelTypeID=IsoModelTypes.ModelTypeID');
+    dmdDV.qIsoModelApproach.SQL.Add('and IsoModels.IsoSystem = :IsoSystem');
+    dmdDV.qIsoModelApproach.SQL.Add('and IsoModels.ModelTypeID = :ModelTypeID');
+    //dmUser.SetDeveloperData(dmdDV.qIsoModelApproach.Sql.Text);
+    dmdDV.qIsoModelApproach.ParamByName('ISOSYSTEM').AsString := ValueForLuHf;
+    dmdDV.qIsoModelApproach.ParamByName('MODELTYPEID').AsString := ValueForCHUR;
+    dmdDV.cdsIsoModelApproach.Open;
+    tRchur := dmdDV.cdsIsoModelApproachMODELPARAM3.AsFloat;
+    tKchur := dmdDV.cdsIsoModelApproachMODELPARAM2.AsFloat;
+    dmdDV.cdsIsoModelApproach.Close;
+    dmdDV.qIsoModelApproach.ParamByName('ISOSYSTEM').AsString := ValueForLuHf;
+    dmdDV.qIsoModelApproach.ParamByName('MODELTYPEID').AsString := ValueForDM;
+    dmdDV.cdsIsoModelApproach.Open;
+    tRdm := dmdDV.cdsIsoModelApproachMODELPARAM3.AsFloat;
+    tKdm := dmdDV.cdsIsoModelApproachMODELPARAM2.AsFloat;
+    dmdDV.cdsIsoModelApproach.Close;
+    dmdDV.qIsoModelApproach.ParamByName('ISOSYSTEM').AsString := ValueForLuHf;
+    dmdDV.qIsoModelApproach.ParamByName('MODELTYPEID').AsString := ValueForCrustIntermediate;
+    dmdDV.cdsIsoModelApproach.Open;
+    tKcc := dmdDV.cdsIsoModelApproachMODELPARAM2.AsFloat;
+    dmdDV.cdsIsoModelApproach.Close;
+    if ((tInitRatio > 0.0) and (tEpsilon = 0.0)) then
+    begin
+      // Calculate Epsilon from initial ratio and update record
+      // before proceeding with crustal residence calculation
+      tRchuratage := tRchur - tKchur*(exp(tDecayConst1*tAgeInitial*1.0e6) - 1.0);
+      tEpsilon := (tInitRatio/tRchuratage - 1.0) * 1.0e4;
+    end;
+    if ((tInitRatio <= 0.0) and (tEpsilon <> 0.0)) then
+    begin
+      // Calculate Initial ratio from epsilon value and update record
+      // before proceeding with crustal residence calculation
+      tRchuratage := tRchur - tKchur*(exp(tDecayConst1*tAgeInitial*1.0e6) - 1.0);
+      tInitRatio := (tEpsilon/1.0e4 + 1.0) * tRchuratage;
+    end;
+    if ((tInitRatio <= 0.0) and (tEpsilon = 0.0)) then
+    begin
+      // Calculate Initial ratio from epsilon value and update record
+      // before proceeding with crustal residence calculation
+      tRchuratage := tRchur - tKchur*(exp(tDecayConst1*tAgeInitial*1.0e6) - 1.0);
+      tInitRatio := (tEpsilon/1.0e4 + 1.0) * tRchuratage;
+    end;
+    tAge := DM2_Age_From_Epsilon(tAgeInitial, tInitRatio, tEpsilon, tDecayConst1, tKCHUR, tRchur, tKcc, tKdm, tRdm);
+    iweDate.Text := FormatFloat('###0.000',tAge);
+    tAgePlus95 := 50.0;
+    iweDatePError.Text := FormatFloat('###0.000',tAgePlus95);
+    tAgeMinus95 := 50.0;
+    iweDateMError.Text := FormatFloat('###0.000',tAgeMinus95);
+  end;
+end;
+
 procedure TISFDetailsEdit.iwbDeleteSampleClick(Sender: TObject);
 begin
   try
     dmDV.cdsSmpReg.Delete;
   except
-    WebApplication.ShowMessage('Not able to delete linked Sample record.',smAlert);
+    WebApplication.ShowMessage('Not able to delete linked Sample record',smAlert);
   end;
   try
     dmDV.cdsSmpReg.ApplyUpdates(0);
@@ -1595,6 +1703,70 @@ begin
   dmDV.AddNewRecordWithDecayconstErrors(WasSuccessful);
 end;
 
+function TISFDetailsEdit.DM2_Age_From_Epsilon(AgeInitial, InitialRatio, Epsilon, tDC1, tKchur, tRchur, tKc, tKdm, tRdm : double) : double;
+var
+  I            : integer;
+  temp, temp1  : double;
+  AgeMax, ApproxAge
+               :  double;
+  ThisDone         :  Boolean;
+  tx, ty : double;
+  tRsmp, tRc  : double;
+begin
+  // Age expected in Ma
+  //calculation only works for situation with linear CHUR and DM curves,
+  //not for quadratic versions
+  if ((tRdm > 0.0) and (tRchur > 0.0)) then
+  begin
+    if ((tKdm > 0.0) and (tKchur > 0.0)) then
+    begin
+      //dmUser.SetDeveloperData('Age = '+FormatFloat('####0.000000',AgeInitial));
+      //dmUser.SetDeveloperData('Initial ratio = '+FormatFloat('####0.000000',InitialRatio));
+      //dmUser.SetDeveloperData('Epsilon = '+FormatFloat('####0.000000',Epsilon));
+      //dmUser.SetDeveloperData('tKchur = '+FormatFloat('####0.000000',tKchur));
+      //dmUser.SetDeveloperData('tRchur = '+FormatFloat('####0.000000',tRchur));
+      tRchur := tRchur - tKchur*(exp(tDC1*AgeInitial*1.0e6) - 1.0);
+      //dmUser.SetDeveloperData('tRchuratage = '+FormatFloat('####0.000000',tRchur));
+      tRsmp := (Epsilon/1.0e4 + 1.0) * tRchur;
+      //dmUser.SetDeveloperData('tRsmp = '+FormatFloat('####0.000000',tRsmp));
+      //dmUser.SetDeveloperData('tKc = '+FormatFloat('####0.000000',tKc));
+      tRc := tRsmp + tKc*(exp(tDC1*AgeInitial*1.0e6) - 1.0);
+      //dmUser.SetDeveloperData('tRc = '+FormatFloat('####0.000000',tRc));
+      //dmUser.SetDeveloperData('tKdm = '+FormatFloat('####0.000000',tKdm));
+      //dmUser.SetDeveloperData('tRdm = '+FormatFloat('####0.000000',tRdm));
+      ty := tKdm - tKc;
+      //dmUser.SetDeveloperData('ty = '+FormatFloat('####0.000000',ty));
+      temp := (tRdm-tRc);
+      //dmUser.SetDeveloperData('temp = '+FormatFloat('####0.000000',temp));
+      if (ty<>0.0) then
+      begin
+        if (temp/ty>-1.0) then
+        begin
+          temp1:=Ln(1.0+temp/ty);
+        end else
+        begin
+          temp1:=0.0;
+        end;
+      end else
+      begin
+        temp1:=0.0;
+      end;
+      //dmUser.SetDeveloperData('temp1 = '+FormatFloat('####0.000000',temp1));
+      AgeMax:=(temp1/tDC1);
+    end else
+    begin
+      AgeMax := -999.99*1.0e6;
+    end;
+    DM2_Age_From_Epsilon := AgeMax/1.0E6;
+  end else
+  begin
+    DM2_Age_From_Epsilon := 9999.99;
+  end;
+  //dmUser.SetDeveloperData('T2DM = '+FormatFloat('####0.000000',AgeMax/1.0e6));
+end;
+
 end.
+
+
 
 

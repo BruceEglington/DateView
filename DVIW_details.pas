@@ -185,7 +185,6 @@ begin
   iwbDetailsEdit.Visible := UserSession.CanModify;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
     if ((dmDV.cdsResultsISOTOPESYSTEM.AsString = 'ArAr') or
         (dmDV.cdsResultsISOTOPESYSTEM.AsString = 'KAr') or
         (dmDV.cdsResultsISOTOPESYSTEM.AsString = 'PbPb') or
@@ -224,7 +223,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
     dmDV.qRecordIDs.Close;
     dmDV.qRecordIDs.ParamByName('RECORDID').AsString := UserSession.RecordChosen;
     dmDV.cdsRecordIDs.Close;

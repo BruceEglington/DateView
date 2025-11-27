@@ -493,8 +493,8 @@ object dmStrat: TdmStrat
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=dbexpida41.dll'
-      'VendorLib=c:\exe32\fbclient.dll'
+      'LibraryName=c:\exe64\dbexpida41.dll'
+      'VendorLib=c:\exe64\fbclient.dll'
       'DataBase=c:\data\firebird\stratdb2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
@@ -767,6 +767,7 @@ object dmStrat: TdmStrat
     Top = 482
   end
   object SQLMonitor1: TSQLMonitor
+    Active = True
     SQLConnection = sqlcStrat
     Left = 104
     Top = 8

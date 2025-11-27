@@ -56,7 +56,6 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'ISOSYSTEMNAME'
     ListSource = dmDV.dsIsoSystems
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbReturn: TIWButton
     AlignWithMargins = False
@@ -219,7 +218,6 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'APPROACHDESCRIPTION'
     ListSource = dmDV.dsApproach
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbSaveChanges: TIWButton
     AlignWithMargins = False
@@ -294,7 +292,6 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'MATERIALDESCRIPTION'
     ListSource = dmDV.dsMaterial
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbEdit: TIWButton
     AlignWithMargins = False
@@ -351,7 +348,6 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
     ListField = 'CLOSTMPASSOCID'
     ListSource = dmDV.dsClosTmpAssoc
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -397,9 +393,6 @@ object ISFClosureDetailEdit: TISFClosureDetailEdit
         inherited iwrSignInOut: TIWRegion
           Width = 716
           ExplicitWidth = 716
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

@@ -3,37 +3,31 @@ object ISFDataLookups: TISFDataLookups
   Top = 0
   Width = 708
   Height = 495
+  RenderInvisibleControls = True
+  AllowPageAccess = True
   ConnectionMode = cmAny
   Title = 'Define query'
-  SupportedBrowsers = [brIE, brNetscape7, brOpera, brSafari, brNetscape6]
   OnCreate = IWAppFormCreate
-  AllowPageAccess = True
-  BrowserSecurityCheck = True
   Background.Fixed = False
   HandleTabs = False
   LeftToRight = True
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 440
-    Cursor = crAuto
     Align = alLeft
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
     ZIndex = 1
-    RenderSize = True
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
-    BorderOptions.Color = clNone
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -41,46 +35,36 @@ object ISFDataLookups: TISFDataLookups
     VAlign = vaMiddle
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 100
     Top = 80
     Width = 385
     Height = 19
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = False
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 12
     Font.Style = [fsBold]
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 16
+    HasTabOrder = False
     FriendlyName = 'IWLabel3'
     Caption = 'Lookup tables used with raw data in DateView'
-    RawText = False
   end
   object iwlModels: TIWLink
+    AlignWithMargins = False
     Left = 100
     Top = 116
     Width = 91
     Height = 17
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
     RenderSize = False
+    StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
     Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsUnderline]
-    ScriptEvents = <>
+    Font.PxSize = 12
+    HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlModels'
     OnClick = iwlModelsClick
@@ -89,75 +73,56 @@ object ISFDataLookups: TISFDataLookups
     Caption = 'Models'
   end
   object IWLabel16: TIWLabel
+    AlignWithMargins = False
     Left = 252
     Top = 116
     Width = 262
     Height = 15
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = False
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
+    HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Isotope models and calculation parameters'
-    RawText = False
   end
   object iwlStandards: TIWLink
+    AlignWithMargins = False
     Left = 100
     Top = 140
     Width = 91
     Height = 17
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
     RenderSize = False
+    StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
     Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsUnderline]
-    ScriptEvents = <>
+    Font.PxSize = 12
+    HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlStandards'
     OnClick = iwlStandardsClick
-    TabOrder = 0
     RawText = False
     Caption = 'Standards'
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 252
     Top = 140
     Width = 240
     Height = 15
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = False
-    Alignment = taLeftJustify
-    BGColor = clNone
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
+    HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'List of standards used for normalisation'
-    RawText = False
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -189,19 +154,12 @@ object ISFDataLookups: TISFDataLookups
       inherited iwrHeader: TIWRegion
         Width = 708
         ExplicitWidth = 972
-        ExplicitHeight = 55
         inherited iwrWelcome: TIWRegion
           Width = 708
-          ExplicitTop = 35
           ExplicitWidth = 972
-          ExplicitHeight = 20
-          inherited iwrLeftBlock: TIWRegion
-            ExplicitHeight = 20
-          end
           inherited iwrDisplayUserName: TIWRegion
             Width = 567
             ExplicitWidth = 831
-            ExplicitHeight = 20
             inherited lblWelcome: TIWLabel
               Left = 246
               ExplicitLeft = 510

@@ -17,6 +17,7 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
   DesignLeft = 2
   DesignTop = 2
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 176
     Width = 134
@@ -25,12 +26,14 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'to the following areas'
   end
   object iwbSubmit: TIWButton
+    AlignWithMargins = False
     Left = 210
     Top = 358
     Width = 75
@@ -40,11 +43,13 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmit'
     TabOrder = 1
     OnClick = iwbSubmitClick
   end
   object iwlAreas: TIWListbox
+    AlignWithMargins = False
     Left = 92
     Top = 194
     Width = 349
@@ -55,6 +60,7 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     RequireSelection = False
     UseSize = False
     NonEditableAsLabel = True
@@ -66,9 +72,9 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
       'two=2')
     Sorted = True
     MultiSelect = True
-    NoSelectionText = '-- No Selection --'
   end
   object lblUnitError: TIWLabel
+    AlignWithMargins = False
     Left = 459
     Top = 126
     Width = 68
@@ -77,12 +83,14 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblUnitError'
     Caption = 'lblUnitError'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -92,6 +100,7 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -99,6 +108,7 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     VAlign = vaMiddle
   end
   object lblAreaError: TIWLabel
+    AlignWithMargins = False
     Left = 461
     Top = 196
     Width = 71
@@ -107,12 +117,14 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblAreaError'
     Caption = 'lblAreaError'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 90
     Top = 80
     Width = 162
@@ -121,12 +133,14 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Link this stratigraphic unit'
   end
   object iwcbUnit: TIWComboBox
+    AlignWithMargins = False
     Left = 92
     Top = 102
     Width = 347
@@ -136,12 +150,12 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NonEditableAsLabel = True
     TabOrder = 2
     ItemIndex = -1
     Sorted = True
     FriendlyName = 'iwcbUnit'
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -187,9 +201,6 @@ object ISFUnitAreaLinkQuery: TISFUnitAreaLinkQuery
         inherited iwrSignInOut: TIWRegion
           Width = 762
           ExplicitWidth = 762
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

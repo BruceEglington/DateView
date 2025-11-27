@@ -14,37 +14,41 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 110
     Width = 121
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
-    TabOrder = 0
     AutoEditable = True
     DataField = 'SAMPLENO'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object iwdblcbContinent: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 140
     Width = 279
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -57,9 +61,9 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     ListField = 'CONTINENT'
     ListSource = dmDV.dsContinents
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 92
@@ -69,11 +73,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 9
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 112
     Width = 69
@@ -82,11 +88,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Sample no.'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 142
     Width = 58
@@ -95,11 +103,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Continent'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 170
     Width = 27
@@ -108,11 +118,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Area'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 202
     Width = 48
@@ -121,11 +133,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Latitude'
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 228
     Width = 60
@@ -134,11 +148,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Longitude'
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 254
     Width = 79
@@ -147,11 +163,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Elevation (m)'
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 225
     Top = 202
     Width = 57
@@ -160,11 +178,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object IWLabel8: TIWLabel
+    AlignWithMargins = False
     Left = 225
     Top = 230
     Width = 57
@@ -173,11 +193,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object IWLabel9: TIWLabel
+    AlignWithMargins = False
     Left = 225
     Top = 256
     Width = 57
@@ -186,15 +208,18 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Precision'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 198
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -202,20 +227,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 3
     AutoEditable = True
     DataField = 'LATITUDE'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWDBEdit3: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 226
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -223,20 +251,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 4
     AutoEditable = True
     DataField = 'LONGITUDE'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWDBEdit4: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 252
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -244,20 +275,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 5
     AutoEditable = True
     DataField = 'ELEVATION'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWDBEdit5: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 200
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -265,20 +299,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 6
     AutoEditable = True
     DataField = 'LATITUDEPRECISION'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWDBEdit6: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 226
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -286,20 +323,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 7
     AutoEditable = True
     DataField = 'LONGITUDEPRECISION'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWDBEdit7: TIWDBEdit
+    AlignWithMargins = False
     Left = 297
     Top = 252
     Width = 78
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
@@ -307,24 +347,28 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     ReadOnly = True
     SubmitOnAsyncEvent = True
     TabOrder = 8
     AutoEditable = True
     DataField = 'ELEVATIONPRECISION'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object iwdblcbCountry: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 168
     Width = 279
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -337,9 +381,9 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     ListField = 'COUNTRY'
     ListSource = dmDV.dsCountries
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 290
     Top = 74
     Width = 92
@@ -349,11 +393,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 10
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 433
     Top = 74
     Width = 92
@@ -363,11 +409,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 11
     OnClick = iwbCancelChangesClick
   end
   object iwbDeleteSample: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 92
@@ -378,11 +426,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
     TabOrder = 12
     OnClick = iwbDeleteSampleClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 147
     Top = 74
     Width = 92
@@ -392,11 +442,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 13
     OnClick = iwbEditClick
   end
   object iwbCopySampleNo: TIWButton
+    AlignWithMargins = False
     Left = 252
     Top = 108
     Width = 85
@@ -406,11 +458,13 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCopySampleNo'
     TabOrder = 14
     OnClick = iwbCopySampleNoClick
   end
   object IWLabel15: TIWLabel
+    AlignWithMargins = False
     Left = 352
     Top = 112
     Width = 69
@@ -419,30 +473,35 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Original no.'
   end
   object IWDBEdit8: TIWDBEdit
+    AlignWithMargins = False
     Left = 421
     Top = 110
     Width = 121
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 15
     AutoEditable = True
     DataField = 'ORIGINALNO'
-    PasswordPrompt = False
     DataSource = dmDV.dsSmpLoc
+    PasswordPrompt = False
   end
   object IWText1: TIWText
+    AlignWithMargins = False
     Left = 421
     Top = 137
     Width = 275
@@ -453,6 +512,7 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWText1'
     Lines.Strings = (
       
@@ -472,6 +532,7 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     WantReturns = True
   end
   object IWLabel21: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 281
     Width = 53
@@ -480,19 +541,23 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Lithology'
   end
   object iwdblcbLithology: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 117
     Top = 279
     Width = 279
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Required = True
     Editable = False
     NonEditableAsLabel = True
@@ -505,7 +570,6 @@ object ISFSampleGeoEdit: TISFSampleGeoEdit
     ListField = 'LITHOLOGY'
     ListSource = dmDV.dsLithol
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBar
     Left = 0

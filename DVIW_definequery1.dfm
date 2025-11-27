@@ -7,7 +7,7 @@ object ISFDefineQuery1: TISFDefineQuery1
   OnRender = IWAppFormRender
   AllowPageAccess = True
   ConnectionMode = cmAny
-  Title = 'Define query'
+  Title = 'Define query (2)'
   OnCreate = IWAppFormCreate
   Background.Fixed = False
   HandleTabs = False
@@ -75,17 +75,13 @@ object ISFDefineQuery1: TISFDefineQuery1
             Width = 643
             ExplicitWidth = 643
             inherited lblWelcome: TIWLabel
-              Left = 1
-              ExplicitLeft = 644
+              ExplicitLeft = 4
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
           Width = 784
           ExplicitWidth = 784
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -711,7 +707,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 20
-          Width = 145
+          Width = 143
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'
@@ -743,7 +739,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 81
-          Width = 13
+          Width = 12
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'
@@ -793,8 +789,8 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 273
           Top = 44
-          Width = 134
-          Height = 14
+          Width = 135
+          Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
           Font.Size = 9
@@ -810,7 +806,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           Left = 273
           Top = 81
           Width = 117
-          Height = 14
+          Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
           Font.Size = 9
@@ -869,7 +865,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 70
-          Width = 13
+          Width = 12
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'
@@ -902,7 +898,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 273
           Top = 47
-          Width = 109
+          Width = 106
           Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
@@ -918,7 +914,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 273
           Top = 68
-          Width = 92
+          Width = 90
           Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
@@ -961,7 +957,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 20
-          Width = 147
+          Width = 143
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'
@@ -993,7 +989,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 73
-          Width = 13
+          Width = 12
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'
@@ -1043,8 +1039,8 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 273
           Top = 44
-          Width = 135
-          Height = 14
+          Width = 136
+          Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
           Font.Size = 9
@@ -1060,7 +1056,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           Left = 273
           Top = 73
           Width = 118
-          Height = 14
+          Height = 15
           Font.Color = clWebRED
           Font.FontName = 'Arial'
           Font.Size = 9
@@ -1086,7 +1082,7 @@ object ISFDefineQuery1: TISFDefineQuery1
           AlignWithMargins = False
           Left = 22
           Top = 20
-          Width = 356
+          Width = 346
           Height = 15
           Font.Color = clNone
           Font.FontName = 'Arial'

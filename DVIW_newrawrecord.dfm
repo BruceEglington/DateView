@@ -16,7 +16,7 @@ object ISFNewRawRecord: TISFNewRawRecord
   LockOnSubmit = True
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -299
+  DesignTop = 2
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
@@ -61,9 +61,6 @@ object ISFNewRawRecord: TISFNewRawRecord
         inherited iwrSignInOut: TIWRegion
           Width = 1560
           ExplicitWidth = 1560
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -95,6 +92,7 @@ object ISFNewRawRecord: TISFNewRawRecord
       Align = alTop
       BorderOptions.Style = cbsNone
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 57
         Width = 107
@@ -103,12 +101,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Stratigraphic unit'
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 83
         Width = 56
@@ -117,12 +117,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Lithology'
       end
       object IWLabel5: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 107
         Width = 110
@@ -131,12 +133,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Material analysed'
       end
       object IWLabel6: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 137
         Width = 95
@@ -145,12 +149,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Isotope system'
       end
       object IWLabel7: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 163
         Width = 60
@@ -159,12 +165,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Approach'
       end
       object IWLabel8: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 189
         Width = 64
@@ -173,12 +181,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Technique'
       end
       object IWLabel9: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 215
         Width = 46
@@ -187,12 +197,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Method'
       end
       object IWLabel13: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 241
         Width = 84
@@ -201,12 +213,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Interpretation'
       end
       object IWLabel14: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 267
         Width = 39
@@ -215,12 +229,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Rating'
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 291
         Width = 58
@@ -229,12 +245,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Age units'
       end
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 341
         Width = 64
@@ -243,12 +261,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Reference'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 20
         Top = 363
         Width = 91
@@ -257,12 +277,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Accessable by'
       end
       object iwlWhoFor: TIWListbox
+        AlignWithMargins = False
         Left = 26
         Top = 384
         Width = 349
@@ -273,6 +295,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         NonEditableAsLabel = True
@@ -284,9 +307,9 @@ object ISFNewRawRecord: TISFNewRawRecord
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbUnit: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 53
         Width = 309
@@ -296,14 +319,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NonEditableAsLabel = True
         TabOrder = 1
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbLithology: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 79
         Width = 309
@@ -313,14 +337,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 2
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbContinent'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbMaterial: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 105
         Width = 309
@@ -330,14 +355,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 3
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbIsotopeSystem: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 131
         Width = 309
@@ -347,14 +373,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 4
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbApproach: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 157
         Width = 309
@@ -364,14 +391,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 5
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbTechnique: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 183
         Width = 309
@@ -381,14 +409,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 6
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbMethod: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 209
         Width = 309
@@ -398,14 +427,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 7
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbInterpretation: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 235
         Width = 309
@@ -415,14 +445,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 8
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbRating: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 260
         Width = 309
@@ -432,14 +463,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 9
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbNewAgeUnit: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 287
         Width = 61
@@ -450,14 +482,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         UseSize = False
         NonEditableAsLabel = True
         TabOrder = 10
         ItemIndex = -1
         FriendlyName = 'iwcbAgeUnits'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbReference: TIWComboBox
+        AlignWithMargins = False
         Left = 154
         Top = 335
         Width = 623
@@ -467,14 +500,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 11
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbUnit'
-        NoSelectionText = '-- No Selection --'
       end
       object lblStratigraphicUnitError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 54
         Width = 144
@@ -483,12 +517,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblStratigraphicUnitError'
         Caption = 'lblStratigraphicUnitError'
       end
       object lblLithologyError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 82
         Width = 97
@@ -497,12 +533,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblLithologyError'
         Caption = 'lblLithologyError'
       end
       object lblMaterialError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 108
         Width = 91
@@ -511,12 +549,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblMaterialError'
         Caption = 'lblMaterialError'
       end
       object lblIsoSystemError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 132
         Width = 107
@@ -525,12 +565,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblIsoSystemError'
         Caption = 'lblIsoSystemError'
       end
       object lblApproachError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 158
         Width = 101
@@ -539,12 +581,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblApproachError'
         Caption = 'lblApproachError'
       end
       object lblTechniqueError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 188
         Width = 107
@@ -553,12 +597,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblTechniqueError'
         Caption = 'lblTechniqueError'
       end
       object lblMethodError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 212
         Width = 88
@@ -567,12 +613,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblMethodError'
         Caption = 'lblMethodError'
       end
       object lblinterpretationError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 238
         Width = 123
@@ -581,12 +629,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblinterpretationError'
         Caption = 'lblinterpretationError'
       end
       object lblRatingError: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 262
         Width = 83
@@ -595,12 +645,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblRatingError'
         Caption = 'lblRatingError'
       end
       object lblAgeUnitsError: TIWLabel
+        AlignWithMargins = False
         Left = 526
         Top = 288
         Width = 99
@@ -609,12 +661,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblAgeUnitsError'
         Caption = 'lblAgeUnitsError'
       end
       object lblReferenceError: TIWLabel
+        AlignWithMargins = False
         Left = 526
         Top = 362
         Width = 106
@@ -623,12 +677,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblReferenceError'
         Caption = 'lblReferenceError'
       end
       object lblWhoForError: TIWLabel
+        AlignWithMargins = False
         Left = 526
         Top = 392
         Width = 91
@@ -637,12 +693,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblWhoForError'
         Caption = 'lblWhoForError'
       end
       object IWLabel15: TIWLabel
+        AlignWithMargins = False
         Left = 496
         Top = 431
         Width = 68
@@ -651,12 +709,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Laboratory'
       end
       object IWLabel17: TIWLabel
+        AlignWithMargins = False
         Left = 496
         Top = 485
         Width = 55
@@ -665,12 +725,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Province'
       end
       object IWLabel18: TIWLabel
+        AlignWithMargins = False
         Left = 496
         Top = 513
         Width = 49
@@ -679,21 +741,20 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Terrane'
       end
       object iwcbIncludeProvince: TIWCheckBox
+        AlignWithMargins = False
         Left = 594
         Top = 484
         Width = 23
         Height = 21
         Caption = ' '
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 12
@@ -701,15 +762,13 @@ object ISFNewRawRecord: TISFNewRawRecord
         FriendlyName = 'iwcbIncludeProvince'
       end
       object iwcbIncludeTerrane: TIWCheckBox
+        AlignWithMargins = False
         Left = 594
         Top = 511
         Width = 23
         Height = 21
         Caption = ' '
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 13
@@ -717,6 +776,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         FriendlyName = 'iwcbIncludeTerrane'
       end
       object iwcbTerrane: TIWComboBox
+        AlignWithMargins = False
         Left = 630
         Top = 509
         Width = 309
@@ -726,14 +786,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 14
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbTerrane'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbProvince: TIWComboBox
+        AlignWithMargins = False
         Left = 630
         Top = 482
         Width = 309
@@ -743,14 +804,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 15
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbProvince'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbLaboratory: TIWComboBox
+        AlignWithMargins = False
         Left = 630
         Top = 425
         Width = 309
@@ -760,14 +822,15 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NonEditableAsLabel = True
         TabOrder = 16
         ItemIndex = -1
         Sorted = True
         FriendlyName = 'iwcbLaboratory'
-        NoSelectionText = '-- No Selection --'
       end
       object IWLabel12: TIWLabel
+        AlignWithMargins = False
         Left = 661
         Top = 56
         Width = 79
@@ -776,12 +839,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Reset from'
       end
       object iweUnitFrom: TIWEdit
+        AlignWithMargins = False
         Left = 736
         Top = 54
         Width = 59
@@ -793,12 +858,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweUnitFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 20
         Text = 'A'
       end
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 816
         Top = 56
         Width = 14
@@ -807,12 +874,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'to'
       end
       object iweUnitTo: TIWEdit
+        AlignWithMargins = False
         Left = 840
         Top = 53
         Width = 59
@@ -824,12 +893,14 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Verdana'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweUnitTo'
         SubmitOnAsyncEvent = True
         TabOrder = 21
         Text = 'zz'
       end
       object iwbResetUnits: TIWButton
+        AlignWithMargins = False
         Left = 920
         Top = 45
         Width = 57
@@ -840,6 +911,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.FontName = 'Verdana'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwbResetUnits'
         TabOrder = 22
         OnClick = iwbResetUnitsClick
@@ -854,6 +926,7 @@ object ISFNewRawRecord: TISFNewRawRecord
       Align = alTop
       BorderOptions.Style = cbsNone
       object iwCancel: TIWButton
+        AlignWithMargins = False
         Left = 468
         Top = 18
         Width = 227
@@ -863,11 +936,13 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwCancel'
         TabOrder = 17
         OnClick = iwCancelClick
       end
       object iwbSubmitQuery: TIWButton
+        AlignWithMargins = False
         Left = 120
         Top = 18
         Width = 187
@@ -877,6 +952,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery'
         TabOrder = 18
         OnClick = iwbSubmitQueryClick
@@ -911,6 +987,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator1: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -926,6 +1003,7 @@ object ISFNewRawRecord: TISFNewRawRecord
           Orientation = orHorizontal
         end
         object IWLabel11: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 408
@@ -934,6 +1012,7 @@ object ISFNewRawRecord: TISFNewRawRecord
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -960,6 +1039,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgSummaryValues: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 897
@@ -977,10 +1057,13 @@ object ISFNewRawRecord: TISFNewRawRecord
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -991,6 +1074,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -999,7 +1083,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -1010,6 +1093,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1028,6 +1112,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1036,7 +1121,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'SampleNo'
@@ -1047,6 +1131,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1065,6 +1150,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1073,7 +1159,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Frac'
@@ -1084,6 +1169,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1102,6 +1188,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1110,7 +1197,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Age'
@@ -1121,6 +1207,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1139,6 +1226,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1147,7 +1235,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgePlus95'
@@ -1158,6 +1245,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1176,6 +1264,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1184,7 +1273,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgeMinus95'
@@ -1195,6 +1283,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1213,6 +1302,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1221,7 +1311,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Initial'
@@ -1232,6 +1321,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1250,6 +1340,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1258,7 +1349,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'InitialError'
@@ -1269,6 +1359,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1287,6 +1378,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1295,7 +1387,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Epsilon'
@@ -1306,6 +1397,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1324,6 +1416,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1332,7 +1425,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'EpsilonError'
@@ -1343,6 +1435,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1401,6 +1494,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator2: TIWDBNavigator
+          AlignWithMargins = False
           Left = 6
           Top = 39
           Width = 210
@@ -1416,6 +1510,7 @@ object ISFNewRawRecord: TISFNewRawRecord
           Orientation = orHorizontal
         end
         object IWLabel29: TIWLabel
+          AlignWithMargins = False
           Left = 6
           Top = 14
           Width = 133
@@ -1424,6 +1519,7 @@ object ISFNewRawRecord: TISFNewRawRecord
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
+          Font.PxSize = 16
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel8'
@@ -1450,6 +1546,7 @@ object ISFNewRawRecord: TISFNewRawRecord
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBgPeaks: TIWDBGrid
+          AlignWithMargins = False
           Left = 0
           Top = 0
           Width = 897
@@ -1467,10 +1564,13 @@ object ISFNewRawRecord: TISFNewRawRecord
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
           UseFrame = True
           UseSize = True
+          ShowEmptyCells = True
+          ShowInvisibleRows = True
           ScrollToCurrentRow = True
           Columns = <
             item
@@ -1481,6 +1581,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1489,7 +1590,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -1500,6 +1600,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1518,6 +1619,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1526,7 +1628,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Age'
@@ -1537,6 +1638,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1555,6 +1657,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1563,7 +1666,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgePlus95'
@@ -1574,6 +1676,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1592,6 +1695,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1600,7 +1704,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgeMinus95'
@@ -1611,6 +1714,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True
@@ -1629,6 +1733,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Font.FontName = 'Verdana'
               Font.Size = 8
               Font.Style = []
+              Font.PxSize = 10
               Header = False
               Height = '0'
               ShowHint = True
@@ -1637,7 +1742,6 @@ object ISFNewRawRecord: TISFNewRawRecord
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Probability'
@@ -1648,6 +1752,7 @@ object ISFNewRawRecord: TISFNewRawRecord
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
+              Title.Font.PxSize = 10
               Title.Header = False
               Title.Height = '0'
               Title.ShowHint = True

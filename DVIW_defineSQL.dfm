@@ -17,6 +17,7 @@ object ISFDefineSQL: TISFDefineSQL
   DesignLeft = 2
   DesignTop = 2
   object iwbSubmit: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 70
     Width = 105
@@ -26,10 +27,12 @@ object ISFDefineSQL: TISFDefineSQL
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmit'
     OnClick = iwbSubmitClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -39,6 +42,7 @@ object ISFDefineSQL: TISFDefineSQL
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -47,6 +51,7 @@ object ISFDefineSQL: TISFDefineSQL
     ExplicitHeight = 294
   end
   object iwlblError: TIWLabel
+    AlignWithMargins = False
     Left = 424
     Top = 70
     Width = 235
@@ -55,11 +60,13 @@ object ISFDefineSQL: TISFDefineSQL
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlblError'
     Caption = 'No items selected or box not checked'
   end
   object iwbCancel: TIWButton
+    AlignWithMargins = False
     Left = 256
     Top = 70
     Width = 105
@@ -69,11 +76,13 @@ object ISFDefineSQL: TISFDefineSQL
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancel'
     TabOrder = 1
     OnClick = iwbCancelClick
   end
   object IWMemo1: TIWMemo
+    AlignWithMargins = False
     Left = 102
     Top = 156
     Width = 700
@@ -85,6 +94,7 @@ object ISFDefineSQL: TISFDefineSQL
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = True
     VertScrollBar = True
@@ -94,6 +104,7 @@ object ISFDefineSQL: TISFDefineSQL
     FriendlyName = 'IWMemo1'
   end
   object iwcbGoDirectToGraphs: TIWCheckBox
+    AlignWithMargins = False
     Left = 102
     Top = 120
     Width = 353
@@ -105,6 +116,7 @@ object ISFDefineSQL: TISFDefineSQL
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     SubmitOnAsyncEvent = True
     Style = stNormal
     TabOrder = 3
@@ -155,9 +167,6 @@ object ISFDefineSQL: TISFDefineSQL
         inherited iwrSignInOut: TIWRegion
           Width = 930
           ExplicitWidth = 930
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

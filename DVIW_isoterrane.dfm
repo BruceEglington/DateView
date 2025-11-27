@@ -17,6 +17,7 @@ object ISFIsoTerrane: TISFIsoTerrane
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 229
     Top = 72
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoTerrane: TISFIsoTerrane
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 100
@@ -41,11 +43,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 122
     Width = 47
@@ -54,12 +58,14 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Terrane'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 100
@@ -69,11 +75,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 100
@@ -83,11 +91,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 692
     Top = 73
     Width = 100
@@ -98,11 +108,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 3
     OnClick = iwbDeleteClick
   end
   object iwDBlcb: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 136
     Top = 120
     Width = 341
@@ -112,6 +124,7 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 2
@@ -123,9 +136,9 @@ object ISFIsoTerrane: TISFIsoTerrane
     ListField = 'DOMAINNAME'
     ListSource = dmDV.dsTerranes
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBgrid: TIWDBGrid
+    AlignWithMargins = False
     Left = 30
     Top = 170
     Width = 595
@@ -142,10 +155,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.FontName = 'Verdana'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -156,6 +172,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -164,7 +181,6 @@ object ISFIsoTerrane: TISFIsoTerrane
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINNAME'
@@ -175,6 +191,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -193,6 +210,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -201,7 +219,6 @@ object ISFIsoTerrane: TISFIsoTerrane
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
@@ -211,6 +228,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Title.Font.Color = clNone
         Title.Font.Size = 10
         Title.Font.Style = []
+        Title.Font.PxSize = 13
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -229,6 +247,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -237,7 +256,6 @@ object ISFIsoTerrane: TISFIsoTerrane
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINTYPEID'
@@ -247,6 +265,7 @@ object ISFIsoTerrane: TISFIsoTerrane
         Title.Font.Color = clNone
         Title.Font.Size = 10
         Title.Font.Style = []
+        Title.Font.PxSize = 13
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -274,6 +293,7 @@ object ISFIsoTerrane: TISFIsoTerrane
     RowCurrentColor = clWebYELLOW
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 100
@@ -283,11 +303,13 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 6
     OnClick = iwbEditClick
   end
   object iwbAddTerrane: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 102
@@ -297,6 +319,7 @@ object ISFIsoTerrane: TISFIsoTerrane
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddTerrane'
     TabOrder = 7
     OnClick = iwbAddTerraneClick
@@ -345,9 +368,6 @@ object ISFIsoTerrane: TISFIsoTerrane
         inherited iwrSignInOut: TIWRegion
           Width = 876
           ExplicitWidth = 876
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

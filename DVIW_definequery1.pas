@@ -9,7 +9,7 @@ uses
   IWHTMLControls, IWCompButton, IWCompText, DBClient, IWVCLBaseControl,
   IWBaseHTMLControl, IWCompRectangle, DVIW_constants, IWVCLBaseContainer,
   IWContainer, IWHTMLContainer, IWHTML40Container, IWRegion,
-  DVIW_definerawdatasamplequery, usrIW_dm, IWCompEdit;
+  IWCompEdit;
 
 type
   TISFDefineQuery1 = class(TIWAppForm)
@@ -88,7 +88,7 @@ type
 implementation
 
 uses DVIW_dm, ServerController, DVIW_definequery2, DB_List_Combo,
-  DVIW_uMain;
+  DVIW_uMain, DVIW_definerawdatasamplequery;
 
 {$R *.dfm}
 
@@ -99,8 +99,9 @@ var
 begin
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
+  TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   iwlblError.Visible := false;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   iwrPlateModel.Visible := false;
@@ -321,6 +322,7 @@ begin
     iwcbGDUs.Checked := UserSession.IncludeGDUValues;
     //UpdateListBoxValues(iwlAreas,dmDV.cdsCountries,'Country','CountryAbr',UserSession.AreaValues);
   end;
+  TopBar.lblWelcome.Text := 'User is ' + UserSession.UserDisplayName;
 end;
 
 function TISFDefineQuery1.Validate: Boolean;

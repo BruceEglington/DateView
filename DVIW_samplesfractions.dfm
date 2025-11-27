@@ -17,6 +17,7 @@ object ISFSamplesFractions: TISFSamplesFractions
   DesignLeft = 2
   DesignTop = 2
   object iwDBgSamplesFractions: TIWDBGrid
+    AlignWithMargins = False
     Left = 98
     Top = 150
     Width = 431
@@ -33,10 +34,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = True
     Columns = <
       item
@@ -47,6 +51,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -55,7 +60,6 @@ object ISFSamplesFractions: TISFSamplesFractions
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SAMPLENO'
@@ -68,6 +72,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -86,6 +91,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,7 +100,6 @@ object ISFSamplesFractions: TISFSamplesFractions
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'FRAC'
@@ -106,6 +111,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -124,6 +130,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -132,7 +139,6 @@ object ISFSamplesFractions: TISFSamplesFractions
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'ZONEID'
@@ -143,6 +149,7 @@ object ISFSamplesFractions: TISFSamplesFractions
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -170,6 +177,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     RowCurrentColor = clWebYELLOW
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 96
     Top = 72
     Width = 102
@@ -179,10 +187,12 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
     OnClick = iwbCloseClick
   end
   object iwbAddNewSample: TIWButton
+    AlignWithMargins = False
     Left = 564
     Top = 72
     Width = 217
@@ -192,11 +202,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNewSample'
     TabOrder = 1
     OnClick = iwbAddNewSampleClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
@@ -206,6 +218,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.Color = clWebBLACK
     Font.Size = 10
     Font.Style = []
+    Font.PxSize = 13
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -215,6 +228,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     ExplicitHeight = 541
   end
   object iwDBnSamplesFractions: TIWDBNavigator
+    AlignWithMargins = False
     Left = 98
     Top = 116
     Width = 120
@@ -230,6 +244,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     Orientation = orHorizontal
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 213
     Top = 72
     Width = 102
@@ -240,11 +255,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 3
     OnClick = iwbEditClick
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 330
     Top = 72
     Width = 102
@@ -255,11 +272,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 448
     Top = 72
     Width = 102
@@ -270,11 +289,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDeleteSample: TIWButton
+    AlignWithMargins = False
     Left = 796
     Top = 72
     Width = 102
@@ -286,11 +307,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
     TabOrder = 6
     OnClick = iwbDeleteSampleClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 575
     Top = 168
     Width = 69
@@ -299,11 +322,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Sample no.'
   end
   object iwDBeSampleNo: TIWDBEdit
+    AlignWithMargins = False
     Left = 660
     Top = 166
     Width = 121
@@ -315,6 +340,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeSampleNo'
     SubmitOnAsyncEvent = True
     TabOrder = 7
@@ -324,6 +350,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     PasswordPrompt = False
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 575
     Top = 198
     Width = 48
@@ -332,11 +359,13 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Fraction'
   end
   object iwDBeFrac: TIWDBEdit
+    AlignWithMargins = False
     Left = 660
     Top = 194
     Width = 78
@@ -348,6 +377,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeFrac'
     SubmitOnAsyncEvent = True
     TabOrder = 8
@@ -357,6 +387,7 @@ object ISFSamplesFractions: TISFSamplesFractions
     PasswordPrompt = False
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 575
     Top = 225
     Width = 30
@@ -365,19 +396,18 @@ object ISFSamplesFractions: TISFSamplesFractions
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Zone'
   end
   object iwdblcbSampleZone: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 660
     Top = 221
     Width = 213
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     TabOrder = 9
     AutoEditable = False
     DataField = 'ZONEID'
@@ -387,7 +417,6 @@ object ISFSamplesFractions: TISFSamplesFractions
     ListField = 'ZONETYPE'
     ListSource = dmDV.dsSampleZones
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBar
     Left = 0
@@ -433,9 +462,6 @@ object ISFSamplesFractions: TISFSamplesFractions
         inherited iwrSignInOut: TIWRegion
           Width = 900
           ExplicitWidth = 900
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

@@ -58,7 +58,7 @@ begin
   iwbDelete.Visible := UserSession.CanDelete;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmStrat.qTerranes.Close;
   dmStrat.cdsTerranes.Close;

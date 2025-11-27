@@ -26,12 +26,8 @@ object ISFTopBar: TISFTopBar
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     RenderInvisibleControls = False
-    TabOrder = 0
     Align = alClient
-    BorderOptions.NumericWidth = 1
-    BorderOptions.BorderWidth = cbwNumeric
     BorderOptions.Style = cbsNone
-    BorderOptions.Color = clNone
     Color = clWebALICEBLUE
     ZIndex = -1
     object iwrHeader: TIWRegion
@@ -43,8 +39,6 @@ object ISFTopBar: TISFTopBar
       RenderInvisibleControls = False
       Align = alClient
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
-      BorderOptions.Style = cbsSolid
       BorderOptions.Color = clMoneyGreen
       Color = clMoneyGreen
       object iwrWelcome: TIWRegion
@@ -57,9 +51,7 @@ object ISFTopBar: TISFTopBar
         TabOrder = 2
         Align = alClient
         BorderOptions.NumericWidth = 0
-        BorderOptions.BorderWidth = cbwNumeric
         BorderOptions.Style = cbsNone
-        BorderOptions.Color = clNone
         object iwrLeftBlock: TIWRegion
           Left = 0
           Top = 0
@@ -69,9 +61,6 @@ object ISFTopBar: TISFTopBar
           RenderInvisibleControls = False
           Align = alLeft
           BorderOptions.NumericWidth = 0
-          BorderOptions.BorderWidth = cbwNumeric
-          BorderOptions.Style = cbsSolid
-          BorderOptions.Color = clNone
           Color = clWebLIGHTSLATEGRAY
         end
         object iwrDisplayUserName: TIWRegion
@@ -83,26 +72,25 @@ object ISFTopBar: TISFTopBar
           RenderInvisibleControls = False
           Align = alClient
           BorderOptions.NumericWidth = 0
-          BorderOptions.BorderWidth = cbwNumeric
-          BorderOptions.Style = cbsSolid
-          BorderOptions.Color = clNone
           Color = clWebLIGHTSTEELBLUE
-          DesignSize = (
-            843
-            20)
           object lblWelcome: TIWLabel
-            Left = 522
+            AlignWithMargins = True
+            Left = 3
             Top = 3
-            Width = 70
-            Height = 16
-            Anchors = [akTop, akRight]
+            Width = 64
+            Height = 14
+            Align = alLeft
             Font.Color = clWebDARKSLATEGRAY
             Font.FontName = 'Arial'
-            Font.Size = 10
+            Font.Size = 8
             Font.Style = [fsBold]
+            Font.PxSize = 10
+            NoWrap = True
             HasTabOrder = False
             FriendlyName = 'lblWelcome'
             Caption = ' Welcome'
+            ExplicitLeft = 522
+            ExplicitHeight = 16
           end
         end
       end
@@ -116,11 +104,9 @@ object ISFTopBar: TISFTopBar
         TabOrder = 3
         Align = alTop
         BorderOptions.NumericWidth = 0
-        BorderOptions.BorderWidth = cbwNumeric
-        BorderOptions.Style = cbsSolid
-        BorderOptions.Color = clNone
         Color = clWebLIGHTBLUE
         object iwlSignOut: TIWLink
+          AlignWithMargins = False
           Left = 723
           Top = 12
           Width = 53
@@ -133,15 +119,17 @@ object ISFTopBar: TISFTopBar
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'iwlSignOut'
           OnClick = iwlSignOutClick
-          TabOrder = 0
+          TabOrder = -1
           RawText = False
           Caption = 'Log Out'
         end
         object lnkSignIn: TIWLink
+          AlignWithMargins = False
           Left = 607
           Top = 12
           Width = 53
@@ -154,6 +142,7 @@ object ISFTopBar: TISFTopBar
           Font.FontName = 'Verdana'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'lnkSignIn'
@@ -163,6 +152,7 @@ object ISFTopBar: TISFTopBar
           Caption = 'Log In'
         end
         object lblProgTitle: TIWLabel
+          AlignWithMargins = False
           Left = 16
           Top = 8
           Width = 532
@@ -171,6 +161,7 @@ object ISFTopBar: TISFTopBar
           Font.FontName = 'Arial'
           Font.Size = 16
           Font.Style = [fsBold]
+          Font.PxSize = 21
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblProgTitle'

@@ -7,8 +7,8 @@ object dmdDV: TdmdDV
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=dbexpida41.dll'
-      'VendorLib=c:\exe32\fbclient.dll'
+      'LibraryName=c:\exe64\dbexpida41.dll'
+      'VendorLib=c:\exe64\fbclient.dll'
       'DataBase=c:\data\firebird\dateview2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
@@ -477,14 +477,15 @@ object dmdDV: TdmdDV
         ParamType = ptInput
       end>
     SQL.Strings = (
-      
-        'select IsoModels.ModelID, IsoModels.IsoSystem, IsoModels.ModelPa' +
-        'ram1,'
+      'select IsoModels.ModelID, IsoModels.IsoSystem, '
+      '  IsoModels.ModelTypeID, IsoModelTypes.ModelType,'
+      '  IsoModels.ModelParam1,'
       '  IsoModels.ModelParam2, IsoModels.ModelParam3,'
       '  IsoModels.ModelParam4, IsoModels.ModelParam5,'
       '  IsoModels.ModelName, IsoSystem.IsoSystemName'
-      'from IsoModels,IsoSystem'
+      'from IsoModels,IsoSystem,IsoModelTypes'
       'where IsoModels.IsoSystem=IsoSystem.IsoSystem'
+      'and IsoModels.ModelTypeID=IsoModelTypes.ModelTypeID'
       'and IsoModels.IsoSystem = :IsoSystem'
       '')
     SQLConnection = sqlcDateView
@@ -525,6 +526,18 @@ object dmdDV: TdmdDV
       FixedChar = True
       Size = 50
     end
+    object qIsoModelsMODELTYPEID: TWideStringField
+      FieldName = 'MODELTYPEID'
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object qIsoModelsMODELTYPE: TWideStringField
+      FieldName = 'MODELTYPE'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
   end
   object dspIsoModels: TDataSetProvider
     DataSet = qIsoModels
@@ -551,6 +564,19 @@ object dmdDV: TdmdDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
+    end
+    object cdsIsoModelsMODELTYPEID: TWideStringField
+      FieldName = 'MODELTYPEID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object cdsIsoModelsMODELTYPE: TWideStringField
+      FieldName = 'MODELTYPE'
+      Required = True
+      FixedChar = True
+      Size = 30
     end
     object cdsIsoModelsMODELPARAM1: TFloatField
       DisplayLabel = 'Param. 1'
@@ -7685,6 +7711,7 @@ object dmdDV: TdmdDV
     Top = 704
   end
   object SQLMonitor1: TSQLMonitor
+    Active = True
     SQLConnection = sqlcDateView
     Left = 96
     Top = 16
@@ -7754,5 +7781,238 @@ object dmdDV: TdmdDV
     DataSet = cdsDataChem
     Left = 1008
     Top = 120
+  end
+  object dsIsoModelApproach: TDataSource
+    DataSet = cdsIsoModelApproach
+    Left = 96
+    Top = 510
+  end
+  object cdsIsoModelApproach: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspIsoModelApproach'
+    Left = 70
+    Top = 510
+    object cdsIsoModelApproachMODELID: TWideStringField
+      FieldName = 'MODELID'
+      Required = True
+      Size = 5
+    end
+    object cdsIsoModelApproachISOSYSTEM: TWideStringField
+      FieldName = 'ISOSYSTEM'
+      Required = True
+      Size = 15
+    end
+    object cdsIsoModelApproachMODELTYPEID: TWideStringField
+      FieldName = 'MODELTYPEID'
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object cdsIsoModelApproachMODELTYPE: TWideStringField
+      FieldName = 'MODELTYPE'
+      ReadOnly = True
+      FixedChar = True
+      Size = 30
+    end
+    object cdsIsoModelApproachMODELPARAM1: TFloatField
+      FieldName = 'MODELPARAM1'
+    end
+    object cdsIsoModelApproachMODELPARAM2: TFloatField
+      FieldName = 'MODELPARAM2'
+    end
+    object cdsIsoModelApproachMODELPARAM3: TFloatField
+      FieldName = 'MODELPARAM3'
+    end
+    object cdsIsoModelApproachMODELPARAM4: TFloatField
+      FieldName = 'MODELPARAM4'
+    end
+    object cdsIsoModelApproachMODELPARAM5: TFloatField
+      FieldName = 'MODELPARAM5'
+    end
+    object cdsIsoModelApproachISOSYSTEMNAME: TWideStringField
+      FieldName = 'ISOSYSTEMNAME'
+      ReadOnly = True
+      Size = 30
+    end
+    object cdsIsoModelApproachMODELNAME: TWideStringField
+      FieldName = 'MODELNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+  end
+  object dspIsoModelApproach: TDataSetProvider
+    DataSet = qIsoModelApproach
+    Options = [poCascadeUpdates, poAutoRefresh, poPropogateChanges]
+    Left = 42
+    Top = 510
+  end
+  object qIsoModelApproach: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'IsoSystem'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftUnknown
+        Name = 'ModelTypeID'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'select IsoModels.ModelID, IsoModels.IsoSystem, '
+      '  IsoModels.ModelTypeID, IsoModelTypes.ModelType,'
+      '  IsoModels.ModelParam1,'
+      '  IsoModels.ModelParam2, IsoModels.ModelParam3,'
+      '  IsoModels.ModelParam4, IsoModels.ModelParam5,'
+      '  IsoModels.ModelName, IsoSystem.IsoSystemName'
+      'from IsoModels,IsoSystem,IsoModelTypes'
+      'where IsoModels.IsoSystem=IsoSystem.IsoSystem'
+      'and IsoModels.ModelTypeID=IsoModelTypes.ModelTypeID'
+      'and IsoModels.IsoSystem = :IsoSystem'
+      'and IsoModels.ModelTypeID = :ModelTypeID'
+      '')
+    SQLConnection = sqlcDateView
+    Left = 14
+    Top = 510
+    object WideStringField5: TWideStringField
+      FieldName = 'MODELID'
+      Required = True
+      Size = 5
+    end
+    object WideStringField6: TWideStringField
+      FieldName = 'ISOSYSTEM'
+      Required = True
+      Size = 15
+    end
+    object qIsoModelApproachMODELTYPEID: TWideStringField
+      FieldName = 'MODELTYPEID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object qIsoModelApproachMODELTYPE: TWideStringField
+      FieldName = 'MODELTYPE'
+      ProviderFlags = []
+      ReadOnly = True
+      FixedChar = True
+      Size = 30
+    end
+    object FloatField29: TFloatField
+      FieldName = 'MODELPARAM1'
+    end
+    object FloatField30: TFloatField
+      FieldName = 'MODELPARAM2'
+    end
+    object FloatField31: TFloatField
+      FieldName = 'MODELPARAM3'
+    end
+    object FloatField32: TFloatField
+      FieldName = 'MODELPARAM4'
+    end
+    object FloatField33: TFloatField
+      FieldName = 'MODELPARAM5'
+    end
+    object WideStringField7: TWideStringField
+      FieldName = 'ISOSYSTEMNAME'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 30
+    end
+    object WideStringField8: TWideStringField
+      FieldName = 'MODELNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+  end
+  object qIsoSystem: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'IsoSystem'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'select * from ISOSYSTEM'
+      'where ISOSYSTEM.IsoSystem = :IsoSystem'
+      'order by ISOSYSTEM.ISOSYSTEMNAME')
+    SQLConnection = sqlcDateView
+    Left = 6
+    Top = 604
+    object qIsoSystemISOSYSTEM: TWideStringField
+      FieldName = 'ISOSYSTEM'
+      Required = True
+      Size = 15
+    end
+    object qIsoSystemISOSYSTEMNAME: TWideStringField
+      FieldName = 'ISOSYSTEMNAME'
+      Size = 30
+    end
+    object qIsoSystemISOSYSNO: TIntegerField
+      FieldName = 'ISOSYSNO'
+    end
+    object qIsoSystemDECAYCONST1: TFloatField
+      FieldName = 'DECAYCONST1'
+    end
+    object qIsoSystemDECAYCONST2: TFloatField
+      FieldName = 'DECAYCONST2'
+    end
+    object qIsoSystemISOTOPECONSTANT: TFloatField
+      FieldName = 'ISOTOPECONSTANT'
+      Required = True
+    end
+  end
+  object dspIsoSystem: TDataSetProvider
+    DataSet = qIsoSystem
+    Left = 34
+    Top = 604
+  end
+  object cdsIsoSystem: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspIsoSystem'
+    ReadOnly = True
+    Left = 64
+    Top = 606
+    object cdsIsoSystemISOSYSTEM: TWideStringField
+      DisplayLabel = 'Iso Sys ID'
+      FieldName = 'ISOSYSTEM'
+      Required = True
+      Size = 15
+    end
+    object cdsIsoSystemISOSYSTEMNAME: TWideStringField
+      DisplayLabel = 'Isotope System'
+      FieldName = 'ISOSYSTEMNAME'
+      Size = 30
+    end
+    object cdsIsoSystemISOSYSNO: TIntegerField
+      DisplayLabel = 'Iso Sys No'
+      FieldName = 'ISOSYSNO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object cdsIsoSystemDECAYCONST1: TFloatField
+      DisplayLabel = 'Decay Const 1'
+      FieldName = 'DECAYCONST1'
+      DisplayFormat = '0.00000e+00'
+    end
+    object cdsIsoSystemDECAYCONST2: TFloatField
+      DisplayLabel = 'Decay Const 2'
+      FieldName = 'DECAYCONST2'
+      DisplayFormat = '0.00000e+00'
+    end
+    object cdsIsoSystemISOTOPECONSTANT: TFloatField
+      FieldName = 'ISOTOPECONSTANT'
+      Required = True
+    end
+  end
+  object dsIsoSystem: TDataSource
+    DataSet = cdsIsoSystem
+    Left = 92
+    Top = 606
   end
 end

@@ -17,6 +17,7 @@ object ISFIsoImage: TISFIsoImage
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 227
     Top = 70
     Width = 108
@@ -32,6 +33,7 @@ object ISFIsoImage: TISFIsoImage
     Orientation = orHorizontal
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 94
@@ -41,11 +43,13 @@ object ISFIsoImage: TISFIsoImage
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 8
     Top = 110
     Width = 66
@@ -54,11 +58,13 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Image type'
   end
   object iwbSaveChanges: TIWButton
+    AlignWithMargins = False
     Left = 347
     Top = 74
     Width = 94
@@ -68,11 +74,13 @@ object ISFIsoImage: TISFIsoImage
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 7
     OnClick = iwbSaveChangesClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 461
     Top = 74
     Width = 94
@@ -82,11 +90,13 @@ object ISFIsoImage: TISFIsoImage
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 6
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 94
@@ -97,11 +107,13 @@ object ISFIsoImage: TISFIsoImage
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 5
     OnClick = iwbDeleteClick
   end
   object iwDBlcb: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 88
     Top = 108
     Width = 341
@@ -111,6 +123,7 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 2
@@ -122,9 +135,9 @@ object ISFIsoImage: TISFIsoImage
     ListField = 'IMAGETYPE'
     ListSource = dmDV.dsImageTypes
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBgrid: TIWDBGrid
+    AlignWithMargins = False
     Left = 6
     Top = 168
     Width = 185
@@ -141,10 +154,13 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = []
+    Font.PxSize = 10
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
@@ -155,6 +171,7 @@ object ISFIsoImage: TISFIsoImage
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -163,7 +180,6 @@ object ISFIsoImage: TISFIsoImage
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IMAGETYPEID'
@@ -174,6 +190,7 @@ object ISFIsoImage: TISFIsoImage
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -192,6 +209,7 @@ object ISFIsoImage: TISFIsoImage
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -200,7 +218,6 @@ object ISFIsoImage: TISFIsoImage
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'IMAGEID'
@@ -211,6 +228,7 @@ object ISFIsoImage: TISFIsoImage
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -238,6 +256,7 @@ object ISFIsoImage: TISFIsoImage
     RowCurrentColor = clWebYELLOW
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 90
     Top = 136
     Width = 41
@@ -250,6 +269,7 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 3
@@ -259,6 +279,7 @@ object ISFIsoImage: TISFIsoImage
     PasswordPrompt = False
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 8
     Top = 138
     Width = 55
@@ -267,11 +288,13 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Image ID'
   end
   object IWDBMemo1: TIWDBMemo
+    AlignWithMargins = False
     Left = 208
     Top = 136
     Width = 485
@@ -283,6 +306,7 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
@@ -295,6 +319,7 @@ object ISFIsoImage: TISFIsoImage
     FriendlyName = 'IWDBMemo1'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 612
     Top = 116
     Width = 88
@@ -303,11 +328,13 @@ object ISFIsoImage: TISFIsoImage
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Image caption'
   end
   object IWDBImage1: TIWDBImage
+    AlignWithMargins = False
     Left = 206
     Top = 262
     Width = 489
@@ -321,6 +348,7 @@ object ISFIsoImage: TISFIsoImage
     DataSource = dmDV.dsImageDetails
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 119
     Top = 74
     Width = 94
@@ -330,6 +358,7 @@ object ISFIsoImage: TISFIsoImage
     Font.Color = clNone
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 8
     OnClick = iwbEditClick
@@ -378,9 +407,6 @@ object ISFIsoImage: TISFIsoImage
         inherited iwrSignInOut: TIWRegion
           Width = 706
           ExplicitWidth = 706
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

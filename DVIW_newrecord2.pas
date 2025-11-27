@@ -58,7 +58,7 @@ procedure TISFNewRecord2.IWAppFormCreate(Sender: TObject);
 begin
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   iweUnitFrom.Text := UserSession.UnitStartFrom;

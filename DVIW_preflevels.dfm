@@ -60,7 +60,6 @@ object ISFPrefLevels: TISFPrefLevels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PREFLEVELNO'
@@ -100,7 +99,6 @@ object ISFPrefLevels: TISFPrefLevels
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PREFSHORT'
@@ -338,9 +336,6 @@ object ISFPrefLevels: TISFPrefLevels
         inherited iwrSignInOut: TIWRegion
           Width = 693
           ExplicitWidth = 693
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

@@ -7,8 +7,8 @@ object dmOpt: TdmOpt
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=dbexpida41.dll'
-      'VendorLib=c:\exe32\fbclient.dll'
+      'LibraryName=c:\exe64\dbexpida41.dll'
+      'VendorLib=c:\exe64\fbclient.dll'
       'DataBase=c:\data\firebird\dateview2025v50_utf8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'

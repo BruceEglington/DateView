@@ -1196,9 +1196,6 @@ object ISFSampleEdit: TISFSampleEdit
         inherited iwrSignInOut: TIWRegion
           Width = 907
           ExplicitWidth = 907
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

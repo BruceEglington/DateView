@@ -68,8 +68,9 @@ procedure TISFDefineQuery.IWAppFormCreate(Sender: TObject);
 begin
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
+  TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   iwlblError.Visible := false;
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   iwrIncludes.Visible := true;
@@ -164,6 +165,7 @@ begin
     iwcbContinents.Checked := UserSession.IncludeContinentValues;
     //UpdateListBoxValues(iwlContinents,dmDV.cdsContinents,'Continent','ContinentID',UserSession.ContinentValues);
   end;
+  //TopBar.lblWelcome.Text := 'User is ' + UserSession.UserDisplayName;
 end;
 
 function TISFDefineQuery.Validate: Boolean;

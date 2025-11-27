@@ -51,10 +51,10 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
     iwlPageNum.Caption := IntToStr(UserSession.PageNum);
   end;
   iwbAddNewSample.Visible := UserSession.CanModify;
+  //dmUser.SetDeveloperData('AppFormRender');
 end;
 
 procedure TISFSamples.IWAppFormCreate(Sender: TObject);
@@ -64,7 +64,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   //SmpLoc
   dmDV.qSmpLoc.Close;
@@ -109,7 +109,7 @@ begin
     dmDV.qSmpLoc.SQL.Add(' ) ');
   end;
   dmDV.qSmpLoc.SQL.Add('ORDER BY SMPLOC.SAMPLENO');
-  dmUser.SetDeveloperData('SmpLoc query definition');
+  //dmUser.SetDeveloperData('SmpLoc query definition');
   dmUser.SetDeveloperData(dmDV.qSmpLoc.SQL.Text);
   dmDV.qSmpLoc.ParamByName('FIRSTSAMPLE').Value := UserSession.SampleStartFrom;
   dmDV.qSmpLoc.ParamByName('LASTSAMPLE').Value := UserSession.SampleEndWith;
@@ -117,11 +117,11 @@ begin
   dmDV.cdsSmpLoc.Open;
   dmDV.cdsContinents.Open;
   dmDV.cdsCountries.Open;
-  dmUser.SetDeveloperData('SmpLoc and Countries queries opened');
+  //dmUser.SetDeveloperData('SmpLoc and Countries queries opened');
   UserSession.PageNum := 1;
   UserSession.PageNumTotal := UserSession.NumRecordsFound div iwDBgSmpLoc.RowLimit;
-  dmUser.SetDeveloperData('PageNum = '+IntToStr(UserSession.PageNum));
-  dmUser.SetDeveloperData('PageNumTotal = '+IntToStr(UserSession.PageNumTotal));
+  //dmUser.SetDeveloperData('PageNum = '+IntToStr(UserSession.PageNum));
+  //dmUser.SetDeveloperData('PageNumTotal = '+IntToStr(UserSession.PageNumTotal));
   iwlPageNum.Caption := IntToStr(UserSession.PageNum);
   iwlPageNumTotal.Caption := IntToStr(UserSession.PageNumTotal);
 end;

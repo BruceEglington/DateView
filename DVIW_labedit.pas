@@ -56,7 +56,7 @@ begin
   iwDBNavigator1.Visible := UserSession.CanModifyPlus;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmDV.cdsLaboratories.Locate('LABORATORYABR',UserSession.ParameterChosen,[loCaseInsensitive,loPartialKey]);
   iwDBEdit1.Editable := UserSession.CanModify;

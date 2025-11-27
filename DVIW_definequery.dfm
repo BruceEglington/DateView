@@ -75,17 +75,13 @@ object ISFDefineQuery: TISFDefineQuery
             Width = 1862
             ExplicitWidth = 1862
             inherited lblWelcome: TIWLabel
-              Left = 610
-              ExplicitLeft = 2472
+              ExplicitLeft = 613
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
           Width = 2003
           ExplicitWidth = 2003
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end

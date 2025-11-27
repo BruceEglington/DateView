@@ -61,9 +61,6 @@ object ISFAgeHf: TISFAgeHf
         inherited iwrSignInOut: TIWRegion
           Width = 1500
           ExplicitWidth = 1500
-          inherited iwlSignOut: TIWLink
-            TabOrder = -1
-          end
         end
       end
     end
@@ -1311,7 +1308,6 @@ object ISFAgeHf: TISFAgeHf
           TabOrder = 58
           FriendlyName = 'iwlSampleZones'
           MultiSelect = True
-          NoSelectionText = '-- No Selection --'
         end
       end
       object iwrGraphRightBorder: TIWRegion
@@ -1651,7 +1647,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -1691,7 +1686,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'SampleNo'
@@ -1731,7 +1725,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Frac'
@@ -1771,7 +1764,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Age'
@@ -1811,7 +1803,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgePlus95'
@@ -1851,7 +1842,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgeMinus95'
@@ -1891,7 +1881,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Initial'
@@ -1931,7 +1920,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'InitialError'
@@ -1970,7 +1958,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Epsilon'
@@ -2010,7 +1997,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'EpsilonError'
@@ -2049,7 +2035,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Ymodeli'
@@ -2272,7 +2257,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -2315,7 +2299,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'SampleNo'
@@ -2356,7 +2339,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Frac'
@@ -2396,7 +2378,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'ZoneID'
@@ -2437,7 +2418,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PreferredAge'
@@ -2478,7 +2458,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PreferredAgeSigma'
@@ -2518,7 +2497,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PercentConcordance'
@@ -2559,7 +2537,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'IncludeYN'
@@ -2600,7 +2577,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = '176Lu177Hf'
@@ -2641,7 +2617,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = '176Lu177HfSigma'
@@ -2680,7 +2655,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = '176Hf177Hf'
@@ -2720,7 +2694,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = '176Hf177HfSigma'
@@ -2760,7 +2733,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'InitRatio'
@@ -2801,7 +2773,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'InitRatioSigma'
@@ -2840,7 +2811,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Ymodeli'
@@ -2881,7 +2851,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Epsilon'
@@ -2922,7 +2891,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'EpsilonSigma'
@@ -2961,7 +2929,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'TDM'
@@ -3001,7 +2968,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'TDMSigma'
@@ -4004,7 +3970,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'i'
@@ -4043,7 +4008,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Age'
@@ -4082,7 +4046,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgePlus95'
@@ -4121,7 +4084,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'AgeMinus95'
@@ -4160,7 +4122,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Probability'
@@ -4366,7 +4327,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'Step'
@@ -4407,7 +4367,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PDFDataValue'
@@ -4446,7 +4405,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'PDFValue'
@@ -4629,7 +4587,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'RECORDID'
@@ -4668,7 +4625,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'CONTINENTID'
@@ -4707,7 +4663,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'COUNTRYABR'
@@ -4746,7 +4701,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'UNITNAME'
@@ -4785,7 +4739,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'UNITRANK'
@@ -4824,7 +4777,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'INTERPRETATION'
@@ -4863,7 +4815,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'MATERIALDESCRIPTION'
@@ -4902,7 +4853,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'ISOTOPESYSTEM'
@@ -4941,7 +4891,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'APPROACHDESCRIPTION'
@@ -4980,7 +4929,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'TECHNIQUE'
@@ -5019,7 +4967,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'RAGE'
@@ -5058,7 +5005,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'RAGEPERROR'
@@ -5097,7 +5043,6 @@ object ISFAgeHf: TISFAgeHf
               Width = '0'
               Wrap = False
               RawText = False
-              Css = ''
               BlobCharLimit = 0
               CompareHighlight = hcNone
               DataField = 'RAGEMERROR'

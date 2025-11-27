@@ -50,7 +50,7 @@ begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
   if UserSession.LoggedIn then
   begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
+    TopBar.lblWelcome.Caption := 'User is ' + UserSession.UserDisplayName;
   end;
   dmDV.cdsLithol.Open;
 end;
@@ -58,10 +58,6 @@ end;
 procedure TISFLithologies.IWAppFormRender(Sender: TObject);
 begin
   TopBar.lnkSignIn.Visible := not UserSession.LoggedIn;
-  if UserSession.LoggedIn then
-  begin
-    TopBar.lblWelcome.Caption := 'Welcome ' + UserSession.UserDisplayName;
-  end;
   iwlPrevPage.Visible := (dmDV.cdsLithol.RecordCount > iwDBg.RowLimit);
   iwlNextPage.Visible := (dmDV.cdsLithol.RecordCount > iwDBg.RowLimit);
 end;
