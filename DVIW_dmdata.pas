@@ -1211,12 +1211,12 @@ implementation
 uses
   IWInit,
   ServerController,
-  DVIW_constants, usrIW_dm;
+  DVIW_constants, usrIW_dm, UserSessionUnit;
 
 
 function dmdDV: TdmdDV;
 begin
-  Result := TUserSession(WebApplication.Data).dmdDV;
+  Result := TIWUserSession(WebApplication.Data).dmdDV;
 end;
 
 procedure TdmdDV.CalculateConcordiaForAge(Age : double; var t207235 : double;

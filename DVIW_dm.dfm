@@ -6333,7 +6333,6 @@ object dmDV: TdmDV
     Top = 726
   end
   object SQLMonitor1: TSQLMonitor
-    Active = True
     SQLConnection = sqlcDateView
     Left = 88
     Top = 16

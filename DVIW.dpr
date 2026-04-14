@@ -6,13 +6,17 @@ uses
   madListHardware,
   madListProcesses,
   madListModules,
-  IWRtlFix,
-  IWStart,
+  //IWRtlFix,
+  //IWStart,      // for use when creating an Indy application
+  IWStartHSys,  // for use when creating an HTTP.SYS application
+  usrIW_dm in '..\WebUserIW\usrIW_dm.pas' {dmUser: TDataModule},
   DVIW_dmopt in 'DVIW_dmopt.pas' {dmOpt: TDataModule},
   DVIW_dm in 'DVIW_dm.pas' {dmDV: TDataModule},
   DVIW_dmstrat in 'DVIW_dmstrat.pas' {dmStrat: TDataModule},
   DVIW_dmdata in 'DVIW_dmdata.pas' {dmdDV: TDataModule},
   DVIW_dmgraphics in 'DVIW_dmgraphics.pas' {dmgDV: TDataModule},
+  UserSessionUnit in 'UserSessionUnit.pas' {IWUserSession: TIWUserSessionBase},
+  ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase},
   DVIW_uMain in 'DVIW_uMain.pas',
   DVIW_frTopBar in 'DVIW_frTopBar.pas' {ISFTopBar: TFrame},
   DVIW_constants in 'DVIW_constants.pas',
@@ -101,24 +105,21 @@ uses
   Mathproc in '..\Eglington Delphi common code items\Mathproc.pas',
   NumRecipes in '..\Eglington Delphi common code items\NumRecipes.pas',
   NumRecipes_varb in '..\Eglington Delphi common code items\NumRecipes_varb.pas',
-  usrIW_dm in '..\WebUserIW\usrIW_dm.pas' {dmUser: TDataModule},
   usr_constants in '..\WebUserIW\usr_constants.pas',
   usr_cookies in '..\WebUserIW\usr_cookies.pas',
   usr_insufficientright in '..\WebUserIW\usr_insufficientright.pas' {ISFInsufficientRights: TIWAppForm},
   usr_uChangeDetails in '..\WebUserIW\usr_uChangeDetails.pas' {ISFChangeUserDetails: TIWAppForm},
   usr_uDBInterface in '..\WebUserIW\usr_uDBInterface.pas',
-  usr_uDonate in '..\WebUserIW\usr_uDonate.pas' {ISFDonate: TIWAppForm},
   usr_uRegister in '..\WebUserIW\usr_uRegister.pas' {ISFRegister: TIWAppForm},
-  usr_uRenew in '..\WebUserIW\usr_uRenew.pas' {ISFRenew: TIWAppForm},
   DVIW_datalookups in 'DVIW_datalookups.pas' {ISFDataLookups: TIWAppForm},
   DVIW_modelquery in 'DVIW_modelquery.pas' {ISFModelQuery: TIWAppForm},
   usr_uForgotten in '..\WebUserIW\usr_uForgotten.pas' {ISFForgotten: TIWAppForm},
-  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm},
-  ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase};
+  usr_uLogin in '..\WebUserIW\usr_uLogin.pas' {ISFLogin: TIWAppForm};
 
 {$R *.res}
 
 begin
-  TIWStart.Execute(True);
+  //TIWStart.Execute(True);      // for use when creating an Indy application
+  TIWStartHSys.Execute(True);  // for use when creating an HTTP.SYS application
 end.
 

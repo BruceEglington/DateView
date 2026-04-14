@@ -767,7 +767,6 @@ object dmStrat: TdmStrat
     Top = 482
   end
   object SQLMonitor1: TSQLMonitor
-    Active = True
     SQLConnection = sqlcStrat
     Left = 104
     Top = 8

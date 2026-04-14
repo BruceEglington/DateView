@@ -146,10 +146,10 @@ procedure TIWChartInterpretation.IWAppFormCreate(Sender: TObject);
 begin
   iweXMinimum.Text := FormatFloat('####0.00',UserSession.StartAtX);
   iweXMaximum.Text := FormatFloat('####0.00',UserSession.EndAtX);
-  //dmUser.SetDeveloperData('StartAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.StartAtX));
-  //dmUser.SetDeveloperData('EndAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.EndAtX));
-  //dmUser.SetDeveloperData('iweXMinimum.Text ChartInterpretationFormCreate = '+iweXMinimum.Text);
-  //dmUser.SetDeveloperData('iweXMaximum.Text ChartInterpretationFormCreate = '+iweXMaximum.Text);
+  dmUser.SetDeveloperData('StartAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.StartAtX));
+  dmUser.SetDeveloperData('EndAtX ChartInterpretationFormCreate = '+FormatFloat('####0.00',UserSession.EndAtX));
+  dmUser.SetDeveloperData('iweXMinimum.Text ChartInterpretationFormCreate = '+iweXMinimum.Text);
+  dmUser.SetDeveloperData('iweXMaximum.Text ChartInterpretationFormCreate = '+iweXMaximum.Text);
   MinimumCurveValue := 1.0e-8;
   Chart1.BufferedDisplay := false;
   Chart1.Foot.Clear;
@@ -354,8 +354,8 @@ var
   tempGauss : double;
   tNpts : double;
 begin
-    //dmUser.SetDeveloperData('iweXMinimum GraphDateByInterpretation = '+iweXMinimum.Text);
-    //dmUser.SetDeveloperData('iweXMaximum GraphDateByInterpretation = '+iweXMaximum.Text);
+    dmUser.SetDeveloperData('iweXMinimum GraphDateByInterpretation = '+iweXMinimum.Text);
+    dmUser.SetDeveloperData('iweXMaximum GraphDateByInterpretation = '+iweXMaximum.Text);
     MinimumUncertainty := 2.0;
     Val(UserSession.MinimumDateUncertainty,MinimumUncertainty,iCode);
     MinimumUncertainty := MinimumUncertainty/1.96;
@@ -364,8 +364,8 @@ begin
     if (UserSession.EndAtX <= UserSession.StartAtX) then UserSession.EndAtX := UserSession.StartAtX + 1.0;
     //UserSession.StartAtX := 100.0*(Trunc(UserSession.StartAtX) div 100);
     //UserSession.EndAtX := 100.0*(Trunc(UserSession.EndAtX) div 100 + 1);
-    //dmUser.SetDeveloperData('DateFromField GraphDateByInterpretation = '+UserSession.DateFromField);
-    //dmUser.SetDeveloperData('DateToField GraphDateByInterpretation = '+UserSession.DateToField);
+    dmUser.SetDeveloperData('DateFromField GraphDateByInterpretation = '+UserSession.DateFromField);
+    dmUser.SetDeveloperData('DateToField GraphDateByInterpretation = '+UserSession.DateToField);
     {
     if UserSession.IncludeDateFromValue then
     begin
@@ -384,10 +384,12 @@ begin
       end;
     end;
     }
-    //dmUser.SetDeveloperData('FromDate GraphDateByInterpretation = '+FormatFloat('####0.00',FromDate));
-    //dmUser.SetDeveloperData('ToDate GraphDateByInterpretation = '+FormatFloat('####0.00',ToDate));
+    dmUser.SetDeveloperData('FromDate GraphDateByInterpretation = '+FormatFloat('####0.00',FromDate));
+    dmUser.SetDeveloperData('ToDate GraphDateByInterpretation = '+FormatFloat('####0.00',ToDate));
     UserSession.FromAge := UserSession.StartAtX;
     UserSession.ToAge := UserSession.EndAtX;
+    dmUser.SetDeveloperData('FromDAge GraphDateByInterpretation = '+FormatFloat('####0.00',UserSession.FromAge));
+    dmUser.SetDeveloperData('ToAge GraphDateByInterpretation = '+FormatFloat('####0.00',UserSession.ToAge));
     Chart1.BottomAxis.Automatic := true;
     Chart1.LeftAxis.Automatic := true;
     Chart1.Title.Text.Text := UserSession.GraphType;

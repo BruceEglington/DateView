@@ -153,7 +153,7 @@ implementation
 uses
   IWInit,
   ServerController,
-  Variants, DVIW_constants, usrIW_dm;
+  Variants, DVIW_constants, usrIW_dm, UserSessionUnit;
 
 // Since we are threaded we cannot use global variables to store form / datamodule references
 // so we store them in WebApplication.Data and we could reference that each time, but by creating
@@ -168,7 +168,7 @@ uses
 
 function dmStrat: TdmStrat;
 begin
-  Result := TUserSession(WebApplication.Data).dmStrat;
+  Result := TIWUserSession(WebApplication.Data).dmStrat;
 end;
 
 procedure TdmStrat.cdsAnyReconcileError(DataSet: TCustomClientDataSet;

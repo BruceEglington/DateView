@@ -76,7 +76,7 @@ const
 
   MaxSamp    = 1000;
   MaxSeries  = 5;
-  MaxGuestRecords = 50;
+  MaxGuestRecords = 500;
   AgeTolerance : double = 20000.0;
   Steps        = 2500;
   SpectrumStartAge = 0.0;
@@ -88,7 +88,7 @@ const
   DefaultMissingValue = -999.99;
 
   NothingChosen = 'nothing';
-  Copyright1 = '(c) Dr Bruce Eglington (2004-2025)';
+  Copyright1 = '(c) Dr Bruce Eglington (2004-2026)';
   Copyright2 = 'DateView Geochronology Database';
 
 

@@ -363,14 +363,14 @@ implementation
 
 uses
   IWInit,
-  ServerController,
+  ServerController, UserSessionUnit,
   VCL.FlexCel.Core, FlexCel.Render, FlexCel.Pdf,
   DVIW_constants, usrIW_dm;
 
 
 function dmOpt: TdmOpt;
 begin
-  Result := TUserSession(WebApplication.Data).dmOpt;
+  Result := TIWUserSession(WebApplication.Data).dmOpt;
 end;
 
 procedure ExportToHtml(const MemStream: TStream; const xls: TXlsFile);

@@ -2582,7 +2582,6 @@ object dmgDV: TdmgDV
     Top = 32
   end
   object SQLMonitor1: TSQLMonitor
-    Active = True
     SQLConnection = sqlcDateView
     Left = 96
     Top = 8

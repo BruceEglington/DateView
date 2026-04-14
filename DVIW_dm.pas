@@ -1213,7 +1213,7 @@ implementation
 
 uses
   IWInit,
-  ServerController,
+  ServerController, UserSessionUnit,
   Variants, DVIW_constants, usrIW_dm;
 
 // Since we are threaded we cannot use global variables to store form / datamodule references
@@ -1229,7 +1229,7 @@ uses
 
 function dmDV: TdmDV;
 begin
-  Result := TUserSession(WebApplication.Data).dmDV;
+  Result := TIWUserSession(WebApplication.Data).dmDV;
 end;
 
 

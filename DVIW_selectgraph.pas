@@ -84,8 +84,8 @@ begin
   end;
   iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
   iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
-  //dmUser.SetDeveloperData('iweFromAge.Text FormCreate selectgraph = '+iweFromAge.Text);
-  //dmUser.SetDeveloperData('iweToAge.Text FormCreate selectgraph = '+iweToAge.Text);
+  dmUser.SetDeveloperData('iweFromAge.Text FormCreate selectgraph = '+iweFromAge.Text);
+  dmUser.SetDeveloperData('iweToAge.Text FormCreate selectgraph = '+iweToAge.Text);
   for i := 0 to iwcbGroupBy.Items.Count-1 do
   begin
     if (UserSession.GroupBy = iwcbGroupBy.Items.Strings[i]) then
@@ -122,10 +122,10 @@ begin
     //dmUser.SetDeveloperData('iweToAge Submit 0 = '+iweToAge.Text);
     Val(iweFromAge.Text,UserSession.StartAtX,iCode);
       //dmUser.SetDeveloperData('FromAge Submit 0a = '+FormatFloat('####0.00',UserSession.FromAge));
-      if (iCode <> 0) then UserSession.StartAtX := SpectrumStartAge;
+    if (iCode <> 0) then UserSession.StartAtX := SpectrumStartAge;
     Val(iweToAge.Text,UserSession.EndAtX,iCode);
       //dmUser.SetDeveloperData('ToAge Submit 0a = '+FormatFloat('####0.00',UserSession.ToAge));
-      if (iCode <> 0) then UserSession.EndAtX := SpectrumEndAge;
+    if (iCode <> 0) then UserSession.EndAtX := SpectrumEndAge;
     //UserSession.StartAtX := UserSession.FromAge;
     //UserSession.EndAtX := UserSession.ToAge;
     if (UserSession.StartAtX >= UserSession.EndAtX) then
@@ -136,8 +136,8 @@ begin
     end;
     iweFromAge.Text := FormatFloat('###0.00',UserSession.StartAtX);
     iweToAge.Text := FormatFloat('###0.00',UserSession.EndAtX);
-    //dmUser.SetDeveloperData('StartAtX Submit 0b = '+FormatFloat('####0.00',UserSession.StartAtX));
-    //dmUser.SetDeveloperData('EndAtX Submit 0b = '+FormatFloat('####0.00',UserSession.EndAtX));
+    dmUser.SetDeveloperData('StartAtX Submit 0b = '+FormatFloat('####0.00',UserSession.StartAtX));
+    dmUser.SetDeveloperData('EndAtX Submit 0b = '+FormatFloat('####0.00',UserSession.EndAtX));
   //end;
   AllOkay := true;
   dmgDV.cdsQuerydm.Close;
@@ -471,8 +471,12 @@ begin
     begin
       if not iwcbPlotTypeGrouped.Checked then
       begin
+        dmUser.SetDeveloperData('StartAtX before AllocateDataByInterpretation2 0 = '+FormatFloat('####0.00',UserSession.StartAtX));
+        dmUser.SetDeveloperData('EndAtX before AllocateDataByInterpretation2 0 = '+FormatFloat('####0.00',UserSession.EndAtX));
         dmgDV.cdsTempDataDI.Open;
         dmgDV.AllocateDataByInterpretation2;
+        dmUser.SetDeveloperData('StartAtX after AllocateDataByInterpretation2 1 = '+FormatFloat('####0.00',UserSession.StartAtX));
+        dmUser.SetDeveloperData('EndAtX after AllocateDataByInterpretation2 1 = '+FormatFloat('####0.00',UserSession.EndAtX));
       end;
       if iwcbPlotTypeGrouped.Checked then
       begin
@@ -480,6 +484,8 @@ begin
         dmgDV.cdsTempDataDG.Open;
         dmgDV.AllocateDataGroupedByInterpretation2;
       end;
+      dmUser.SetDeveloperData('StartAtX before ChartInterpretation 2 = '+FormatFloat('####0.00',UserSession.StartAtX));
+      dmUser.SetDeveloperData('EndAtX before ChartInterpretation 2 = '+FormatFloat('####0.00',UserSession.EndAtX));
       UserSession.LastVisitedForm := TIWAppFormClass(WebApplication.ActiveForm.ClassType);
       TIWAppForm(WebApplication.ActiveForm).Release;
       TIWChartInterpretation.Create(WebApplication).Show;

@@ -1,8 +1,12 @@
 object ISFDetailsEdit: TISFDetailsEdit
   Left = 0
   Top = 0
-  Width = 1023
-  Height = 3300
+  Width = 1279
+  Height = 4125
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -15,18 +19,21 @@ object ISFDetailsEdit: TISFDetailsEdit
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
+  PixelsPerInch = 120
   DesignLeft = 2
-  DesignTop = -2629
+  DesignTop = 2
   object IWLabel1: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 132
+    Left = 120
+    Top = 165
     Width = 60
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -35,29 +42,33 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbReturn: TIWButton
     AlignWithMargins = False
-    Left = 96
-    Top = 88
-    Width = 140
-    Height = 25
+    Left = 120
+    Top = 110
+    Width = 175
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Return to results list'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel2: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 155
+    Left = 120
+    Top = 194
     Width = 27
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -66,14 +77,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel3: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 190
+    Left = 120
+    Top = 238
     Width = 101
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -82,14 +95,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel4: TIWLabel
     AlignWithMargins = False
-    Left = 611
-    Top = 190
+    Left = 764
+    Top = 238
     Width = 53
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -98,14 +113,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel5: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 228
+    Left = 120
+    Top = 285
     Width = 105
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -114,14 +131,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel6: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 262
+    Left = 120
+    Top = 328
     Width = 92
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -130,14 +149,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel7: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 289
+    Left = 120
+    Top = 361
     Width = 57
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -146,14 +167,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel8: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 316
+    Left = 120
+    Top = 395
     Width = 63
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -162,14 +185,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel9: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 342
+    Left = 120
+    Top = 428
     Width = 79
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -178,14 +203,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel10: TIWLabel
     AlignWithMargins = False
-    Left = 490
-    Top = 342
+    Left = 613
+    Top = 428
     Width = 39
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -194,14 +221,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel11: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 390
+    Left = 120
+    Top = 488
     Width = 39
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -210,15 +239,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGE: TIWDBEdit
     AlignWithMargins = False
-    Left = 208
-    Top = 389
-    Width = 53
-    Height = 21
+    Left = 260
+    Top = 486
+    Width = 66
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -233,14 +265,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel12: TIWLabel
     AlignWithMargins = False
-    Left = 270
-    Top = 390
+    Left = 338
+    Top = 488
     Width = 7
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -249,15 +283,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGEPERRORALL: TIWDBEdit
     AlignWithMargins = False
-    Left = 280
-    Top = 389
-    Width = 53
-    Height = 21
+    Left = 350
+    Top = 486
+    Width = 66
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -273,14 +310,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel13: TIWLabel
     AlignWithMargins = False
-    Left = 340
-    Top = 390
+    Left = 425
+    Top = 488
     Width = 4
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -289,15 +328,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGEMERRORALL: TIWDBEdit
     AlignWithMargins = False
-    Left = 348
-    Top = 389
-    Width = 53
-    Height = 21
+    Left = 435
+    Top = 486
+    Width = 66
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -312,14 +354,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel15: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 564
-    Width = 60
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 705
+    Width = 75
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -328,14 +372,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeWeighting: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 565
-    Width = 323
-    Height = 21
+    Left = 258
+    Top = 706
+    Width = 403
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -350,14 +397,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlDC1: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 738
-    Width = 114
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 923
+    Width = 142
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -366,15 +415,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeDC1: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 739
-    Width = 93
-    Height = 21
+    Left = 258
+    Top = 924
+    Width = 116
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -389,14 +441,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlDC1error: TIWLabel
     AlignWithMargins = False
-    Left = 306
-    Top = 738
-    Width = 83
-    Height = 15
-    Font.Color = clNone
+    Left = 383
+    Top = 923
+    Width = 103
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -405,14 +459,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeDC1error: TIWDBEdit
     AlignWithMargins = False
-    Left = 392
-    Top = 739
-    Width = 46
-    Height = 21
+    Left = 490
+    Top = 924
+    Width = 58
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -427,14 +484,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel18: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1018
-    Width = 70
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1273
+    Width = 88
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -443,14 +502,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel19: TIWLabel
     AlignWithMargins = False
-    Left = 526
-    Top = 390
+    Left = 658
+    Top = 488
     Width = 262
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -459,14 +520,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlOtherIntercept: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 500
+    Left = 118
+    Top = 625
     Width = 99
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -475,15 +538,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeOtherIntercept: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 500
-    Width = 53
-    Height = 21
+    Left = 258
+    Top = 625
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -498,14 +564,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlOtherInterceptPError: TIWLabel
     AlignWithMargins = False
-    Left = 266
-    Top = 500
+    Left = 333
+    Top = 625
     Width = 7
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -514,15 +582,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeOtherInterceptPError: TIWDBEdit
     AlignWithMargins = False
-    Left = 276
-    Top = 500
-    Width = 53
-    Height = 21
+    Left = 345
+    Top = 625
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -537,14 +608,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlOtherInterceptMError: TIWLabel
     AlignWithMargins = False
-    Left = 336
-    Top = 500
+    Left = 420
+    Top = 625
     Width = 4
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -553,15 +626,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeOtherInterceptMError: TIWDBEdit
     AlignWithMargins = False
-    Left = 344
-    Top = 500
-    Width = 53
-    Height = 21
+    Left = 430
+    Top = 625
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -576,14 +652,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlDC2: TIWLabel
     AlignWithMargins = False
-    Left = 486
-    Top = 738
-    Width = 114
-    Height = 15
-    Font.Color = clNone
+    Left = 608
+    Top = 923
+    Width = 142
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -592,15 +670,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeDC2: TIWDBEdit
     AlignWithMargins = False
-    Left = 594
-    Top = 739
-    Width = 93
-    Height = 21
+    Left = 743
+    Top = 924
+    Width = 116
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -615,14 +696,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlDC2error: TIWLabel
     AlignWithMargins = False
-    Left = 694
-    Top = 738
-    Width = 83
-    Height = 15
-    Font.Color = clNone
+    Left = 868
+    Top = 923
+    Width = 103
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -631,14 +714,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeDC2error: TIWDBEdit
     AlignWithMargins = False
-    Left = 780
-    Top = 739
-    Width = 44
-    Height = 21
+    Left = 975
+    Top = 924
+    Width = 55
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -653,10 +739,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgReference: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 1017
-    Width = 679
-    Height = 105
+    Left = 288
+    Top = 1271
+    Width = 848
+    Height = 132
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -665,10 +755,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -682,10 +770,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -701,7 +787,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -720,10 +805,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -739,7 +822,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -758,10 +840,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -779,7 +859,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -812,10 +891,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgValidation: TIWDBGrid
     AlignWithMargins = False
-    Left = 232
-    Top = 1397
-    Width = 541
-    Height = 161
+    Left = 290
+    Top = 1746
+    Width = 676
+    Height = 202
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -824,10 +907,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -841,10 +922,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -862,7 +941,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -881,10 +959,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -900,7 +976,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -919,10 +994,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -938,7 +1011,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -971,14 +1043,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel24: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1400
-    Width = 100
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1750
+    Width = 125
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -987,10 +1061,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgSample: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 2521
-    Width = 731
-    Height = 150
+    Left = 288
+    Top = 3151
+    Width = 913
+    Height = 188
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -999,10 +1077,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
-    Font.Style = []
     Font.PxSize = 10
     FrameBuffer = 40
     Lines = tlAll
@@ -1016,10 +1092,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1037,7 +1111,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1056,10 +1129,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1075,7 +1146,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1094,10 +1164,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1113,7 +1181,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1132,10 +1199,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taRightJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1152,7 +1217,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1171,10 +1235,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taRightJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1191,7 +1253,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1210,10 +1271,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taRightJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1230,7 +1289,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1249,10 +1307,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1268,7 +1324,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1287,10 +1342,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1306,7 +1359,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1325,10 +1377,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1344,7 +1394,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1363,10 +1412,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1382,7 +1429,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1401,10 +1447,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1420,7 +1464,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1439,10 +1482,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         Header = False
         Height = '0'
@@ -1458,7 +1499,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
@@ -1491,14 +1531,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel25: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 2526
-    Width = 55
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 3158
+    Width = 69
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -1507,14 +1549,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel26: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1754
-    Width = 51
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2193
+    Width = 64
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -1523,10 +1567,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgProvince: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 1750
-    Width = 257
-    Height = 139
+    Left = 288
+    Top = 2188
+    Width = 321
+    Height = 173
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -1535,10 +1583,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -1552,10 +1598,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -1573,7 +1617,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -1592,10 +1635,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -1611,7 +1652,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -1644,10 +1684,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgTerrane: TIWDBGrid
     AlignWithMargins = False
-    Left = 656
-    Top = 1750
-    Width = 257
-    Height = 139
+    Left = 820
+    Top = 2188
+    Width = 321
+    Height = 173
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -1656,10 +1700,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -1673,10 +1715,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -1694,7 +1734,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -1713,10 +1752,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -1732,7 +1769,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -1765,14 +1801,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel27: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 2040
-    Width = 132
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2550
+    Width = 165
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -1781,10 +1819,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgChemicalType: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 2035
-    Width = 257
-    Height = 109
+    Left = 288
+    Top = 2544
+    Width = 321
+    Height = 136
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -1793,10 +1835,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -1810,9 +1850,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         Header = False
         Height = '0'
@@ -1830,9 +1867,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
-        Title.Font.Size = 10
-        Title.Font.Style = []
         Title.Font.PxSize = 13
         Title.Header = False
         Title.Height = '0'
@@ -1862,10 +1896,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgOrogenicPeriod: TIWDBGrid
     AlignWithMargins = False
-    Left = 656
-    Top = 2035
-    Width = 257
-    Height = 109
+    Left = 820
+    Top = 2544
+    Width = 321
+    Height = 136
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -1874,10 +1912,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -1891,10 +1927,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -1912,7 +1946,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -1945,14 +1978,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel28: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 590
-    Width = 83
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 738
+    Width = 103
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -1961,14 +1996,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeAugmentation: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 589
-    Width = 323
-    Height = 21
+    Left = 258
+    Top = 736
+    Width = 403
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -1983,14 +2021,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel29: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 614
-    Width = 66
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 768
+    Width = 82
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -1999,14 +2039,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeLudwig: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 613
-    Width = 47
-    Height = 21
+    Left = 258
+    Top = 766
+    Width = 58
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2021,14 +2064,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel30: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 638
-    Width = 70
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 798
+    Width = 87
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2037,14 +2082,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeConstraints: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 638
-    Width = 323
-    Height = 21
+    Left = 258
+    Top = 798
+    Width = 403
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2059,14 +2107,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel31: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 664
-    Width = 96
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 830
+    Width = 120
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2075,14 +2125,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeAgeConstrain: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 663
-    Width = 57
-    Height = 21
+    Left = 258
+    Top = 829
+    Width = 71
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2097,14 +2150,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel32: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 688
-    Width = 81
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 860
+    Width = 101
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2113,15 +2168,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeXConstrain: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 687
-    Width = 97
-    Height = 21
+    Left = 258
+    Top = 859
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2136,14 +2194,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel33: TIWLabel
     AlignWithMargins = False
-    Left = 344
-    Top = 688
-    Width = 70
-    Height = 15
-    Font.Color = clNone
+    Left = 430
+    Top = 860
+    Width = 88
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2152,15 +2212,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeYConstrain: TIWDBEdit
     AlignWithMargins = False
-    Left = 414
-    Top = 687
-    Width = 97
-    Height = 21
+    Left = 518
+    Top = 859
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2175,15 +2238,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeZConstrain: TIWDBEdit
     AlignWithMargins = False
-    Left = 624
-    Top = 687
-    Width = 97
-    Height = 21
+    Left = 780
+    Top = 859
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2198,14 +2264,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel34: TIWLabel
     AlignWithMargins = False
-    Left = 554
-    Top = 688
-    Width = 70
-    Height = 15
-    Font.Color = clNone
+    Left = 693
+    Top = 860
+    Width = 87
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2214,14 +2282,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel35: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 712
-    Width = 59
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 890
+    Width = 73
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2230,15 +2300,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeXCentroid: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 711
-    Width = 97
-    Height = 21
+    Left = 258
+    Top = 889
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2253,14 +2326,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel36: TIWLabel
     AlignWithMargins = False
-    Left = 344
-    Top = 712
-    Width = 59
-    Height = 15
-    Font.Color = clNone
+    Left = 430
+    Top = 890
+    Width = 74
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2269,15 +2344,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeYCentroid: TIWDBEdit
     AlignWithMargins = False
-    Left = 414
-    Top = 711
-    Width = 97
-    Height = 21
+    Left = 518
+    Top = 889
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2292,14 +2370,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel37: TIWLabel
     AlignWithMargins = False
-    Left = 554
-    Top = 712
-    Width = 59
-    Height = 15
-    Font.Color = clNone
+    Left = 693
+    Top = 890
+    Width = 73
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2308,15 +2388,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeZCentroid: TIWDBEdit
     AlignWithMargins = False
-    Left = 624
-    Top = 711
-    Width = 97
-    Height = 21
+    Left = 780
+    Top = 889
+    Width = 121
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2331,14 +2414,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel38: TIWLabel
     AlignWithMargins = False
-    Left = 344
-    Top = 664
-    Width = 174
-    Height = 15
-    Font.Color = clNone
+    Left = 430
+    Top = 830
+    Width = 218
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2347,14 +2432,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeProgName: TIWDBEdit
     AlignWithMargins = False
-    Left = 510
-    Top = 663
-    Width = 211
-    Height = 21
+    Left = 638
+    Top = 829
+    Width = 263
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2369,14 +2457,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel39: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 844
-    Width = 104
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1055
+    Width = 130
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2385,15 +2475,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeProbOfFit: TIWDBEdit
     AlignWithMargins = False
-    Left = 208
-    Top = 843
-    Width = 53
-    Height = 21
+    Left = 260
+    Top = 1054
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2408,14 +2501,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel40: TIWLabel
     AlignWithMargins = False
-    Left = 270
-    Top = 842
-    Width = 108
-    Height = 15
-    Font.Color = clNone
+    Left = 338
+    Top = 1053
+    Width = 135
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2424,15 +2519,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeAlpha: TIWDBEdit
     AlignWithMargins = False
-    Left = 386
-    Top = 843
-    Width = 45
-    Height = 21
+    Left = 483
+    Top = 1054
+    Width = 56
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2447,14 +2545,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel41: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 870
-    Width = 51
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1088
+    Width = 64
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2463,15 +2563,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeMSWD: TIWDBEdit
     AlignWithMargins = False
-    Left = 208
-    Top = 869
-    Width = 53
-    Height = 21
+    Left = 260
+    Top = 1086
+    Width = 66
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2486,14 +2589,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel42: TIWLabel
     AlignWithMargins = False
-    Left = 270
-    Top = 868
-    Width = 118
-    Height = 15
-    Font.Color = clNone
+    Left = 338
+    Top = 1085
+    Width = 147
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2502,15 +2607,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeFcutoff: TIWDBEdit
     AlignWithMargins = False
-    Left = 386
-    Top = 869
-    Width = 45
-    Height = 21
+    Left = 483
+    Top = 1086
+    Width = 56
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2525,14 +2633,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel43: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 920
-    Width = 169
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1150
+    Width = 211
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2541,14 +2651,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeProbConcord: TIWDBEdit
     AlignWithMargins = False
-    Left = 260
-    Top = 920
-    Width = 41
-    Height = 21
+    Left = 325
+    Top = 1150
+    Width = 51
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2563,15 +2676,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel44: TIWLabel
     AlignWithMargins = False
-    Left = 288
-    Top = 895
-    Width = 10
-    Height = 15
+    Left = 360
+    Top = 1119
+    Width = 13
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Alignment = taCenter
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2580,15 +2695,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeNReg: TIWDBEdit
     AlignWithMargins = False
-    Left = 210
-    Top = 894
-    Width = 51
-    Height = 21
+    Left = 263
+    Top = 1118
+    Width = 63
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taCenter
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2603,14 +2721,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel45: TIWLabel
     AlignWithMargins = False
-    Left = 364
-    Top = 895
-    Width = 119
-    Height = 15
-    Font.Color = clNone
+    Left = 455
+    Top = 1119
+    Width = 149
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2619,15 +2739,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeNSamp: TIWDBEdit
     AlignWithMargins = False
-    Left = 308
-    Top = 894
-    Width = 51
-    Height = 21
+    Left = 385
+    Top = 1118
+    Width = 64
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taCenter
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2642,15 +2765,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeNRep: TIWDBEdit
     AlignWithMargins = False
-    Left = 712
-    Top = 894
-    Width = 51
-    Height = 21
+    Left = 890
+    Top = 1118
+    Width = 64
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2665,14 +2791,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel46: TIWLabel
     AlignWithMargins = False
-    Left = 582
-    Top = 895
-    Width = 137
-    Height = 15
-    Font.Color = clNone
+    Left = 728
+    Top = 1119
+    Width = 171
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2681,15 +2809,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeDegFree: TIWDBEdit
     AlignWithMargins = False
-    Left = 712
-    Top = 869
-    Width = 51
-    Height = 21
+    Left = 890
+    Top = 1086
+    Width = 64
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2704,14 +2835,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel47: TIWLabel
     AlignWithMargins = False
-    Left = 580
-    Top = 870
-    Width = 132
-    Height = 15
-    Font.Color = clNone
+    Left = 725
+    Top = 1088
+    Width = 165
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2720,14 +2853,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel48: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1280
-    Width = 63
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1600
+    Width = 79
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2736,10 +2871,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgLaboratory: TIWDBGrid
     AlignWithMargins = False
-    Left = 232
-    Top = 1279
-    Width = 541
-    Height = 111
+    Left = 290
+    Top = 1599
+    Width = 676
+    Height = 139
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -2748,10 +2887,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -2765,10 +2902,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -2786,7 +2921,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -2819,14 +2953,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel49: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1132
-    Width = 68
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1415
+    Width = 85
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2835,17 +2971,19 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBmComments: TIWDBMemo
     AlignWithMargins = False
-    Left = 230
-    Top = 1128
-    Width = 541
-    Height = 144
+    Left = 288
+    Top = 1410
+    Width = 676
+    Height = 180
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     BGColor = clWebWHITE
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
@@ -2860,14 +2998,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlConfidentiality: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1586
-    Width = 130
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 1983
+    Width = 163
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2876,14 +3016,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeConfidentiality: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1586
-    Width = 35
-    Height = 21
+    Left = 293
+    Top = 1983
+    Width = 43
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2898,14 +3041,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel52: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1616
-    Width = 72
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2020
+    Width = 90
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2914,15 +3059,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeInitialRatio: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1616
-    Width = 79
-    Height = 21
+    Left = 293
+    Top = 2020
+    Width = 98
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2937,14 +3085,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel53: TIWLabel
     AlignWithMargins = False
-    Left = 320
-    Top = 1616
-    Width = 55
-    Height = 15
-    Font.Color = clNone
+    Left = 400
+    Top = 2020
+    Width = 69
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2953,15 +3103,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeInitialRatioError: TIWDBEdit
     AlignWithMargins = False
-    Left = 376
-    Top = 1616
-    Width = 79
-    Height = 21
+    Left = 470
+    Top = 2020
+    Width = 99
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -2976,14 +3129,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel51: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1640
-    Width = 116
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2050
+    Width = 145
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -2992,15 +3147,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeEpsilon: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1640
-    Width = 79
-    Height = 21
+    Left = 293
+    Top = 2050
+    Width = 98
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3015,14 +3173,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel54: TIWLabel
     AlignWithMargins = False
-    Left = 320
-    Top = 1640
-    Width = 55
-    Height = 15
-    Font.Color = clNone
+    Left = 400
+    Top = 2050
+    Width = 69
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3031,15 +3191,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeEpsilonError: TIWDBEdit
     AlignWithMargins = False
-    Left = 376
-    Top = 1640
-    Width = 79
-    Height = 21
+    Left = 470
+    Top = 2050
+    Width = 99
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3054,14 +3217,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel55: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1664
-    Width = 106
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2080
+    Width = 133
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3070,15 +3235,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeInitialRatio3D: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1664
-    Width = 79
-    Height = 21
+    Left = 293
+    Top = 2080
+    Width = 98
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3093,14 +3261,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel56: TIWLabel
     AlignWithMargins = False
-    Left = 320
-    Top = 1664
-    Width = 55
-    Height = 15
-    Font.Color = clNone
+    Left = 400
+    Top = 2080
+    Width = 69
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3109,15 +3279,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeInitialRatio3DError: TIWDBEdit
     AlignWithMargins = False
-    Left = 376
-    Top = 1664
-    Width = 79
-    Height = 21
+    Left = 470
+    Top = 2080
+    Width = 99
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3132,14 +3305,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel57: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1688
-    Width = 36
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2110
+    Width = 45
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3148,14 +3323,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeModelUsed: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1688
-    Width = 399
-    Height = 21
+    Left = 293
+    Top = 2110
+    Width = 498
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3170,14 +3348,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel59: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1712
-    Width = 140
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2140
+    Width = 175
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3186,14 +3366,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel60: TIWLabel
     AlignWithMargins = False
-    Left = 320
-    Top = 1712
-    Width = 35
-    Height = 15
-    Font.Color = clNone
+    Left = 400
+    Top = 2140
+    Width = 44
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3202,15 +3384,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeMuPError: TIWDBEdit
     AlignWithMargins = False
-    Left = 356
-    Top = 1712
-    Width = 61
-    Height = 21
+    Left = 445
+    Top = 2140
+    Width = 76
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3225,15 +3410,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeMuMError: TIWDBEdit
     AlignWithMargins = False
-    Left = 472
-    Top = 1712
-    Width = 59
-    Height = 21
+    Left = 590
+    Top = 2140
+    Width = 74
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3248,14 +3436,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel61: TIWLabel
     AlignWithMargins = False
-    Left = 434
-    Top = 1712
-    Width = 31
-    Height = 15
-    Font.Color = clNone
+    Left = 543
+    Top = 2140
+    Width = 38
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3264,15 +3454,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeMu: TIWDBEdit
     AlignWithMargins = False
-    Left = 234
-    Top = 1712
-    Width = 73
-    Height = 21
+    Left = 293
+    Top = 2140
+    Width = 91
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3287,14 +3480,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel58: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 1898
-    Width = 56
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2373
+    Width = 70
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3303,10 +3498,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgGrouping: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 1895
-    Width = 257
-    Height = 135
+    Left = 288
+    Top = 2369
+    Width = 321
+    Height = 169
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -3315,10 +3514,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -3332,10 +3529,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3353,7 +3548,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3386,14 +3580,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel62: TIWLabel
     AlignWithMargins = False
-    Left = 520
-    Top = 2040
-    Width = 96
-    Height = 15
-    Font.Color = clNone
+    Left = 650
+    Top = 2550
+    Width = 120
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3402,14 +3598,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel63: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 2156
-    Width = 57
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2695
+    Width = 71
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3418,10 +3616,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgBoundary: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 2153
-    Width = 541
-    Height = 113
+    Left = 288
+    Top = 2691
+    Width = 676
+    Height = 142
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -3430,10 +3632,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -3447,10 +3647,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3466,7 +3664,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3485,10 +3682,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3506,7 +3701,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3539,14 +3733,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel64: TIWLabel
     AlignWithMargins = False
-    Left = 96
-    Top = 2276
-    Width = 46
-    Height = 15
-    Font.Color = clNone
+    Left = 120
+    Top = 2845
+    Width = 58
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3555,10 +3751,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgImage: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 2273
-    Width = 257
-    Height = 119
+    Left = 288
+    Top = 2841
+    Width = 321
+    Height = 149
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -3567,10 +3767,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -3584,10 +3782,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3603,7 +3799,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3622,10 +3817,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3643,7 +3836,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3676,10 +3868,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgWhoFor: TIWDBGrid
     AlignWithMargins = False
-    Left = 230
-    Top = 2399
-    Width = 441
-    Height = 115
+    Left = 288
+    Top = 2999
+    Width = 551
+    Height = 144
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -3688,10 +3884,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -3705,10 +3899,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -3726,7 +3918,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -3759,14 +3950,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbLithology: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 671
-    Top = 188
-    Width = 260
-    Height = 21
+    Left = 839
+    Top = 235
+    Width = 325
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3787,15 +3981,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbPost: TIWButton
     AlignWithMargins = False
-    Left = 902
-    Top = 88
-    Width = 130
-    Height = 25
+    Left = 1128
+    Top = 110
+    Width = 162
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Post'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbPost'
     TabOrder = 44
@@ -3803,15 +3999,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbApplyUpdates: TIWButton
     AlignWithMargins = False
-    Left = 414
-    Top = 88
-    Width = 130
-    Height = 25
+    Left = 518
+    Top = 110
+    Width = 162
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 45
@@ -3819,14 +4017,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbInterpretation: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 340
-    Width = 243
-    Height = 21
+    Left = 260
+    Top = 425
+    Width = 304
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3847,14 +4048,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbPrefLevel: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 548
-    Top = 340
-    Width = 455
-    Height = 21
+    Left = 685
+    Top = 425
+    Width = 569
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3875,14 +4079,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbMethod: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 412
-    Top = 390
-    Width = 84
-    Height = 21
+    Left = 515
+    Top = 488
+    Width = 105
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -3903,10 +4110,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBnReferences: TIWDBNavigator
     AlignWithMargins = False
-    Left = 96
-    Top = 1035
-    Width = 108
-    Height = 28
+    Left = 120
+    Top = 1294
+    Width = 135
+    Height = 35
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3919,10 +4130,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBnLaboratories: TIWDBNavigator
     AlignWithMargins = False
-    Left = 96
-    Top = 1297
-    Width = 108
-    Height = 29
+    Left = 120
+    Top = 1621
+    Width = 135
+    Height = 37
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3935,10 +4150,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator3: TIWDBNavigator
     AlignWithMargins = False
-    Left = 526
-    Top = 1771
-    Width = 108
-    Height = 29
+    Left = 658
+    Top = 2214
+    Width = 135
+    Height = 36
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3951,14 +4170,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel66: TIWLabel
     AlignWithMargins = False
-    Left = 522
-    Top = 1754
-    Width = 47
-    Height = 15
-    Font.Color = clNone
+    Left = 653
+    Top = 2193
+    Width = 58
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -3967,10 +4188,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator4: TIWDBNavigator
     AlignWithMargins = False
-    Left = 94
-    Top = 1771
-    Width = 108
-    Height = 29
+    Left = 118
+    Top = 2214
+    Width = 135
+    Height = 36
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3983,10 +4208,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator5: TIWDBNavigator
     AlignWithMargins = False
-    Left = 94
-    Top = 1913
-    Width = 108
-    Height = 29
+    Left = 118
+    Top = 2391
+    Width = 135
+    Height = 37
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3999,10 +4228,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator6: TIWDBNavigator
     AlignWithMargins = False
-    Left = 92
-    Top = 2055
-    Width = 108
-    Height = 29
+    Left = 115
+    Top = 2569
+    Width = 135
+    Height = 36
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4015,10 +4248,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator7: TIWDBNavigator
     AlignWithMargins = False
-    Left = 522
-    Top = 2055
-    Width = 108
-    Height = 27
+    Left = 653
+    Top = 2569
+    Width = 135
+    Height = 34
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4031,10 +4268,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator8: TIWDBNavigator
     AlignWithMargins = False
-    Left = 94
-    Top = 2173
-    Width = 108
-    Height = 27
+    Left = 118
+    Top = 2716
+    Width = 135
+    Height = 34
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4047,10 +4288,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator9: TIWDBNavigator
     AlignWithMargins = False
-    Left = 96
-    Top = 2293
-    Width = 108
-    Height = 29
+    Left = 120
+    Top = 2866
+    Width = 135
+    Height = 37
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4063,10 +4308,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwdbnWhoFor: TIWDBNavigator
     AlignWithMargins = False
-    Left = 96
-    Top = 2421
-    Width = 108
-    Height = 29
+    Left = 120
+    Top = 3026
+    Width = 135
+    Height = 37
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4079,14 +4328,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlWhoFor: TIWLabel
     AlignWithMargins = False
-    Left = 98
-    Top = 2404
-    Width = 46
-    Height = 15
-    Font.Color = clNone
+    Left = 123
+    Top = 3005
+    Width = 57
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -4095,10 +4346,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator10: TIWDBNavigator
     AlignWithMargins = False
-    Left = 96
-    Top = 2543
-    Width = 108
-    Height = 29
+    Left = 120
+    Top = 3179
+    Width = 135
+    Height = 36
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
     Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -4111,15 +4366,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbCancelChanges: TIWButton
     AlignWithMargins = False
-    Left = 558
-    Top = 88
-    Width = 130
-    Height = 25
+    Left = 698
+    Top = 110
+    Width = 162
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbCancelChanges'
     TabOrder = 57
@@ -4127,15 +4384,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddReference: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1064
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 1330
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddReference'
     TabOrder = 59
@@ -4143,15 +4402,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddLaboratory: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1328
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 1660
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddLaboratory'
     TabOrder = 60
@@ -4159,15 +4420,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddProvince: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 1802
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2253
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddProvince'
     TabOrder = 62
@@ -4175,15 +4438,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddTerrane: TIWButton
     AlignWithMargins = False
-    Left = 536
-    Top = 1802
-    Width = 91
-    Height = 25
+    Left = 670
+    Top = 2253
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddTerrane'
     TabOrder = 63
@@ -4191,15 +4456,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddGroup: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 1948
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2435
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddGroup'
     TabOrder = 64
@@ -4207,15 +4474,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddChemType: TIWButton
     AlignWithMargins = False
-    Left = 102
-    Top = 2086
-    Width = 91
-    Height = 25
+    Left = 128
+    Top = 2608
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddChemType'
     TabOrder = 65
@@ -4223,15 +4492,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddOrogenic: TIWButton
     AlignWithMargins = False
-    Left = 532
-    Top = 2086
-    Width = 91
-    Height = 25
+    Left = 665
+    Top = 2608
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddOrogenic'
     TabOrder = 66
@@ -4239,15 +4510,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddBoundary: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 2202
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2753
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddBoundary'
     TabOrder = 67
@@ -4255,15 +4528,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddImage: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2324
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 2905
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddImage'
     TabOrder = 68
@@ -4271,15 +4546,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddWhoFor: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2452
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 3065
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddWhoFor'
     TabOrder = 69
@@ -4287,15 +4564,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddSample: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2578
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 3223
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddSample'
     TabOrder = 70
@@ -4303,16 +4582,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteReference: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1092
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 1365
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteReference'
     TabOrder = 71
@@ -4320,16 +4601,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteLaboratory: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1356
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 1695
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteLaboratory'
     TabOrder = 72
@@ -4337,16 +4620,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteProvince: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 1830
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2288
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteProvince'
     TabOrder = 73
@@ -4354,16 +4639,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteTerrane: TIWButton
     AlignWithMargins = False
-    Left = 536
-    Top = 1830
-    Width = 91
-    Height = 25
+    Left = 670
+    Top = 2288
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteTerrane'
     TabOrder = 74
@@ -4371,16 +4658,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteGroup: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 1976
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2470
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteGroup'
     TabOrder = 75
@@ -4388,16 +4677,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteChemType: TIWButton
     AlignWithMargins = False
-    Left = 102
-    Top = 2114
-    Width = 91
-    Height = 25
+    Left = 128
+    Top = 2643
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteChemType'
     TabOrder = 76
@@ -4405,16 +4696,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteOrogenic: TIWButton
     AlignWithMargins = False
-    Left = 532
-    Top = 2114
-    Width = 91
-    Height = 25
+    Left = 665
+    Top = 2643
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteOrogenic'
     TabOrder = 77
@@ -4422,16 +4715,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteBoundary: TIWButton
     AlignWithMargins = False
-    Left = 104
-    Top = 2230
-    Width = 91
-    Height = 25
+    Left = 130
+    Top = 2788
+    Width = 114
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteBoundary'
     TabOrder = 78
@@ -4439,16 +4734,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteImage: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2352
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 2940
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteImage'
     TabOrder = 79
@@ -4456,16 +4753,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteWhoFor: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2480
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 3100
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteWhoFor'
     TabOrder = 80
@@ -4473,16 +4772,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteSample: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 2606
-    Width = 91
-    Height = 25
+    Left = 133
+    Top = 3258
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteSample'
     TabOrder = 81
@@ -4490,14 +4791,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlFooterProgramName: TIWLabel
     AlignWithMargins = False
-    Left = 90
-    Top = 3254
-    Width = 214
-    Height = 15
-    Font.Color = clNone
+    Left = 113
+    Top = 4068
+    Width = 267
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlFooterProgramName'
@@ -4505,11 +4808,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlFooterCopyright: TIWLabel
     AlignWithMargins = False
-    Left = 90
-    Top = 3270
-    Width = 159
-    Height = 14
-    Font.Color = clNone
+    Left = 113
+    Top = 4088
+    Width = 198
+    Height = 17
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
@@ -4520,14 +4826,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel69: TIWLabel
     AlignWithMargins = False
-    Left = 611
-    Top = 316
+    Left = 764
+    Top = 395
     Width = 44
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -4536,14 +4844,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbMethod2: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 671
-    Top = 314
-    Width = 202
-    Height = 21
+    Left = 839
+    Top = 393
+    Width = 252
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -4564,15 +4875,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbValidate: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1450
-    Width = 111
-    Height = 25
+    Left = 133
+    Top = 1813
+    Width = 138
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Validate'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbValidate'
     TabOrder = 61
@@ -4581,29 +4894,33 @@ object ISFDetailsEdit: TISFDetailsEdit
   object rectLeft: TIWRectangle
     AlignWithMargins = False
     Left = 0
-    Top = 55
-    Width = 83
-    Height = 3245
+    Top = 69
+    Width = 104
+    Height = 4056
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alLeft
     ZIndex = 1
-    Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     Font.PxSize = 13
+    Font.Color = clWebBLACK
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
     Alignment = taLeftJustify
     VAlign = vaMiddle
-    ExplicitTop = -1822
-    ExplicitHeight = 2423
   end
   object iwbAddInitialRatioData: TIWButton
     AlignWithMargins = False
-    Left = 654
-    Top = 1616
-    Width = 241
-    Height = 25
+    Left = 818
+    Top = 2020
+    Width = 301
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add Initial ratio data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddInitialRatioData'
@@ -4612,10 +4929,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddStatisticsData: TIWButton
     AlignWithMargins = False
-    Left = 632
-    Top = 603
-    Width = 241
-    Height = 25
+    Left = 790
+    Top = 754
+    Width = 301
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add Statistics data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddStatisticsData'
@@ -4624,10 +4945,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddOtherInterceptData: TIWButton
     AlignWithMargins = False
-    Left = 632
-    Top = 500
-    Width = 241
-    Height = 25
+    Left = 790
+    Top = 625
+    Width = 301
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add Other Intercept data'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddOtherInterceptData'
@@ -4636,10 +4961,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbRawData: TIWButton
     AlignWithMargins = False
-    Left = 764
-    Top = 2677
-    Width = 151
-    Height = 25
+    Left = 955
+    Top = 3346
+    Width = 189
+    Height = 32
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'View raw data'
     Color = clBtnFace
     FriendlyName = '111'
@@ -4648,16 +4977,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDelete: TIWButton
     AlignWithMargins = False
-    Left = 702
-    Top = 88
-    Width = 130
-    Height = 25
+    Left = 878
+    Top = 110
+    Width = 162
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete record'
     Confirmation = 'Are you sure you wish to delete this record?'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 58
@@ -4665,15 +4996,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbEdit: TIWButton
     AlignWithMargins = False
-    Left = 270
-    Top = 88
-    Width = 130
-    Height = 25
+    Left = 338
+    Top = 110
+    Width = 162
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 85
@@ -4681,11 +5014,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBLabel1: TIWDBLabel
     AlignWithMargins = False
-    Left = 208
-    Top = 132
-    Width = 59
-    Height = 15
-    Font.Color = clNone
+    Left = 260
+    Top = 165
+    Width = 74
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -4698,15 +5034,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbObjection: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1420
-    Width = 111
-    Height = 25
+    Left = 133
+    Top = 1775
+    Width = 138
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Submit Objection'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbObjection'
     TabOrder = 86
@@ -4714,15 +5052,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbNewErrorRec: TIWButton
     AlignWithMargins = False
-    Left = 892
-    Top = 124
-    Width = 130
-    Height = 25
+    Left = 1128
+    Top = 165
+    Width = 163
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Create d.c. err. rec.'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbNewErrorRec'
     TabOrder = 87
@@ -4730,15 +5070,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbReturnBottom: TIWButton
     AlignWithMargins = False
-    Left = 100
-    Top = 3203
-    Width = 130
-    Height = 25
+    Left = 125
+    Top = 4004
+    Width = 163
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Return to results list'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbReturnBottom'
     TabOrder = 88
@@ -4746,15 +5088,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbEditBottom: TIWButton
     AlignWithMargins = False
-    Left = 290
-    Top = 3203
-    Width = 101
-    Height = 25
+    Left = 363
+    Top = 4004
+    Width = 126
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbEditBottom'
     TabOrder = 89
@@ -4762,15 +5106,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbApplyUpdatesBottom: TIWButton
     AlignWithMargins = False
-    Left = 421
-    Top = 3203
-    Width = 101
-    Height = 25
+    Left = 526
+    Top = 4004
+    Width = 127
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdatesBottom'
     TabOrder = 90
@@ -4778,15 +5124,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbCancelChangesBottom: TIWButton
     AlignWithMargins = False
-    Left = 551
-    Top = 3203
-    Width = 101
-    Height = 25
+    Left = 689
+    Top = 4004
+    Width = 126
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbCancelChangesBottom'
     TabOrder = 91
@@ -4794,14 +5142,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel16: TIWLabel
     AlignWithMargins = False
-    Left = 611
-    Top = 230
+    Left = 764
+    Top = 288
     Width = 62
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -4810,14 +5160,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeStratDBID: TIWDBEdit
     AlignWithMargins = False
-    Left = 671
-    Top = 226
-    Width = 130
-    Height = 21
+    Left = 839
+    Top = 283
+    Width = 162
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -4832,14 +5185,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel14: TIWLabel
     AlignWithMargins = False
-    Left = 522
-    Top = 1898
-    Width = 121
-    Height = 15
-    Font.Color = clNone
+    Left = 653
+    Top = 2373
+    Width = 151
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -4848,10 +5203,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWDBNavigator1: TIWDBNavigator
     AlignWithMargins = False
-    Left = 520
-    Top = 1913
-    Width = 108
-    Height = 29
+    Left = 650
+    Top = 2391
+    Width = 135
+    Height = 37
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Visible = False
     Confirmations.Delete = 'Are you sure you want to delete this record?'
     Confirmations.Post = 'Are you sure you want to update this record?'
@@ -4865,15 +5224,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddLIP: TIWButton
     AlignWithMargins = False
-    Left = 530
-    Top = 1948
-    Width = 91
-    Height = 25
+    Left = 663
+    Top = 2435
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Add link'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbAddLIP'
     TabOrder = 93
@@ -4881,16 +5242,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbDeleteLIP: TIWButton
     AlignWithMargins = False
-    Left = 530
-    Top = 1976
-    Width = 91
-    Height = 25
+    Left = 663
+    Top = 2470
+    Width = 113
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete link'
     Confirmation = 'Are you sure you wish to delete this?'
     Color = clBtnFace
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteLIP'
     TabOrder = 94
@@ -4898,10 +5261,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBgLIP: TIWDBGrid
     AlignWithMargins = False
-    Left = 656
-    Top = 1895
-    Width = 257
-    Height = 134
+    Left = 820
+    Top = 2369
+    Width = 321
+    Height = 167
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -4910,10 +5277,8 @@ object ISFDetailsEdit: TISFDetailsEdit
     BorderStyle = tfDefault
     CellPadding = 2
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
@@ -4927,10 +5292,8 @@ object ISFDetailsEdit: TISFDetailsEdit
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         Header = False
         Height = '0'
@@ -4948,7 +5311,6 @@ object ISFDetailsEdit: TISFDetailsEdit
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 9
         Title.Font.Style = [fsBold]
@@ -4981,10 +5343,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbAddComment: TIWButton
     AlignWithMargins = False
-    Left = 106
-    Top = 1147
-    Width = 111
-    Height = 25
+    Left = 133
+    Top = 1434
+    Width = 138
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'New Comment'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbAddComment'
@@ -4993,10 +5359,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbLinkRawData: TIWButton
     AlignWithMargins = False
-    Left = 557
-    Top = 2677
-    Width = 151
-    Height = 25
+    Left = 696
+    Top = 3346
+    Width = 189
+    Height = 32
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Link raw data'
     Color = clBtnFace
     FriendlyName = 'iwbRawData'
@@ -5005,14 +5375,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbArea: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 153
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 191
+    Width = 451
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5033,14 +5406,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbUnit: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 188
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 235
+    Width = 451
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5061,14 +5437,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbMaterial: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 226
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 283
+    Width = 451
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5089,14 +5468,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbIsoSys: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 260
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 325
+    Width = 451
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5117,14 +5499,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbApproach: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 287
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 359
+    Width = 451
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5145,14 +5530,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBlcbTechnique: TIWDBLookupComboBox
     AlignWithMargins = False
-    Left = 208
-    Top = 313
-    Width = 361
-    Height = 21
+    Left = 260
+    Top = 391
+    Width = 451
+    Height = 27
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderSize = False
     StyleRenderOptions.RenderSize = False
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5173,10 +5561,14 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwbMakePublic: TIWButton
     AlignWithMargins = False
-    Left = 731
-    Top = 2425
-    Width = 122
-    Height = 25
+    Left = 914
+    Top = 3031
+    Width = 152
+    Height = 32
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Make public'
     Color = clWebLIGHTSKYBLUE
     FriendlyName = 'iwbMakePublic'
@@ -5185,14 +5577,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel67: TIWLabel
     AlignWithMargins = False
-    Left = 270
-    Top = 417
+    Left = 338
+    Top = 521
     Width = 7
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5201,15 +5595,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGEPERRORTRACER: TIWDBEdit
     AlignWithMargins = False
-    Left = 280
-    Top = 416
-    Width = 53
-    Height = 21
+    Left = 350
+    Top = 520
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5225,14 +5622,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel68: TIWLabel
     AlignWithMargins = False
-    Left = 340
-    Top = 417
+    Left = 425
+    Top = 521
     Width = 4
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5241,15 +5640,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGEMERRORTRACER: TIWDBEdit
     AlignWithMargins = False
-    Left = 348
-    Top = 416
-    Width = 53
-    Height = 21
+    Left = 435
+    Top = 520
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5264,14 +5666,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel73: TIWLabel
     AlignWithMargins = False
-    Left = 526
-    Top = 417
+    Left = 658
+    Top = 521
     Width = 282
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5280,14 +5684,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel74: TIWLabel
     AlignWithMargins = False
-    Left = 270
-    Top = 444
+    Left = 338
+    Top = 555
     Width = 7
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5296,15 +5702,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeRAGEPERROR: TIWDBEdit
     AlignWithMargins = False
-    Left = 280
-    Top = 443
-    Width = 53
-    Height = 21
+    Left = 350
+    Top = 554
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5320,14 +5729,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel75: TIWLabel
     AlignWithMargins = False
-    Left = 340
-    Top = 444
+    Left = 425
+    Top = 555
     Width = 4
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5336,15 +5747,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeiwDBeRAGEMERROR: TIWDBEdit
     AlignWithMargins = False
-    Left = 348
-    Top = 443
-    Width = 53
-    Height = 21
+    Left = 435
+    Top = 554
+    Width = 66
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5359,14 +5773,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel76: TIWLabel
     AlignWithMargins = False
-    Left = 526
-    Top = 444
+    Left = 658
+    Top = 555
     Width = 349
     Height = 15
-    Font.Color = clNone
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5375,15 +5791,18 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeIsotopeConstant: TIWDBEdit
     AlignWithMargins = False
-    Left = 206
-    Top = 767
-    Width = 71
-    Height = 21
+    Left = 258
+    Top = 959
+    Width = 88
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5398,14 +5817,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwlIsotopeConstant: TIWLabel
     AlignWithMargins = False
-    Left = 94
-    Top = 766
-    Width = 111
-    Height = 15
-    Font.Color = clNone
+    Left = 118
+    Top = 958
+    Width = 138
+    Height = 18
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5414,14 +5835,16 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object IWLabel77: TIWLabel
     AlignWithMargins = False
-    Left = 299
-    Top = 765
-    Width = 71
-    Height = 15
-    Font.Color = clNone
+    Left = 374
+    Top = 956
+    Width = 89
+    Height = 19
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -5430,14 +5853,17 @@ object ISFDetailsEdit: TISFDetailsEdit
   end
   object iwDBeSigmaIsotopeConstant: TIWDBEdit
     AlignWithMargins = False
-    Left = 392
-    Top = 766
-    Width = 59
-    Height = 21
+    Left = 490
+    Top = 958
+    Width = 74
+    Height = 26
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -5453,68 +5879,94 @@ object ISFDetailsEdit: TISFDetailsEdit
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 1023
-    Height = 55
+    Width = 1279
+    Height = 69
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     Align = alTop
-    Constraints.MaxHeight = 55
-    Constraints.MinHeight = 55
-    Constraints.MinWidth = 600
+    Constraints.MaxHeight = 69
+    Constraints.MinHeight = 69
+    Constraints.MinWidth = 750
     Color = clNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -15
     Font.Name = 'Arial'
     Font.Style = []
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     TabStop = True
-    ExplicitWidth = 1023
+    ExplicitWidth = 1279
     inherited IWFrameRegion: TIWRegion
-      Width = 1023
+      Width = 1279
       TabOrder = 96
-      ExplicitWidth = 1023
+      ExplicitWidth = 1279
       inherited iwrHeader: TIWRegion
-        Width = 1023
-        ExplicitWidth = 1023
+        Width = 1279
+        ExplicitWidth = 1279
         inherited iwrWelcome: TIWRegion
-          Width = 1023
-          ExplicitWidth = 1023
+          Width = 1279
+          ExplicitWidth = 1279
           inherited iwrDisplayUserName: TIWRegion
-            Width = 882
-            ExplicitWidth = 882
+            Width = 1103
+            ExplicitWidth = 1103
             inherited lblWelcome: TIWLabel
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 510
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 1023
-          ExplicitWidth = 1023
+          Width = 1279
+          ExplicitWidth = 1279
+          inherited iwlSignOut: TIWLink
+            Font.Style = [fsUnderline]
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Style = [fsUnderline]
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Width = 532
+            Height = 24
+            Font.Color = clWebSTEELBLUE
+            ExplicitWidth = 532
+            ExplicitHeight = 24
+          end
         end
       end
     end
   end
   object iwrSameSampleRecords: TIWRegion
-    Left = 89
-    Top = 2708
-    Width = 872
-    Height = 473
+    Left = 111
+    Top = 3385
+    Width = 1090
+    Height = 591
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderInvisibleControls = True
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     Color = clMoneyGreen
     object IWLabel17: TIWLabel
       AlignWithMargins = False
-      Left = 11
-      Top = 245
-      Width = 367
-      Height = 16
-      Font.Color = clNone
+      Left = 14
+      Top = 306
+      Width = 459
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
-      Font.Size = 10
       Font.Style = [fsBold]
       Font.PxSize = 13
       NoWrap = True
@@ -5524,14 +5976,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel50: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 294
-      Width = 105
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 368
+      Width = 131
+      Height = 18
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -5540,14 +5994,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel65: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 320
-      Width = 92
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 400
+      Width = 115
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -5556,14 +6012,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel70: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 347
-      Width = 57
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 434
+      Width = 71
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -5572,14 +6030,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel71: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 374
-      Width = 63
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 468
+      Width = 78
+      Height = 18
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -5588,14 +6048,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel72: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 267
-      Width = 79
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 334
+      Width = 98
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -5604,10 +6066,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwdbgSameSampleResults: TIWDBGrid
       AlignWithMargins = False
-      Left = 15
-      Top = 35
-      Width = 842
-      Height = 198
+      Left = 19
+      Top = 44
+      Width = 1052
+      Height = 247
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       BorderColors.Color = clNone
       BorderColors.Light = clNone
       BorderColors.Dark = clNone
@@ -5616,10 +6082,8 @@ object ISFDetailsEdit: TISFDetailsEdit
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 8
-      Font.Style = []
       Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
@@ -5633,10 +6097,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5654,7 +6116,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5673,10 +6134,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5692,7 +6151,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5711,10 +6169,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5730,7 +6186,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5749,10 +6204,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5768,7 +6221,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5787,10 +6239,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5806,7 +6256,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5825,10 +6274,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5844,7 +6291,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5863,10 +6309,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5882,7 +6326,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5901,10 +6344,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5920,7 +6361,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5939,10 +6379,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5958,7 +6396,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -5977,10 +6414,8 @@ object ISFDetailsEdit: TISFDetailsEdit
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           Header = False
           Height = '0'
@@ -5996,7 +6431,6 @@ object ISFDetailsEdit: TISFDetailsEdit
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
@@ -6029,10 +6463,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwbCreateEquivalentRecord: TIWButton
       AlignWithMargins = False
-      Left = 623
-      Top = 445
-      Width = 234
-      Height = 25
+      Left = 779
+      Top = 556
+      Width = 292
+      Height = 32
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Create New Record'
       Color = clWebLIGHTSKYBLUE
       FriendlyName = 'iwbCreateEquivalentRecord'
@@ -6041,15 +6479,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbMaterial: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 294
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 368
+      Width = 386
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 106
@@ -6059,15 +6499,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbIsotopeSystem: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 321
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 401
+      Width = 386
+      Height = 27
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 107
@@ -6077,15 +6519,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbApproach: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 348
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 435
+      Width = 386
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 108
@@ -6095,15 +6539,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbTechnique: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 375
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 469
+      Width = 386
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 109
@@ -6113,15 +6559,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbInterpretation: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 267
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 334
+      Width = 386
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 110
@@ -6131,14 +6579,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel20: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 443
-      Width = 39
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 554
+      Width = 48
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -6147,17 +6597,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iweDate: TIWEdit
       AlignWithMargins = False
-      Left = 179
-      Top = 440
-      Width = 59
-      Height = 21
+      Left = 224
+      Top = 550
+      Width = 74
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
       Alignment = taRightJustify
       NonEditableAsLabel = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iweDate'
       SubmitOnAsyncEvent = True
@@ -6165,11 +6617,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel21: TIWLabel
       AlignWithMargins = False
-      Left = 263
-      Top = 441
-      Width = 7
-      Height = 15
-      Font.Color = clNone
+      Left = 329
+      Top = 551
+      Width = 9
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
@@ -6181,17 +6636,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iweDatePError: TIWEdit
       AlignWithMargins = False
-      Left = 275
-      Top = 440
-      Width = 59
-      Height = 21
+      Left = 344
+      Top = 550
+      Width = 74
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
       Alignment = taRightJustify
       NonEditableAsLabel = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
@@ -6199,11 +6656,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel22: TIWLabel
       AlignWithMargins = False
-      Left = 349
-      Top = 441
-      Width = 4
-      Height = 15
-      Font.Color = clNone
+      Left = 436
+      Top = 551
+      Width = 5
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
       Font.Style = [fsBold]
@@ -6215,17 +6675,19 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iweDateMError: TIWEdit
       AlignWithMargins = False
-      Left = 363
-      Top = 440
-      Width = 59
-      Height = 21
+      Left = 454
+      Top = 550
+      Width = 74
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
       Alignment = taRightJustify
       NonEditableAsLabel = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
@@ -6233,14 +6695,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwlAgeUnitsNew: TIWLabel
       AlignWithMargins = False
-      Left = 441
-      Top = 443
-      Width = 17
-      Height = 15
-      Font.Color = clNone
+      Left = 551
+      Top = 554
+      Width = 22
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -6249,14 +6713,16 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object IWLabel23: TIWLabel
       AlignWithMargins = False
-      Left = 26
-      Top = 401
-      Width = 39
-      Height = 15
-      Font.Color = clNone
+      Left = 33
+      Top = 501
+      Width = 48
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -6265,15 +6731,17 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwcbRating: TIWComboBox
       AlignWithMargins = False
-      Left = 179
-      Top = 402
-      Width = 309
-      Height = 21
+      Left = 224
+      Top = 503
+      Width = 386
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NonEditableAsLabel = True
       TabOrder = 115
@@ -6283,10 +6751,14 @@ object ISFDetailsEdit: TISFDetailsEdit
     end
     object iwbDM2_from_Initial: TIWButton
       AlignWithMargins = False
-      Left = 623
-      Top = 400
-      Width = 234
-      Height = 25
+      Left = 779
+      Top = 500
+      Width = 292
+      Height = 31
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Calculate T(2DM) from epsilon/initial'
       Color = clBtnFace
       FriendlyName = 'iwbDM2_from_Initial'

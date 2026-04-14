@@ -1,8 +1,12 @@
 object IWChartInterpretation: TIWChartInterpretation
   Left = 0
   Top = 0
-  Width = 1000
-  Height = 800
+  Width = 1250
+  Height = 1000
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -15,13 +19,18 @@ object IWChartInterpretation: TIWChartInterpretation
   LockUntilLoaded = False
   LockOnSubmit = False
   ShowHint = True
+  PixelsPerInch = 120
   DesignLeft = 2
   DesignTop = 2
   object IWRegion1: TIWRegion
     Left = 0
     Top = 0
-    Width = 1000
-    Height = 73
+    Width = 1250
+    Height = 91
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderInvisibleControls = True
     TabOrder = 16
     Align = alTop
@@ -29,30 +38,34 @@ object IWChartInterpretation: TIWChartInterpretation
     BorderOptions.Style = cbsNone
     object iwbClose: TIWButton
       AlignWithMargins = False
-      Left = 11
-      Top = 14
-      Width = 75
-      Height = 21
+      Left = 14
+      Top = 18
+      Width = 94
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Close'
       Color = clWebLIGHTGREEN
-      Font.Color = clNone
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iwbClose'
       OnClick = iwbCloseClick
     end
     object iwbExportGraphValues: TIWButton
       AlignWithMargins = False
-      Left = 11
-      Top = 36
-      Width = 75
-      Height = 21
+      Left = 14
+      Top = 48
+      Width = 94
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Export'
       Color = clBtnFace
-      Font.Color = clNone
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iwbExportGraphValues'
       TabOrder = 15
@@ -60,14 +73,16 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object IWLabel3: TIWLabel
       AlignWithMargins = False
-      Left = 107
-      Top = 16
+      Left = 134
+      Top = 20
       Width = 64
       Height = 15
-      Font.Color = clNone
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -76,14 +91,16 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object IWLabel4: TIWLabel
       AlignWithMargins = False
-      Left = 107
-      Top = 40
+      Left = 134
+      Top = 50
       Width = 64
       Height = 15
-      Font.Color = clNone
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -92,15 +109,17 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iweYMinimum: TIWEdit
       AlignWithMargins = False
-      Left = 194
-      Top = 12
-      Width = 69
-      Height = 21
+      Left = 243
+      Top = 15
+      Width = 86
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iweYMinimum'
       SubmitOnAsyncEvent = True
@@ -108,15 +127,17 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iweXMinimum: TIWEdit
       AlignWithMargins = False
-      Left = 194
-      Top = 39
-      Width = 69
-      Height = 21
+      Left = 243
+      Top = 49
+      Width = 86
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iweXMinimum'
       SubmitOnAsyncEvent = True
@@ -124,14 +145,16 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object IWLabel6: TIWLabel
       AlignWithMargins = False
-      Left = 269
-      Top = 40
+      Left = 336
+      Top = 50
       Width = 28
       Height = 15
-      Font.Color = clNone
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -140,14 +163,16 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object IWLabel5: TIWLabel
       AlignWithMargins = False
-      Left = 269
-      Top = 16
+      Left = 336
+      Top = 20
       Width = 28
       Height = 15
-      Font.Color = clNone
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       NoWrap = True
       HasTabOrder = False
@@ -156,15 +181,17 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iweYMaximum: TIWEdit
       AlignWithMargins = False
-      Left = 303
-      Top = 12
-      Width = 69
-      Height = 21
+      Left = 379
+      Top = 15
+      Width = 86
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'IWEdit1'
       SubmitOnAsyncEvent = True
@@ -172,15 +199,17 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iweXMaximum: TIWEdit
       AlignWithMargins = False
-      Left = 303
-      Top = 36
-      Width = 69
-      Height = 21
+      Left = 379
+      Top = 49
+      Width = 86
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       StyleRenderOptions.RenderBorder = False
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'IWEdit2'
       SubmitOnAsyncEvent = True
@@ -188,17 +217,19 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iwcbAutomaticScaling: TIWCheckBox
       AlignWithMargins = False
-      Left = 389
-      Top = 36
-      Width = 197
-      Height = 21
+      Left = 486
+      Top = 45
+      Width = 247
+      Height = 26
       Cursor = crAuto
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Automatic scale'
       Editable = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
@@ -209,15 +240,17 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iwbChangeAxisScales: TIWButton
       AlignWithMargins = False
-      Left = 389
-      Top = 14
-      Width = 75
-      Height = 21
+      Left = 486
+      Top = 15
+      Width = 94
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Change'
       Color = clBtnFace
-      Font.Color = clNone
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       FriendlyName = 'iwbChangeAxisScales'
       TabOrder = 5
@@ -225,17 +258,19 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iwcbShowErrorBars: TIWCheckBox
       AlignWithMargins = False
-      Left = 509
-      Top = 14
-      Width = 116
-      Height = 21
+      Left = 636
+      Top = 18
+      Width = 145
+      Height = 26
       Cursor = crAuto
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Error bars'
       Editable = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
@@ -246,17 +281,19 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iwcbShowLegend: TIWCheckBox
       AlignWithMargins = False
-      Left = 617
-      Top = 14
-      Width = 176
-      Height = 21
+      Left = 771
+      Top = 18
+      Width = 220
+      Height = 26
       Cursor = crAuto
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Show Legend'
       Editable = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
@@ -267,17 +304,19 @@ object IWChartInterpretation: TIWChartInterpretation
     end
     object iwcbShowBackground: TIWCheckBox
       AlignWithMargins = False
-      Left = 617
-      Top = 34
-      Width = 176
-      Height = 21
+      Left = 771
+      Top = 43
+      Width = 220
+      Height = 26
       Cursor = crAuto
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Show background'
       Editable = True
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 9
-      Font.Style = []
       Font.PxSize = 12
       SubmitOnAsyncEvent = True
       Style = stNormal
@@ -289,35 +328,45 @@ object IWChartInterpretation: TIWChartInterpretation
   end
   object IWRegion4: TIWRegion
     Left = 0
-    Top = 73
-    Width = 1000
-    Height = 727
+    Top = 91
+    Width = 1250
+    Height = 909
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderInvisibleControls = True
     Align = alClient
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object IWRegion3: TIWRegion
-      Left = 700
+      Left = 875
       Top = 0
-      Width = 300
-      Height = 727
+      Width = 375
+      Height = 909
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = True
       Align = alRight
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwcbSeries1: TIWCheckBox
         AlignWithMargins = False
-        Left = 18
-        Top = 18
-        Width = 250
-        Height = 21
+        Left = 23
+        Top = 23
+        Width = 312
+        Height = 26
         Cursor = crAuto
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Series1'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -328,17 +377,19 @@ object IWChartInterpretation: TIWChartInterpretation
       end
       object iwcbSeries2: TIWCheckBox
         AlignWithMargins = False
-        Left = 18
-        Top = 37
-        Width = 250
-        Height = 21
+        Left = 23
+        Top = 46
+        Width = 312
+        Height = 27
         Cursor = crAuto
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Series2'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -349,17 +400,19 @@ object IWChartInterpretation: TIWChartInterpretation
       end
       object iwcbSeries3: TIWCheckBox
         AlignWithMargins = False
-        Left = 18
-        Top = 57
-        Width = 250
-        Height = 21
+        Left = 23
+        Top = 71
+        Width = 312
+        Height = 27
         Cursor = crAuto
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Series3'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -370,17 +423,19 @@ object IWChartInterpretation: TIWChartInterpretation
       end
       object iwcbSeries4: TIWCheckBox
         AlignWithMargins = False
-        Left = 18
-        Top = 76
-        Width = 250
-        Height = 21
+        Left = 23
+        Top = 95
+        Width = 312
+        Height = 26
         Cursor = crAuto
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Series4'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -391,17 +446,19 @@ object IWChartInterpretation: TIWChartInterpretation
       end
       object iwcbSeries5: TIWCheckBox
         AlignWithMargins = False
-        Left = 18
-        Top = 96
-        Width = 250
-        Height = 21
+        Left = 23
+        Top = 120
+        Width = 312
+        Height = 26
         Cursor = crAuto
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Series5'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -414,8 +471,12 @@ object IWChartInterpretation: TIWChartInterpretation
     object IWRegion5: TIWRegion
       Left = 0
       Top = 0
-      Width = 700
-      Height = 727
+      Width = 875
+      Height = 909
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = True
       Align = alClient
       BorderOptions.NumericWidth = 0
@@ -424,36 +485,42 @@ object IWChartInterpretation: TIWChartInterpretation
         AlignWithMargins = False
         Left = 0
         Top = 0
-        Width = 700
-        Height = 653
+        Width = 875
+        Height = 816
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alClient
         BorderOptions.Width = 0
         UseSize = True
         Chart = Chart1
-        ExplicitLeft = -435
-        ExplicitTop = -316
-        ExplicitWidth = 713
-        ExplicitHeight = 459
       end
       object IWRegion2: TIWRegion
         Left = 0
-        Top = 653
-        Width = 700
-        Height = 74
+        Top = 816
+        Width = 875
+        Height = 93
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = True
         Align = alBottom
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwlNormalisationType: TIWLabel
           AlignWithMargins = False
-          Left = 442
-          Top = 44
-          Width = 112
-          Height = 14
-          Font.Color = clNone
+          Left = 553
+          Top = 55
+          Width = 140
+          Height = 18
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
@@ -462,14 +529,16 @@ object IWChartInterpretation: TIWChartInterpretation
         end
         object iwlMinimumDateUncertainty: TIWLabel
           AlignWithMargins = False
-          Left = 442
-          Top = 24
-          Width = 144
-          Height = 14
-          Font.Color = clNone
+          Left = 553
+          Top = 30
+          Width = 180
+          Height = 18
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
@@ -478,14 +547,16 @@ object IWChartInterpretation: TIWChartInterpretation
         end
         object iwlPDFType: TIWLabel
           AlignWithMargins = False
-          Left = 442
-          Top = 3
-          Width = 62
-          Height = 14
-          Font.Color = clNone
+          Left = 553
+          Top = 4
+          Width = 77
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           NoWrap = True
           HasTabOrder = False
@@ -496,8 +567,12 @@ object IWChartInterpretation: TIWChartInterpretation
       object Chart1: TChart
         Left = 0
         Top = 0
-        Width = 700
-        Height = 653
+        Width = 875
+        Height = 816
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         BackWall.Brush.Gradient.Direction = gdBottomTop
         BackWall.Brush.Gradient.EndColor = clWhite
         BackWall.Brush.Gradient.StartColor = 15395562
@@ -575,12 +650,13 @@ object IWChartInterpretation: TIWChartInterpretation
         TopAxis.TicksInner.Color = clDarkgray
         TopAxis.Title.Font.Name = 'Verdana'
         View3D = False
+        View3DOptions.FontZoom = 125
+        View3DOptions.PenZoom = 125
+        View3DOptions.CheckBoxZoom = 125
         View3DWalls = False
         Zoom.Allow = False
         Align = alClient
         TabOrder = 1
-        ExplicitLeft = -96
-        ExplicitTop = -104
         DefaultCanvas = 'TGDIPlusCanvas'
         PrintMargins = (
           15

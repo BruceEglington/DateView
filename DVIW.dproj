@@ -7,7 +7,7 @@
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Console</AppType>
         <ProjectName Condition="'$(ProjectName)'==''">DVIW</ProjectName>
@@ -125,7 +125,6 @@
         <VerInfo_Build>0</VerInfo_Build>
         <Icon_MainIcon>DVIW_Icon5.ico</Icon_MainIcon>
         <DCC_ExeOutput>C:\EXE32</DCC_ExeOutput>
-        <DCC_DcuOutput>C:\DCU32\</DCC_DcuOutput>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <Debugger_LoadAllSymbols>false</Debugger_LoadAllSymbols>
         <DCC_DebugInformation>2</DCC_DebugInformation>
@@ -139,10 +138,11 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=2.0.0.295;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_ExeOutput>C:\EXE64\</DCC_ExeOutput>
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
+        <AppDPIAwarenessMode>gdiScaling</AppDPIAwarenessMode>
         <DCC_DebugInformation>2</DCC_DebugInformation>
         <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
@@ -175,6 +175,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="..\WebUserIW\usrIW_dm.pas">
+            <Form>dmUser</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <DCCReference Include="DVIW_dmopt.pas">
             <Form>dmOpt</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -194,6 +198,14 @@
         <DCCReference Include="DVIW_dmgraphics.pas">
             <Form>dmgDV</Form>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UserSessionUnit.pas">
+            <Form>IWUserSession</Form>
+            <DesignClass>TIWUserSessionBase</DesignClass>
+        </DCCReference>
+        <DCCReference Include="ServerController.pas">
+            <Form>IWServerController</Form>
+            <DesignClass>TIWServerControllerBase</DesignClass>
         </DCCReference>
         <DCCReference Include="DVIW_uMain.pas"/>
         <DCCReference Include="DVIW_frTopBar.pas">
@@ -520,10 +532,6 @@
         <DCCReference Include="..\Eglington Delphi common code items\Mathproc.pas"/>
         <DCCReference Include="..\Eglington Delphi common code items\NumRecipes.pas"/>
         <DCCReference Include="..\Eglington Delphi common code items\NumRecipes_varb.pas"/>
-        <DCCReference Include="..\WebUserIW\usrIW_dm.pas">
-            <Form>dmUser</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <DCCReference Include="..\WebUserIW\usr_constants.pas"/>
         <DCCReference Include="..\WebUserIW\usr_cookies.pas"/>
         <DCCReference Include="..\WebUserIW\usr_insufficientright.pas">
@@ -535,16 +543,8 @@
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
         <DCCReference Include="..\WebUserIW\usr_uDBInterface.pas"/>
-        <DCCReference Include="..\WebUserIW\usr_uDonate.pas">
-            <Form>ISFDonate</Form>
-            <DesignClass>TIWAppForm</DesignClass>
-        </DCCReference>
         <DCCReference Include="..\WebUserIW\usr_uRegister.pas">
             <Form>ISFRegister</Form>
-            <DesignClass>TIWAppForm</DesignClass>
-        </DCCReference>
-        <DCCReference Include="..\WebUserIW\usr_uRenew.pas">
-            <Form>ISFRenew</Form>
             <DesignClass>TIWAppForm</DesignClass>
         </DCCReference>
         <DCCReference Include="DVIW_datalookups.pas">
@@ -562,10 +562,6 @@
         <DCCReference Include="..\WebUserIW\usr_uLogin.pas">
             <Form>ISFLogin</Form>
             <DesignClass>TIWAppForm</DesignClass>
-        </DCCReference>
-        <DCCReference Include="ServerController.pas">
-            <Form>IWServerController</Form>
-            <DesignClass>TIWServerControllerBase</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -641,6 +637,18 @@
                 <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64">
                         <RemoteName>DVIW.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\EXE64\DVIW.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>DVIW.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\EXE64\DVIW.rsm" Configuration="Release" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>DVIW.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

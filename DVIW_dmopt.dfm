@@ -2203,7 +2203,6 @@ object dmOpt: TdmOpt
     Top = 574
   end
   object SQLMonitor1: TSQLMonitor
-    Active = True
     SQLConnection = sqlcDateView
     Left = 120
     Top = 16

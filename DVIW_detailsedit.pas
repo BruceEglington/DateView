@@ -1645,6 +1645,7 @@ procedure TISFDetailsEdit.iwbEditClick(Sender: TObject);
 begin
   dmDV.cdsRecordIDs.Edit;
   dmDV.cdsResults.Edit;
+  dmDV.cdsResults2.Edit;
   dmDV.cdsIsoOther.Edit;
   dmDV.cdsIsoStatistics.Edit;
   dmDV.cdsResultsExtra.Edit;

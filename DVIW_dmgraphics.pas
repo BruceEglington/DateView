@@ -465,12 +465,12 @@ implementation
 uses
   IWInit,
   ServerController,
-  DVIW_constants, DVIW_dm, DVIW_regp, DVIW_mathproc, usrIW_dm;
+  DVIW_constants, DVIW_dm, DVIW_regp, DVIW_mathproc, usrIW_dm, UserSessionUnit;
 
 
 function dmgDV: TdmgDV;
 begin
-  Result := TUserSession(WebApplication.Data).dmgDV;
+  Result := TIWUserSession(WebApplication.Data).dmgDV;
 end;
 
 procedure TdmgDV.RecordIsToBeGraphed(CurrentInterpAbr : string; var GraphCategory : integer);
@@ -1204,7 +1204,7 @@ begin
     end;
     if UserSession.IsDeveloper then
     begin
-        //dmUser.SetDeveloperData('SubmitQuerydmDIa '+dmgDV.QuerydmDI.SQL.Text);
+        dmUser.SetDeveloperData('SubmitQuerydmDIa '+dmgDV.QuerydmDI.SQL.Text);
     end;
 
     //QuerydmDI.SQL.Add('FROM ISORGR30,COUNTRY,');
@@ -1235,7 +1235,7 @@ begin
     QuerydmDI.ParamByName('USERID').AsString := UserSession.UserID;
     if UserSession.IsDeveloper then
     begin
-      //dmUser.SetDeveloperData('AllocateDataByInterpretation2 '+dmgDV.QuerydmDI.SQL.Text);
+      dmUser.SetDeveloperData('AllocateDataByInterpretation2 '+dmgDV.QuerydmDI.SQL.Text);
     end;
     cdsQuerydmDI.Close;
     cdsQuerydmDI.Open;
@@ -1243,10 +1243,20 @@ begin
   try
     if UserSession.DataHaveChanged then
     begin
+      if UserSession.IsDeveloper then
+      begin
+        dmUser.SetDeveloperData('ataHaveChanged');
+      end;
       dmgDV.cdsQuerydmDI.First;
       repeat
-        if (UserSession.StartAtX > dmgDV.cdsQuerydmDIRAge.AsFloat-dmgDV.cdsQuerydmDIRAgeMError.AsFloat) then UserSession.StartAtX := dmgDV.cdsQuerydmDIRAge.AsFloat-dmgDV.cdsQuerydmDIRAgeMError.AsFloat;
-        if (UserSession.EndAtX < dmgDV.cdsQuerydmDIRAge.AsFloat+dmgDV.cdsQuerydmDIRAgePError.AsFloat) then UserSession.EndAtX := dmgDV.cdsQuerydmDIRAge.AsFloat+dmgDV.cdsQuerydmDIRAgePError.AsFloat;
+        if (UserSession.StartAtX > dmgDV.cdsQuerydmDIRAge.AsFloat-dmgDV.cdsQuerydmDIRAgeMError.AsFloat) then
+        begin
+          UserSession.StartAtX := dmgDV.cdsQuerydmDIRAge.AsFloat-dmgDV.cdsQuerydmDIRAgeMError.AsFloat;
+        end;
+        if (UserSession.EndAtX < dmgDV.cdsQuerydmDIRAge.AsFloat+dmgDV.cdsQuerydmDIRAgePError.AsFloat) then
+        begin
+          UserSession.EndAtX := dmgDV.cdsQuerydmDIRAge.AsFloat+dmgDV.cdsQuerydmDIRAgePError.AsFloat;
+        end;
         try
           dmgDV.cdsTempDataDI.Append;
           dmgDV.cdsTempDataDIInterpretation.AsString := dmgDV.cdsQuerydmDIOPTIONTITLE.AsString;
@@ -1273,7 +1283,7 @@ begin
     }
     if UserSession.IsDeveloper then
     begin
-      //dmUser.SetDeveloperData('AllocateDataByInterpretation2 completed');
+      dmUser.SetDeveloperData('AllocateDataByInterpretation2 completed');
     end;
   finally
     dmgDV.cdsQuerydmDI.Close;
