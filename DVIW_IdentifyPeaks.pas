@@ -227,22 +227,22 @@ procedure TISFIdentifyPeaks.IWAppFormCreate(Sender: TObject);
 begin
   if UserSession.LoggedIn then
   begin
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 1');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 1');
     iwcbIncludeSampleZones.Checked := UserSession.IncludeSampleZoneValues;
     UpdateListBoxValues(iwlSampleZones,dmDV.cdsSampleZones,'ZoneType','ZoneID',UserSession.SampleZoneValues);
     dmdDV.cdsPeaksFound.EmptyDataSet;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 2');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 2');
     dmdDV.cdsData.EmptyDataSet;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 3');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 3');
     dmdDV.cdsDataHf.EmptyDataSet;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 4');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 4');
     dmdDV.cdsDataHfyes.EmptyDataSet;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 5');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 5');
     dmdDV.cdsPDF.EmptyDataSet;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 6');
+    dmUser.SetDeveloperData('TISFIdentifyPeaks FormCreate 6');
     dmdDV.ConstructRawDataSampleQuery;
-    //dmUser.SetDeveloperData('TISFIdentifyPeaks qRawSmp construct');
-    //dmUser.SetDeveloperData(dmdDV.qRawSmp.SQL.Text);
+    dmUser.SetDeveloperData('TISFIdentifyPeaks qRawSmp construct');
+    dmUser.SetDeveloperData(dmdDV.qRawSmp.SQL.Text);
     iwrCreateNewSummaryRecords.Visible := false;
     iwrPeaksIdentifiedList.Visible := false;
     iwbIdentifyPeaks.Visible := false;
@@ -291,15 +291,15 @@ begin
     dmdDV.cdsPeaksFound.EmptyDataSet;
     dmdDV.cdsPDF.EmptyDataSet;
     dmdDV.cdsData.EmptyDataSet;
-    //dmUser.SetDeveloperData('SetDeveloperData works');
+    dmUser.SetDeveloperData('SetDeveloperData works');
     CreateConcordiaGraphs;
-    //dmUser.SetDeveloperData('Before GetSampleData');
+    dmUser.SetDeveloperData('Before GetSampleData');
     GetSampleData;
-    //dmUser.SetDeveloperData('Before CalculatePDF N');
+    dmUser.SetDeveloperData('Before CalculatePDF N');
     CalculatePDF('N');
-    //dmUser.SetDeveloperData('Before CalculatePDF Y');
+    dmUser.SetDeveloperData('Before CalculatePDF Y');
     CalculatePDF('Y');
-    //dmUser.SetDeveloperData('After CalculatePDF Y');
+    dmUser.SetDeveloperData('After CalculatePDF Y');
   end;
 end;
 

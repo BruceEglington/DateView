@@ -6,9 +6,9 @@ uses
   madListHardware,
   madListProcesses,
   madListModules,
-  //IWRtlFix,
-  //IWStart,      // for use when creating an Indy application
-  IWStartHSys,  // for use when creating an HTTP.SYS application
+  IWRtlFix,
+  IWStart,      // for use when creating an Indy application
+  //IWStartHSys,  // for use when creating an HTTP.SYS application
   usrIW_dm in '..\WebUserIW\usrIW_dm.pas' {dmUser: TDataModule},
   DVIW_dmopt in 'DVIW_dmopt.pas' {dmOpt: TDataModule},
   DVIW_dm in 'DVIW_dm.pas' {dmDV: TDataModule},
@@ -119,7 +119,7 @@ uses
 {$R *.res}
 
 begin
-  //TIWStart.Execute(True);      // for use when creating an Indy application
-  TIWStartHSys.Execute(True);  // for use when creating an HTTP.SYS application
+  TIWStart.Execute(True);      // for use when creating an Indy application
+  //TIWStartHSys.Execute(True);  // for use when creating an HTTP.SYS application
 end.
 

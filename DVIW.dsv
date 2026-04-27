@@ -40,9 +40,9 @@ EditViewName=C:\DevD13\DateViewIW2\DVIW_dmdata.pas
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXFNlcnZlckNvbnRyb2xsZXIucGFz]
 Module=C:\DevD13\DateViewIW2\ServerController.pas
-CursorX=1
-CursorY=44
-TopLine=385
+CursorX=13
+CursorY=95
+TopLine=56
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -170,9 +170,9 @@ EditViewName=C:\DevD13\DateViewIW2\DVIW_AgeChem.pas
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVdfSWRlbnRpZnlQZWFrcy5wYXM=]
 Module=C:\DevD13\DateViewIW2\DVIW_IdentifyPeaks.pas
-CursorX=42
-CursorY=311
-TopLine=294
+CursorX=22
+CursorY=236
+TopLine=214
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -580,13 +580,13 @@ EditViewName=C:\DevD13\DateViewIW2\DVIW_defineSQL.pas
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVdfZGVmaW5lcmF3ZGF0YXNhbXBsZXF1ZXJ5LnBhcw==]
 Module=C:\DevD13\DateViewIW2\DVIW_definerawdatasamplequery.pas
-CursorX=1
-CursorY=562
-TopLine=547
+CursorX=33
+CursorY=509
+TopLine=496
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=
+EditViewName=C:\DevD13\DateViewIW2\DVIW_definerawdatasamplequery.pas
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVdfY29uc3RhbnRzLnBhcw==]
 Module=C:\DevD13\DateViewIW2\DVIW_constants.pas
@@ -660,9 +660,9 @@ EditViewName=
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVcuZHBy]
 Module=C:\DevD13\DateViewIW2\DVIW.dpr
-CursorX=5
-CursorY=10
-TopLine=1
+CursorX=26
+CursorY=114
+TopLine=88
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -820,9 +820,9 @@ EditViewName=
 
 [ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXFVzZXJTZXNzaW9uVW5pdC5wYXM=]
 Module=C:\DevD13\DateViewIW2\UserSessionUnit.pas
-CursorX=28
-CursorY=634
-TopLine=624
+CursorX=33
+CursorY=260
+TopLine=221
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -867,4 +867,24 @@ LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\DevD13\DateViewIW2\DVIW_frProductTree.pas
+
+[ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVdfdXNlcmdyb3Vwcy5wYXM=]
+Module=C:\DevD13\DateViewIW2\DVIW_usergroups.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=
+
+[ClosedView_QzpcRGV2RDEzXERhdGVWaWV3SVcyXERWSVdfZnJhbWVtZW51LnBhcw==]
+Module=C:\DevD13\DateViewIW2\DVIW_framemenu.pas
+CursorX=1
+CursorY=478
+TopLine=476
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\DevD13\DateViewIW2\DVIW_framemenu.pas
 

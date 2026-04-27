@@ -1,8 +1,12 @@
 object ISFIdentifyPeaks: TISFIdentifyPeaks
   Left = 0
   Top = 0
-  Width = 1300
-  Height = 3500
+  Width = 1625
+  Height = 4375
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -15,13 +19,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
   LockUntilLoaded = False
   LockOnSubmit = False
   ShowHint = True
+  PixelsPerInch = 120
   DesignLeft = 2
   DesignTop = 2
   object iwrPage: TIWRegion
-    Left = 60
-    Top = 55
-    Width = 1240
-    Height = 3445
+    Left = 75
+    Top = 69
+    Width = 1550
+    Height = 4306
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderInvisibleControls = False
     Align = alClient
     BorderOptions.NumericWidth = 0
@@ -29,23 +38,29 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     object iwrButtonsTop: TIWRegion
       Left = 0
       Top = 0
-      Width = 1240
-      Height = 60
+      Width = 1550
+      Height = 75
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbReturnToSampleList: TIWButton
         AlignWithMargins = False
-        Left = 17
-        Top = 19
-        Width = 217
-        Height = 25
+        Left = 21
+        Top = 24
+        Width = 272
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Return to Sample Selection Form'
         Color = clWebROSYBROWN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 25
@@ -53,15 +68,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwbReturn: TIWButton
         AlignWithMargins = False
-        Left = 270
-        Top = 19
-        Width = 155
-        Height = 25
+        Left = 338
+        Top = 24
+        Width = 193
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Return to Main Form'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 26
@@ -70,20 +87,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrSampleDetails: TIWRegion
       Left = 0
-      Top = 60
-      Width = 1240
-      Height = 95
+      Top = 75
+      Width = 1550
+      Height = 119
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWLabel2: TIWLabel
         AlignWithMargins = False
-        Left = 11
-        Top = 3
+        Left = 14
+        Top = 4
         Width = 128
         Height = 29
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
@@ -95,11 +119,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwlSampleNo: TIWLabel
         AlignWithMargins = False
-        Left = 145
-        Top = 3
+        Left = 181
+        Top = 4
         Width = 37
         Height = 29
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
@@ -111,12 +138,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwlSource: TIWLabel
         AlignWithMargins = False
-        Left = 461
-        Top = 13
+        Left = 576
+        Top = 16
         Width = 71
         Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         ParentShowHint = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold]
@@ -127,11 +157,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwlSourceShort: TIWLabel
         AlignWithMargins = False
-        Left = 538
-        Top = 13
+        Left = 673
+        Top = 16
         Width = 24
         Height = 18
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
@@ -143,14 +176,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel13: TIWLabel
         AlignWithMargins = False
-        Left = 15
-        Top = 69
+        Left = 19
+        Top = 86
         Width = 69
         Height = 14
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -159,14 +194,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel17: TIWLabel
         AlignWithMargins = False
-        Left = 226
-        Top = 69
+        Left = 283
+        Top = 86
         Width = 57
         Height = 14
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -175,14 +212,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel23: TIWLabel
         AlignWithMargins = False
-        Left = 410
-        Top = 69
+        Left = 513
+        Top = 86
         Width = 63
         Height = 14
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -191,14 +230,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel24: TIWLabel
         AlignWithMargins = False
-        Left = 567
-        Top = 69
+        Left = 709
+        Top = 86
         Width = 12
         Height = 14
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -207,16 +248,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweLongitude: TIWEdit
         AlignWithMargins = False
-        Left = 81
-        Top = 67
-        Width = 90
-        Height = 21
+        Left = 101
+        Top = 84
+        Width = 113
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweLongitude'
         SubmitOnAsyncEvent = True
@@ -225,16 +268,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweLatitude: TIWEdit
         AlignWithMargins = False
-        Left = 281
-        Top = 68
-        Width = 90
-        Height = 21
+        Left = 351
+        Top = 85
+        Width = 113
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweLatitude'
         SubmitOnAsyncEvent = True
@@ -243,16 +288,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweElevation: TIWEdit
         AlignWithMargins = False
-        Left = 471
-        Top = 67
-        Width = 90
-        Height = 21
+        Left = 589
+        Top = 84
+        Width = 112
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweElevation'
         SubmitOnAsyncEvent = True
@@ -261,16 +308,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweCountryAbr: TIWEdit
         AlignWithMargins = False
-        Left = 631
-        Top = 68
-        Width = 90
-        Height = 21
+        Left = 789
+        Top = 85
+        Width = 112
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweCountryAbr'
         SubmitOnAsyncEvent = True
@@ -279,16 +328,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweContinentID: TIWEdit
         AlignWithMargins = False
-        Left = 727
-        Top = 68
-        Width = 90
-        Height = 21
+        Left = 909
+        Top = 85
+        Width = 112
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweContinentID'
         SubmitOnAsyncEvent = True
@@ -297,14 +348,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel30: TIWLabel
         AlignWithMargins = False
-        Left = 15
-        Top = 45
+        Left = 19
+        Top = 56
         Width = 62
         Height = 14
-        Font.Color = clNone
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -313,17 +366,19 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweLithology: TIWEdit
         AlignWithMargins = False
-        Left = 81
-        Top = 42
-        Width = 290
-        Height = 21
+        Left = 101
+        Top = 53
+        Width = 363
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweLithology'
         SubmitOnAsyncEvent = True
@@ -332,17 +387,19 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweLithClass: TIWEdit
         AlignWithMargins = False
-        Left = 410
-        Top = 42
-        Width = 290
-        Height = 21
+        Left = 513
+        Top = 53
+        Width = 362
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweLithClass'
         SubmitOnAsyncEvent = True
@@ -352,9 +409,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrConcordiaPlots: TIWRegion
       Left = 0
-      Top = 155
-      Width = 1240
-      Height = 550
+      Top = 194
+      Width = 1550
+      Height = 687
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
@@ -362,17 +423,19 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       Color = clWebLEMONCHIFFON
       object iwcbIncluded: TIWCheckBox
         AlignWithMargins = False
-        Left = 945
-        Top = 24
-        Width = 121
-        Height = 21
+        Left = 1181
+        Top = 30
+        Width = 152
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Included'
         Editable = True
-        Font.Color = clWebRED
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
+        Font.Color = clWebRED
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 42
@@ -382,17 +445,19 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwcbExcluded: TIWCheckBox
         AlignWithMargins = False
-        Left = 945
-        Top = 51
-        Width = 121
-        Height = 21
+        Left = 1181
+        Top = 64
+        Width = 152
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Excluded'
         Editable = True
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
+        Font.Color = clWebBLUE
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 43
@@ -403,8 +468,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object iwrWetherill: TIWRegion
         Left = 0
         Top = 0
-        Width = 450
-        Height = 390
+        Width = 563
+        Height = 487
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -414,24 +483,29 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 450
-          Height = 390
+          Width = 563
+          Height = 487
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           RenderSize = False
           StyleRenderOptions.RenderSize = False
           BorderOptions.Width = 0
           UseSize = False
           Chart = ChartWetherill
-          ExplicitLeft = 192
-          ExplicitTop = 104
-          ExplicitWidth = 89
-          ExplicitHeight = 112
+          ExplicitHeight = 488
         end
         object ChartWetherill: TChart
           Left = 0
           Top = 0
-          Width = 450
-          Height = 390
+          Width = 563
+          Height = 487
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           BackWall.Brush.Gradient.Direction = gdBottomTop
           BackWall.Brush.Gradient.EndColor = clWhite
           BackWall.Brush.Gradient.StartColor = 15395562
@@ -490,6 +564,9 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
+          View3DOptions.FontZoom = 125
+          View3DOptions.PenZoom = 125
+          View3DOptions.CheckBoxZoom = 125
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
@@ -567,10 +644,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
       end
       object iwrTeraWasserburg: TIWRegion
-        Left = 466
+        Left = 583
         Top = 0
-        Width = 450
-        Height = 390
+        Width = 562
+        Height = 487
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -580,24 +661,30 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 450
-          Height = 390
+          Width = 562
+          Height = 487
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           RenderSize = False
           StyleRenderOptions.RenderSize = False
           BorderOptions.Width = 0
           UseSize = False
           Chart = ChartTeraWasserburg
-          ExplicitLeft = 208
-          ExplicitTop = 176
-          ExplicitWidth = 89
-          ExplicitHeight = 112
+          ExplicitWidth = 563
+          ExplicitHeight = 488
         end
         object ChartTeraWasserburg: TChart
           Left = 0
           Top = 0
-          Width = 450
-          Height = 390
+          Width = 562
+          Height = 487
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           BackWall.Brush.Gradient.Direction = gdBottomTop
           BackWall.Brush.Gradient.EndColor = clWhite
           BackWall.Brush.Gradient.StartColor = 15395562
@@ -656,6 +743,9 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
+          View3DOptions.FontZoom = 125
+          View3DOptions.PenZoom = 125
+          View3DOptions.CheckBoxZoom = 125
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
@@ -729,10 +819,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
       end
       object iwrConcordiaSplit: TIWRegion
-        Left = 450
+        Left = 563
         Top = 0
-        Width = 16
-        Height = 390
+        Width = 20
+        Height = 487
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -741,9 +835,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwrGraphOptions: TIWRegion
         Left = 0
-        Top = 390
-        Width = 1240
-        Height = 160
+        Top = 487
+        Width = 1550
+        Height = 200
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alBottom
         BorderOptions.NumericWidth = 0
@@ -751,11 +849,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         Color = clWebLEMONCHIFFON
         object IWLabel1: TIWLabel
           AlignWithMargins = False
-          Left = 6
-          Top = 14
-          Width = 138
-          Height = 18
-          Font.Color = clNone
+          Left = 8
+          Top = 18
+          Width = 172
+          Height = 22
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
           Font.Size = 12
           Font.Style = [fsBold]
@@ -767,15 +868,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iweGraphAgeFrom: TIWEdit
           AlignWithMargins = False
-          Left = 12
-          Top = 38
-          Width = 59
-          Height = 21
+          Left = 15
+          Top = 48
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iweGraphAgeFrom'
           SubmitOnAsyncEvent = True
@@ -783,14 +885,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel11: TIWLabel
           AlignWithMargins = False
-          Left = 94
-          Top = 41
-          Width = 117
-          Height = 16
-          Font.Color = clNone
+          Left = 118
+          Top = 51
+          Width = 146
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -799,15 +902,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iweGraphAgeTo: TIWEdit
           AlignWithMargins = False
-          Left = 236
-          Top = 38
-          Width = 59
-          Height = 21
+          Left = 295
+          Top = 48
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iweGraphAgeTo'
           SubmitOnAsyncEvent = True
@@ -816,10 +920,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbReplotConcordia: TIWButton
           AlignWithMargins = False
-          Left = 330
-          Top = 39
-          Width = 120
-          Height = 25
+          Left = 413
+          Top = 49
+          Width = 150
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Update Concordia'
           Color = clBtnFace
           FriendlyName = 'iwbReplotConcordia'
@@ -828,15 +936,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe75Min: TIWEdit
           AlignWithMargins = False
-          Left = 12
-          Top = 78
-          Width = 59
-          Height = 21
+          Left = 15
+          Top = 98
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe75Min'
           SubmitOnAsyncEvent = True
@@ -845,14 +954,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel25: TIWLabel
           AlignWithMargins = False
-          Left = 94
-          Top = 81
-          Width = 147
-          Height = 16
-          Font.Color = clNone
+          Left = 118
+          Top = 101
+          Width = 183
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -861,15 +971,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe75Max: TIWEdit
           AlignWithMargins = False
-          Left = 236
-          Top = 78
-          Width = 59
-          Height = 21
+          Left = 295
+          Top = 98
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe75Max'
           SubmitOnAsyncEvent = True
@@ -878,15 +989,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe68Min: TIWEdit
           AlignWithMargins = False
-          Left = 12
-          Top = 102
-          Width = 59
-          Height = 21
+          Left = 15
+          Top = 128
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe68Min'
           SubmitOnAsyncEvent = True
@@ -895,14 +1007,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel26: TIWLabel
           AlignWithMargins = False
-          Left = 94
-          Top = 105
-          Width = 147
-          Height = 16
-          Font.Color = clNone
+          Left = 118
+          Top = 131
+          Width = 183
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -911,15 +1024,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe68Max: TIWEdit
           AlignWithMargins = False
-          Left = 236
-          Top = 102
-          Width = 59
-          Height = 21
+          Left = 295
+          Top = 128
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe68Max'
           SubmitOnAsyncEvent = True
@@ -928,15 +1042,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe86Min: TIWEdit
           AlignWithMargins = False
-          Left = 484
-          Top = 80
-          Width = 59
-          Height = 21
+          Left = 605
+          Top = 100
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe86Min'
           SubmitOnAsyncEvent = True
@@ -945,14 +1060,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel27: TIWLabel
           AlignWithMargins = False
-          Left = 566
-          Top = 83
-          Width = 147
-          Height = 16
-          Font.Color = clNone
+          Left = 708
+          Top = 104
+          Width = 183
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -961,15 +1077,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe86Max: TIWEdit
           AlignWithMargins = False
-          Left = 757
-          Top = 80
-          Width = 59
-          Height = 21
+          Left = 946
+          Top = 100
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe86Max'
           SubmitOnAsyncEvent = True
@@ -978,15 +1095,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe76Max: TIWEdit
           AlignWithMargins = False
-          Left = 757
-          Top = 104
-          Width = 59
-          Height = 21
+          Left = 946
+          Top = 130
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe76Max'
           SubmitOnAsyncEvent = True
@@ -995,14 +1113,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel28: TIWLabel
           AlignWithMargins = False
-          Left = 566
-          Top = 109
-          Width = 165
-          Height = 16
-          Font.Color = clNone
+          Left = 708
+          Top = 136
+          Width = 206
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -1011,15 +1130,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwe76Min: TIWEdit
           AlignWithMargins = False
-          Left = 484
-          Top = 107
-          Width = 59
-          Height = 21
+          Left = 605
+          Top = 134
+          Width = 74
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           StyleRenderOptions.RenderBorder = False
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           FriendlyName = 'iwe76Min'
           SubmitOnAsyncEvent = True
@@ -1028,10 +1148,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbScaleConcordiaAxes: TIWButton
           AlignWithMargins = False
-          Left = 330
-          Top = 87
-          Width = 120
-          Height = 25
+          Left = 413
+          Top = 109
+          Width = 150
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Rescale Axes'
           Color = clBtnFace
           FriendlyName = 'iwbScaleConcordiaAxes'
@@ -1040,16 +1164,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwcbConcordiaAutoscale: TIWCheckBox
           AlignWithMargins = False
-          Left = 330
-          Top = 128
-          Width = 136
-          Height = 21
+          Left = 413
+          Top = 160
+          Width = 170
+          Height = 26
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Auto-scale axes'
           Editable = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           SubmitOnAsyncEvent = True
           Style = stNormal
@@ -1062,19 +1187,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrButtonsMiddle: TIWRegion
       Left = 0
-      Top = 1971
-      Width = 1240
-      Height = 41
+      Top = 2464
+      Width = 1550
+      Height = 51
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbIdentifyPeaks: TIWButton
         AlignWithMargins = False
-        Left = 369
-        Top = 3
-        Width = 140
-        Height = 25
+        Left = 461
+        Top = 4
+        Width = 175
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Identify Peaks'
         Color = clWebLIGHTGREEN
         FriendlyName = 'iwbIdentifyPeaks'
@@ -1084,9 +1217,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrPDF: TIWRegion
       Left = 0
-      Top = 1471
-      Width = 1240
-      Height = 500
+      Top = 1839
+      Width = 1550
+      Height = 625
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
@@ -1094,28 +1231,40 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object iwrPDFLeft: TIWRegion
         Left = 0
         Top = 0
-        Width = 16
-        Height = 500
+        Width = 20
+        Height = 625
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object iwrPDFRight: TIWRegion
-        Left = 1180
+        Left = 1475
         Top = 0
-        Width = 60
-        Height = 500
+        Width = 75
+        Height = 625
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alRight
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object iwrPDFGraph: TIWRegion
-        Left = 16
+        Left = 20
         Top = 0
-        Width = 900
-        Height = 500
+        Width = 1125
+        Height = 625
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -1124,24 +1273,28 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 900
-          Height = 500
+          Width = 1125
+          Height = 625
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           RenderSize = False
           StyleRenderOptions.RenderSize = False
           BorderOptions.Width = 0
           UseSize = False
           Chart = ChartPDF
-          ExplicitLeft = 328
-          ExplicitTop = 160
-          ExplicitWidth = 89
-          ExplicitHeight = 112
         end
         object ChartPDF: TChart
           Left = 0
           Top = 0
-          Width = 900
-          Height = 500
+          Width = 1125
+          Height = 625
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           BackWall.Brush.Gradient.Direction = gdBottomTop
           BackWall.Brush.Gradient.EndColor = clWhite
           BackWall.Brush.Gradient.StartColor = 15395562
@@ -1208,6 +1361,9 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           TopAxis.TicksInner.Color = clDarkgray
           TopAxis.Title.Font.Name = 'Verdana'
           View3D = False
+          View3DOptions.FontZoom = 125
+          View3DOptions.PenZoom = 125
+          View3DOptions.CheckBoxZoom = 125
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
@@ -1266,20 +1422,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrProbabilityOptions: TIWRegion
       Left = 0
-      Top = 705
-      Width = 1240
-      Height = 376
+      Top = 881
+      Width = 1550
+      Height = 470
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWLabel3: TIWLabel
         AlignWithMargins = False
-        Left = 6
-        Top = 14
-        Width = 355
-        Height = 18
-        Font.Color = clNone
+        Left = 8
+        Top = 18
+        Width = 443
+        Height = 22
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
@@ -1291,14 +1454,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel4: TIWLabel
         AlignWithMargins = False
-        Left = 369
-        Top = 37
-        Width = 211
-        Height = 16
-        Font.Color = clNone
+        Left = 461
+        Top = 46
+        Width = 264
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
@@ -1307,14 +1471,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel5: TIWLabel
         AlignWithMargins = False
-        Left = 82
-        Top = 65
-        Width = 165
-        Height = 16
-        Font.Color = clNone
+        Left = 103
+        Top = 81
+        Width = 206
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
@@ -1323,15 +1488,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweConcordanceFrom: TIWEdit
         AlignWithMargins = False
-        Left = 12
-        Top = 64
-        Width = 59
-        Height = 21
+        Left = 15
+        Top = 80
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
@@ -1340,15 +1506,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweConcordanceTo: TIWEdit
         AlignWithMargins = False
-        Left = 236
-        Top = 64
-        Width = 59
-        Height = 21
+        Left = 295
+        Top = 80
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iweConcordanceTo'
         SubmitOnAsyncEvent = True
@@ -1357,15 +1524,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweMinimumUncertainty: TIWEdit
         AlignWithMargins = False
-        Left = 575
-        Top = 35
-        Width = 43
-        Height = 21
+        Left = 719
+        Top = 44
+        Width = 54
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iweMinimumUncertainty'
         SubmitOnAsyncEvent = True
@@ -1374,15 +1542,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweAgeTo: TIWEdit
         AlignWithMargins = False
-        Left = 236
-        Top = 35
-        Width = 59
-        Height = 21
+        Left = 295
+        Top = 44
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iweAgeTo'
         SubmitOnAsyncEvent = True
@@ -1391,14 +1560,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel6: TIWLabel
         AlignWithMargins = False
-        Left = 94
-        Top = 37
-        Width = 117
-        Height = 16
-        Font.Color = clNone
+        Left = 118
+        Top = 46
+        Width = 146
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
@@ -1407,15 +1577,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweAgeFrom: TIWEdit
         AlignWithMargins = False
-        Left = 12
-        Top = 35
-        Width = 59
-        Height = 21
+        Left = 15
+        Top = 44
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iweAgeFrom'
         SubmitOnAsyncEvent = True
@@ -1424,10 +1595,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwbRefresh: TIWButton
         AlignWithMargins = False
-        Left = 401
-        Top = 337
-        Width = 120
-        Height = 25
+        Left = 501
+        Top = 421
+        Width = 150
+        Height = 32
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Refresh'
         Color = clBtnFace
         FriendlyName = 'iwbRefresh'
@@ -1436,14 +1611,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel7: TIWLabel
         AlignWithMargins = False
-        Left = 632
-        Top = 37
-        Width = 20
-        Height = 16
-        Font.Color = clNone
+        Left = 790
+        Top = 46
+        Width = 25
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
@@ -1451,17 +1627,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwrgAndOr: TIWRadioGroup
         AlignWithMargins = False
-        Left = 727
-        Top = 59
-        Width = 89
-        Height = 43
+        Left = 909
+        Top = 74
+        Width = 111
+        Height = 54
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         FriendlyName = 'iwrgAndOr'
         ItemIndex = 0
@@ -1473,14 +1650,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel10: TIWLabel
         AlignWithMargins = False
-        Left = 704
-        Top = 37
-        Width = 113
-        Height = 16
-        Font.Color = clNone
+        Left = 880
+        Top = 46
+        Width = 141
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
@@ -1489,10 +1667,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwbCalculatePDF: TIWButton
         AlignWithMargins = False
-        Left = 609
-        Top = 336
-        Width = 177
-        Height = 25
+        Left = 761
+        Top = 420
+        Width = 222
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Calculate PDF'
         Color = clBtnFace
         FriendlyName = 'iwbCalculate PDF'
@@ -1501,16 +1683,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwcbExcludeDataWithoutAnalyses: TIWCheckBox
         AlignWithMargins = False
-        Left = 369
-        Top = 65
-        Width = 264
-        Height = 21
+        Left = 461
+        Top = 81
+        Width = 330
+        Height = 27
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Exclude Data Without Analyses'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -1520,16 +1703,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwcbIncludeSampleZones: TIWCheckBox
         AlignWithMargins = False
-        Left = 6
-        Top = 109
-        Width = 202
-        Height = 21
+        Left = 8
+        Top = 136
+        Width = 252
+        Height = 27
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Include Grain Zones'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
@@ -1540,14 +1724,15 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwlSampleZones: TIWListbox
         AlignWithMargins = False
-        Left = 12
-        Top = 127
-        Width = 284
-        Height = 233
-        Font.Color = clNone
+        Left = 15
+        Top = 159
+        Width = 355
+        Height = 291
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         RequireSelection = False
         TabOrder = 52
@@ -1556,10 +1741,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwbScaleProbabilityXAxis: TIWButton
         AlignWithMargins = False
-        Left = 401
-        Top = 287
-        Width = 120
-        Height = 25
+        Left = 501
+        Top = 359
+        Width = 150
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Rescale X Axis'
         Color = clBtnFace
         FriendlyName = 'iwbScaleProbabilityXAxis'
@@ -1569,18 +1758,26 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrPeaksIdentifiedList: TIWRegion
       Left = 0
-      Top = 2356
-      Width = 1240
-      Height = 344
+      Top = 2945
+      Width = 1550
+      Height = 430
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWRegion8: TIWRegion
         Left = 0
-        Top = 73
-        Width = 16
-        Height = 255
+        Top = 91
+        Width = 20
+        Height = 319
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -1589,18 +1786,26 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object IWRegion10: TIWRegion
         Left = 0
         Top = 0
-        Width = 1240
-        Height = 73
+        Width = 1550
+        Height = 91
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alTop
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator1: TIWDBNavigator
           AlignWithMargins = False
-          Left = 6
-          Top = 39
-          Width = 210
-          Height = 28
+          Left = 8
+          Top = 49
+          Width = 262
+          Height = 35
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Confirmations.Delete = 'Are you sure you want to delete this record?'
           Confirmations.Post = 'Are you sure you want to update this record?'
           Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -1613,11 +1818,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel8: TIWLabel
           AlignWithMargins = False
-          Left = 6
-          Top = 14
-          Width = 133
-          Height = 19
-          Font.Color = clNone
+          Left = 8
+          Top = 18
+          Width = 166
+          Height = 23
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
@@ -1630,19 +1838,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWRegion11: TIWRegion
         Left = 0
-        Top = 328
-        Width = 1240
-        Height = 16
+        Top = 410
+        Width = 1550
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alBottom
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object IWRegion12: TIWRegion
-        Left = 16
-        Top = 73
-        Width = 1224
-        Height = 255
+        Left = 20
+        Top = 91
+        Width = 1530
+        Height = 319
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alClient
         BorderOptions.NumericWidth = 0
@@ -1651,8 +1867,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 897
-          Height = 255
+          Width = 1121
+          Height = 319
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alLeft
           BorderColors.Color = clNone
           BorderColors.Light = clNone
@@ -1662,10 +1882,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           BorderStyle = tfDefault
           CellPadding = 0
           CellSpacing = 0
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
@@ -1679,10 +1897,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taCenter
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -1701,7 +1917,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -1720,10 +1935,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -1740,7 +1953,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -1759,10 +1971,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -1779,7 +1989,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -1798,10 +2007,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -1818,7 +2025,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -1837,10 +2043,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -1857,7 +2061,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -1892,28 +2095,40 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrDataList: TIWRegion
       Left = 0
-      Top = 1081
-      Width = 1240
-      Height = 390
+      Top = 1351
+      Width = 1550
+      Height = 488
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwrDataListLeft: TIWRegion
         Left = 0
-        Top = 73
-        Width = 16
-        Height = 271
+        Top = 91
+        Width = 20
+        Height = 339
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object iwrDataListRight: TIWRegion
-        Left = 1116
-        Top = 73
-        Width = 124
-        Height = 271
+        Left = 1395
+        Top = 91
+        Width = 155
+        Height = 339
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alClient
         BorderOptions.NumericWidth = 0
@@ -1922,18 +2137,26 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object iwrDataListTop: TIWRegion
         Left = 0
         Top = 0
-        Width = 1240
-        Height = 73
+        Width = 1550
+        Height = 91
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alTop
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwDBnData: TIWDBNavigator
           AlignWithMargins = False
-          Left = 6
-          Top = 39
-          Width = 210
-          Height = 28
+          Left = 8
+          Top = 49
+          Width = 262
+          Height = 35
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Confirmations.Delete = 'Are you sure you want to delete this record?'
           Confirmations.Post = 'Are you sure you want to update this record?'
           Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -1946,11 +2169,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel9: TIWLabel
           AlignWithMargins = False
-          Left = 6
-          Top = 14
-          Width = 38
-          Height = 19
-          Font.Color = clNone
+          Left = 8
+          Top = 18
+          Width = 47
+          Height = 23
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
@@ -1962,15 +2188,16 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwlCount: TIWLabel
           AlignWithMargins = False
-          Left = 954
-          Top = 51
-          Width = 56
-          Height = 16
+          Left = 1193
+          Top = 64
+          Width = 70
+          Height = 20
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Alignment = taRightJustify
-          Font.Color = clNone
           Font.FontName = 'Verdana'
-          Font.Size = 10
-          Font.Style = []
           Font.PxSize = 13
           NoWrap = True
           HasTabOrder = False
@@ -1979,10 +2206,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbIncludeExcludeData: TIWButton
           AlignWithMargins = False
-          Left = 510
-          Top = 42
-          Width = 173
-          Height = 25
+          Left = 638
+          Top = 53
+          Width = 216
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Include / Exclude record'
           Color = clBtnFace
           FriendlyName = 'iwbIncludeExcludeData'
@@ -1991,15 +2222,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbDownloadData: TIWButton
           AlignWithMargins = False
-          Left = 296
-          Top = 42
-          Width = 140
-          Height = 25
+          Left = 370
+          Top = 53
+          Width = 175
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Download to Excel'
           Color = clBtnFace
-          Font.Color = clNone
           Font.Size = 9
-          Font.Style = []
           Font.PxSize = 12
           FriendlyName = 'iwbDownloadData'
           TabOrder = 47
@@ -2008,19 +2241,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iwrDataListBottom: TIWRegion
         Left = 0
-        Top = 344
-        Width = 1240
-        Height = 46
+        Top = 430
+        Width = 1550
+        Height = 58
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alBottom
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object iwbUpdateIncludeExcludeToDatabase: TIWButton
           AlignWithMargins = False
-          Left = 510
-          Top = 6
-          Width = 331
-          Height = 25
+          Left = 638
+          Top = 8
+          Width = 413
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Update Current Record Include/Exclude to Database'
           Color = clBtnFace
           FriendlyName = 'iwbUpdateIncludeExcludeToDatabase'
@@ -2029,10 +2270,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
       end
       object iwrDataListGrid: TIWRegion
-        Left = 16
-        Top = 73
-        Width = 1100
-        Height = 271
+        Left = 20
+        Top = 91
+        Width = 1375
+        Height = 339
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -2041,8 +2286,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 1100
-          Height = 271
+          Width = 1375
+          Height = 339
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           BorderColors.Color = clNone
           BorderColors.Light = clNone
@@ -2052,10 +2301,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           BorderStyle = tfDefault
           CellPadding = 0
           CellSpacing = 0
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
@@ -2069,10 +2316,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taCenter
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2091,9 +2336,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
-              Title.Font.Size = 10
-              Title.Font.Style = []
               Title.Font.PxSize = 13
               Title.Header = False
               Title.Height = '0'
@@ -2109,10 +2351,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2130,7 +2370,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2149,10 +2388,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2170,7 +2407,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2189,10 +2425,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taCenter
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2209,7 +2443,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2228,10 +2461,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2249,7 +2480,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2268,10 +2498,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2289,7 +2517,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2308,10 +2535,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2329,7 +2554,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2348,10 +2572,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2369,7 +2591,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2388,10 +2609,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2409,7 +2628,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2428,10 +2646,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2449,7 +2665,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2468,10 +2683,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2489,7 +2702,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2508,10 +2720,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2529,7 +2739,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2548,10 +2757,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2569,7 +2776,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2588,10 +2794,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taCenter
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2609,7 +2813,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2628,10 +2831,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2649,7 +2850,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2668,10 +2868,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2689,7 +2887,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2724,28 +2921,40 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrProbabilityCurves: TIWRegion
       Left = 0
-      Top = 2012
-      Width = 1240
-      Height = 344
+      Top = 2515
+      Width = 1550
+      Height = 430
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWRegion2: TIWRegion
         Left = 0
-        Top = 70
-        Width = 16
-        Height = 258
+        Top = 88
+        Width = 20
+        Height = 322
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object IWRegion3: TIWRegion
-        Left = 945
-        Top = 70
+        Left = 1181
+        Top = 88
         Width = 0
-        Height = 258
+        Height = 322
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -2754,18 +2963,26 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object IWRegion4: TIWRegion
         Left = 0
         Top = 0
-        Width = 1240
-        Height = 70
+        Width = 1550
+        Height = 88
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alTop
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object IWDBNavigator2: TIWDBNavigator
           AlignWithMargins = False
-          Left = 6
-          Top = 39
-          Width = 210
-          Height = 28
+          Left = 8
+          Top = 49
+          Width = 262
+          Height = 35
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Confirmations.Delete = 'Are you sure you want to delete this record?'
           Confirmations.Post = 'Are you sure you want to update this record?'
           Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -2778,11 +2995,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel12: TIWLabel
           AlignWithMargins = False
-          Left = 6
-          Top = 14
-          Width = 145
-          Height = 19
-          Font.Color = clNone
+          Left = 8
+          Top = 18
+          Width = 181
+          Height = 23
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
@@ -2794,16 +3014,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbDownload: TIWButton
           AlignWithMargins = False
-          Left = 296
-          Top = 42
-          Width = 140
-          Height = 25
+          Left = 370
+          Top = 53
+          Width = 175
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Download to Excel'
           Enabled = False
           Color = clBtnFace
-          Font.Color = clNone
           Font.Size = 9
-          Font.Style = []
           Font.PxSize = 12
           FriendlyName = 'iwbDownload'
           TabOrder = 23
@@ -2811,10 +3033,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object iwbTransferToPeak: TIWButton
           AlignWithMargins = False
-          Left = 744
-          Top = 39
-          Width = 169
-          Height = 25
+          Left = 930
+          Top = 49
+          Width = 211
+          Height = 31
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Visible = False
           Caption = 'Transfer To Peak List'
           Color = clBtnFace
@@ -2824,15 +3050,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel29: TIWLabel
           AlignWithMargins = False
-          Left = 510
-          Top = 50
-          Width = 195
-          Height = 14
-          Font.Color = clWindowFrame
+          Left = 638
+          Top = 63
+          Width = 243
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
+          Font.Color = clWindowFrame
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'IWLabel29'
@@ -2841,19 +3070,27 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWRegion5: TIWRegion
         Left = 0
-        Top = 328
-        Width = 1240
-        Height = 16
+        Top = 410
+        Width = 1550
+        Height = 20
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alBottom
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
       end
       object IWRegion6: TIWRegion
-        Left = 16
-        Top = 70
-        Width = 929
-        Height = 258
+        Left = 20
+        Top = 88
+        Width = 1161
+        Height = 322
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -2862,8 +3099,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 897
-          Height = 258
+          Width = 1121
+          Height = 322
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alLeft
           BorderColors.Color = clNone
           BorderColors.Light = clNone
@@ -2873,10 +3114,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           BorderStyle = tfDefault
           CellPadding = 0
           CellSpacing = 0
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
           Font.PxSize = 10
           FrameBuffer = 40
           Lines = tlAll
@@ -2890,10 +3129,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taCenter
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2911,7 +3148,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2930,10 +3166,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2949,7 +3183,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -2968,10 +3201,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -2987,7 +3218,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3017,24 +3247,33 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           RowHeaderColor = clWebLIGHTSTEELBLUE
           RowAlternateColor = clNone
           RowCurrentColor = clWebYELLOW
+          ExplicitHeight = 323
         end
       end
     end
     object iwrCreateNewSummaryRecords: TIWRegion
       Left = 0
-      Top = 2700
-      Width = 1240
-      Height = 205
+      Top = 3375
+      Width = 1550
+      Height = 256
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbCreateNewRecords: TIWButton
         AlignWithMargins = False
-        Left = 369
-        Top = 149
-        Width = 347
-        Height = 25
+        Left = 461
+        Top = 186
+        Width = 434
+        Height = 32
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Create New Summary Records for Identified Peaks'
         Color = clBtnFace
         FriendlyName = 'iwbCreateNewRecords'
@@ -3043,11 +3282,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel14: TIWLabel
         AlignWithMargins = False
-        Left = 21
-        Top = 27
-        Width = 94
-        Height = 15
-        Font.Color = clNone
+        Left = 26
+        Top = 34
+        Width = 118
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3059,16 +3301,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweUnitFrom: TIWEdit
         AlignWithMargins = False
-        Left = 136
-        Top = 25
-        Width = 59
-        Height = 21
+        Left = 170
+        Top = 31
+        Width = 74
+        Height = 27
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweUnitFrom'
         SubmitOnAsyncEvent = True
@@ -3077,11 +3321,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel15: TIWLabel
         AlignWithMargins = False
-        Left = 216
-        Top = 27
-        Width = 12
-        Height = 15
-        Font.Color = clNone
+        Left = 270
+        Top = 34
+        Width = 15
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3093,16 +3340,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweUnitTo: TIWEdit
         AlignWithMargins = False
-        Left = 240
-        Top = 24
-        Width = 59
-        Height = 21
+        Left = 300
+        Top = 30
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweUnitTo'
         SubmitOnAsyncEvent = True
@@ -3111,11 +3360,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel16: TIWLabel
         AlignWithMargins = False
-        Left = 21
-        Top = 55
-        Width = 97
-        Height = 15
-        Font.Color = clNone
+        Left = 26
+        Top = 69
+        Width = 122
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3127,11 +3379,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel18: TIWLabel
         AlignWithMargins = False
-        Left = 21
-        Top = 85
-        Width = 88
-        Height = 15
-        Font.Color = clNone
+        Left = 26
+        Top = 106
+        Width = 110
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3143,11 +3398,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel19: TIWLabel
         AlignWithMargins = False
-        Left = 21
-        Top = 112
-        Width = 82
-        Height = 15
-        Font.Color = clNone
+        Left = 26
+        Top = 140
+        Width = 103
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3159,16 +3417,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweTerraneFrom: TIWEdit
         AlignWithMargins = False
-        Left = 136
-        Top = 106
-        Width = 59
-        Height = 21
+        Left = 170
+        Top = 133
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweTerraneFrom'
         SubmitOnAsyncEvent = True
@@ -3177,16 +3437,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweProvinceFrom: TIWEdit
         AlignWithMargins = False
-        Left = 136
-        Top = 79
-        Width = 59
-        Height = 21
+        Left = 170
+        Top = 99
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweProvinceFrom'
         SubmitOnAsyncEvent = True
@@ -3195,16 +3457,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweReferenceFrom: TIWEdit
         AlignWithMargins = False
-        Left = 136
-        Top = 52
-        Width = 59
-        Height = 21
+        Left = 170
+        Top = 65
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweReferenceFrom'
         SubmitOnAsyncEvent = True
@@ -3213,11 +3477,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel20: TIWLabel
         AlignWithMargins = False
-        Left = 216
-        Top = 55
-        Width = 12
-        Height = 15
-        Font.Color = clNone
+        Left = 270
+        Top = 69
+        Width = 15
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3229,11 +3496,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel21: TIWLabel
         AlignWithMargins = False
-        Left = 216
-        Top = 106
-        Width = 12
-        Height = 15
-        Font.Color = clNone
+        Left = 270
+        Top = 133
+        Width = 15
+        Height = 18
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3245,11 +3515,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWLabel22: TIWLabel
         AlignWithMargins = False
-        Left = 216
-        Top = 85
-        Width = 12
-        Height = 15
-        Font.Color = clNone
+        Left = 270
+        Top = 106
+        Width = 15
+        Height = 19
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
@@ -3261,16 +3534,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweTerraneTo: TIWEdit
         AlignWithMargins = False
-        Left = 240
-        Top = 106
-        Width = 59
-        Height = 21
+        Left = 300
+        Top = 133
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweTerraneTo'
         SubmitOnAsyncEvent = True
@@ -3279,16 +3554,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweProvinceTo: TIWEdit
         AlignWithMargins = False
-        Left = 240
-        Top = 79
-        Width = 59
-        Height = 21
+        Left = 300
+        Top = 99
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweProvinceTo'
         SubmitOnAsyncEvent = True
@@ -3297,16 +3574,18 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object iweReferenceTo: TIWEdit
         AlignWithMargins = False
-        Left = 240
-        Top = 52
-        Width = 59
-        Height = 21
+        Left = 300
+        Top = 65
+        Width = 74
+        Height = 26
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iweReferenceTo'
         SubmitOnAsyncEvent = True
@@ -3315,17 +3594,20 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWText2: TIWText
         AlignWithMargins = False
-        Left = 342
-        Top = 21
-        Width = 247
-        Height = 67
+        Left = 428
+        Top = 26
+        Width = 308
+        Height = 84
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         BGColor = clNone
         ConvertSpaces = True
-        Font.Color = clWebDARKSLATEGRAY
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
+        Font.Color = clWebDARKSLATEGRAY
         FriendlyName = 'IWText1'
         Lines.Strings = (
           
@@ -3339,24 +3621,30 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrButtonsBottom: TIWRegion
       Left = 0
-      Top = 3355
-      Width = 1240
-      Height = 93
+      Top = 4194
+      Width = 1550
+      Height = 116
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton1: TIWButton
         AlignWithMargins = False
-        Left = 17
-        Top = 59
-        Width = 217
-        Height = 25
+        Left = 21
+        Top = 74
+        Width = 272
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Return to Sample Selection Form'
         Color = clWebROSYBROWN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 27
@@ -3364,15 +3652,17 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWButton2: TIWButton
         AlignWithMargins = False
-        Left = 270
-        Top = 59
-        Width = 155
-        Height = 25
+        Left = 338
+        Top = 74
+        Width = 193
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Return to Main Form'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbReturn'
         TabOrder = 28
@@ -3381,9 +3671,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
     end
     object iwrExistingRecords: TIWRegion
       Left = 0
-      Top = 2905
-      Width = 1240
-      Height = 450
+      Top = 3631
+      Width = 1550
+      Height = 563
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       RenderInvisibleControls = False
       Align = alTop
       BorderOptions.NumericWidth = 0
@@ -3392,8 +3686,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       object IWRegion14: TIWRegion
         Left = 0
         Top = 0
-        Width = 1240
-        Height = 65
+        Width = 1550
+        Height = 81
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alTop
         BorderOptions.NumericWidth = 0
@@ -3401,10 +3699,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         Color = clWebLEMONCHIFFON
         object IWDBNavigator4: TIWDBNavigator
           AlignWithMargins = False
-          Left = 6
-          Top = 32
-          Width = 120
-          Height = 28
+          Left = 8
+          Top = 40
+          Width = 150
+          Height = 35
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Confirmations.Delete = 'Are you sure you want to delete this record?'
           Confirmations.Post = 'Are you sure you want to update this record?'
           Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
@@ -3417,11 +3719,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         end
         object IWLabel31: TIWLabel
           AlignWithMargins = False
-          Left = 6
-          Top = 7
-          Width = 247
-          Height = 19
-          Font.Color = clNone
+          Left = 8
+          Top = 9
+          Width = 308
+          Height = 24
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Font.FontName = 'Arial'
           Font.Size = 12
           Font.Style = [fsBold]
@@ -3434,9 +3739,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWRegion15: TIWRegion
         Left = 0
-        Top = 65
-        Width = 16
-        Height = 367
+        Top = 81
+        Width = 20
+        Height = 459
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alLeft
         BorderOptions.NumericWidth = 0
@@ -3444,10 +3753,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         Color = clWebLEMONCHIFFON
       end
       object IWRegion16: TIWRegion
-        Left = 1180
-        Top = 65
-        Width = 60
-        Height = 367
+        Left = 1475
+        Top = 81
+        Width = 75
+        Height = 459
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alRight
         BorderOptions.NumericWidth = 0
@@ -3456,9 +3769,13 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
       end
       object IWRegion17: TIWRegion
         Left = 0
-        Top = 432
-        Width = 1240
-        Height = 18
+        Top = 540
+        Width = 1550
+        Height = 23
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alBottom
         BorderOptions.NumericWidth = 0
@@ -3466,10 +3783,14 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
         Color = clWebLEMONCHIFFON
       end
       object IWRegion18: TIWRegion
-        Left = 16
-        Top = 65
-        Width = 1164
-        Height = 367
+        Left = 20
+        Top = 81
+        Width = 1455
+        Height = 459
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         RenderInvisibleControls = False
         Align = alClient
         BorderOptions.NumericWidth = 0
@@ -3479,8 +3800,12 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           AlignWithMargins = False
           Left = 0
           Top = 0
-          Width = 1017
-          Height = 367
+          Width = 1271
+          Height = 459
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alLeft
           BorderColors.Color = clNone
           BorderColors.Light = clNone
@@ -3490,10 +3815,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           BorderStyle = tfDefault
           CellPadding = 0
           CellSpacing = 0
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 9
-          Font.Style = []
           Font.PxSize = 12
           FrameBuffer = 40
           Lines = tlAll
@@ -3507,10 +3830,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3526,7 +3847,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3545,10 +3865,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3564,7 +3882,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3583,10 +3900,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3602,7 +3917,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3621,10 +3935,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3640,7 +3952,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3659,10 +3970,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3678,7 +3987,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3697,10 +4005,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3716,7 +4022,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3735,10 +4040,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3754,7 +4057,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3773,10 +4075,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3792,7 +4092,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3811,10 +4110,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3830,7 +4127,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3849,10 +4145,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taLeftJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3868,7 +4162,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3887,10 +4180,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3906,7 +4197,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3925,10 +4215,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3944,7 +4232,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -3963,10 +4250,8 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Alignment = taRightJustify
               BGColor = clNone
               DoSubmitValidation = True
-              Font.Color = clNone
               Font.FontName = 'Verdana'
               Font.Size = 8
-              Font.Style = []
               Font.PxSize = 10
               Header = False
               Height = '0'
@@ -3982,7 +4267,6 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
               Title.Alignment = taCenter
               Title.BGColor = clNone
               Title.DoSubmitValidation = True
-              Title.Font.Color = clNone
               Title.Font.FontName = 'Verdana'
               Title.Font.Size = 8
               Title.Font.Style = [fsBold]
@@ -4012,18 +4296,19 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
           RowHeaderColor = clWebLIGHTSTEELBLUE
           RowAlternateColor = clNone
           RowCurrentColor = clWebYELLOW
-          ExplicitLeft = 16
-          ExplicitTop = 65
-          ExplicitHeight = 216
         end
       end
     end
   end
   object iwrLeft: TIWRegion
     Left = 0
-    Top = 55
-    Width = 60
-    Height = 3445
+    Top = 69
+    Width = 75
+    Height = 4306
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     RenderInvisibleControls = False
     TabOrder = 4
     Align = alLeft
@@ -4034,47 +4319,66 @@ object ISFIdentifyPeaks: TISFIdentifyPeaks
   inline TopBar: TISFTopBar
     Left = 0
     Top = 0
-    Width = 1300
-    Height = 55
+    Width = 1625
+    Height = 69
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     Align = alTop
-    Constraints.MaxHeight = 55
-    Constraints.MinHeight = 55
-    Constraints.MinWidth = 600
+    Constraints.MaxHeight = 69
+    Constraints.MinHeight = 69
+    Constraints.MinWidth = 750
     Color = clNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -15
     Font.Name = 'Arial'
     Font.Style = []
     ParentColor = False
     ParentFont = False
     TabOrder = 2
     TabStop = True
-    ExplicitWidth = 1300
+    ExplicitWidth = 1625
     inherited IWFrameRegion: TIWRegion
-      Width = 1300
+      Width = 1625
       TabOrder = 54
-      ExplicitWidth = 1300
+      ExplicitWidth = 1625
       inherited iwrHeader: TIWRegion
-        Width = 1300
-        ExplicitWidth = 1300
+        Width = 1625
+        ExplicitWidth = 1625
         inherited iwrWelcome: TIWRegion
-          Width = 1300
-          ExplicitWidth = 1300
+          Width = 1625
+          ExplicitWidth = 1625
           inherited iwrDisplayUserName: TIWRegion
-            Width = 1159
-            ExplicitWidth = 1159
+            Width = 1449
+            ExplicitWidth = 1449
             inherited lblWelcome: TIWLabel
-              Left = 838
-              ExplicitLeft = 510
+              Font.Color = clWebDARKSLATEGRAY
+              ExplicitLeft = 1048
             end
           end
         end
         inherited iwrSignInOut: TIWRegion
-          Width = 1300
-          ExplicitWidth = 1300
+          Width = 1625
+          ExplicitWidth = 1625
+          inherited iwlSignOut: TIWLink
+            Font.Style = [fsUnderline]
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Style = [fsUnderline]
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Width = 532
+            Height = 24
+            Font.Color = clWebSTEELBLUE
+            ExplicitWidth = 532
+            ExplicitHeight = 24
+          end
         end
       end
     end

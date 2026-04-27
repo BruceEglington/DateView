@@ -30,7 +30,7 @@ uses
 
 type
   TIWServerController = class(TIWServerControllerBase)
-    //procedure IWServerControllerBaseGetMainForm(var vMainForm: TIWBaseForm);
+    procedure IWServerControllerBaseGetMainForm(var vMainForm: TIWBaseForm);
     procedure IWServerControllerBaseNewSession(ASession: TIWApplication);
     procedure IWServerControllerBaseBrowserCheck(aSession: TIWApplication;
       var rBrowser: TBrowser);
@@ -160,11 +160,11 @@ begin
   }
 end;
 
-//procedure TIWServerController.IWServerControllerBaseGetMainForm(
-//  var vMainForm: TIWBaseForm);
-//begin
-//  vMainForm := TISFMain.Create(WebApplication);
-//end;
+procedure TIWServerController.IWServerControllerBaseGetMainForm(
+  var vMainForm: TIWBaseForm);
+begin
+  vMainForm := TISFMain.Create(WebApplication);
+end;
 
 procedure TIWServerController.GetIniFile;
 var

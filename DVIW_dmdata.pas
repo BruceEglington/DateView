@@ -1471,7 +1471,6 @@ begin
   DM_Age_Error := Sqrt(((tplus1-tage)*(tplus1-tage)+(tage-tminus1)*(tage-tminus1))+0.000001);
 end;
 
-
 procedure TdmdDV.UpdateSmpData(tSampleNo,tFrac,tIsoSystem,tVariableID,tTechAbr : string;
                                RevisedDataValue : double;
                            var WasSuccessful : boolean);

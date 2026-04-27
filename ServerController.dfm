@@ -1,5 +1,5 @@
 object IWServerController: TIWServerController
-  AppName = 'DateView'
+  AppName = 'DVIW'
   Description = 'DateView database'
   DisplayName = 'DateView database'
   Port = 8085
